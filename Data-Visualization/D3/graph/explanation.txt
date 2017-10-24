@@ -1,0 +1,2 @@
+We have used the method of scale radius linearly to scale the radius of the node.
+I think this method is best way because this method decide the radius size using link's count to link to each node.

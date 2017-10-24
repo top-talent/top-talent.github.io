@@ -1,0 +1,53 @@
+
+div#chart1 svg{
+  margin-top: 100px;
+  border: 1px solid #000; 
+  page-break-before:always;
+  margin-left: 230px;  
+}
+div#chart2 svg{
+  margin-top: 100px;
+  border: 1px solid #000; 
+  page-break-before:always;
+  margin-left: 230px;  
+}
+div#chart3 svg{
+  margin-top: 100px;
+  border: 1px solid #000;	
+  page-break-before:always;
+  margin-left: 230px;
+}
+div#chart4 svg{
+  margin-top: 100px;
+  border: 1px solid #000;	
+  page-break-before:always;
+  margin-left: 230px;
+}
+div#chart5 svg{
+  margin-top: 100px;
+  border: 1px solid #000;	
+  page-break-before:always;
+  margin-left: 230px;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+.grid line {
+  fill:none;
+  stroke: lightgrey;
+  stroke-width:2;
+  stroke-opacity: 0.7;
+  shape-rendering: crispEdges;
+}
+
+.grid path {
+  stroke-width:1;
+  fill:none;
+}
+g.grid .tick:first-child, g.grid .tick:last-of-type {
+  opacity:0!important;
+}

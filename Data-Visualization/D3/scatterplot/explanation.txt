@@ -1,0 +1,8 @@
+Q3 A.2
+
+We have to use "BMI vs. Blood Pressure" feature combination than "Plasma Glucose vs.Insulin" to separate the "negative" class and "positive" class from the classes.
+Because we can see the scatterplots of two classes clearly in the first feature combination.
+
+Q3 C
+We need to use "square root scale" method when we are going to see the scatterplots that Y value isn't 0 more clearly.
+We need to use "log scale" method when we are going to see the scatterplots that Y value is 0 and Y value isn't 0 separately.

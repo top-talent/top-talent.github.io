@@ -1,0 +1,21 @@
+.visualization {
+	border:1px solid #000;
+  width: 70%;
+  margin-left: 15%;
+  margin-top: 50px;
+}
+.visualization .title {
+	text-align: center;
+}
+.select {
+  position: relative;
+  text-align: center;
+}
+.select h3 {
+	display: inline-block;
+	font-size: 20px;
+}
+.select #season {
+	width:50px;
+	height:30px;
+}
