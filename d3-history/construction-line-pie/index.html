@@ -1,0 +1,253 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Construction Dashbaord </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body * {
+            font-family: 'Helvetica'
+        }
+
+        .toolTip {
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            position: absolute;
+            display: none;
+            width: auto;
+            height: auto;
+            /*background: none repeat scroll 0 0 white;*/
+            background: rgba(255, 255, 255, 1);
+            border: 0 none;
+            border-radius: 8px 8px 8px 8px;
+            box-shadow: -3px 3px 15px #888888;
+            color: black;
+            font: 12px sans-serif;
+            padding: 5px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body translate="no">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+
+
+    <div class="container" style="width: 100%; margin-top : 30px">
+        <div class="row">
+            <div class="col-md-6">
+                <div id="myLine" style=" background-color : #f1f1f1">
+                </div>
+                <div id="myFilter" style=" background-color : #f1f1f1" style="margin-bottom : 20px;">
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div id="myPie1" style=" background-color : #f1f1f1"></div>
+            </div>
+            <div class="col-md-3">
+                <div id="myPie2" style="background-color : #f1f1f1"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="js/d3.v4.min.js"></script>
+    <script src="js/processData.js"></script>
+    <script src="js/d3scriptfilter.js"></script>
+    <script src="js/d3scriptline.js"></script>
+    <script src="js/d3scriptpie.js"></script>
+    <script src="js/tooltip.js"></script>
+
+    <script>
+        var pie2Chart;
+        var pie1Chart;
+        var lineChart;
+        var filterChart;
+
+        d3.csv("data/Constructions.csv", function (data) {
+            var result = [];
+            data.forEach(function (d) {
+                for (var property in d) {
+                    if (d.hasOwnProperty(property)) {
+                        if (!isNaN(property)) {
+                            result.push({
+                                region: d.Region,
+                                year: property,
+                                value: d[property]
+                            });
+                        }
+                    }
+                }
+            });
+
+
+
+            var dataGroupedByRegion = GetRegionData(result);
+            var dataGroupedByYear = GetYearlyData(result);
+            var dataForFilter = GetYearsForFilter(result);
+            var groupedDataForLine = GetGroupedDataForLineChart(result);
+
+            lineChart = drawLineChart()
+                .data({
+                    title: "Construction Number By Region and Year",
+                    data: result,
+                    groupedData: groupedDataForLine
+                })
+                .tooltipRows([{ left: "Region", right: "{region}" }, { left: "Number", right: "{value}" }])
+                .onLineHoverStart(d => {
+                   
+                    pie1Chart.remoteUpdateStart(d);
+                })
+                .onLineHoverEnd(d => {
+                    
+                    pie1Chart.remoteUpdateEnd(d);
+                });
+
+            pie1Chart = drawPieChart()
+                .data({
+                    title: "Sum Of Constructions By Region",
+                    data: dataGroupedByRegion,
+                    tooltip: true,
+                    outerLabel: true,
+                    shuffleSlices: true
+                })
+                .color('#796799')
+                .tooltipRows([{ left: "Region", right: "{label}" }, { left: "Quantity", right: "{formatedValue}" }])
+                .onPieSliceHoverStart(d => {
+                   
+                    lineChart.remoteUpdateStart(d);
+                })
+                .onPieSliceHoverEnd(d => {
+                    
+                    lineChart.remoteUpdateEnd(d);
+                });
+
+            pie2Chart = drawPieChart()
+                .data({
+                    title: "Average Construnctions Number By Years",
+                    data: dataGroupedByYear,
+                    tooltip: true,
+                    outerLabel: true,
+                    shuffleSlices: false
+                })
+                .color('#EF4836')
+                .tooltipRows([{ left: "Year", right: "{label}" }, { left: "Avg Constr. Number", right: "{formatedValue}" }])
+
+            filterChart = renderFilter()
+                .data({
+                    title: "Filter By Year",
+                    data: dataForFilter
+                })
+                .onFilterChange(d => {
+
+                    var filteredDataForPie1 = GetRegionData(result, d.start, d.end);
+                    var filteredDataForPie2 = GetYearlyData(result, d.start, d.end);
+                    var filteredDataForLine = GetFilteredDataForLineChart(result, d.start, d.end);
+                    var filteredGroupedDataForLine = GetGroupedDataForLineChart(result, d.start, d.end);
+
+
+                    pie2Chart.shuffleSlices(false).data({ data: filteredDataForPie2 });
+
+                    pie1Chart.shuffleSlices(false).data({ data: filteredDataForPie1 });
+
+                    lineChart.data({ data: filteredDataForLine, groupedData: filteredGroupedDataForLine });
+                });
+
+            d3.select("#myLine").call(lineChart);
+            d3.select("#myPie1").call(pie1Chart);
+            d3.select("#myPie2").call(pie2Chart);
+            d3.select("#myFilter").call(filterChart);
+
+        });
+
+        function TestCharts() {
+            var result = [{ "region": "Tbilisi", "year": "2011", "value": "425669" },
+            { "region": "Tbilisi", "year": "2012", "value": "821126" },
+            { "region": "Tbilisi", "year": "2013", "value": "821126" },
+            { "region": "Tbilisi", "year": "2014", "value": "821126" },
+            { "region": "Tbilisi", "year": "2015", "value": "821126" },
+
+            { "region": "Adjara", "year": "2011", "value": "318193" },
+            { "region": "Adjara", "year": "2012", "value": "318193" },
+            { "region": "Adjara", "year": "2013", "value": "318193" },
+            { "region": "Adjara", "year": "2014", "value": "318193" },
+            { "region": "Adjara", "year": "2015", "value": "318193" },
+
+            { "region": "Guria", "year": "2011", "value": "21605" },
+            { "region": "Guria", "year": "2012", "value": "6293" },
+            { "region": "Guria", "year": "2013", "value": "21605" },
+            { "region": "Guria", "year": "2014", "value": "21605" },
+            { "region": "Guria", "year": "2015", "value": "21605" },
+
+            { "region": "Imereti", "year": "2011", "value": "49860" },
+            { "region": "Imereti", "year": "2012", "value": "99960" },
+            { "region": "Imereti", "year": "2013", "value": "60804" },
+            { "region": "Imereti", "year": "2014", "value": "60804" },
+            { "region": "Imereti", "year": "2015", "value": "60804" },
+
+
+            { "region": "Kakheti", "year": "2011", "value": "87775" },
+            { "region": "Kakheti", "year": "2012", "value": "87775" },
+            { "region": "Kakheti", "year": "2013", "value": "87775" },
+            { "region": "Kakheti", "year": "2014", "value": "87775" },
+            { "region": "Kakheti", "year": "2015", "value": "87775" },
+
+            { "region": "Mtskheta", "year": "2011", "value": "34996" },
+            { "region": "Mtskheta", "year": "2012", "value": "34996" },
+            { "region": "Mtskheta", "year": "2013", "value": "34996" },
+            { "region": "Mtskheta", "year": "2014", "value": "34996" },
+            { "region": "Mtskheta", "year": "2015", "value": "34996" },
+
+            { "region": "Samegrelo", "year": "2011", "value": "43158" },
+            { "region": "Samegrelo", "year": "2012", "value": "62885" },
+            { "region": "Samegrelo", "year": "2013", "value": "62885" },
+            { "region": "Samegrelo", "year": "2014", "value": "62885" },
+            { "region": "Samegrelo", "year": "2015", "value": "62885" },
+
+            { "region": "Samtskhe", "year": "2011", "value": "21905" },
+            { "region": "Samtskhe", "year": "2012", "value": "21905" },
+            { "region": "Samtskhe", "year": "2013", "value": "21905" },
+            { "region": "Samtskhe", "year": "2014", "value": "21905" },
+            { "region": "Samtskhe", "year": "2015", "value": "21905" },
+
+            { "region": "Shida Kartli", "year": "2011", "value": "9391" },
+            { "region": "Shida Kartli", "year": "2012", "value": "9391" },
+
+            { "region": "Shida Kartli", "year": "2013", "value": "9391" },
+            { "region": "Shida Kartli", "year": "2014", "value": "9391" },
+            { "region": "Shida Kartli", "year": "2015", "value": "9391" },
+
+            { "region": "Racha", "year": "2011", "value": "8243" },
+            { "region": "Racha", "year": "2012", "value": "8243" },
+            { "region": "Racha", "year": "2013", "value": "8243" },
+            { "region": "Racha", "year": "2014", "value": "810" },
+            { "region": "Racha", "year": "2015", "value": "810" },
+
+            { "region": "Kvemo Kartli", "year": "2011", "value": "48040" },
+            { "region": "Kvemo Kartli", "year": "2012", "value": "48040" },
+            { "region": "Kvemo Kartli", "year": "2013", "value": "48040" },
+            { "region": "Kvemo Kartli", "year": "2014", "value": "48040" },
+            { "region": "Kvemo Kartli", "year": "2015", "value": "48040" }];
+
+            result.forEach(d => d.value = Math.floor(Math.random() * 500000));
+
+            var dataGroupedByRegion = GetRegionData(result);
+            var dataGroupedByYear = GetYearlyData(result);
+            var groupedDataForLine = GetGroupedDataForLineChart(result);
+
+
+            pie2Chart.shuffleSlices(false).data({
+                title: "Average Construnctions Number By Years",
+                data: dataGroupedByYear
+            });
+
+            pie1Chart.shuffleSlices(false).data({ data: dataGroupedByRegion });
+            lineChart.data({ data: result, groupedData: groupedDataForLine });
+
+        };
+    </script>
+
+</body>
+
+</html>
