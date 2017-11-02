@@ -19,26 +19,33 @@ body {
   font-family: 'Open Sans',sans-serif;
   font-weight: 400;
   width: 100% !important;
-  overflow-x: hidden !important; }
+  overflow-x: hidden !important; 
+  margin: 0;
+}
 
 #viewport, #viewport>#container {
     height: 100%;
     width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    overflow: hidden;
+    position: relative;
 }
 
 /* header part */
-#header {
+.cbp-af-header {
   top: 2.5vw;
-  position: absolute;
+  position: fixed;
   left: 0;
   width: 100%;
-  z-index: 3;
+  z-index: 10000;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
 }
-#header>.wrapper {
+.cbp-af-header.cbp-af-header-shrink {
+  top: 0;
+}
+.cbp-af-header .cbp-af-inner {
   background: #eee;
   color: #9f9f9f;
   margin: 0 auto;
@@ -47,11 +54,15 @@ body {
   height: 6.7vw;
   width: 83.4vw;
 }
-#header>.wrapper * {
+.cbp-af-header.cbp-af-header-shrink .cbp-af-inner {
+  height: 4.7vw;
+  font-size: 14px;
+}
+.cbp-af-header>.wrapper * {
   margin: 0;
   padding: 0;
 }
-#header .logo {
+.cbp-af-header .logo {
   margin-left: 2.4vw;
   height: 6.7vw;
   float: left;
@@ -59,7 +70,10 @@ body {
   z-index: 4;
   line-height: 1;
 }
-#header .logo a {
+.cbp-af-header.cbp-af-header-shrink .logo {
+  height: 4.7vw;  
+}  
+.cbp-af-header .logo a {
   display: block;
   height: inherit;
   width: 100%;
@@ -69,15 +83,18 @@ body {
   z-index: 2;
   text-indent: -9000px;
 }
-#header .logo img {
-  width: 16vw;
-  min-width: 205px;
+.cbp-af-header .logo img {
+  width: 11vw;
   height: inherit;
+}
+.cbp-af-header-shrink .logo img {
+  width: 8vw;
+  margin-left: 28px;
 }
 .hidden {
   display: none !important;
 }
-#header .nav {
+.cbp-af-header .nav {
   top: 0;
   left: 0;
   width: 96%;
@@ -94,11 +111,11 @@ nav ul, nav li {
   list-style: none;
   display: inline-block;
 }
-#header .nav>ul>li {
+.cbp-af-header .nav>ul>li {
   height: 3.5vw;
   position: relative;
 }
-#header .nav>ul>li>a {
+.cbp-af-header .nav>ul>li>a {
   padding: 0 1.7vw;
   height: 6.7vw;
   line-height: 6.7vw;
@@ -106,22 +123,36 @@ nav ul, nav li {
   color: inherit;
   display: inline-block;  
 } 
-body.home #header .nav>ul li.current_page_item>a {
+.search {
+  vertical-align: top;
+}
+.fa-search {
+  margin-top: 45px !important;
+}
+.cbp-af-header-shrink .fa-search {
+  margin-top: 30px !important;
+}
+.cbp-af-header-shrink .nav>ul>li>a {
+  padding: 0 2vw;
+  height: 4.7vw !important;
+  line-height: 4.7vw !important;  
+} 
+body.home .cbp-af-header .nav>ul li.current_page_item>a {
   background: transparent !important;
   color: inherit !important;
 }
-#header .nav>ul>li>a, #header .homes>ul>li>a {
+.cbp-af-header .nav>ul>li>a, .cbp-af-header .homes>ul>li>a {
   height: 6.7vw;
   line-height: 6.7vw;
 }
-#header .nav > ul > li:hover > a {
+.cbp-af-header .nav > ul > li:hover > a {
   background: #4c4c4c;
   color: #eee;
 }
-#header .nav>ul>li>a>i{
-  vertical-align: text-top;
+.cbp-af-header .nav>ul>li>a>i{
+  margin-left: 8px;
 }
-#header .widget {
+.cbp-af-header .widget {
   height: 2.1vw;
   top: -2.5vw;
   width: 15.2vw;
@@ -130,11 +161,11 @@ body.home #header .nav>ul li.current_page_item>a {
   text-align: center;
   z-index: 3;
 }
-#header .widget * {
+.cbp-af-header .widget * {
   display: inline;
   line-height: 1;
 }
-#header .widget a {
+.cbp-af-header .widget a {
   display: block;
   color: #4c4c4c;
   text-transform: uppercase;
@@ -148,23 +179,17 @@ body.home #header .nav>ul li.current_page_item>a {
   font-size: 14px;
   text-decoration: none;
 }
-#header .widget a:hover {
+.cbp-af-header .widget a:hover {
   background: #4c4c4c;
   color: #f3f3f3;
 }
-#header .widget i {
+.cbp-af-header .widget i {
   display: inline-block;
   vertical-align: baseline;
 }
 #page {
   height: 100%;
   width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  overflow-x: hidden;
-  overflow-y: auto;
-  -webkit-overflow-scrolling: touch;
   background: #fff;
 }
 #main {
@@ -233,6 +258,9 @@ body.home #header .nav>ul li.current_page_item>a {
   background-image: url(https://www.executivehomes.com/wp-content/uploads/CoverOct172.0.jpg) !important;
   background-position: center center;
   background-size: cover;
+  height: 48.1vw;
+  max-height: 48.1vw;
+  min-height: 92vh;
 }
 
 
@@ -240,12 +268,18 @@ body.home #header .nav>ul li.current_page_item>a {
   background-image: url(https://www.executivehomes.com/wp-content/uploads/Cover3Oct17.jpg) !important;
   background-position: center center;
   background-size: cover;
+  height: 48.1vw;
+  max-height: 48.1vw;
+  min-height: 92vh;
 }
 
 #pg-w59e5f07586b5c-2>.panel-row-style {
   background-image: url(https://www.executivehomes.com/wp-content/uploads/Cover2Oct17.jpg) !important;
   background-position: center center;
   background-size: cover;
+  height: 48.1vw;
+  max-height: 48.1vw;
+  min-height: 92vh;
 }
 #main .hero {
   color: #eee;
