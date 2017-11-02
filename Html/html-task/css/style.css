@@ -167,9 +167,9 @@ body.home .cbp-af-header .nav>ul li.current_page_item>a {
 }
 .cbp-af-header .widget a {
   display: block;
-  color: #4c4c4c;
+  color: #fff;
   text-transform: uppercase;
-  background: #fbac4d;
+  background: #bf1e2e;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -555,6 +555,10 @@ body.home .cbp-af-header .nav>ul li.current_page_item>a {
   background-image: url(https://www.executivehomes.com/wp-content/uploads/home-section.jpg);
   background-position: center center;
   background-size: cover;
+  min-height: 500px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 #main .home-1 .so-widget-sow-editor {
@@ -562,7 +566,7 @@ body.home .cbp-af-header .nav>ul li.current_page_item>a {
   margin: 0 auto;
 }
 #main .home-1 h2, #content.details h2.entry-title {
-  font-size: 3.48rem;
+  font-size: 2.48rem;
   font-family: 'ArgentCF-Regular',serif;
   font-weight: 400;
 }
@@ -598,7 +602,7 @@ body.home .cbp-af-header .nav>ul li.current_page_item>a {
   z-index: 1;
   width: 36%;
   height: 2px;
-  background: #fbac4d;
+  background: #bf1e2e;
 }
 #main .home-1 .more {
   display: none;
@@ -622,6 +626,16 @@ body.home .cbp-af-header .nav>ul li.current_page_item>a {
   background: #4c4c4c;
   color: #9f9f9f;
 }
+a.social {
+  border: none !important;
+}
+a.social i {
+  /* color: #bf1e2e !important; */
+}
+a.social i:hover {
+  cursor: pointer;
+  color: #fff !important;
+}
 #site-info {
   background: #262626;
   color: #717171;
@@ -629,7 +643,6 @@ body.home .cbp-af-header .nav>ul li.current_page_item>a {
   padding: 2.3vw 0 1.8vw 0;
 }
 #site-info * {
-  font-size: 0.86rem;
   margin: 0;
   padding: 0;
   vertical-align: top;
