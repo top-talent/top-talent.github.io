@@ -203,6 +203,9 @@ body.home .cbp-af-header .nav>ul li.current_page_item>a {
   z-index: 2;
   position: relative;
 }
+.panel-grid {
+  background-color: #eee;
+}
 #pg-6-0, #pg-6-1, #pl-6 .so-panel, #pl-6 .so-panel:last-child {
   margin-bottom: 0;
 }
@@ -311,6 +314,9 @@ body.home .cbp-af-header .nav>ul li.current_page_item>a {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+}
+.owl-dots {
+  height: 0;
 }
 .owl-dot {
   display: inline-block;
