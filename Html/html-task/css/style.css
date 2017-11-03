@@ -57,9 +57,9 @@ body {
 .cbp-af-header.cbp-af-header-shrink .cbp-af-inner {
   height: 4.7vw;
   font-size: 14px;
-  box-shadow: 7px 7px 12px #ccc;
-  -webkit-box-shadow: 7px 7px 12px #ccc;
-  -khtml-box-shadow: 7px 7px 12px #ccc;
+  -webkit-box-shadow: 0 3px 5px #cccccc;
+  -moz-box-shadow: 0 3px 5px #cccccc;
+  box-shadow: 0 3px 5px #cccccc;
 }
 .cbp-af-header>.wrapper * {
   margin: 0;
@@ -556,7 +556,7 @@ body.home .cbp-af-header .nav>ul li.current_page_item>a {
   font-weight: 700;
 }
 #pg-6-2>.panel-row-style {
-  background-image: url(https://www.executivehomes.com/wp-content/uploads/home-section.jpg);
+  background-image: url(../images/home-section1.png);
   background-position: center center;
   background-size: cover;
   min-height: 500px;
@@ -570,9 +570,10 @@ body.home .cbp-af-header .nav>ul li.current_page_item>a {
   margin: 0 auto;
 }
 #main .home-1 h2, #content.details h2.entry-title {
-  font-size: 2.48rem;
+  font-size: 2.2rem;
   font-family: 'Open Sans',sans-serif;
   font-weight: 400;
+  color: #000;
 }
 #main .home-1 h2, #main .home-1 h3, #content.details h2.entry-title, #content.details h2.entry-title~h3 {
   margin: 0;
@@ -608,6 +609,12 @@ body.home .cbp-af-header .nav>ul li.current_page_item>a {
   height: 2px;
   background: #bf1e2e;
 }
+.section_title {
+  text-align: center !important;
+  width: 50% !important;
+  margin: 0 auto !important;
+  padding-bottom: 34px !important;
+}
 #main .home-1 .more {
   display: none;
 }
@@ -633,12 +640,31 @@ body.home .cbp-af-header .nav>ul li.current_page_item>a {
 a.social {
   border: none !important;
 }
+
 a.social i {
   /* color: #bf1e2e !important; */
 }
 a.social i:hover {
   cursor: pointer;
   color: #fff !important;
+}
+ul.phone {
+  font-size: 18px !important;
+  text-align: left;
+  padding: 0 !important;
+  font-family: 'Open Sans',sans-serif !important;
+}
+.phone_call {
+  display: block;
+}
+.phone_call h3 {
+  margin: 0;
+}
+.phone_num a {
+  color: #bf1e2e !important;
+  margin-left: 0 !important;
+  text-decoration: none;
+  font-size: 25px;
 }
 #site-info {
   background: #262626;
@@ -692,7 +718,7 @@ a.social i:hover {
 }
 #footer .social>ul>li>a {
   display: inline-block;
-  color: #777;
+  color: #a8a7a7;
   margin-left: 7px;
 }
 #footer .social>ul>li>a>i:hover{
@@ -718,7 +744,7 @@ a.social i:hover {
   display: block;
   font-size: 20px;
   text-decoration: none;
-  color: #777;
+  color: #a8a7a7;
 }
 #footer .nav>ul>li>ul>li {
   display: block;
@@ -736,7 +762,7 @@ a.social i:hover {
   text-transform: uppercase;
   font-size: 12px;
   text-decoration: none;
-  color: #777;
+  color: #a8a7a7;
 }
 #footer .wrapper {
   border-top-width: .2vw;
@@ -759,7 +785,7 @@ a.social i:hover {
   float: left;
 }
 #site-info .nav>ul {
-  margin-left: 6.9vw;
+  margin-left: 13.5vw;
   display: block;
   float: left;
 }
@@ -868,4 +894,60 @@ a.social i:hover {
     line-height: 3.9vw;
     font-size: 24px;
     padding-left: 20px;
+}
+
+
+
+/* back-top */
+.cd-top {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  position: fixed;
+  bottom: 40px;
+  right: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  /* image replacement properties */
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+  background: #18bc9c url(../images/cd-top-arrow.svg) no-repeat center 50%;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: opacity .3s 0s, visibility 0s .3s;
+  -moz-transition: opacity .3s 0s, visibility 0s .3s;
+  transition: opacity .3s 0s, visibility 0s .3s;
+}
+.cd-top.cd-is-visible, .cd-top.cd-fade-out, .no-touch .cd-top:hover {
+  -webkit-transition: opacity .3s 0s, visibility 0s 0s;
+  -moz-transition: opacity .3s 0s, visibility 0s 0s;
+  transition: opacity .3s 0s, visibility 0s 0s;
+}
+.cd-top.cd-is-visible {
+  /* the button becomes visible */
+  visibility: visible;
+  opacity: 1;
+  border-radius: 5px;
+}
+.cd-top.cd-fade-out {
+  /* if the user keeps scrolling down, the button is out of focus and becomes less visible */
+  opacity: .5;
+}
+.no-touch .cd-top:hover {
+  background-color: #33c4a8;
+  opacity: 1;
+}
+@media only screen and (min-width: 768px) {
+  .cd-top {
+    right: 20px;
+    bottom: 20px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .cd-top {
+    height: 60px;
+    width: 60px;
+    right: 30px;
+    bottom: 30px;
+  }
 }
