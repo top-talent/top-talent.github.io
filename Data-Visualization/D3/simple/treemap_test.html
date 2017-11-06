@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<!--
+Generic treemap, based on http://bost.ocks.org/mike/treemap/
+
+-->
+<html>
+<head>
+<meta charset="utf-8">
+<title>(% title %)</title>
+<style>
+
+* {
+ font-family: sans-serif, serif;
+}
+
+#chart {
+  background: #fff;
+  font-family: sans-serif, serif;
+}
+
+.title {
+    font-weight: bold;
+    font-size: 24px;
+    text-align: center;
+    margin-top: 6px;
+    margin-bottom: 6px;
+}
+text {
+  pointer-events: none;
+}
+
+.grandparent text {
+  font-weight: bold;
+}
+
+rect {
+  fill: none;
+  stroke: #fff;
+}
+
+rect.parent,
+.grandparent rect {
+  stroke-width: 2px;
+}
+
+rect.parent {
+    pointer-events: none;
+}
+
+.grandparent rect {
+  fill: orange;
+}
+
+.grandparent:hover rect {
+  fill: #ee9700;
+}
+
+.children rect.parent,
+.grandparent rect {
+  cursor: pointer;
+}
+
+.children rect.parent {
+  fill: #bbb;
+  fill-opacity: .5;
+}
+
+.children:hover rect.child {
+  fill: #bbb;
+}
+
+</style>
+</head>
+
+<body>
+<div id="chart"></div>
+
+<script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+<script src="https://d3js.org/d3.v3.min.js"></script>
+<script>
+
+
+window.addEventListener('message', function(e) {
+    var opts = e.data.opts,
+        data = e.data.data;
+
+    return main(opts, data);
+});
+
+var defaults = {
+    margin: {top: 24, right: 0, bottom: 0, left: 0},
+    rootname: "TOP",
+    format: ",d",
+    title: "",
+    width: (window.innerWidth)/2,
+    height: (window.innerHeight)*2/3
+};
+
+reinitGraph();
+d3.select(window).on("resize", reinitGraph);
+function reinitGraph() {
+	$("#chart *").remove();
+	defaults.width = $('#chart').width();
+  defaults.height = window.innerHeight*2/3;
+
+	    res = [{"key":"Afghanistan","region":"Asia","subregion":"Southern Asia","value":100},{"key":"\u0413\u2026land Islands","region":"Europe","subregion":"Northern Europe","value":100},{"key":"Albania","region":"Europe","subregion":"Southern Europe","value":100},{"key":"Algeria","region":"Africa","subregion":"Northern Africa","value":100},{"key":"American Samoa","region":"Oceania","subregion":"Polynesia","value":100},{"key":"Andorra","region":"Europe","subregion":"Southern Europe","value":100},{"key":"Angola","region":"Africa","subregion":"Middle Africa","value":100},{"key":"Anguilla","region":"Americas","subregion":"Caribbean","value":100},{"key":"Antarctica","region":"","subregion":"","value":100},{"key":"Antigua and Barbuda","region":"Americas","subregion":"Caribbean","value":100},{"key":"Argentina","region":"Americas","subregion":"South America","value":100},{"key":"Armenia","region":"Asia","subregion":"Western Asia","value":100},{"key":"Aruba","region":"Americas","subregion":"Caribbean","value":100},{"key":"Australia","region":"Oceania","subregion":"Australia and New Zealand","value":100},{"key":"Austria","region":"Europe","subregion":"Western Europe","value":100},{"key":"Azerbaijan","region":"Asia","subregion":"Western Asia","value":100},{"key":"Bahamas","region":"Americas","subregion":"Caribbean","value":100},{"key":"Bahrain","region":"Asia","subregion":"Western Asia","value":100},{"key":"Bangladesh","region":"Asia","subregion":"Southern Asia","value":100},{"key":"Barbados","region":"Americas","subregion":"Caribbean","value":100},{"key":"Belarus","region":"Europe","subregion":"Eastern Europe","value":100},{"key":"Belgium","region":"Europe","subregion":"Western Europe","value":100},{"key":"Belize","region":"Americas","subregion":"Central America","value":100},{"key":"Benin","region":"Africa","subregion":"Western Africa","value":100},{"key":"Bermuda","region":"Americas","subregion":"Northern America","value":100},{"key":"Bhutan","region":"Asia","subregion":"Southern Asia","value":100},{"key":"Bolivia","region":"Americas","subregion":"South America","value":100},{"key":"Bonaire","region":"Americas","subregion":"Caribbean","value":100},{"key":"Bosnia and Herzegovina","region":"Europe","subregion":"Southern Europe","value":100},{"key":"Botswana","region":"Africa","subregion":"Southern Africa","value":100},{"key":"Bouvet Island","region":"","subregion":"","value":100},{"key":"Brazil","region":"Americas","subregion":"South America","value":100},{"key":"British Indian Ocean Territory","region":"Africa","subregion":"Eastern Africa","value":100},{"key":"British Virgin Islands","region":"Americas","subregion":"Caribbean","value":100},{"key":"Brunei","region":"Asia","subregion":"South-Eastern Asia","value":100},{"key":"Bulgaria","region":"Europe","subregion":"Eastern Europe","value":100},{"key":"Burkina Faso","region":"Africa","subregion":"Western Africa","value":100},{"key":"Burundi","region":"Africa","subregion":"Eastern Africa","value":100},{"key":"Cambodia","region":"Asia","subregion":"South-Eastern Asia","value":100},{"key":"Cameroon","region":"Africa","subregion":"Middle Africa","value":100},{"key":"Canada","region":"Americas","subregion":"Northern America","value":100},{"key":"Cape Verde","region":"Africa","subregion":"Western Africa","value":100},{"key":"Cayman Islands","region":"Americas","subregion":"Caribbean","value":100},{"key":"Central African Republic","region":"Africa","subregion":"Middle Africa","value":100},{"key":"Chad","region":"Africa","subregion":"Middle Africa","value":100},{"key":"Chile","region":"Americas","subregion":"South America","value":100},{"key":"China","region":"Asia","subregion":"Eastern Asia","value":100},{"key":"Christmas Island","region":"Oceania","subregion":"Australia and New Zealand","value":100},{"key":"Cocos (Keeling) Islands","region":"Oceania","subregion":"Australia and New Zealand","value":100},{"key":"Colombia","region":"Americas","subregion":"South America","value":100},{"key":"Comoros","region":"Africa","subregion":"Eastern Africa","value":100},{"key":"Republic of the Congo","region":"Africa","subregion":"Middle Africa","value":100},{"key":"Democratic Republic of the Congo","region":"Africa","subregion":"Middle Africa","value":100},{"key":"Cook Islands","region":"Oceania","subregion":"Polynesia","value":100},{"key":"Costa Rica","region":"Americas","subregion":"Central America","value":100},{"key":"C\u0413\u0491te d'Ivoire","region":"Africa","subregion":"Western Africa","value":100},{"key":"Croatia","region":"Europe","subregion":"Southern Europe","value":100},{"key":"Cuba","region":"Americas","subregion":"Caribbean","value":100},{"key":"Cura\u0413\u00a7ao","region":"Americas","subregion":"Caribbean","value":100},{"key":"Cyprus","region":"Asia","subregion":"Western Asia","value":100},{"key":"Czech Republic","region":"Europe","subregion":"Eastern Europe","value":100},{"key":"Denmark","region":"Europe","subregion":"Northern Europe","value":100},{"key":"Djibouti","region":"Africa","subregion":"Eastern Africa","value":100},{"key":"Dominica","region":"Americas","subregion":"Caribbean","value":100},{"key":"Dominican Republic","region":"Americas","subregion":"Caribbean","value":100},{"key":"Ecuador","region":"Americas","subregion":"South America","value":100},{"key":"Egypt","region":"Africa","subregion":"Northern Africa","value":100},{"key":"El Salvador","region":"Americas","subregion":"Central America","value":100},{"key":"Equatorial Guinea","region":"Africa","subregion":"Middle Africa","value":100},{"key":"Eritrea","region":"Africa","subregion":"Eastern Africa","value":100},{"key":"Estonia","region":"Europe","subregion":"Northern Europe","value":100},{"key":"Ethiopia","region":"Africa","subregion":"Eastern Africa","value":100},{"key":"Falkland Islands","region":"Americas","subregion":"South America","value":100},{"key":"Faroe Islands","region":"Europe","subregion":"Northern Europe","value":100},{"key":"Fiji","region":"Oceania","subregion":"Melanesia","value":100},{"key":"Finland","region":"Europe","subregion":"Northern Europe","value":100},{"key":"France","region":"Europe","subregion":"Western Europe","value":100},{"key":"French Guiana","region":"Americas","subregion":"South America","value":100},{"key":"French Polynesia","region":"Oceania","subregion":"Polynesia","value":100},{"key":"French Southern and Antarctic Lands","region":"","subregion":"","value":100},{"key":"Gabon","region":"Africa","subregion":"Middle Africa","value":100},{"key":"Gambia","region":"Africa","subregion":"Western Africa","value":100},{"key":"Georgia","region":"Asia","subregion":"Western Asia","value":100},{"key":"Germany","region":"Europe","subregion":"Western Europe","value":100},{"key":"Ghana","region":"Africa","subregion":"Western Africa","value":100},{"key":"Gibraltar","region":"Europe","subregion":"Southern Europe","value":100},{"key":"Greece","region":"Europe","subregion":"Southern Europe","value":100},{"key":"Greenland","region":"Americas","subregion":"Northern America","value":100},{"key":"Grenada","region":"Americas","subregion":"Caribbean","value":100},{"key":"Guadeloupe","region":"Americas","subregion":"Caribbean","value":100},{"key":"Guam","region":"Oceania","subregion":"Micronesia","value":100},{"key":"Guatemala","region":"Americas","subregion":"Central America","value":100},{"key":"Guernsey","region":"Europe","subregion":"Northern Europe","value":100},{"key":"Guinea","region":"Africa","subregion":"Western Africa","value":100},{"key":"Guinea-Bissau","region":"Africa","subregion":"Western Africa","value":100},{"key":"Guyana","region":"Americas","subregion":"South America","value":100},{"key":"Haiti","region":"Americas","subregion":"Caribbean","value":100},{"key":"Heard Island and McDonald Islands","region":"","subregion":"","value":100},{"key":"Vatican City","region":"Europe","subregion":"Southern Europe","value":100},{"key":"Honduras","region":"Americas","subregion":"Central America","value":100},{"key":"Hong Kong","region":"Asia","subregion":"Eastern Asia","value":100},{"key":"Hungary","region":"Europe","subregion":"Eastern Europe","value":100},{"key":"Iceland","region":"Europe","subregion":"Northern Europe","value":100},{"key":"India","region":"Asia","subregion":"Southern Asia","value":100},{"key":"Indonesia","region":"Asia","subregion":"South-Eastern Asia","value":100},{"key":"Iran","region":"Asia","subregion":"Southern Asia","value":100},{"key":"Iraq","region":"Asia","subregion":"Western Asia","value":100},{"key":"Ireland","region":"Europe","subregion":"Northern Europe","value":100},{"key":"Isle of Man","region":"Europe","subregion":"Northern Europe","value":100},{"key":"Israel","region":"Asia","subregion":"Western Asia","value":100},{"key":"Italy","region":"Europe","subregion":"Southern Europe","value":100},{"key":"Jamaica","region":"Americas","subregion":"Caribbean","value":100},{"key":"Japan","region":"Asia","subregion":"Eastern Asia","value":100},{"key":"Jersey","region":"Europe","subregion":"Northern Europe","value":100},{"key":"Jordan","region":"Asia","subregion":"Western Asia","value":100},{"key":"Kazakhstan","region":"Asia","subregion":"Central Asia","value":100},{"key":"Kenya","region":"Africa","subregion":"Eastern Africa","value":100},{"key":"Kiribati","region":"Oceania","subregion":"Micronesia","value":100},{"key":"Kuwait","region":"Asia","subregion":"Western Asia","value":100},{"key":"Kyrgyzstan","region":"Asia","subregion":"Central Asia","value":100},{"key":"Laos","region":"Asia","subregion":"South-Eastern Asia","value":100},{"key":"Latvia","region":"Europe","subregion":"Northern Europe","value":100},{"key":"Lebanon","region":"Asia","subregion":"Western Asia","value":100},{"key":"Lesotho","region":"Africa","subregion":"Southern Africa","value":100},{"key":"Liberia","region":"Africa","subregion":"Western Africa","value":100},{"key":"Libya","region":"Africa","subregion":"Northern Africa","value":100},{"key":"Liechtenstein","region":"Europe","subregion":"Western Europe","value":100},{"key":"Lithuania","region":"Europe","subregion":"Northern Europe","value":100},{"key":"Luxembourg","region":"Europe","subregion":"Western Europe","value":100},{"key":"Macau","region":"Asia","subregion":"Eastern Asia","value":100},{"key":"Macedonia","region":"Europe","subregion":"Southern Europe","value":100},{"key":"Madagascar","region":"Africa","subregion":"Eastern Africa","value":100},{"key":"Malawi","region":"Africa","subregion":"Eastern Africa","value":100},{"key":"Malaysia","region":"Asia","subregion":"South-Eastern Asia","value":100},{"key":"Maldives","region":"Asia","subregion":"Southern Asia","value":100},{"key":"Mali","region":"Africa","subregion":"Western Africa","value":100},{"key":"Malta","region":"Europe","subregion":"Southern Europe","value":100},{"key":"Marshall Islands","region":"Oceania","subregion":"Micronesia","value":100},{"key":"Martinique","region":"Americas","subregion":"Caribbean","value":100},{"key":"Mauritania","region":"Africa","subregion":"Western Africa","value":100},{"key":"Mauritius","region":"Africa","subregion":"Eastern Africa","value":100},{"key":"Mayotte","region":"Africa","subregion":"Eastern Africa","value":100},{"key":"Mexico","region":"Americas","subregion":"Central America","value":100},{"key":"Micronesia","region":"Oceania","subregion":"Micronesia","value":100},{"key":"Moldova","region":"Europe","subregion":"Eastern Europe","value":100},{"key":"Monaco","region":"Europe","subregion":"Western Europe","value":100},{"key":"Mongolia","region":"Asia","subregion":"Eastern Asia","value":100},{"key":"Montenegro","region":"Europe","subregion":"Southern Europe","value":100},{"key":"Montserrat","region":"Americas","subregion":"Caribbean","value":100},{"key":"Morocco","region":"Africa","subregion":"Northern Africa","value":100},{"key":"Mozambique","region":"Africa","subregion":"Eastern Africa","value":100},{"key":"Myanmar","region":"Asia","subregion":"South-Eastern Asia","value":100},{"key":"Namibia","region":"Africa","subregion":"Southern Africa","value":100},{"key":"Nauru","region":"Oceania","subregion":"Micronesia","value":100},{"key":"Nepal","region":"Asia","subregion":"Southern Asia","value":100},{"key":"Netherlands","region":"Europe","subregion":"Western Europe","value":100},{"key":"New Caledonia","region":"Oceania","subregion":"Melanesia","value":100},{"key":"New Zealand","region":"Oceania","subregion":"Australia and New Zealand","value":100},{"key":"Nicaragua","region":"Americas","subregion":"Central America","value":100},{"key":"Niger","region":"Africa","subregion":"Western Africa","value":100},{"key":"Nigeria","region":"Africa","subregion":"Western Africa","value":100},{"key":"Niue","region":"Oceania","subregion":"Polynesia","value":100},{"key":"Norfolk Island","region":"Oceania","subregion":"Australia and New Zealand","value":100},{"key":"North Korea","region":"Asia","subregion":"Eastern Asia","value":100},{"key":"Northern Mariana Islands","region":"Oceania","subregion":"Micronesia","value":100},{"key":"Norway","region":"Europe","subregion":"Northern Europe","value":100},{"key":"Oman","region":"Asia","subregion":"Western Asia","value":100},{"key":"Pakistan","region":"Asia","subregion":"Southern Asia","value":100},{"key":"Palau","region":"Oceania","subregion":"Micronesia","value":100},{"key":"Palestine","region":"Asia","subregion":"Western Asia","value":100},{"key":"Panama","region":"Americas","subregion":"Central America","value":100},{"key":"Papua New Guinea","region":"Oceania","subregion":"Melanesia","value":100},{"key":"Paraguay","region":"Americas","subregion":"South America","value":100},{"key":"Peru","region":"Americas","subregion":"South America","value":100},{"key":"Philippines","region":"Asia","subregion":"South-Eastern Asia","value":100},{"key":"Pitcairn Islands","region":"Oceania","subregion":"Polynesia","value":100},{"key":"Poland","region":"Europe","subregion":"Eastern Europe","value":100},{"key":"Portugal","region":"Europe","subregion":"Southern Europe","value":100},{"key":"Puerto Rico","region":"Americas","subregion":"Caribbean","value":100},{"key":"Qatar","region":"Asia","subregion":"Western Asia","value":100},{"key":"Republic of Kosovo","region":"Europe","subregion":"Eastern Europe","value":100},{"key":"R\u0413\u00a9union","region":"Africa","subregion":"Eastern Africa","value":100},{"key":"Romania","region":"Europe","subregion":"Eastern Europe","value":100},{"key":"Russia","region":"Europe","subregion":"Eastern Europe","value":100},{"key":"Rwanda","region":"Africa","subregion":"Eastern Africa","value":100},{"key":"Saint Barth\u0413\u00a9lemy","region":"Americas","subregion":"Caribbean","value":100},{"key":"Saint Helena","region":"Africa","subregion":"Western Africa","value":100},{"key":"Saint Kitts and Nevis","region":"Americas","subregion":"Caribbean","value":100},{"key":"Saint Lucia","region":"Americas","subregion":"Caribbean","value":100},{"key":"Saint Martin","region":"Americas","subregion":"Caribbean","value":100},{"key":"Saint Pierre and Miquelon","region":"Americas","subregion":"Northern America","value":100},{"key":"Saint Vincent and the Grenadines","region":"Americas","subregion":"Caribbean","value":100},{"key":"Samoa","region":"Oceania","subregion":"Polynesia","value":100},{"key":"San Marino","region":"Europe","subregion":"Southern Europe","value":100},{"key":"S\u0413\u0408o Tom\u0413\u00a9 and Pr\u0413\u00adncipe","region":"Africa","subregion":"Middle Africa","value":100},{"key":"Saudi Arabia","region":"Asia","subregion":"Western Asia","value":100},{"key":"Senegal","region":"Africa","subregion":"Western Africa","value":100},{"key":"Serbia","region":"Europe","subregion":"Southern Europe","value":100},{"key":"Seychelles","region":"Africa","subregion":"Eastern Africa","value":100},{"key":"Sierra Leone","region":"Africa","subregion":"Western Africa","value":100},{"key":"Singapore","region":"Asia","subregion":"South-Eastern Asia","value":100},{"key":"Sint Maarten","region":"Americas","subregion":"Caribbean","value":100},{"key":"Slovakia","region":"Europe","subregion":"Eastern Europe","value":100},{"key":"Slovenia","region":"Europe","subregion":"Southern Europe","value":100},{"key":"Solomon Islands","region":"Oceania","subregion":"Melanesia","value":100},{"key":"Somalia","region":"Africa","subregion":"Eastern Africa","value":100},{"key":"South Africa","region":"Africa","subregion":"Southern Africa","value":100},{"key":"South Georgia","region":"Americas","subregion":"South America","value":100},{"key":"South Korea","region":"Asia","subregion":"Eastern Asia","value":100},{"key":"South Sudan","region":"Africa","subregion":"Middle Africa","value":100},{"key":"Spain","region":"Europe","subregion":"Southern Europe","value":100},{"key":"Sri Lanka","region":"Asia","subregion":"Southern Asia","value":100},{"key":"Sudan","region":"Africa","subregion":"Northern Africa","value":100},{"key":"Suriname","region":"Americas","subregion":"South America","value":100},{"key":"Svalbard and Jan Mayen","region":"Europe","subregion":"Northern Europe","value":100},{"key":"Swaziland","region":"Africa","subregion":"Southern Africa","value":100},{"key":"Sweden","region":"Europe","subregion":"Northern Europe","value":100},{"key":"Switzerland","region":"Europe","subregion":"Western Europe","value":100},{"key":"Syria","region":"Asia","subregion":"Western Asia","value":100},{"key":"Taiwan","region":"Asia","subregion":"Eastern Asia","value":100},{"key":"Tajikistan","region":"Asia","subregion":"Central Asia","value":100},{"key":"Tanzania","region":"Africa","subregion":"Eastern Africa","value":100},{"key":"Thailand","region":"Asia","subregion":"South-Eastern Asia","value":100},{"key":"Timor-Leste","region":"Asia","subregion":"South-Eastern Asia","value":100},{"key":"Togo","region":"Africa","subregion":"Western Africa","value":100},{"key":"Tokelau","region":"Oceania","subregion":"Polynesia","value":100},{"key":"Tonga","region":"Oceania","subregion":"Polynesia","value":100},{"key":"Trinidad and Tobago","region":"Americas","subregion":"Caribbean","value":100},{"key":"Tunisia","region":"Africa","subregion":"Northern Africa","value":100},{"key":"Turkey","region":"Asia","subregion":"Western Asia","value":100},{"key":"Turkmenistan","region":"Asia","subregion":"Central Asia","value":100},{"key":"Turks and Caicos Islands","region":"Americas","subregion":"Caribbean","value":100},{"key":"Tuvalu","region":"Oceania","subregion":"Polynesia","value":100},{"key":"Uganda","region":"Africa","subregion":"Eastern Africa","value":100},{"key":"Ukraine","region":"Europe","subregion":"Eastern Europe","value":100},{"key":"United Arab Emirates","region":"Asia","subregion":"Western Asia","value":100},{"key":"United Kingdom","region":"Europe","subregion":"Northern Europe","value":100},{"key":"United States","region":"Americas","subregion":"Northern America","value":100},{"key":"United States Minor Outlying Islands","region":"Americas","subregion":"Northern America","value":100},{"key":"United States Virgin Islands","region":"Americas","subregion":"Caribbean","value":100},{"key":"Uruguay","region":"Americas","subregion":"South America","value":100},{"key":"Uzbekistan","region":"Asia","subregion":"Central Asia","value":100},{"key":"Vanuatu","region":"Oceania","subregion":"Melanesia","value":100},{"key":"Venezuela","region":"Americas","subregion":"South America","value":100},{"key":"Vietnam","region":"Asia","subregion":"South-Eastern Asia","value":100},{"key":"Wallis and Futuna","region":"Oceania","subregion":"Polynesia","value":100},{"key":"Western Sahara","region":"Africa","subregion":"Northern Africa","value":100},{"key":"Yemen","region":"Asia","subregion":"Western Asia","value":100},{"key":"Zambia","region":"Africa","subregion":"Eastern Africa","value":100},{"key":"Zimbabwe","region":"Africa","subregion":"Eastern Africa","value":100}];
+    // d3.json("countries.json", function(err, res) {
+    //     if (!err) {
+            console.log(res);
+            var data = d3.nest().key(function(d) { return d.region; }).key(function(d) { return d.subregion; }).entries(res);
+            main({title: "World Population"}, {key: "World", values: data});
+    //    }
+    //});
+}
+
+function main(o, data) {
+  var root,
+      opts = $.extend(true, {}, defaults, o),
+      formatNumber = d3.format(opts.format),
+      rname = opts.rootname,
+      margin = opts.margin,
+      theight = 36 + 16;
+
+  //$('#chart').width(opts.width).height(opts.height);
+  var width = opts.width - margin.left - margin.right,
+      height = opts.height - margin.top - margin.bottom - theight,
+      transitioning;
+  
+  var color = d3.scale.category20c();
+  
+  var x = d3.scale.linear()
+      .domain([0, width])
+      .range([0, width]);
+  
+  var y = d3.scale.linear()
+      .domain([0, height])
+      .range([0, height]);
+  
+  var treemap = d3.layout.treemap()
+      .children(function(d, depth) { return depth ? null : d._children; })
+      .sort(function(a, b) { return a.value - b.value; })
+      .ratio(height / width * 0.5 * (1 + Math.sqrt(5)))
+      .round(false);
+  
+  var svg = d3.select("#chart").append("svg")
+      .attr("width", width + margin.left + margin.right)
+      .attr("height", height + margin.bottom + margin.top)
+      .style("margin-left", -margin.left + "px")
+      .style("margin.right", -margin.right + "px")
+    .append("g")
+      .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
+      .style("shape-rendering", "crispEdges");
+  
+  var grandparent = svg.append("g")
+      .attr("class", "grandparent");
+  
+  grandparent.append("rect")
+      .attr("y", -margin.top)
+      .attr("width", width)
+      .attr("height", margin.top);
+  
+  grandparent.append("text")
+      .attr("x", 6)
+      .attr("y", 6 - margin.top)
+      .attr("dy", ".75em");
+
+  if (opts.title) {
+    $("#chart").prepend("<p class='title'>" + opts.title + "</p>");
+  }
+  if (data instanceof Array) {
+    root = { key: rname, values: data };
+  } else {
+    root = data;
+  }
+    
+  initialize(root);
+  accumulate(root);
+  layout(root);
+  console.log(root);
+  display(root);
+
+  if (window.parent !== window) {
+    var myheight = document.documentElement.scrollHeight || document.body.scrollHeight;
+    window.parent.postMessage({height: myheight}, '*');
+  }
+
+  function initialize(root) {
+    root.x = root.y = 0;
+    root.dx = width;
+    root.dy = height;
+    root.depth = 0;
+  }
+
+  // Aggregate the values for internal nodes. This is normally done by the
+  // treemap layout, but not here because of our custom implementation.
+  // We also take a snapshot of the original children (_children) to avoid
+  // the children being overwritten when when layout is computed.
+  function accumulate(d) {
+    return (d._children = d.values)
+        ? d.value = d.values.reduce(function(p, v) { return p + accumulate(v); }, 0)
+        : d.value;
+  }
+
+  // Compute the treemap layout recursively such that each group of siblings
+  // uses the same size (1×1) rather than the dimensions of the parent cell.
+  // This optimizes the layout for the current zoom state. Note that a wrapper
+  // object is created for the parent node for each group of siblings so that
+  // the parent’s dimensions are not discarded as we recurse. Since each group
+  // of sibling was laid out in 1×1, we must rescale to fit using absolute
+  // coordinates. This lets us use a viewport to zoom.
+  function layout(d) {
+    if (d._children) {
+      treemap.nodes({_children: d._children});
+      d._children.forEach(function(c) {
+        c.x = d.x + c.x * d.dx;
+        c.y = d.y + c.y * d.dy;
+        c.dx *= d.dx;
+        c.dy *= d.dy;
+        c.parent = d;
+        layout(c);
+      });
+    }
+  }
+
+  function display(d) {
+    grandparent
+        .datum(d.parent)
+        .on("click", transition)
+      .select("text")
+        .text(name(d));
+
+    var g1 = svg.insert("g", ".grandparent")
+        .datum(d)
+        .attr("class", "depth");
+
+    var g = g1.selectAll("g")
+        .data(d._children)
+      .enter().append("g");
+
+    g.filter(function(d) { return d._children; })
+        .classed("children", true)
+        .on("click", transition);
+
+    var children = g.selectAll(".child")
+        .data(function(d) { return d._children || [d]; })
+      .enter().append("g");
+
+    children.append("rect")
+        .attr("class", "child")
+        .call(rect)
+      .append("title")
+        .text(function(d) { return d.key; // + " (" + formatNumber(d.value) + ")"; 
+        });
+    children.append("text")
+        .attr("class", "ctext")
+        .text(function(d) { return d.key; })
+        .call(text2);
+
+    g.append("rect")
+        .attr("class", "parent")
+        .call(rect);
+
+    var t = g.append("text")
+        .attr("class", "ptext")
+        .attr("dy", ".75em")
+
+    t.append("tspan")
+        .text(function(d) { return d.key; });
+    t.append("tspan")
+        .attr("dy", "1.0em")
+        .text(function(d) { return ''; //formatNumber(d.value); 
+        });
+    t.call(text);
+
+    g.selectAll("rect")
+        .style("fill", function(d) { return color(d.key); });
+
+    function transition(d) {
+      if (transitioning || !d) return;
+      transitioning = true;
+
+      var g2 = display(d),
+          t1 = g1.transition().duration(750),
+          t2 = g2.transition().duration(750);
+
+      // Update the domain only after entering new elements.
+      x.domain([d.x, d.x + d.dx]);
+      y.domain([d.y, d.y + d.dy]);
+
+      // Enable anti-aliasing during the transition.
+      svg.style("shape-rendering", null);
+
+      // Draw child nodes on top of parent nodes.
+      svg.selectAll(".depth").sort(function(a, b) { return a.depth - b.depth; });
+
+      // Fade-in entering text.
+      g2.selectAll("text").style("fill-opacity", 0);
+
+      // Transition to the new view.
+      t1.selectAll(".ptext").call(text).style("fill-opacity", 0);
+      t1.selectAll(".ctext").call(text2).style("fill-opacity", 0);
+      t2.selectAll(".ptext").call(text).style("fill-opacity", 1);
+      t2.selectAll(".ctext").call(text2).style("fill-opacity", 1);
+      t1.selectAll("rect").call(rect);
+      t2.selectAll("rect").call(rect);
+
+      // Remove the old node when the transition is finished.
+      t1.remove().each("end", function() {
+        svg.style("shape-rendering", "crispEdges");
+        transitioning = false;
+      });
+    }
+
+    return g;
+  }
+
+  function text(text) {
+    text.selectAll("tspan")
+        .attr("x", function(d) { return x(d.x) + 6; })
+    text.attr("x", function(d) { return x(d.x) + 6; })
+        .attr("y", function(d) { return y(d.y) + 6; })
+        .style("opacity", function(d) { return this.getComputedTextLength() < x(d.x + d.dx) - x(d.x) ? 1 : 0; });
+  }
+
+  function text2(text) {
+    text.attr("x", function(d) { return x(d.x + d.dx) - this.getComputedTextLength() - 6; })
+        .attr("y", function(d) { return y(d.y + d.dy) - 6; })
+        .style("opacity", function(d) { return this.getComputedTextLength() < x(d.x + d.dx) - x(d.x) ? 1 : 0; });
+  }
+
+  function rect(rect) {
+    rect.attr("x", function(d) { return x(d.x); })
+        .attr("y", function(d) { return y(d.y); })
+        .attr("width", function(d) { return x(d.x + d.dx) - x(d.x); })
+        .attr("height", function(d) { return y(d.y + d.dy) - y(d.y); });
+  }
+
+  function name(d) {
+    return d.parent
+        ? name(d.parent) + " / " + d.key // + " (fgh" + formatNumber(d.value) + ")"
+        : d.key; // + " (" + formatNumber(d.value) + ")";
+  }
+}
+
+if (window.location.hash === "") {
+    reinitGraph();
+}
+
+</script>
+</body>
+</html>

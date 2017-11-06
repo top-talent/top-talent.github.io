@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Venn diagram of Venn diagrams</title>
+<style>
+* {
+ font-family: sans-serif, serif;
+}
+
+body {
+font-size : 16px;
+font-family: sans-serif, serif;
+}
+</style>
+</head>
+
+<body>
+    <div style="display: inline-block;">
+        <div class="text" style="text-align:center;">Title of venn diagram</div>
+        <div id="venn">
+        </div>
+    </div>
+</body>
+
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script src="http://benfred.github.io/venn.js/venn.js"></script>
+<script>
+var sets = [{"sets":["Information"],"size":12},{"sets":["Things That Overlap"],"size":12},{"sets":["Circles"],"size":12},{"sets":["Information","Things That Overlap"],"size":4,"label":"Redundancy"},{"sets":["Information","Circles"],"size":4,"label":"Pie Charts"},{"sets":["Things That Overlap","Circles"],"size":4},{"sets":["Information","Things That Overlap","Circles"],"size":2}];
+
+function resize(){
+
+    var w = window.innerWidth,
+        h = window.innerHeight;
+
+    var chart = venn.VennDiagram()
+        chart.wrap(false) 
+        .width(w)
+        .height(h);
+
+    var div = d3.select("#venn").datum(sets).call(chart);
+    div.selectAll("text").style("fill", "white");
+    div.selectAll(".venn-circle path").style("fill-opacity", .6);
+
+}
+
+resize();
+d3.select(window).on("resize", resize);
+
+</script>
+</html>

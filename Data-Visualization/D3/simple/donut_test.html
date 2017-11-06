@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+
+* {
+ font-family: sans-serif, serif;
+}
+
+.arc text {
+  font: 10px sans-serif, serif;
+  text-anchor: middle;
+}
+
+.arc path {
+  stroke: #fff;
+}
+
+</style>
+<body>
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script src="http://d3js.org/colorbrewer.v1.min.js"></script>
+<script>
+var data = [{"label":"a","value":1},{"label":"b","value":2},{"label":"c","value":3},{"label":"d","value":4}] /*[
+    {"label": "<5",    "value": "2704659"},
+    {"label": "5-13",  "value": "4499890"},
+    {"label": "14-17", "value": "2159981"},
+    {"label": "18-24", "value": "3853788"},
+    {"label": "25-44", "value": "14106543"},
+    {"label": "45-64", "value": "8819342"},
+    {"label": "?65",   "value": "612463"}
+];/**/
+
+data.forEach(type);
+
+var margin = {"top": 50};
+
+var color = d3.scaleOrdinal()
+    .range(d3.schemeCategory20c);
+
+var svg = d3.select("body").append("svg");
+
+var pie = d3.pie()
+    .sort(null)
+    .value(function(d) { return d.value; });
+
+function resize() {
+
+var width = window.innerWidth,
+    height = window.innerHeight,
+    radius = Math.min(width, height) / 3;
+
+var arc = d3.arc()
+    .outerRadius(radius - 10)
+    .innerRadius(radius - 70);
+
+  d3.select(".gdraw").remove();
+var draw = svg.attr("width", width)
+    .attr("height", height)
+    .append("g")
+    .attr("class","gdraw")
+    .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
+
+  var chart_title = 'The title of a donut chart';
+  draw.append("text")
+    .attr("x", 0)             
+    .attr("y",  -height / 2 + margin.top/2)
+    .attr("text-anchor", "middle")  
+    .style("font-size", "16px") 
+    //.style("text-decoration", "underline")  
+    .text(chart_title);
+
+  // d3.csv("data.csv", type, function(error, data) {
+  //   if (error) throw error;
+
+  var g = draw.selectAll(".arc")
+      .data(pie(data))
+    .enter().append("g")
+      .attr("class", "arc");
+
+  g.append("path")
+      .attr("d", arc)
+      .style("fill", function(d) { return color(d.data.label); });
+
+  g.append("text")
+      .attr("transform", function(d) { return "translate(" + arc.centroid(d) + ")"; })
+      .attr("dy", ".35em")
+      .text(function(d) { return d.data.label; });
+}  
+
+resize();
+d3.select(window).on("resize", resize);
+
+function type(d) {
+    //console.log(d);
+  d.value = +d.value;
+  return d;
+}
+    
+</script>
