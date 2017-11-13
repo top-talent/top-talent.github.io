@@ -606,12 +606,6 @@ display: table;
     width: 100%;
     overflow: hidden;
   }
-  .about-grid img{
-    width: 5%;
-    position: absolute;
-    top: 61%;
-    left: 47.5%;
-  }
   .grid-1{
     width: 50%;
     background-image: url(../../images/about/grid-1.png);
@@ -621,6 +615,7 @@ display: table;
     max-height: 48.1vw;
     min-height: 62vh;
     text-decoration: none;
+    opacity: 0.5;
   }
   .grid-border{
     width: calc(100% - 20px);
@@ -630,14 +625,14 @@ display: table;
   }
   .grid-text{
     width: 60%;
-    margin: 92px auto;
+    margin: 85px auto;
     color: #fff;
   }
   .grid-text h2{
     font-size: 26px;
   }
   .grid-text h3{
-    font-size: 22px;
+    font-size: 20px;
     line-height: 1.8;
     font-weight: 100;
   }
@@ -651,9 +646,16 @@ display: table;
     max-height: 48.1vw;
     min-height: 62vh;
     text-decoration: none;
+    opacity: 0.5;
   }
   .grid-1:hover, .grid-2:hover{
     opacity: 0.4;
+  }
+  .about-grid img{
+    width: 5%;
+    position: absolute;
+    top: 61%;
+    left: 47.5%;
   }
   #main .about_content{
     background-image: url(../../images/about/intro3.png);
