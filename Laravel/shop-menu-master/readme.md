@@ -57,7 +57,7 @@ The more people star my repos - the more I will give back to the community.
 
 ### Read more on my blog and follow on Twitter
 
-I post tutorials all the time on my blog : http://maxoffsky.com, stay updated on my Twitter: http://twitter.com/msurguy
+I post tutorials all the time on my blog : http://maxoffsky.com
 
 ### License
 
