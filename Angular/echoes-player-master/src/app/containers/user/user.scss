@@ -1,0 +1,17 @@
+app-user {
+  article {
+    padding-bottom: 5rem;
+    padding-top:7rem;
+  }
+  h2 {
+    small {
+      color: gray;
+    }
+  }
+  .youtube-items-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}

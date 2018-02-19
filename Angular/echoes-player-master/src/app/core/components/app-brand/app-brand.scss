@@ -1,0 +1,95 @@
+@import '~css/core/global.scss';
+
+@media (min-width: 320px) {
+  :host {
+    .brand-container {
+      $brand-icon-font-size: 30px;
+      $brand-icon-line-height: 2;
+      $brand-icon-margin: 0 0.3rem;
+      $brand-padding: 0.5rem 1.5rem;
+
+      padding: $brand-padding;
+      margin: 0;
+      text-transform: uppercase;
+      position: relative;
+      display: flex;
+
+      .brand-text {
+        flex: 1;
+        display: flex;
+        flex-direction: row;
+
+        .brand-text-item {
+          margin: 0;
+          transition: flex, opacity 0.3s ease-in;
+          line-height: $brand-icon-line-height;
+        }
+      }
+
+      .brand-icon {
+        font-size: $brand-icon-font-size;
+        margin: $brand-icon-margin;
+        color: $clouds;
+        padding-top: 9px;
+        flex: 0 0 0%;
+
+        &.brand-text-item {
+          line-height: 1 !important;
+        }
+
+        .closed & {
+          flex: 0;
+        }
+      }
+
+      .text {
+        flex: 0 1 0%;
+      }
+
+      .sidebar-toggle {
+        transition: transform;
+        transform: translateX(37.5rem);
+        color: var(--brand-primary);
+
+        .closed & {
+          position: absolute;
+          transform: translateY(-4rem);
+        }
+      }
+    }
+  }
+}
+@media (min-width: 768px) {
+  :host {
+    .brand-container {
+      .sidebar-toggle {
+        transform: translateX(0);
+        color: var(--brand-inverse-text);
+      }
+
+      .brand-icon {
+        .closed & {
+          flex: 1 1 100%;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  :host {
+    .brand-container {
+      .closed & {
+        text-align: center;
+      }
+      .text {
+        .closed & {
+          flex: 0 1 00%;
+          width: 0;
+          overflow: hidden;
+          opacity: 0;
+        }
+      }
+    }
+  }
+}

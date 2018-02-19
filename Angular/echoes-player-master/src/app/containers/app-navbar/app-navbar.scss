@@ -1,0 +1,118 @@
+@import '~css/core/global.scss';
+
+@media (min-width: 320px) {
+  app-navbar {
+    $zindex: 1020;
+    $user-icon-size: 4rem;
+    $navbar-container-padding: 0.5rem 5rem;
+    $navbar-new-height: 1rem;
+    
+
+    display: block;
+
+    nav.navbar {
+      margin-left: 0;
+      background-image: none;
+      background-color: var(--navbar-bg-color);
+      border-color: var(--navbar-bg-color);
+      color: var(--navbar-text-color);
+      box-shadow: 0 1px 7px rgba(0,0,0,0.5);
+      transition: transform, margin-left .3s ease-out;      
+      z-index: $zindex;      
+    }
+
+    // .navbar-brand {
+    //   line-height: 2;
+    //   float: none;
+    //   height: auto;
+    // }
+
+    .user-icon {
+      width: $user-icon-size;
+      height: $user-icon-size;
+      vertical-align: middle;
+      border-radius: 50%;
+      border: 1px solid #fff;
+      box-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
+    }
+    .navbar-container {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      padding: $navbar-container-padding;
+
+      .navbar__content {
+        flex: 3 0 0;
+        padding-left: 0;
+        display: flex;
+        flex-flow: wrap;
+        justify-content: center;
+
+        .navbar-header {
+          width: auto;
+          margin-right: 7px;
+          line-height: $navbar-new-height;
+          
+          .fa {
+            margin-right: 10px;
+          }
+
+          .navbar-btn__main {
+            box-shadow: none;
+            border: none;
+            padding-top: 0;
+            padding-bottom: 0;
+          }
+        }
+      }
+
+      .navbar__header {
+        color: var(--brand-primary);
+      }
+    }
+
+    .navbar-text {
+      margin: 0;
+      line-height: 2;
+    }
+
+    .navbar-brand {
+      margin-left: 0 !important;
+    }
+
+    .navbar-actions {
+      display: flex;
+      flex: 1;
+      flex-direction: column-reverse;
+      justify-content: flex-end;
+      padding-right: 1rem;
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+  }
+}
+@media (min-width: 768px) {
+  $navbar-container-left-padding: 2.5rem;
+
+  app-navbar {
+    nav.navbar.navbar-fixed-top {
+      margin-left: $drawer-width;
+    }
+    .navbar-container {
+      padding: 0.5rem 0;
+      .navbar__content {
+        display: block;
+        padding-left: $navbar-container-left-padding;
+      }
+    }
+    .navbar-actions {
+      position: relative;
+      flex-direction: row;
+    }
+  }
+
+  .closed + .container-main app-navbar .navbar {
+    margin-left: $sidebar-closed-width;
+  }
+}

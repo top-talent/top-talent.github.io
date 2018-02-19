@@ -1,0 +1,105 @@
+@import '../echoes-variables.scss';
+/* applying a nicer UX*/
+.nicer-ux *,
+.ux-maker {
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition:    all 0.3s ease-out;
+    -ms-transition:     all 0.3s ease-out;
+    -o-transition:      all 0.3s ease-out;
+    transition:         all 0.3s ease-out;
+}
+
+.ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+// 3d flip
+.card .face {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transition: all .8s ease;
+}
+
+.card .front {
+    -webkit-transform: perspective(400px) rotateY(0deg);
+    transform: perspective(400px) rotateY(0deg);
+    -webkit-backface-visibility: visible;
+    backface-visibility: visible;
+}
+
+.card .back {
+    -webkit-transform: perspective(400px) rotateY(-179.9deg);
+    transform: perspective(400px) rotateY(-179.9deg);
+    opacity: 0;
+}
+
+.show-description .face.front {
+    -webkit-transform: perspective(400px) rotateY(179.9deg);
+    transform: perspective(400px) rotateY(179.9deg);
+}
+.show-description .face.back {
+    -webkit-transform: perspective(400px) rotateY(0deg);
+    transform: perspective(400px) rotateY(0deg);
+    opacity: 1;
+}
+input,
+a,
+button,
+select {
+    // removes the blue overlay in chrome android
+    tap-highlight-color: rgba(0,0,0,0);
+    // removes the orange border when on focus
+    outline: none;
+}
+.dropdown .dropdown-toggle {
+    cursor: pointer;
+}
+.btn-transparent {
+    background-color: transparent !important;
+    border-color: transparent;
+    box-shadow: none;
+}
+.bg-primary {
+	background-color: var(--brand-primary);
+}
+.bg-secondary {
+    background-color: var(--brand-secondary);
+}
+.text-primary {
+    color: var(--brand-primary);
+}
+.text-secondary {
+    color: var(--brand-secondary);
+}
+
+.label-danger {
+  background-color: var(--brand-danger);
+}
+.label-info {
+  background-color: var(--brand-info);
+}
+.label-success {
+  background-color: var(--brand-success);
+}
+
+// BUTTONS
+.btn-primary {
+  background-color: var(--brand-primary);
+  border-color: var(--brand-primary);
+}
+.btn-info {
+  background-color: var(--brand-info);
+  border-color: var(--brand-info);
+}
+
+.btn-danger {
+  background-color: var(--brand-danger);
+  border-color: var(--brand-danger);
+}
+
+// FLEX
+.is-strechable {
+  flex-grow: 1;
+}

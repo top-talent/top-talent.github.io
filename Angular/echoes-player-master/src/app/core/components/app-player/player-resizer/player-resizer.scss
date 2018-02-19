@@ -1,0 +1,40 @@
+@import '~css/core/global.scss';
+
+@media (min-width: 320px) {
+  :host {
+    .btn.show-player {
+      background-color: var(--brand-primary);
+      color: var(--brand-inverse-text);
+    }
+    .full-screen.show-player {
+      transform: scale(5);
+      background-color: transparent;
+      color: var(--brand-primary);
+      border: none;
+      left: 14rem;
+      position: absolute;
+      font-size: 4rem;
+      top: 12rem;
+      padding: 1rem 2.5rem;
+    }
+    .icon-max {
+      display: block;
+    }
+
+    .icon-minimize {
+      display: none;
+    }
+
+    .show-youtube-player & {
+      display: block;
+
+      .icon-max {
+        display: none;
+      }
+
+      .icon-minimize {
+        display: block;
+      }
+    }
+  }
+}

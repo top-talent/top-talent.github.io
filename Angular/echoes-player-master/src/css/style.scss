@@ -1,0 +1,48 @@
+/* ===== Primary Styles ========================================================
+   Author: Oren Farhi, http://orizens.com
+   ========================================================================== */
+/* Application */
+// $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
+@import './echoes-variables';
+// @import '~bootstrap-sass/assets/stylesheets/bootstrap';
+@import './bootstrap-custom';
+@import './core/global';
+@import './core/utils';
+
+$fa-font-path: '../fonts' !default;
+@import '~font-awesome/scss/font-awesome';
+
+// Themes
+@import './themes/index.themes';
+
+.btn:focus,
+.btn:active:focus,
+.btn.active:focus,
+.btn.focus,
+.btn:active.focus,
+.btn.active.focus {
+  outline: none;
+}
+
+iframe {
+  border: none;
+}
+// ngx-tooltip Style <START>
+tooltip-content .tooltip .tooltip-inner {
+  box-shadow: 0px 0px 2px var(--brand-primary);
+  color: var(--brand-primary);
+}
+
+// -list group item
+.list-group-item,
+button.list-group-item,
+a.list-group-item {
+  background-color: var(--list-group-item-bg);
+  border-color: var(--list-group-item-border);
+  color: var(--list-group-item-text);
+
+  &:hover {
+    background-color: var(--list-group-item-bg-hover);
+    color: var(--list-group-item-text-hover);
+  }
+}
