@@ -1,0 +1,118 @@
+/* Add label-large class */
+.label-large {
+    font-size: 19px;
+}
+
+/* Add margins to labels in td's for clearer separation */
+td .label {
+    margin: 3px;
+}
+
+/* Make sure faded text appears clearly in panels of different colors */
+.panel-success .panel-title .text-muted, .panel-info .panel-title .text-muted {
+    color: #E3E7EA;
+}
+
+/* Add padding to the inside of select choices */
+.select2-container-multi .select2-choices .select2-search-choice {
+    padding: 10px 10px 10px 20px;
+    background-image: none;
+}
+
+/* Make sure select choices don't float beside eachother */
+.select2-container-multi .select2-choices li {
+    float: none;
+}
+
+/* Add padding to md-editor text area instances */
+.md-editor > textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+/* Add padding to md-preview instances */
+.md-preview {
+    padding: 10px;
+}
+
+/* Extra Large Font Awesome Icons */
+.fa-2 {
+    font-size: 2em;
+}
+.fa-3 {
+    font-size: 4em;
+}
+.fa-4 {
+    font-size: 7em;
+}
+.fa-5 {
+    font-size: 12em;
+}
+.fa-6 {
+    font-size: 20em;
+}
+
+/* No border rounding, tight corners */
+*:not(.sa-icon){
+    border-radius: 0 !important;
+}
+
+/* Guide step numbers */
+.step-number {
+    font-size: 43px;
+    padding: 8px 15px 3px 0;
+    font-weight: bold;
+    float: left;
+}
+
+/* Vertically align step numbers with the step */
+.step-vertical {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+}
+
+/* Override dropzone's border on forms */
+.dropzone {
+    border: none;
+}
+
+/* Override dropzone's cursor on forms */
+.dropzone.dz-clickable * {
+    cursor: auto;
+}
+
+/* Center images in panel headers for guide steps */
+.panel-heading .img-responsive {
+    margin: 0 auto;
+}
+
+/* White text */
+.text-white {
+    color: white;
+}
+
+/* Blue and bold links inside table data rows */
+tr td a {
+    color: #337ab7;
+    font-weight: bold;
+    text-decoration: none !important;
+}
+
+/* Break the words in panels for wrapping */
+.panel-body {
+    word-wrap: break-word;
+}
+
+/* Alter dropdown menu padding for labels */
+.dropdown-menu-labels > li > a {
+    padding: 0 20px 5px;
+}
+
+/* Avatar image inside the bootstrap navbar CSS */
+.avatar-img {
+    position: relative;
+    top: -5px;
+    float: left;
+    left: -5px;
+}
