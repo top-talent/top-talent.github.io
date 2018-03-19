@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>SpriteSpin Example</title>
+    <link type="text/css" rel="stylesheet" media="all" href="style.css">
+    <script src="page.js" type="text/javascript"></script>
+    <script src="spritespin.js" type="text/javascript"></script>
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="SpriteSpin example">
+    <meta property="og:site_name" content="SpriteSpin">
+    <meta property="og:description" content="A SpriteSpin example.">
+  </head>
+  <body>
+    <div class="container">
+    <h1> Virtual 3d Object on a webpage using a number of images</h1>
+      <div class="spritespin"></div>      
+      
+    </div>
+    <script type="text/javascript"> 
+    var frames = SpriteSpin.sourceArray('3d/sample-{lane}-{frame}.jpg', { lane: [0,8], frame: [0,17], digits: 2});
+    var spin = $('.spritespin');  
+    var api;         
+    $('.spritespin').spritespin({
+      source: frames,
+      // width and height of the display
+      width: 600,
+      height: 325,
+      // the number of lanes (vertical angles)
+      lanes: 9,
+      // the number of frames per lane (per vertical angle)
+      frames: 18,
+      // interaction sensitivity (and direction) modifier for horizontal movement
+      sense: 1,
+      // interaction sensitivity (and direction) modifier for vertical movement
+      senseLane: -2,
+
+      // the initial lane number
+      lane: 4,
+      // the initial frame number (within the lane)
+      frame: 9,
+      // disable autostart of the animation
+      animate: false
+    });
+    api = spin.spritespin("api");
+  $(document).dblclick(function(e){
+      e.preventDefault();
+      $('.spritespin').spritespin('api').requestFullscreen();
+    });
+  $(document).keydown(function(e) {
+          var b = (e.charCode) ? e.charCode : e.keyCode;
+          if (e.keyCode == 37) {
+            api.stopAnimation();
+    api.prevFrame();
+          }
+          else if(e.keyCode == 39){
+          api.stopAnimation();
+    api.nextFrame();
+          }
+          else if(e.keyCode == 38){
+            api.stopAnimation();
+            api.prevLane();
+            
+          }
+          else if(e.keyCode == 40){
+            api.stopAnimation();
+          api.nextLane();
+          }
+        });
+
+</script>
+          
+  </body>
+</html>
