@@ -1,0 +1,34 @@
+/* Fix select 2 style */
+.select2-container--default .select2-selection--single {
+	border-radius: 0 !important;
+	border: 1px SOLID #ccc !important;
+}
+
+.select2-container .select2-selection--single {
+	height: 34px !important;
+}
+
+.select2-container .select2-selection--single .select2-selection__rendered {
+	padding-left: 2px !important;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow b {
+	margin-top: 1px !important;
+}
+
+.select2-container--bootstrap .select2-selection--single .select2-selection__rendered {
+	padding-top: 4px !important;
+}
+
+.tr-current-product {
+	background-color: #e1e9fb !important;
+	font-weight: bold;
+}
+
+.table tbody>tr>td.vertical-align-middle {
+	vertical-align: middle;
+}
+
+.font-12 {
+	font-size: 12px;
+}
