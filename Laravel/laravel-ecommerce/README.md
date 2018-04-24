@@ -26,12 +26,6 @@
 - Create cart rules
 - Create Specific prices
 
-## Installation
-- Clone repository
-```
-$ git clone https://github.com/updivision/estarter-ecommerce-for-laravel.git
-```
-- Run in your terminal
 ```
 $ composer install
 $ php artisan key:generate
@@ -59,7 +53,7 @@ $ php artisan migrate --seed
 
 - Access it on
 ```
-http://localhost/estarter-ecommerce-for-laravel/admin/login
+http://localhost/laravel-ecommerce/admin/login
 ```
 
 ## Setup
@@ -87,10 +81,6 @@ After creating these, you’re ready to add your first product.
 ![alt text](http://i.imgur.com/OVbI44p.png "Edit currency")
 ![alt text](http://i.imgur.com/86mx9U2.png "Edit tax")
 
-## Contributors
- - [Paul Duca](https://github.com/pduca)
- - [Diana Marusic](https://github.com/mdiannna)
- - [Andrei Barta](https://github.com/abarta)
  
 ## License
 eStarter is based on Backpack which is free for non-commercial use and $49/project for commercial use. Please see [License File](LICENSE.md) and [backpackforlaravel.com](https://backpackforlaravel.com/#pricing) for more information.
