@@ -1,0 +1,337 @@
+::selection {
+  color: white;
+  background: #ff7633; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  color: white;
+  background: #ff7633; /* Gecko Browsers */
+}
+
+.ip-header .ip-loader svg path.ip-loader-circle{
+  stroke: #ff7633;
+}
+
+.color-overlay {
+
+}
+
+a:hover {
+    color: #ff7633;
+}
+
+a:active {
+    color: #ff7633;
+}
+
+a:focus{
+  color: #ff7633;
+}
+
+
+.sticky-navigation{
+
+    /*border-bottom: solid 1px #ff7633 ;*/
+}
+
+.sticky-navigation .main-navigation .current a{
+    color: #ff7633;
+}
+
+.sticky-navigation .main-navigation li a:hover{
+  color: #ff7633;
+  background: none;
+}
+
+.sticky-navigation .main-navigation li a:active{
+  color: #ff7633;
+  background: none;
+}
+
+.sticky-navigation .main-navigation li a:focus{
+  color: #ff7633;
+  background: none;
+}
+
+.navbar-toggle .icon-bar{
+  background-color: #ff7633;
+}
+
+
+.services .single-service .icon-container .icon{
+
+    color: #ff7633;
+}
+
+.hvr-ripple-out:before{
+    border: #ff7633 solid 1px;
+}
+
+.progress .bar {
+    background: #ff7633;
+}
+
+ .pf-filter li.active{
+  color: #ff7633;
+}
+
+.masonry-grid-4 .portfolio-hover{
+    background-color: rgba(141, 56, 192, .7);
+}
+
+.portfolio-project-info li a:hover {
+    color: #ff7633;
+}
+
+.testimonials .owl-theme .owl-controls .owl-page span {
+    background: #ff7633;
+    border-radius: 20%;
+    max-height: 2px;
+}
+
+.clients .owl-theme .owl-controls .owl-page span {
+    background: #ff7633;
+    border-radius: 20%;
+    max-height: 2px;
+}
+
+.team-hover {
+    border: 2px solid #FFFFFF;
+    background-color: rgba(255, 255, 255, .7);
+}
+
+.team-hover .s-link a {
+    text-align: center;
+    color: #ff7633;
+}
+
+.desk p {
+    color: #ff7633;
+}
+
+.team .owl-theme .owl-controls .owl-page span {
+    background: #ff7633;
+}
+
+.special-package{
+  color: #ff7633;
+}
+
+.special-package .price h2,
+.special-package .price h2 span,
+.special-package .price p
+{
+  color: #ff7633;
+}
+
+.special-package .hvr-bounce-to-right:before{
+  background: #ff7633;
+}
+
+.special-package .single-package{
+  border: 1px solid #ff7633;
+}
+
+.special-package .btn-price{
+  color: #ff7633;
+  border-color: #ff7633;
+}
+
+.special-package .btn-price:hover{
+  color: #fff;
+}
+
+
+.btn-lines .line-top,
+.btn-lines .line-bottom,
+.btn-lines .line-left,
+.btn-lines .line-right {
+  background: #ff7633;
+}
+
+.res-funfactor .icon-container i {
+
+    color: #ff7633;}
+
+.blog-title :hover{
+    color: #ff7633;
+}
+
+.blog-post-title :hover {
+    color: #ff7633;
+}
+
+.author a :hover {
+  color: #ff7633;
+
+ }
+
+ .read-more :hover{
+    color: #ff7633;
+ }
+
+.blog-list-item-detail a:hover{
+  color: #ff7633;
+}
+
+.blog-item-detail a:hover{
+  color: #ff7633;
+}
+
+.input-field:active{
+  border: 1px solid  #ff7633;
+  border-radius: 5px;
+}
+
+.input-field:focus {
+  border-color: #ff7633;
+}
+
+.clearlist li a:hover  {
+    color: #ff7633;
+}
+
+.tags a:hover {
+   color: #ff7633;
+  border: 1px solid #ff7633;
+}
+
+.article-nav a i:hover{
+  color: #ff7633;
+}
+
+/**/
+
+.standard-button {
+    background: #B58C82;
+}
+
+.standard-button2 {
+    background:  #ff7633;
+}
+
+.standard-button2:hover {
+    background: #fff;
+}
+
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active,
+.open .dropdown-toggle.btn-primary {
+    background: #005885;
+    border-color: inherit;
+}
+
+.colored-line,
+.colored-line-left {
+    background:  #ff7633;
+}
+
+.main-color {
+    color:  #ff7633;
+}
+
+.theme-color {
+    color:  #ff7633;
+}
+
+.theme-color-bg {
+    background-color:  #ff7633;
+}
+
+.color-bg {
+	background: rgb(127,111,91);
+	color: #FFFFFF;
+}
+
+.contact .contact-button {
+    border: 2px solid #656565;
+    color: #958257;
+}
+
+.contact .contact-button:hover {
+    background:  #ff7633;
+}
+
+.contact .contact-box .input-box:active,
+.contact .contact-box .textarea-box:active,
+.contact .contact-box .input-box:focus,
+.contact .contact-box .textarea-box:focus {
+    border: 1px solid  #ff7633;
+    color: #111;
+}
+
+.social-icons li a:hover {
+    color:  #ff7633;
+}
+
+.comment-reply .contact-box .input-box:active,
+.comment-reply .contact-box .textarea-box:active,
+.comment-reply .contact-box .input-box:focus,
+.comment-reply .contact-box .textarea-box:focus {
+    border: 1px solid  #ff7633;
+    color: #111;
+}
+
+.contact  .contact-address i{
+  color: #ff7633;
+}
+
+.nav-transparent{
+  border-bottom: solid 1px transparent;
+}
+
+.list-tweets li a:hover{
+  color: #ff7633;
+}
+
+
+.menu-subtitle{
+  color: #ff7633;
+}
+
+.price-menu-list .menu-list__item-title{
+  color: #ff7633;
+}
+.price-menu-list .menu-list__item-price{
+  color: #ff7633;
+}
+.price-menu-list .menu-list__item-price span{ color: #ff7633; }
+
+nav.navbar.bootsnav ul.dropdown-menu.megamenu-content .content ul.menu-col li a:hover,
+.side .widget ul.link li a:hover,
+.side .widget ul.link li a:focus,
+.check-list li:before,
+ul.cart-list > li > h6 > a,
+.attr-nav > ul > li > a:hover,
+.attr-nav > ul > li > a:focus,
+nav.navbar-sidebar ul.nav li.dropdown.on > a,
+nav.navbar-sidebar .dropdown .megamenu-content .col-menu.on .title,
+nav.navbar-sidebar ul.nav li.dropdown ul.dropdown-menu li a:hover,
+nav.navbar ul.nav li.dropdown.on > a,
+nav.navbar.navbar-inverse ul.nav li.dropdown.on > a,
+nav.navbar-sidebar ul.nav li.dropdown.on ul.dropdown-menu li.dropdown.on > a,
+nav.navbar .dropdown .megamenu-content .col-menu.on .title,
+nav.navbar ul.nav > li > a:hover,
+nav.navbar ul.nav li.active > a,
+nav.navbar li.dropdown ul.dropdown-menu > li a:hover{
+    color: #ff7633;
+    background: rgba(0, 0, 0, 0.07);
+}
+
+nav.navbar.navbar-transparent ul.nav > li > a:hover,
+nav.navbar.no-background ul.nav > li > a:hover,
+nav.navbar ul.nav li.scroll.active > a,
+nav.navbar.navbar-dark ul.nav li.dropdown ul.dropdown-menu  > li > a:hover,
+nav.navbar ul.nav li.dropdown.on > a,
+nav.navbar-dark ul.nav li.dropdown.on > a{
+    color: #ff7633 !important;
+    background: rgba(0, 0, 0, 0.07);
+}
+
+@media(max-width:920px){
+    nav.navbar .dropdown .megamenu-content .col-menu ul > li > a:hover,
+    nav.navbar.navbar-dark .dropdown .megamenu-content .col-menu .title:hover{
+        color: #ff7633 !important;
+        background: rgba(0, 0, 0, 0.07);
+    }
+}

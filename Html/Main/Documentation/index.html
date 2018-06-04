@@ -1,0 +1,624 @@
+<!doctype html>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <title>Jovan- Documentation</title>
+    <meta name="author" content="THE CREO">
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+</head>
+
+<body>
+    <div id="header" class="header">
+        <div class="project-name">
+            <div class="logo">
+                <img src="assets/images/logo.png" alt="logo" />
+            </div>
+            <h1>Jovan</h1>
+            <span>Documentation</span>
+        </div>
+        <nav>
+            <ul>
+                <li class="current"><a href="#start" class="ripple-out"><i class="glyphicon glyphicon-play"></i>Welcome</a>
+                </li>
+                <li><a href="#installing" ><i class="glyphicon glyphicon-play"></i> Installing The Template</a>
+                </li>
+                <li><a href="#home-sect" ><i class="glyphicon glyphicon-play"></i> Template variations</a>
+                </li>
+                <li><a href="#html-struc" ><i class="glyphicon glyphicon-play"></i> HTML Structure</a>
+                </li>
+                <li><a href="#css-struc" ><i class="glyphicon glyphicon-play"></i> CSS Structure</a>
+                </li>
+                <li><a href="#js-struc" ><i class="glyphicon glyphicon-play"></i> JavaScript Structure</a>
+                </li>
+                <li><a href="#setup-contact" ><i class="glyphicon glyphicon-play"></i> Setup Contact Form</a>
+                </li>
+                <li><a href="#credits"><i class="glyphicon glyphicon-play"></i> Credits</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <div class="page-sections">
+        <div id="start">
+            <div class="title">
+                <h1><i class="glyphicon glyphicon-plane"></i> Welcome</h1>
+            </div>
+            <ul>
+                <li><span class="highlight-color">Design & Developed By:</span><b>Rashed & Rakib</b></li>
+                <li><span class="highlight-color">Mail:</span> <b>creohelpers@gmail.com</b></li>
+                <li><span class="highlight-color">Created:</span><b>21-10-2016</b></li>   
+            </ul>
+            <p>Thanks for purchasing <b>JOVAN</b> Multipurpose Template. If you have any questions that are beyond the scope of this help file, please feel free to ask in comment section of our Envato account or email via our user page contact form here. Thanks so much!</p>
+            
+        </div>
+        <hr/>
+        <div id="installing">
+            <div class="title">
+                <h1><i class="glyphicon glyphicon-play-circle"></i> Installing The Template</h1>
+            </div>
+            <div class="title">
+                <h2><i class="glyphicon glyphicon-play-circle"></i>General Settings:</h2>
+            </div>
+
+            <div class="doc-item">
+                <h2><i class="glyphicon glyphicon-ok-sign"></i>Setting the Navbar logo & Logo title</h2>
+                <ol>
+                    <li>For setting the logo find the line in HTML file:
+                    <pre>&lt;a class="navbar-brand" href="#"&gt; &lt;src="http://placehold.it/200x70" alt="logo"&gt;</pre> set your logo in src="logo.png" <br></li>
+                    <li>For setting logo title:
+                    <pre>&lt;div class="logo-title"&gt;Logo-title &lt;/div&gt;</pre></li>
+                </ol>
+            </div>
+            <div class="doc-item">
+                <h2><i class="glyphicon glyphicon-ok-sign"></i>Setting the base color scheme</h2>
+                <ol>
+                    <li>Locate <span class="label label-info">css/color-schemes</span> folder, you have all the colors in there.</li>
+                    <li>Choose your color.</li>
+                    <li>Open the html files.</li>
+                    <li>Find the line given below and replace the color name with your chosen color.</li>
+                </ol>
+                <pre>&lt;link rel="stylesheet" href="css/color-schemes/black.css"&gt;</pre>
+            </div>
+            
+            <div class="doc-item">
+                <h2><i class="glyphicon glyphicon-ok-sign"></i>Skill Bar & Pie chart Settings </h2>
+                  <p><b>#1.Skill Bar:</b></p>
+                <p>The default state has the skill bar with some value but if you want to set it accoring to your need:
+                </p>
+                <ol>
+                    <li>Open the html file.</li>
+                    <li>Find <pre>&lt;div class="bar" data-value="70" role="progressbar" &gt;</pre> </li>
+                    <li>Set your value in <b>data-value</b>="your value" along with <pre>&lt;div class="label numbers"> your value div&gt;</pre>
+                    </li>
+                    <li>you must put the same value in <b>here</b> the bold area:</li>
+                </ol>
+                <pre>&lt;div class="bar" data-value="70" role="progressbar"&gt;<b>here</b>&lt;/div&gt;</pre>
+                <p><b>#1.Pie chart:</b></p>
+                <p>The default state has the pie chart with some value but if you want to set it accoring to your need:
+                </p>
+                <ol>
+                    <li>Open the piechart.js file in js folder</li>
+                    <li>Find in the piechart.js file<pre>&lt;value:, &gt;</pre> </li>
+                    <li>Set your number in <b>value</b>.
+                    </li>
+                    <li>you must change the value by checking the <b>circle ID [e.g. id: 'circles-1',]</b> and change according to ID </li>
+                </ol>
+            </div>
+            
+             <div class="doc-item">
+                <h2><i class="glyphicon glyphicon-ok-sign"></i>Fun Factors Settings </h2>
+                <p>The default state has the fun factor with some value but if you want to set it accoring to your need:
+                </p>
+                <ol>
+                    <li>Open the html file.</li>
+                    <li>Find <pre>&lt;h2 class="timer numbers" data-from="0" data-to="100" &gt;</pre> </li>
+                    <li>Set your value in <b>data-to</b>="your value" 
+                    </li>
+                    <li>For setting background image,find the  respective class and path in funfactor sections in <b>styles.css</b> file. </li>
+                </ol>
+            </div>  
+
+            
+            
+            <div class="doc-item">
+                <h2><i class="glyphicon glyphicon-ok-sign"></i>Team Section Settings</h2>
+                <p>We have <b>Three</b> styles of team members</p>
+                <p><b>#Carousel & static Style:</b></p>
+                <p>By default We have 4 team member to be displayed in carousel,if you want to add more team member, just copy one <b>Team Mate</b> section and fill with your information.</p><br>
+                <p>If you want to reduce team member,just delete Team mate</p>
+                
+                <p>here is what you need to do to add or delete each one of Team mate:</p>
+                <ol>
+                    
+                    <li>Find this: <pre>&lt;div class="team-member wow fadeInLeft"&lt;</pre>
+                    </li>
+                    
+                </ol>
+                <p><b>#Grid Style:</b></p>
+                <p>Change the image through the path:<pre>&lt;img class="grid-item"  src="images/team/your-image.jpg" alt="team"&gt;</pre></p>
+
+            </div>
+            <div class="doc-item">
+                <h2><i class="glyphicon glyphicon-ok-sign"></i>Portfolio Section Settings</h2>
+                <p>We have two major layout styles of our portfolio Section:</p>
+                <p>Here are the variations</p>
+                <ol>
+                    <li>
+                        Masonery  Four column Justified:
+                        <ul>
+                            <li></li>
+                            <li> <span class="label label-primary">index-studio.html</span></li>
+                            <li> <span class="label label-primary">index-personal-agency.html</span></li>
+                            <li> <span class="label label-primary">index-creative-agency-2.html</span></li>
+                            
+                        </ul>
+                    </li>
+                    <li>
+                        fixed dimension isotope with four colum:
+                        <ul>
+                            <li></li>
+                            <li> <span class="label label-primary">index-business.html</span></li>
+                            <li> <span class="label label-primary">index-creative-agency-1.html</span></li>
+                            <li> <span class="label label-primary">index-digital-agency.html</span></li>
+                            <li> <span class="label label-primary">index-start-up-agency.html</span></li>
+                        
+                          
+                        </ul>
+                    </li>
+                </ol>
+                
+                
+                <p>There are another two files named <b>portfolio-project.html</b> & <b>portfolio-project-02.html</b> which is about the details project description.</p>
+                
+            </div>
+            
+
+
+            <div class="doc-item">
+                <h2><i class="glyphicon glyphicon-ok-sign"></i>Google Maps</h2>
+                <p>to set the Latitude and Longitude</p>
+                <ol>
+                    <li>Open the custom.js file.</li>
+                    <li>Find: <pre>var marker = new google.maps.Marker({
+                position: new google.maps.LatLng(40.7127, -74.0059),
+                map: map,
+                title: 'Find us here!'</pre>
+                    </li>
+                    <li>Type your Latitude and Longitude in <pre>new google.maps.LatLng(40.7127, -74.0059)</pre> use <a href="http://maps.google.com">Google Maps</a> to find your Lat, Long.
+                    </li>
+                </ol>
+            </div>
+
+            <div id="setup-contact">
+            <div class="title">
+                <h1><i class="glyphicon glyphicon-envelope"></i> Setup Contact Form</h1>
+            </div>
+            <ol>
+                <li>Open the sendmail.php file.</li>
+                <li>Go to Line 23, and replace with your E-mail.</li>
+            </ol>
+            <pre>$recipient = "mail@domain.com";</pre>
+            <p></p>
+        </div>
+            
+        </div>
+        <hr/>
+        <div id="home-sect">
+            <div class="title">
+                <h1><i class="glyphicon glyphicon-home"></i> Pre-made templates: </h1>
+            </div>
+            <h3>We have 7 plus different pre-made templates for different purpose.
+            </h3>
+
+           <div class="doc-item">
+                 <h2>1#. Architechture:</h2>
+               
+                <ol>
+                  
+                    <li><p>For changing background image find it in archit-home.html file:<br>
+                          <pre>&lt;div class="slider-slice-imageContainer&gt;</pre>
+                          and then  change the images thriugh the path:
+                          <pre>&lt;img src="images/architecht/s-1.jpg&gt;</pre>
+                          place the image through the path for five times
+                     </p>
+                    </li>
+                   <li><p> You have to repeat the process for 12 times. <br>
+                    </li>
+                    <li><p> For changing title, find the class:
+                    <pre>&lt;div class="text-main-inner">creative design &gt;div</pre>
+                    </li>
+                    <li><p> For changing title label, find the class:
+                    <pre>&lt;div class="text-label">think&gt;div</pre>
+                    </li>
+                    <li><p> For changing image in case study section, find the classes <b>steps .step-1-image</b> in <b>styles.css</b> file: change the image through the path:
+                    <pre>url(../images/architecht/cs-1.jpg)</pre>
+                    <p>You have to repeat it twice for each image.</p>
+                    </li>
+                </ol>
+                
+            </div>
+
+            
+             
+             <div class="doc-item">
+                <h2>2#.Interior Agency:</h2>
+               
+                <ol>
+                  <li><p>For changing background image: find the path in smooth-slider.css file  in line no 76, 81, 86 & 91:<br></p>
+                     <pre>&lt;background-image: url(../images/interior/bg-1.jpg);&gt;</pre>
+
+                    <p>you can put image through this path:url(../images/interior/bg-1.jpg) </p>
+                    </li>
+                    
+                    <li><p> Fot changing title : <br>
+                    Find this in interior-home.html:
+                    For first Slide title:
+                    <pre>&lt;div&gt;  data-page="1" class="navigation__el navigation__el-1">We are topaz.&lt;div&gt;</pre>
+                    And,<br>
+                    <pre>&lt;div&gt; class="navigation__el navigation__el-1">We are topaz.&lt;div&gt;</pre>
+
+                        <p>Put your title within  the "div" tag. You must use the same title for each slider. You can use different title in other sliders by using similar methoad</p></li>
+                        ** use darker image for better view.
+                </ol>
+                
+            </div>
+             
+             <div class="doc-item">
+                <h2>3#.Construction agency:</h2>
+               
+                <ol>
+                    <li> For Changing image open the file construction-home.html <br>
+                    You can chnage images through the path :-data-image-src="images/construct/home-bg.jpg" </li> 
+                     
+                    <li><p> Fot changing title : <br>
+
+                    <pre>&lt;h1&gt; class="intro hs2-h1 text-white-5">Your Title Here&lt;h1&gt;</pre>
+
+                       
+                </ol>       
+            </div>
+
+            <div class="doc-item">
+                <h2>4#.Consultancy agency:</h2>
+               
+                <ol>
+                    <li> For Changing image open the file conssultation-home.html <br>
+                    You can chnage images through the path :-data-image-src="images/construct/home-bg.jpg" </li> 
+                     
+                    <li><p> Fot changing title : <br>
+
+                    <pre>&lt;h1&gt;class=intro hs2-h1 animated fadeInDownBig animation-delay-6 text-white-8>Your Title Here&lt;h1&gt;</pre>
+                    </li> 
+
+                       
+                
+                
+                    <li> For Changing image  in case study section.<br>
+                        open the styles.css file and find the classes const-cs-1,const-cs-2, const-cs-3,
+                        change the image through the respective paths.  
+                     </li> 
+                   </ol>
+                        
+            </div>
+
+            <div class="doc-item">
+                <h2>5#.Finance agency:</h2>
+               
+                <ol>
+                    <li><p>For changing background image: Open the file aya-slider.css in css folder.<br>
+                    Find the line 12, 17, 22. You can change the images through the path:
+                     <pre>background: url(../images/finance/bg-1a.jpg)</pre>
+
+                     
+                    </li>
+                    <li><p> Fot changing title  in First Slide Title: <br>
+                     Find It in index-finance.html:
+                    <pre>&lt;div&gt;data-in="left:-1000;delay:700;duration:1550" class="slide-1-content"  &gt;
+                      &lt;span &gt;Your  Sub Title&lt;span&gt; &lt;div&gt;</pre>
+
+                     <pre>&lt;div&gt;data-in="bottom:-1000;delay:700;duration:1550" class="slide-1-head &gt;
+                      &lt;h2 &gt;Your Title &lt;h2&gt;&lt;div&gt;</pre>
+ 
+                    </li>
+                    <li><p> Fot changing title  in Second Slide Title: <br>
+                     Find It in index-finance.html:
+                    <pre>&lt;div&gt;data-in="opacity:0;left:150;delay:1550;duration:1050;ease:linear" data-out="left:-100;opacity:0;delay:4300;" class="slide-3-content"  &gt;
+                      Your Title
+                     &lt;div&gt;</pre>
+
+                     <pre>&lt;div&gt;data-in="opacity:0;left:100;delay:2050;duration:1050;ease:linear" data-out="left:-100;opacity:0;delay:4000;" class="slide-3-content" &gt;
+                      &lt;h2 &gt;Your Sub-Title&lt;h2&gt;&lt;div&gt;</pre>
+
+                    </li>
+                    <li><p> Fot changing title  in Third Slide Title: <br>
+                     Find It in index-finance.html:
+                    <pre>&lt;div&gt;data-in="opacity:0;left:150;delay:1200;duration:1050;ease:linear" data-out="left:-100;opacity:0;delay:4300;" class="slide-2-content" &gt;
+                      Your Sub-Title
+                     &lt;div&gt;</pre>
+
+                     <pre>&lt;div&gt;data-in="opacity:0;left:100;delay:1550;duration:1050;ease:linear" data-out="left:-100;opacity:0;delay:4000;" class="slide-2-content"&gt;
+                      &lt;h2 &gt;Your Title&lt;h2&gt; &lt;div&gt;</pre>
+
+                    </li>
+                </ol>       
+            </div>
+
+            <div class="doc-item">
+                <h2>6#.Resturant:</h2>
+               
+                <ol>
+                    <li> For Changing  Home page image slider open the file index-resturant.html <br>
+                    You can chnage images in slider section through the path :- img src="images/resturant/slider1.jpg"  </li> <br>
+                    This process is applicable all other three slides.
+                     
+                    <li><p> Fot changing title & sub-title : <br>
+
+                    <pre>&lt;h1&gt;  class="intro hs3-h1 text-white-6>Your Title Here&lt;h1&gt;</pre>
+                    <pre>&lt;h5&gt;  class="sub-intro text-white&lt;h5&gt;</pre>
+                     </li> 
+                    
+                    
+
+                     <li><p> Fot changing platter image find this in platter sections:<br>
+                       <pre>&lt;div&gt;class="post-thumbnail"&lt;div&gt;</pre>
+                       use the path in the class: img src="images/resturant/p1.jpg" alt="">.
+                     </li>
+                       
+                </ol>       
+            </div>
+
+            <div class="doc-item">
+                <h2>7#.Product Landing:</h2>
+               
+                <ol>
+                    <li> For Changing image open the file index-product.html <br>
+                    You can chnage images through the path :- data-image-src="images/background/image-bg.jpg" </li> 
+                     
+                    <li><p> Fot changing title & sub-title : <br>
+
+                    <pre>&lt;h1&gt;  class="intro hs10-h1 text-white-1">Your Title Here&lt;h1&gt;</pre>
+                    <pre>&lt;h3&gt;  class="up-title-2">Your Sub-Title Here&lt;h3&gt;</pre>
+                     </li>
+
+                     <li><p> Fot changing feature image find this in feature section: <br>
+
+                    <pre>&lt;div&gt;  class="responsive-img fit-img  m-top-40"&lt;div&gt;</pre>
+                       change the image through the path:src="images/product/orange.png" alt="".
+                     </li> 
+
+                       
+                </ol>       
+            </div>
+
+
+
+           <div class="title">
+                <h1><i class="glyphicon glyphicon-home"></i> Generic templates: </h1>
+            </div>
+            <div class="doc-item">
+                <h2>8#.Creative agency-1:</h2>
+               
+                <ol>
+                    <li> For Changing image open the file kenburn.js in js folder.Find the line 16, 17, 18, 19. <br>
+                    You can chnage images through the path :- src: 'images/background/kenburn-1.jpg' </li> 
+                     
+                    <li><p> Fot changing title : <br>
+
+                    <pre>&lt;h1&gt; class="intro hs11-h1 text-white-5">Your Title Here&lt;h1&gt;</pre>
+
+                       
+                </ol>       
+            </div>
+
+            
+
+             <div class="doc-item">
+                <h2>9#.Creative Agency-2:</h2>
+               
+                <ol>
+                    <li><p>For changing background image: open styles.css and find the the path :-<br>
+                    background-image: url("../images/background/bg-6.jpg"); in id name:"wrapper". you can find it in -[Creative Agency-2] Moving bg Background sections.<br>
+                     
+
+                     <p>you can put it through this path:url("../images/background/your-image. </p>
+                    </li>
+                    <li><p> Fot changing title : <br>
+
+                    <pre>&lt;h1&gt; class="intro hs4-h1 text-black-2 &lt;h1&gt;</pre>
+
+                        <p>Put your title in "h1" tag in intro section.</p></li>
+                </ol>       
+            </div>
+
+
+            
+            <div class="doc-item">
+                <h2>10# Start-up Agency:</h2>
+               
+                <ol>
+                    <li> For Changing image open the file index-startup-agency.html and find the path:-
+                    data-image-src="images/agency-3/bg-1.jpg" <br>
+                    You can chnage images through the path :- src: 'images/start-up/bg-1.jpg' </li> 
+                     
+                    <li><p> Fot changing title : <br>
+
+                    <pre>&lt;h1&gt;  class="intro hs9-h1 text-blue">work with quality & art&lt;h1&gt;<span>.</span></h1></pre>
+  
+                </ol>       
+            </div>
+            <div class="doc-item">
+                <h2>11#.Studio Agency:</h2>
+               
+                <ol>
+                    <li> For Changing image open the file index-studio.html <br>
+                    You can chnage images through the path :- data-image-src="images/agency/bg-home.jpg"  </li> 
+                     
+                    <li><p> Fot changing title & sub-title : <br>
+
+                    <pre>&lt;h1&gt;  class="intro hs5-h1 text-green-3">Your Title Here&lt;h1&gt;</pre>
+                    <pre>&lt;h3&gt;  class="up-title-3">Your Sub-Title Here&lt;h3&gt;</pre>
+                     </li> 
+
+                       
+                </ol>       
+            </div>
+
+            <div class="doc-item">
+                <h2>12#.Personal Agency:</h2>
+               
+                <ol>
+                    <li> For Changing image open the file index-personal-agency.html <br>
+                    You can chnage images through the path :- data-image-src="images/personal/type-bg.jpg"</li> 
+                     
+                    <li><p> Fot changing title & sub-title : <br>
+
+                    <pre>&lt;span&gt; class="cd-words-wrapper">Your Title Here&lt;span&gt;</pre>
+                    <pre>&lt;span&gt; >Your Sub-Title Here&lt;span&gt;</pre>
+                     </li> 
+
+                       
+                </ol>       
+            </div>
+
+            <div class="doc-item">
+                <h2>13#.Business Agency:</h2>
+               
+                <ol>
+                    <li> For Changing image open the file index-business.html <br>
+                        Find the class "four-box-wrap".
+                    You can chnage images through the path :- data-image-src="img src="images/business/1.jpg""</li> 
+                     
+                    <li><p> Fot changing title & sub-title : <br>
+
+                    <pre>&lt;h1&gt;class="hs10-h1 text-black-1&lt;h1&gt;"</pre>
+                    
+                     </li> 
+
+                       
+                </ol>       
+            </div>
+
+            
+
+            
+
+
+
+
+        <hr/>
+        <div id="html-struc">
+            <div class="title">
+                <h1><i class="glyphicon glyphicon-file"></i> HTML Structure</h1>
+            </div>
+            <p>This theme is a responsive layout based on <a href="http://getbootstrap.com/">Bootstrap 3</a>.
+            </p>
+            <h2>Grid System</h2>
+            <p>Bootstrap includes a responsive, mobile first fluid grid system that appropriately scales up to 12 columns as the device or viewport size increases. It includes predefined classes for easy layout options, as well as powerful mixins for generating more semantic layouts.<b>Examples:</b>
+            </p>
+            <div class="row show-grid">
+                <div class="col-md-1">.col-md-1</div>
+                <div class="col-md-1">.col-md-1</div>
+                <div class="col-md-1">.col-md-1</div>
+                <div class="col-md-1">.col-md-1</div>
+                <div class="col-md-1">.col-md-1</div>
+                <div class="col-md-1">.col-md-1</div>
+                <div class="col-md-1">.col-md-1</div>
+                <div class="col-md-1">.col-md-1</div>
+                <div class="col-md-1">.col-md-1</div>
+                <div class="col-md-1">.col-md-1</div>
+                <div class="col-md-1">.col-md-1</div>
+                <div class="col-md-1">.col-md-1</div>
+            </div>
+            <div class="row show-grid">
+                <div class="col-md-8">.col-md-8</div>
+                <div class="col-md-4">.col-md-4</div>
+            </div>
+            <div class="row show-grid">
+                <div class="col-md-4">.col-md-4</div>
+                <div class="col-md-4">.col-md-4</div>
+                <div class="col-md-4">.col-md-4</div>
+            </div>
+            <div class="row show-grid" style="margin-bottom:20px;">
+                <div class="col-md-3">.col-md-3</div>
+                <div class="col-md-3">.col-md-3</div>
+                <div class="col-md-3">.col-md-3</div>
+                <div class="col-md-3">.col-md-3</div>
+            </div>
+            
+        </div>
+        <hr/>
+        <div id="css-struc">
+            <div class="title">
+                <h1><i class="glyphicon glyphicon-file"></i> CSS Structure</h1>
+            </div>
+            <p>We're using two main CSS files  <span class="label label-info">styles.css</span>-which is main css, and <span class="label label-info">color-schemes.css</span> css file -for predifined color schemes. we <b>do not</b> recommend making changes to <b>any css files</b>.</p>
+            <br/>
+            <p>We have used different color schemes in different templates.Finished color scheme template is in the /css/color-schemes/ directory:</p>
+            
+            <br>
+              <p>
+              We have some othes css files for different purpose, some are used to furnish the template,(animate.min.css, responsive.css,  etc) and also some are related to respective plugins, (YTPlayer.css, maginific-pop-up.css etc).
+              To customize the template it is <b>Not Necessary</b> to edit these css files. </p>  
+        </div>
+
+         <div id="js-struc">
+            <div class="title">
+                <h1><i class="glyphicon glyphicon-file"></i> JavaScript Structure</h1>
+            </div>
+            <p>We're using <span class="label label-info">custom.js </span> as our main Javascript file,which is well organized with necessary information as comented form.</p>
+            <br/>
+            <p>We have used different js files in different pupose.Finished color scheme template is in the /css/color-schemes/ directory:</p>
+            <ul>
+                
+                <li>smoothscroll.js - for smooth scrolling</li>
+                <li>solidscript.js & fss.min.js - animated block</li>
+                <li>jquery.countTo.js - countdown effect for fun factor</li>
+                <li>animated-headlines.js - for text rotating</li>
+            </ul>
+            <br>
+             
+        </div>
+        <hr/>
+       
+        
+        <hr/>
+        <div id="credits">
+            <div class="title">
+                <h1><i class="glyphicon glyphicon-heart"></i> Credits</h1>
+            </div>
+            <p>We would like to give thanks all the awesome people who created these cool stuffs:</p>
+            <ul>
+                <li><strong>Bootstrap</strong> - Copyright 2011-2014 Twitter, Inc.</li>
+                <li><strong>jquery-2.1.1.js</strong> - 2005, 2014 jQuery Foundation, Inc.</li>
+                <li><strong>jquery.easing.1.3.js</strong> - Copyright © 2008 George McGinley Smith</li>
+                <li><strong>jquery.animsition.js</strong> - http://blivesta.github.io/animsition/</li>
+                <li><strong>smoothscroll.js</strong> - SmoothScroll for websites v1.2.1</li>
+                <li><strong>html5shiv.js</strong> - Author:@afarkas @jdalton @jon_neal @rem ;MIT/GPL2 Licensed</li>
+                <li><strong>jquery.scrollTo.min.js</strong> - Copyright (c) 2007-2014 Ariel Flesler;Licensed under MIT</li>
+                <li><strong>jquery.simple-text-rotator.js</strong>-Copyright 2013 Pete Rojwongsuriya;GENERAL PUBLIC LICENSE</li>
+                <li><strong>wow.js</strong> - Copyright (c) 2014 Matthieu Aussaguel; Licensed MIT</li>
+                <li><strong>waypoints.js</strong> - Copyright (c) 2011-2014 Caleb Troughton</li>
+                <li><strong>jquery.countTo.js</strong> - Copyright 2013, Matt Huggins</li>
+                <li><strong>jquery.mb.YTPlayer.js</strong> - Copyright (c) 2001-2014. Matteo Bicocchi (Pupunzi)</li>
+                <li><strong>retina.js</strong> - Copyright 2014 Imulus, LLC</li>
+                <li><strong>modernizrr.js</strong> - Copyright © MIT & BSD.</li>
+                <li><strong>jquery.isotope.js</strong> - Copyright © 2013 Metafizzy.</li>
+                <li><strong>nivo-lightbox.js</strong> - Copyright 2013, Dev7studios.</li>
+                <li><strong>owl.carousel.js</strong> - Copyright © 2015 Bartosz Wojciechowski.</li>
+            </ul>
+            <br/>
+            <br/>
+        </div>
+    </div>
+    </div>
+    <div class="copyright">Copyright-All rights reserved <a href="#.">© The Creo</a> 2016</div>
+    <script src="assets/js/jquery-2.1.1.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/jquery.easing.1.3.min.js"></script>
+    <script src="assets/js/scripts.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,336 @@
+::selection {
+  color: white;
+  background: #6f8b9d; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  color: white;
+  background: #6f8b9d; /* Gecko Browsers */
+}
+
+.ip-header .ip-loader svg path.ip-loader-circle{
+  stroke: #6f8b9d;
+}
+
+.color-overlay {
+
+}
+
+a:hover {
+    color: #6f8b9d;
+}
+
+a:active {
+    color: #6f8b9d;
+}
+
+a:focus{
+  color: #6f8b9d;
+}
+
+
+.sticky-navigation{
+
+    /*border-bottom: solid 1px #6f8b9d ;*/
+}
+
+.sticky-navigation .main-navigation .current a{
+    color: #6f8b9d;
+}
+
+.sticky-navigation .main-navigation li a:hover{
+  color: #6f8b9d;
+  background: none;
+}
+
+.sticky-navigation .main-navigation li a:active{
+  color: #6f8b9d;
+  background: none;
+}
+
+.sticky-navigation .main-navigation li a:focus{
+  color: #6f8b9d;
+  background: none;
+}
+
+.navbar-toggle .icon-bar{
+  background-color: #6f8b9d;
+}
+
+
+.services .single-service .icon-container .icon{
+
+    color: #6f8b9d;
+}
+
+.featured-item .icon i{
+    color: #6f8b9d;
+}
+
+.work-process .itemz .inner-content > i{
+  background-color: #58656b;
+}
+
+.hvr-ripple-out:before{
+    border: #6f8b9d solid 1px;
+}
+
+.progress .bar {
+    background: #6f8b9d;
+}
+
+ .pf-filter li.active{
+  color: #6f8b9d;
+}
+
+.masonry-grid-4 .portfolio-hover{
+    background-color: rgba(141, 56, 192, .7);
+}
+
+.portfolio-project-info li a:hover {
+    color: #6f8b9d;
+}
+
+.res-funfactor .icon-container i {
+
+    color: #6f8b9d;}
+
+.testimonials .owl-theme .owl-controls .owl-page span {
+    background: #6f8b9d;
+    border-radius: 20%;
+    max-height: 2px;
+}
+
+.clients .owl-theme .owl-controls .owl-page span {
+    background: #6f8b9d;
+    border-radius: 20%;
+    max-height: 2px;
+}
+
+.team-hover {
+    border: 2px solid #FFFFFF;
+    background-color: rgba(255, 255, 255, .7);
+}
+
+.team-hover .s-link a {
+    text-align: center;
+    color: #6f8b9d;
+}
+
+.desk p {
+    color: #6f8b9d;
+}
+
+.team .owl-theme .owl-controls .owl-page span {
+    background: #6f8b9d;
+}
+
+.special-package{
+  color: #6f8b9d;
+}
+
+.special-package .price h2,
+.special-package .price h2 span,
+.special-package .price p
+{
+  color: #6f8b9d;
+}
+
+.special-package .hvr-bounce-to-right:before{
+  background: #6f8b9d;
+}
+
+.special-package .single-package{
+  border: 1px solid #6f8b9d;
+}
+
+.special-package .btn-price{
+  color: #6f8b9d;
+  border-color: #6f8b9d;
+}
+
+.special-package .btn-price:hover{
+  color: #fff;
+}
+
+
+.btn-lines .line-top,
+.btn-lines .line-bottom,
+.btn-lines .line-left,
+.btn-lines .line-right {
+  background: #6f8b9d;
+}
+
+.funfactor .icon-container i {
+    color: #6f8b9d;
+}
+
+.blog-title :hover{
+    color: #6f8b9d;
+}
+
+.blog-post-title :hover {
+    color: #6f8b9d;
+}
+
+.author a :hover {
+  color: #6f8b9d;
+
+ }
+
+ .read-more :hover{
+    color: #6f8b9d;
+ }
+
+.blog-list-item-detail a:hover{
+  color: #6f8b9d;
+}
+
+.blog-item-detail a:hover{
+  color: #6f8b9d;
+}
+
+.input-field:active{
+  border: 1px solid  #6f8b9d;
+  border-radius: 5px;
+}
+
+.input-field:focus {
+  border-color: #6f8b9d;
+}
+
+.clearlist li a:hover  {
+    color: #6f8b9d;
+}
+
+.tags a:hover {
+   color: #6f8b9d;
+  border: 1px solid #6f8b9d;
+}
+
+.article-nav a i:hover{
+  color: #6f8b9d;
+}
+
+/**/
+
+.standard-button {
+    background: #B58C82;
+}
+
+.standard-button2 {
+    background:  #6f8b9d;
+}
+
+.standard-button2:hover {
+    background: #fff;
+}
+
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active,
+.open .dropdown-toggle.btn-primary {
+    background: #005885;
+    border-color: inherit;
+}
+
+.colored-line,
+.colored-line-left {
+    background:  #6f8b9d;
+}
+
+.main-color {
+    color:  #6f8b9d;
+}
+
+.theme-color {
+    color:  #6f8b9d;
+}
+
+.theme-color-bg {
+    background-color:  #6f8b9d;
+}
+
+.color-bg {
+	background: rgb(127,111,91);
+	color: #FFFFFF;
+}
+
+.contact .contact-button {
+    border: 2px solid #656565;
+    color: #958257;
+}
+
+.contact .contact-button:hover {
+    background:  #6f8b9d;
+}
+
+.contact .contact-box .input-box:active,
+.contact .contact-box .textarea-box:active,
+.contact .contact-box .input-box:focus,
+.contact .contact-box .textarea-box:focus {
+    border: 1px solid  #6f8b9d;
+    color: #111;
+}
+
+.social-icons li a:hover {
+    color:  #6f8b9d;
+}
+
+.comment-reply .contact-box .input-box:active,
+.comment-reply .contact-box .textarea-box:active,
+.comment-reply .contact-box .input-box:focus,
+.comment-reply .contact-box .textarea-box:focus {
+    border: 1px solid  #6f8b9d;
+    color: #111;
+}
+
+.contact  .contact-address i{
+  color: #6f8b9d;
+}
+
+.nav-transparent{
+  border-bottom: solid 1px transparent;
+}
+
+.list-tweets li a:hover{
+  color: #6f8b9d;
+}
+
+nav.navbar.bootsnav ul.dropdown-menu.megamenu-content .content ul.menu-col li a:hover,
+.side .widget ul.link li a:hover,
+.side .widget ul.link li a:focus,
+.check-list li:before,
+ul.cart-list > li > h6 > a,
+.attr-nav > ul > li > a:hover,
+.attr-nav > ul > li > a:focus,
+nav.navbar-sidebar ul.nav li.dropdown.on > a,
+nav.navbar-sidebar .dropdown .megamenu-content .col-menu.on .title,
+nav.navbar-sidebar ul.nav li.dropdown ul.dropdown-menu li a:hover,
+nav.navbar ul.nav li.dropdown.on > a,
+nav.navbar.navbar-inverse ul.nav li.dropdown.on > a,
+nav.navbar-sidebar ul.nav li.dropdown.on ul.dropdown-menu li.dropdown.on > a,
+nav.navbar .dropdown .megamenu-content .col-menu.on .title,
+nav.navbar ul.nav > li > a:hover,
+nav.navbar ul.nav li.active > a,
+nav.navbar li.dropdown ul.dropdown-menu > li a:hover{
+    color: #6f8b9d;
+    background: rgba(0, 0, 0, 0.07);
+}
+
+nav.navbar.navbar-transparent ul.nav > li > a:hover,
+nav.navbar.no-background ul.nav > li > a:hover,
+nav.navbar ul.nav li.scroll.active > a,
+nav.navbar.navbar-dark ul.nav li.dropdown ul.dropdown-menu  > li > a:hover,
+nav.navbar ul.nav li.dropdown.on > a,
+nav.navbar-dark ul.nav li.dropdown.on > a{
+    color: #6f8b9d !important;
+    background: rgba(0, 0, 0, 0.07);
+}
+
+@media(max-width:920px){
+    nav.navbar .dropdown .megamenu-content .col-menu ul > li > a:hover,
+    nav.navbar.navbar-dark .dropdown .megamenu-content .col-menu .title:hover{
+        color: #6f8b9d !important;
+        background: rgba(0, 0, 0, 0.07);
+    }
+}

@@ -1,0 +1,338 @@
+::selection {
+  color: white;
+  background: #58656b; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  color: white;
+  background: #58656b; /* Gecko Browsers */
+}
+
+.ip-header .ip-loader svg path.ip-loader-circle{
+  stroke: #58656b;
+}
+
+.color-overlay {
+
+}
+
+a:hover {
+    color: #58656b;
+}
+
+a:active {
+    color: #58656b;
+}
+
+a:focus{
+  color: #58656b;
+}
+
+
+.sticky-navigation{
+
+    /*border-bottom: solid 1px #58656b ;*/
+}
+
+.sticky-navigation .main-navigation .current a{
+    color: #58656b;
+}
+
+.sticky-navigation .main-navigation li a:hover{
+  color: #58656b;
+  background: none;
+}
+
+.sticky-navigation .main-navigation li a:active{
+  color: #58656b;
+  background: none;
+}
+
+.sticky-navigation .main-navigation li a:focus{
+  color: #58656b;
+  background: none;
+}
+
+.navbar-toggle .icon-bar{
+  background-color: #58656b;
+}
+
+
+.services .single-service .icon-container .icon{
+
+    color: #58656b;
+}
+
+.featured-item .icon i{
+    color: #6F8B9D;
+}
+
+
+
+.work-process .itemz .inner-content > i{
+  background-color: #58656b;
+}
+
+.hvr-ripple-out:before{
+    border: #58656b solid 1px;
+}
+
+.progress .bar {
+    background: #58656b;
+}
+
+ .pf-filter li.active{
+  color: #58656b;
+}
+
+.portfolio-hover{
+    background-color: rgba(255, 255, 255, .9);
+}
+
+
+.masonry-grid-4 .portfolio-hover{
+    background-color: rgba(255, 255, 255, .8);
+}
+.portfolio-project-info li a:hover {
+    color: #58656b;
+}
+
+.testimonials .owl-theme .owl-controls .owl-page span {
+    background: #58656b;
+    border-radius: 20%;
+    max-height: 2px;
+}
+
+.clients .owl-theme .owl-controls .owl-page span {
+    background: #58656b;
+    border-radius: 20%;
+    max-height: 2px;
+}
+
+.team-hover {
+    border: 2px solid #FFFFFF;
+    background-color: rgba(255, 255, 255, .7);
+}
+
+.team-hover .s-link a {
+    text-align: center;
+    color: #58656b;
+}
+
+.desk p {
+    color: #58656b;
+}
+
+.team .owl-theme .owl-controls .owl-page span {
+    background: #58656b;
+}
+
+.special-package{
+  color: #58656b;
+}
+
+.special-package .price h2,
+.special-package .price h2 span,
+.special-package .price p
+{
+  color: #58656b;
+}
+
+.special-package .hvr-bounce-to-right:before{
+  background: #58656b;
+}
+
+.special-package .single-package{
+  border: 1px solid #58656b;
+}
+
+.special-package .btn-price{
+  color: #58656b;
+  border-color: #58656b;
+}
+
+.special-package .btn-price:hover{
+  color: #fff;
+}
+
+
+.btn-lines .line-top,
+.btn-lines .line-bottom,
+.btn-lines .line-left,
+.btn-lines .line-right {
+  background: #58656b;
+}
+
+.funfactor .icon-container i {
+    color: #58656b;
+}
+
+.blog-title :hover{
+    color: #58656b;
+}
+
+.blog-post-title :hover {
+    color: #58656b;
+}
+
+.author a :hover {
+  color: #58656b;
+
+ }
+
+ .read-more :hover{
+    color: #58656b;
+ }
+
+.blog-list-item-detail a:hover{
+  color: #58656b;
+}
+
+.blog-item-detail a:hover{
+  color: #58656b;
+}
+
+.input-field:active{
+  border: 1px solid  #58656b;
+  border-radius: 5px;
+}
+
+.input-field:focus {
+  border-color: #58656b;
+}
+
+.clearlist li a:hover  {
+    color: #58656b;
+}
+
+.tags a:hover {
+   color: #58656b;
+  border: 1px solid #58656b;
+}
+
+.article-nav a i:hover{
+  color: #58656b;
+}
+
+/**/
+
+.standard-button {
+    background: #B58C82;
+}
+
+.standard-button2 {
+    background:  #58656b;
+}
+
+.standard-button2:hover {
+    background: #fff;
+}
+
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active,
+.open .dropdown-toggle.btn-primary {
+    background: #005885;
+    border-color: inherit;
+}
+
+.colored-line,
+.colored-line-left {
+    background:  #58656b;
+}
+
+.main-color {
+    color:  #58656b;
+}
+
+.theme-color {
+    color:  #58656b;
+}
+
+.theme-color-bg {
+    background-color:  #58656b;
+}
+
+.color-bg {
+	background: rgb(127,111,91);
+	color: #FFFFFF;
+}
+
+.contact .contact-button {
+    border: 2px solid #656565;
+    color: #958257;
+}
+
+.contact .contact-button:hover {
+    background:  #58656b;
+}
+
+.contact .contact-box .input-box:active,
+.contact .contact-box .textarea-box:active,
+.contact .contact-box .input-box:focus,
+.contact .contact-box .textarea-box:focus {
+    border: 1px solid  #58656b;
+    color: #111;
+}
+
+.social-icons li a:hover {
+    color:  #58656b;
+}
+
+.comment-reply .contact-box .input-box:active,
+.comment-reply .contact-box .textarea-box:active,
+.comment-reply .contact-box .input-box:focus,
+.comment-reply .contact-box .textarea-box:focus {
+    border: 1px solid  #58656b;
+    color: #111;
+}
+
+.contact  .contact-address i{
+  color: #58656b;
+}
+
+.nav-transparent{
+  border-bottom: solid 1px transparent;
+}
+
+.list-tweets li a:hover{
+  color: #58656b;
+}
+
+nav.navbar.bootsnav ul.dropdown-menu.megamenu-content .content ul.menu-col li a:hover,
+.side .widget ul.link li a:hover,
+.side .widget ul.link li a:focus,
+.check-list li:before,
+ul.cart-list > li > h6 > a,
+.attr-nav > ul > li > a:hover,
+.attr-nav > ul > li > a:focus,
+nav.navbar-sidebar ul.nav li.dropdown.on > a,
+nav.navbar-sidebar .dropdown .megamenu-content .col-menu.on .title,
+nav.navbar-sidebar ul.nav li.dropdown ul.dropdown-menu li a:hover,
+nav.navbar ul.nav li.dropdown.on > a,
+nav.navbar.navbar-inverse ul.nav li.dropdown.on > a,
+nav.navbar-sidebar ul.nav li.dropdown.on ul.dropdown-menu li.dropdown.on > a,
+nav.navbar .dropdown .megamenu-content .col-menu.on .title,
+nav.navbar ul.nav > li > a:hover,
+nav.navbar ul.nav li.active > a,
+nav.navbar li.dropdown ul.dropdown-menu > li a:hover{
+    color: #58656b;
+    background: rgba(0, 0, 0, 0.07);
+}
+
+nav.navbar.navbar-transparent ul.nav > li > a:hover,
+nav.navbar.no-background ul.nav > li > a:hover,
+nav.navbar ul.nav li.scroll.active > a,
+nav.navbar.navbar-dark ul.nav li.dropdown ul.dropdown-menu  > li > a:hover,
+nav.navbar ul.nav li.dropdown.on > a,
+nav.navbar-dark ul.nav li.dropdown.on > a{
+    color: #58656b !important;
+    background: rgba(0, 0, 0, 0.07);
+}
+
+@media(max-width:920px){
+    nav.navbar .dropdown .megamenu-content .col-menu ul > li > a:hover,
+    nav.navbar.navbar-dark .dropdown .megamenu-content .col-menu .title:hover{
+        color: #58656b !important;
+        background: rgba(0, 0, 0, 0.07);
+    }
+}

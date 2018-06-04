@@ -1,0 +1,17 @@
+html {
+    font-size: 100%;
+    width: auto !important;
+    overflow-x: visible !important;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  color: #424242;
+  line-height: 34px;
+}
+
+body.u-blockScroll {
+  height: 100%;
+  overflow: hidden;
+}

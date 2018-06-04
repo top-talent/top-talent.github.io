@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>Shortcodes |testimonial</title>
+    <!-- =========================
+        FAV AND TOUCH ICONS (RETINA)
+    ============================== -->
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="apple-icon-57x57.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="apple-icon-144x144.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="apple-icon-120x120.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="apple-icon-152x152.png" />
+    <link rel="icon" type="image/png" href="images/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="images/favicon-16x16.png" sizes="16x16" />
+    <meta name="msapplication-TileImage" content="ms-icon-144x144.png" />
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootsnav.css">
+    <!-- Animation Libraries -->
+    <link rel="stylesheet" href="css/animate.min.css">
+
+
+    <!-- Fonts Icons -->
+    <link rel="stylesheet" href="assets/elegant-icons/style.css">
+    <link rel="stylesheet" href="assets/et-line-font/style.css">
+    <link rel="stylesheet" href="assets/ion-icon/ionicons.min.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+      <link rel="stylesheet" href="css/owl.theme.css">
+    <link rel="stylesheet" href="css/owl.carousel.css">
+
+    <!-- Youtube Background Player -->
+    <link rel="stylesheet" href="css/YTPlayer.css">
+
+    <!-- COLORS Theme -->
+    <link rel="stylesheet" href="css/color-schemes/teal.css">
+
+    <!-- Main Styles -->
+    <link href="css/styles.css" rel="stylesheet">
+
+    <script src="js/jquery.min.js"></script><script src="js/jquery-migrate-3.0.0.js"></script>
+    <script src="js/modernizr.custom.js"></script>
+</head>
+
+<body>
+
+<!-- =========================
+     PRE LOADER
+============================== -->
+<div class="preloader">
+    <div id="ip-container" class="ip-container">
+        <div class="ip-header">
+            <div class="ip-loader">
+                <svg class="ip-inner" width="60px" height="60px" viewBox="0 0 80 80">
+                    <path class="ip-loader-circlebg" d="M40,10C57.351,10,71,23.649,71,40.5S57.351,71,40.5,71 S10,57.351,10,40.5S23.649,10,40.5,10z"/>
+                    <path id="ip-loader-circle" class="ip-loader-circle" d="M40,10C57.351,10,71,23.649,71,40.5S57.351,71,40.5,71 S10,57.351,10,40.5S23.649,10,40.5,10z"/>
+                </svg>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<nav class="navbar navbar-default navbar-sticky bootsnav on no-full sticked">
+          <!-- Start Top Search -->
+          <div class="top-search">
+              <div class="container">
+                  <div class="input-group">
+                      <span class="input-group-addon"><i class="fa fa-search"></i></span>
+                      <input type="text" class="form-control" placeholder="Search">
+                      <span class="input-group-addon close-search"><i class="fa fa-times"></i></span>
+                  </div>
+              </div>
+          </div>
+          <!-- End Top Search -->
+          <div class="container">
+              <!-- Start Atribute Navigation -->
+              <div class="attr-nav">
+                  <ul>
+                      <li class="dropdown">
+                          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                              <i class="fa fa-shopping-bag"></i>
+                              <span class="badge">3</span>
+                          </a>
+                          <ul class="dropdown-menu cart-list animated">
+                              <li>
+                                  <a href="#" class="photo"><img src="images/thumb/thumb01.jpg" class="cart-thumb" alt=""></a>
+                                  <h6><a href="#">Delica omtantur </a></h6>
+                                  <p>2x - <span class="price">$99.99</span></p>
+                              </li>
+                              <li>
+                                  <a href="#" class="photo"><img src="images/thumb/thumb02.jpg" class="cart-thumb" alt=""></a>
+                                  <h6><a href="#">Omnes ocurreret</a></h6>
+                                  <p>1x - <span class="price">$33.33</span></p>
+                              </li>
+                              <li>
+                                  <a href="#" class="photo"><img src="images/thumb/thumb03.jpg" class="cart-thumb" alt=""></a>
+                                  <h6><a href="#">Agam facilisis</a></h6>
+                                  <p>2x - <span class="price">$99.99</span></p>
+                              </li>
+                              <li class="total">
+                                  <span class="pull-right"><strong>Total</strong>: $0.00</span>
+                                  <a href="#" class="btn btn-default btn-cart">Cart</a>
+                              </li>
+                          </ul>
+                      </li>
+                      <li class="search"><a href="#"><i class="fa fa-search"></i></a></li>
+                  </ul>
+              </div>
+              <!-- End Atribute Navigation -->
+              <!-- Start Header Navigation -->
+              <div class="navbar-header">
+                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
+                      <i class="fa fa-bars"></i>
+                  </button>
+                  <a class="navbar-brand" href="#"><img src="images/logo.png" class="logo" alt=""></a>
+              </div>
+              <!-- End Header Navigation -->
+              <!-- Collect the nav links, forms, and other content for toggling -->
+              <div class="collapse navbar-collapse" id="navbar-menu">
+                  <ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
+                      <li class="dropdown megamenu-fw">
+                          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Home</a>
+                          <ul class="dropdown-menu megamenu-content animated fadeOutUp" role="menu">
+                              <li>
+                                  <div class="row">
+                                      <div class="col-menu col-md-3">
+                                          <h6 class="title">Generic Demos</h6>
+                                          <div class="content">
+                                              <ul class="menu-col">
+                                                  <li><a href="index-creative-agency1.html">Home - Creative Agency 1</a></li>
+                                                  <li><a href="index-creative-agency2.html">Home - Creative Agency 2</a></li>
+                                                  <li><a href="index-digital-agency.html">Home - Digital Agency</a></li>
+                                                  <li><a href="index-startup-agency.html">Home - Startup</a></li>
+                                                  <li><a href="index-business.html">Home - Business</a></li>
+                                                  <li><a href="index-studio.html">Home - Studio</a></li>
+                                                  <li><a href="index-product.html">Home - Product Landing</a></li>
+                                              </ul>
+                                          </div>
+                                      </div><!-- end col-3 -->
+                                      <div class="col-menu col-md-3">
+                                          <h6 class="title">Complete Demos</h6>
+                                          <div class="content">
+                                              <ul class="menu-col">
+                                                  <li><a href="archit-home.html">Architecture</a></li>
+                                                  <li><a href="construction-home.html">Construction</a></li>
+                                                  <li><a href="consultancy-home.html">Consultancy</a></li>
+                                                  <li><a href="finance-home.html">Finance</a></li>
+                                                  <li><a href="interior-home.html">Interior</a></li>
+                                                  <li><a href="resturant-home.html">Restaurant</a></li>
+                                              </ul>
+                                          </div>
+                                      </div><!-- end col-3 -->
+                                      <div class="col-menu col-md-3">
+                                          <h6 class="title">Onepage Demos</h6>
+                                          <div class="content">
+                                              <ul class="menu-col">
+                                              <li><a href="index-op-business.html">OP Business</a></li>
+                                              <li><a href="index-op-personal-agency.html">OP Personal Agency</a></li>
+                                              <li><a href="index-op-resturant.html">OP Restaurant</a></li>
+                                              </ul>
+                                          </div>
+                                      </div>
+                                      <div class="col-menu col-md-3">
+                                          <h6 class="title">HomePage Variations</h6>
+                                          <div class="content">
+                                              <ul class="menu-col">
+                                                  <li><a href="index-home-particle.html">Particles</a></li>
+                                                  <li><a href="index-home-utube.html">YouTube</a></li>
+                                                  <li><a href="index-home-video.html">HTML Video</a></li>
+                                                  <li><a href="index-home-type-effect.html">Type Effect</a></li>
+                                              </ul>
+                                          </div>
+                                      </div><!-- end col-3 -->
+                                  </div><!-- end row -->
+                              </li>
+                          </ul>
+                      </li>
+                      <li class="dropdown megamenu-fw">
+                          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Pages</a>
+                          <ul class="dropdown-menu megamenu-content animated fadeOutUp" role="menu">
+                              <li>
+                                  <div class="row">
+                                      <div class="col-menu col-md-3">
+                                          <h6 class="title">About</h6>
+                                          <div class="content">
+                                              <ul class="menu-col">
+                                                  <li><a href="about-us-1.html">About Us 1</a></li>
+                                                  <li><a href="about-us-2.html">About Us 2</a></li>
+                                                  <li><a href="about-us-3.html">About Us 3</a></li>
+                                              </ul>
+                                          </div>
+                                      </div><!-- end col-3 -->
+                                      <div class="col-menu col-md-3">
+                                          <h6 class="title">Service</h6>
+                                          <div class="content">
+                                              <ul class="menu-col">
+                                                  <li><a href="service-1.html">Service 1</a></li>
+                                                  <li><a href="service-2.html">Service 2</a></li>
+                                                  <li><a href="service-3.html">Service 3</a></li>
+                                              </ul>
+                                          </div>
+                                      </div><!-- end col-3 -->
+                                      <div class="col-menu col-md-3">
+                                          <h6 class="title">Contact</h6>
+                                          <div class="content">
+                                              <ul class="menu-col">
+                                                  <li><a href="contact-us-1.html">Contact 1</a></li>
+                                                  <li><a href="contact-us-2.html">Contact 2</a></li>
+                                                  <li><a href="contact-us-3.html">Contact 3</a></li>
+                                              </ul>
+                                          </div>
+                                      </div>
+                                      <div class="col-menu col-md-3">
+                                          <h6 class="title">Others</h6>
+                                          <div class="content">
+                                              <ul class="menu-col">
+                                                  <li><a href="footer-1-dark.html">footer-1-dark</a></li>
+                                                  <li><a href="footer-1-light.html">footer-1-light</a></li>
+                                                  <li><a href="footer-2-dark.html">footer-2-dark</a></li>
+                                                  <li><a href="footer-2-light.html">footer-2-light</a></li>
+                                                </ul>
+                                          </div>
+                                      </div><!-- end col-3 -->
+                                  </div><!-- end row -->
+                              </li>
+                          </ul>
+                      </li>
+                      <li class="dropdown">
+                          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Portfolio</a>
+                          <ul class="dropdown-menu animated fadeOutUp">
+                              <li class="dropdown">
+                                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Grid Style</a>
+                                  <ul class="dropdown-menu animated">
+                                      <li class="dropdown">
+                                          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Gutter</a>
+                                          <ul class="dropdown-menu animated">
+                                              <li><a href="portfolio-gut-5.html">5 Column</a></li>
+                                              <li><a href="portfolio-gut-4.html">4 Column</a></li>
+                                              <li><a href="portfolio-gut-3.html">3 Column</a></li>
+                                          </ul>
+                                      </li>
+                                      <li class="dropdown">
+                                          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Gutter-Less</a>
+                                          <ul class="dropdown-menu animated">
+                                              <li><a href="portfolio-nogut-5.html">5 Column</a></li>
+                                              <li><a href="portfolio-nogut-4.html">4 Column</a></li>
+                                              <li><a href="portfolio-nogut-3.html">3 Column</a></li>
+                                          </ul>
+                                      </li>
+                                  </ul>
+                              </li>
+                              <li class="dropdown">
+                                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Masonry Style</a>
+                                  <ul class="dropdown-menu animated">
+                                      <li class="dropdown">
+                                          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Gutter</a>
+                                          <ul class="dropdown-menu animated">
+                                              <li><a href="portfolio-gut-m-5.html">5 Column</a></li>
+                                              <li><a href="portfolio-gut-m-4.html">4 Column</a></li>
+                                              <li><a href="portfolio-gut-m-3.html">3 Column</a></li>
+                                          </ul>
+                                      </li>
+                                      <li class="dropdown">
+                                          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Gutter-Less</a>
+                                          <ul class="dropdown-menu animated">
+                                              <li><a href="portfolio-nogut-m-5.html">5 Column</a></li>
+                                              <li><a href="portfolio-nogut-m-4.html">4 Column</a></li>
+                                              <li><a href="portfolio-nogut-m-3.html">3 Column</a></li>
+                                          </ul>
+                                      </li>
+                                  </ul>
+                              </li>
+                              <li><a href="portfolio-project-1.html">Portfolio Details 1</a></li>
+                              <li><a href="portfolio-project-2.html">Portfolio Details 2</a></li>
+                              <li><a href="portfolio-project-3.html">Portfolio Details 3</a></li>
+                          </ul>
+                      </li>
+                      <li class="dropdown">
+                          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Blogs</a>
+                          <ul class="dropdown-menu animated fadeOutUp">
+                              <li class="dropdown">
+                                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Single Blog</a>
+                                  <ul class="dropdown-menu animated">
+                                      <li><a href="single-blog-01.html">Left Sidebar</a></li>
+                                      <li><a href="single-blog-02.html">Right Sidebar</a></li>
+                                      <li><a href="single-blog-03.html">No Sidebar</a></li>
+                                      <li><a href="single-blog-04.html">Parallax</a></li>
+                                  </ul>
+                              </li>
+                              <li class="dropdown">
+                                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Blog List</a>
+                                  <ul class="dropdown-menu animated">
+                                      <li><a href="blog-list-01.html">Blog List 1</a></li>
+                                      <li><a href="blog-list-02.html">Blog List 2</a></li>
+                                  </ul>
+                              </li>
+                          </ul>
+                      </li>
+                      <li class="dropdown megamenu-fw">
+                          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Shortcodes</a>
+                          <ul class="dropdown-menu megamenu-content animated fadeOutUp" role="menu">
+                              <li>
+                                  <div class="row">
+                                      <div class="col-menu col-md-4">
+                                          <h6 class="title">Shortcode List 1</h6>
+                                          <div class="content">
+                                              <ul class="menu-col">
+                                                  <li><a href="shortcodes-alert.html">Alerts</a></li>
+                                                  <li><a href="shortcodes-buttons-new.html">Buttons</a></li>
+                                                  <li><a href="shortcodes-call-to.html">Call to Actions</a></li>
+                                                  <li><a href="shortcodes-clients.html">Clients</a></li>
+                                                  <li><a href="shortcodes-divs-new.html">Divs</a></li>
+                                              </ul>
+                                          </div>
+                                      </div><!-- end col-3 -->
+                                      <div class="col-menu col-md-4">
+                                          <h6 class="title">Shortcode List 2</h6>
+                                          <div class="content">
+                                              <ul class="menu-col">
+                                                  <li><a href="shortcodes-dropcaps.html">Drop Caps</a></li>
+                                                  <li><a href="shortcodes-features.html">Features</a></li>
+                                                  <li><a href="shortcodes-fun-factors.html">Fun Factors</a></li>
+                                                  <li><a href="shortcodes-post.html">Posts</a></li>
+                                                  <li><a href="shortcodes-pricing-table.html">Pricing Tables</a></li>
+                                              </ul>
+                                          </div>
+                                      </div><!-- end col-3 -->
+                                      <div class="col-menu col-md-4">
+                                          <h6 class="title">Shortcode List 3</h6>
+                                          <div class="content">
+                                              <ul class="menu-col">
+                                                  <li><a href="shortcodes-skill.html">Skill</a></li>
+                                                  <li><a href="shortcodes-tables.html">Tables</a></li>
+                                                  <li><a href="shortcodes-tabs.html">Tabs</a></li>
+                                                  <li><a href="shortcodes-team.html">Teams</a></li>
+                                                  <li><a href="shortcodes-testimonial.html">Testimonial</a></li>
+                                              </ul>
+                                          </div>
+                                      </div>
+                                  </div><!-- end row -->
+                              </li>
+                          </ul>
+                      </li>
+                      <li class="dropdown">
+                          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Shop</a>
+                          <ul class="dropdown-menu animated fadeOutUp">
+                              <li>
+                                  <a href="shop-page.html" class="dropdown-toggle" data-toggle="dropdown">Shop Page</a>
+                              </li>
+                              <li>
+                                  <a href="shop-details.html" class="dropdown-toggle" data-toggle="dropdown">Single Product</a>
+                              </li>
+                              <li>
+                                  <a href="shopping-cart.html" class="dropdown-toggle" data-toggle="dropdown">Shopping Cart</a>
+                              </li>
+                          </ul>
+                      </li>
+                      <li><a href="#">Contact</a></li>
+                  </ul>
+              </div><!-- /.navbar-collapse -->
+          </div>
+      </nav>
+
+<!--page title start-->
+<section class="shortcode-head-bg" id="home">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <h4 class="shortcode-page-heading">Testimonials</h4>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!--page title end-->
+
+
+
+
+       <div class="page-content">
+        <div class="">
+            <div class="row">
+             <div class="col-md-12">
+
+                        <div class="shortcode-item-title"> Testimonial style one</div>
+
+                   <div class="row">
+
+<div id="testimonial">
+    <div class="">
+
+        <div class="row">
+            <div class="col-md-12" data-wow-delay="0.2s">
+                <div class="carousel slide" data-ride="carousel" id="quote-carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#quote-carousel" data-slide-to="0" class="active"><img class="img-responsive " src="images/cl-1.jpg" alt="">
+                        </li>
+                        <li data-target="#quote-carousel" data-slide-to="1"><img class="img-responsive" src="images/cl-2.jpg" alt="">
+                        </li>
+                        <li data-target="#quote-carousel" data-slide-to="2"><img class="img-responsive" src="images/cl-1.jpg" alt="">
+                        </li>
+                    </ol>
+                    <div class="carousel-inner text-center">
+                        <div class="item active">
+                            <blockquote>
+                                <div class="row">
+                                    <div class="col-sm-8 col-sm-offset-2">
+
+                                        <p class="qute-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. !</p>
+                                        <small>Jhon Doe</small>
+                                    </div>
+                                </div>
+                            </blockquote>
+                        </div>
+                        <div class="item">
+                            <blockquote>
+                                <div class="row">
+                                    <div class="col-sm-8 col-sm-offset-2">
+
+                                        <p class="qute-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+                                        <small>Jacob Oram</small>
+                                    </div>
+                                </div>
+                            </blockquote>
+                        </div>
+                        <div class="item">
+                            <blockquote>
+                                <div class="row">
+                                    <div class="col-sm-8 col-sm-offset-2">
+                                        <p class="qute-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. .</p>
+                                        <small>David Young</small>
+                                    </div>
+                                </div>
+                            </blockquote>
+                        </div>
+                    </div>
+                    <a data-slide="prev" href="#quote-carousel" class="left carousel-control"><i class="fa fa-chevron-left"></i></a>
+                    <a data-slide="next" href="#quote-carousel" class="right carousel-control"><i class="fa fa-chevron-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    </div>   <!-- /END ROW -->
+
+                      </div>
+                     </div>
+                    </div>
+                </div>
+
+                     <!-- TESTIMONIAL STYLE -2 -->
+    <div class="">
+        <div class="container">
+            <div class="row">
+             <div class="col-md-12">
+
+                <div class="shortcode-item-title">Testimonial style two</div>
+                  <div class="testimonials-3">
+
+     <div class="divider d-solid d-single "> </div>
+
+     <div class="container wow fadeIn animated" data-wow-offset="10" data-wow-duration="1.5s">
+
+          <!-- FEEDBACKS  STARTS-->
+          <div id="feedbacks" class="owl-carousel owl-theme">
+
+               <!-- SINGLE FEEDBACK -->
+               <div class="feedback">
+
+                    <!-- IMAGE -->
+                    <div class="image">
+                         <!-- i class=" icon_quotations"></i -->
+                         <img src="images/clients-pic/c-1.jpg" alt="">
+                    </div>
+
+                    <div class="message">
+                           Keep your face to the sunshine and you cannot see a shadow.Find a place inside where there's joy, and the joy will burn out the pain.Live life to the fullest, and focus on the positive.
+
+
+                    </div>
+
+                    <div class="black-line">
+                    </div>
+
+                    <!-- INFORMATION -->
+                    <div class="name">
+                         Phillip Morris.
+                    </div>
+                    <div class="company-info">
+                         Creation Studio.
+                    </div>
+
+               </div>
+               <!-- /END SINGLE FEEDBACK -->
+
+               <!-- SINGLE FEEDBACK -->
+               <div class="feedback">
+
+                    <!-- IMAGE -->
+                    <div class="image">
+                         <!-- i class=" icon_quotations"></i -->
+                         <img src="images/clients-pic/c-2.jpg" alt="">
+                    </div>
+
+                    <div class="message">
+                         Once you replace negative thoughts with positive ones, you'll start having positive results.Live life to the fullest, and focus on the positive.Keep your face to the sunshine and you cannot see a shadow.
+                    </div>
+
+                    <div class="black-line">
+                    </div>
+
+                    <!-- INFORMATION -->
+                    <div class="name">
+                         Christina.
+                    </div>
+                    <div class="company-info">
+                         Christina Collections.
+                    </div>
+
+               </div>
+               <!-- /END SINGLE FEEDBACK -->
+
+               <!-- SINGLE FEEDBACK -->
+               <div class="feedback">
+
+                    <!-- IMAGE -->
+                    <div class="image">
+                         <!-- i class=" icon_quotations"></i -->
+                         <img src="images/clients-pic/c-3.jpg" alt="">
+                    </div>
+                    <!-- MESSAGE -->
+                    <div class="message">
+                          Once you replace negative thoughts with positive ones, you'll start having positive results.Live life to the fullest, and focus on the positive.Keep your face to the sunshine and you cannot see a shadow.
+                    </div>
+
+                    <div class="black-line">
+                    </div>
+
+                    <!-- INFORMATION -->
+                    <div class="name">
+                         Hughman.
+                    </div>
+                    <div class="company-info">
+                         Oley.
+                    </div>
+
+               </div>
+               <!-- /END SINGLE FEEDBACK -->
+
+          </div>
+          <!-- /END FEEDBACKS -->
+
+     </div>
+     <!-- /END CONTAINER -->
+           <div class="divider d-solid d-single "> </div>
+
+</div>
+                        </div>
+                     </div>
+                    </div>
+                </div>
+
+                <!-- TESTIMONIAL STYLE -3 -->
+
+        <div class="page-content">
+            <div class="">
+            <div class="row">
+             <div class="col-md-12">
+
+                        <div class="shortcode-item-title"> Testimonial style three</div>
+
+
+                    <div class="row">
+
+                          <div class="testimonials">
+         <div class="color-overlay">
+          <div class="container wow fadeIn animated" data-wow-offset="10" data-wow-duration="1.5s">
+           <!-- FEEDBACKS  STARTS-->
+           <div class="col-md-6  text-center center-col">
+            <div id="feedbacks-2" class="owl-carousel owl-theme ">
+             <!-- SINGLE FEEDBACK -->
+             <div class="feedback">
+              <!-- IMAGE -->
+              <div class="image">
+               <img src="images/clients-pic/c-3.jpg" alt="">
+             </div>
+             <div class="message">
+               Now that we have a firm handle on just how important exercise is, it’s become all the rage. People are running to shed those pounds, stay in shape, and hopefully live a slightly longer, happier life.
+             </div>
+             <!-- INFORMATION -->
+             <div class="name">
+               Phillip Morris.
+             </div>
+             <div class="company-info">
+               Creation Studio.
+             </div>
+           </div>
+           <!-- /END SINGLE FEEDBACK -->
+           <!-- SINGLE FEEDBACK -->
+           <div class="feedback">
+            <!-- IMAGE -->
+            <div class="image">
+             <img src="images/clients-pic/c-1.jpg" alt="">
+           </div>
+           <div class="message">
+             Now that we have a firm handle on just how important exercise is, it’s become all the rage. People are running to shed those pounds, stay in shape, and hopefully live a slightly longer, happier life.
+           </div>
+           <!-- INFORMATION -->
+           <div class="name">
+             Phillip Morris.
+           </div>
+           <div class="company-info">
+             Creation Studio.
+           </div>
+         </div>
+         <!-- /END SINGLE FEEDBACK -->
+         <!-- SINGLE FEEDBACK -->
+         <div class="feedback">
+          <!-- IMAGE -->
+          <div class="image">
+           <img src="images/clients-pic/c-2.jpg" alt="">
+         </div>
+         <!-- MESSAGE -->
+         <div class="message">
+           Now that we have a firm handle on just how important exercise is, it’s become all the rage. People are running to shed those pounds, stay in shape, and hopefully live a slightly longer, happier life.
+           <!-- INFORMATION -->
+           <div class="name">
+            Phillip Morris.
+          </div>
+          <div class="company-info">
+            Creation Studio.
+          </div>
+        </div>
+        <!-- /END SINGLE FEEDBACK -->
+      </div>
+      <!-- /END FEEDBACKS -->
+    </div>
+  </div>
+  <!-- /END CONTAINER -->
+</div>
+<!-- /END COLOR OVERLAY -->
+</div>
+</div> <!-- /END ROW -->
+
+
+
+                    </div>   <!-- /END ROW -->
+
+                      </div>
+                     </div>
+                    </div>
+                </div>
+
+<!-- =========================
+     FOOTER
+     ============================== -->
+     <footer class="footer-section footer-2 footer-2-dark">
+      <div class="row footer-content">
+        <div class="col-md-3 footer-column">
+            <p>Jovan INC.</p>
+        </div>
+
+        <div class="col-md-3">
+            <ul class="footer__nav-list">
+              <li class="footer__nav-item"><a href="#about" class="footer__nav-link">About</a></li>
+              <li class="footer__nav-item"><a href="blog-list-01.html" class="footer__nav-link">Blog</a></li>
+              <li class="footer__nav-item"><a href="#contact-us" class="footer__nav-link">Contact</a></li>
+              <li class="footer__nav-item"><a href="#policy" class="footer__nav-link">Privacy Policy</a></li>
+            </ul>
+        </div>
+        <div class="col-md-6 footer-column">
+            <ul class="social-icons">
+                <li><a href=""><i class="social_facebook"></i></a></li>
+                <li><a href=""><i class="social_twitter"></i></a></li>
+                <li><a href=""><i class="social_instagram"></i></a></li>
+            </ul>
+            <div class="copyright-2">
+                All work is the property of
+                Jovan Inc. <br>
+                &copy; theCreo. All Rights Reserved.
+            </div>
+        </div>
+
+    </div>
+    <!-- SCROLL UP -->
+    <div class="scroll-up">
+        <a class="theme-color-bg" href="#home"><i class="fa fa-angle-up"></i></a>
+    </div>
+
+
+</footer>
+<!-- /END FOOTER -->
+    <!-- =========================
+     SCRIPTS
+============================== -->
+
+<script src="js/bootstrap.min.js"></script>
+<script src="js/smoothscroll.js"></script>
+<script src="js/jquery.scrollTo.min.js"></script>
+<script src="js/jquery.localScroll.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/isotope.pkgd.min.js"></script>
+<script src="js/waypoints.min.js"></script>
+<script src="js/wow.min.js"></script>
+<script src="js/nivo-lightbox.min.js"></script>
+<script src="js/jquery.nav.js"></script>
+<script src="js/bootsnav.js"></script>
+<script src="js/matchMedia.js"></script>
+<script src="js/jquery.fitvids.js"></script>
+<script src="js/jquery.countTo.js"></script>
+<script src="js/classie.js"></script>
+<script src="js/pathLoader.js"></script>
+<script src="js/parallax.min.js"></script>
+<script src="js/nivo-lightbox.min.js"></script>
+<script src="js/jquery.ajaxchimp.js"></script>
+<script src="js/custom.js"></script>
+
+    <!--/ End JS Scripts -->
+</body>
+
+</html>
