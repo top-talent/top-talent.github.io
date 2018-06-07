@@ -1,0 +1,23 @@
+path.curve {
+  fill: none;
+  /*stroke: #666;*/
+  stroke-width: 1.5px;
+}
+
+circle {
+  fill: #ccc;
+  stroke: black;
+  stroke-width: 1.5px;
+}
+
+g.node.fixed circle {
+  fill: pink;
+  stroke: red;
+  stroke-width: 2.5px;
+}
+
+text {
+  fill: #000;
+  font: 10px sans-serif;
+  pointer-events: none;
+}

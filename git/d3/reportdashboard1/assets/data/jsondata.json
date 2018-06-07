@@ -1,0 +1,309 @@
+[{
+	"id":1,
+	"scenario":"Scenario 1",
+	"visual":"Username validation",
+	"test status":"pass",
+	"funcional area":"account",
+	"auomated" :"yes"
+},{
+	"id":2,
+	"scenario":"Scenario 2",
+	"visual":"Login success",
+	"test status":"pass",
+	"funcional area":"login",
+	"auomated" :"yes"
+},{
+	"id":3,
+	"scenario":"Scenario 3",
+	"visual":"Non-registered login attempt",
+	"test status":"pass",
+	"funcional area":"login",
+	"auomated" :"yes"
+},{
+	"id":4,
+	"scenario":"Scenario 4",
+	"visual":"Username validation",
+	"test status":"pass",
+	"funcional area":"login",
+	"auomated" :"yes"
+},{
+	"id":5,
+	"scenario":"Scenario 5",
+	"visual":"Password validation",
+	"test status":"pass",
+	"funcional area":"login",
+	"auomated" :"yes"
+},{
+	"id":6,
+	"scenario":"Scenario 6",
+	"visual":"Logout",
+	"funcional area":"landing page",
+	"test status":"pass",
+	"auomated" :"yes"
+},{
+	"id":7,
+	"scenario":"Scenario 7",
+	"visual":"Password validation",
+	"funcional area":"landing page",
+	"test status":"pass",
+	"auomated" :"tbc"
+},{
+	"id":8,
+	"scenario":"Scenario 8",
+	"visual":"Landing page login",
+	"funcional area":"landing page",
+	"test status":"pass",
+	"auomated" :"yes"
+},{
+	"id":9,
+	"scenario":"Scenario 9",
+	"visual":"Landing page navigation",
+	"funcional area":"account",
+	"test status":"pass",
+	"auomated" :"no"
+},{
+	"id":10,
+	"scenario":"Scenario 10",
+	"visual":"Landing page register",
+	"funcional area":"account",
+	"test status":"pass",
+	"auomated" :"no"
+},{
+	"id":11,
+	"scenario":"Scenario 11",
+	"visual":"Scenario 11",
+	"funcional area":"account",
+	"test status":"pass",
+	"auomated" :"yes"
+},{
+	"id":12,
+	"scenario":"Scenario 12",
+	"visual":"Scenario 11",
+	"funcional area":"dashboard",
+	"test status":"pass",
+	"auomated" :"yes"
+},{
+	"id":13,
+	"scenario":"Scenario 13",
+	"visual":"registraion success",
+	"funcional area":"dashboard",
+	"test status":"pass",
+	"auomated" :"yes"
+},{
+	"id":14,
+	"scenario":"Scenario 14",
+	"visual":"registraion success 14",
+	"funcional area":"dashboard",
+	"test status":"pass",
+	"auomated" :"yes"
+},{
+	"id":15,
+	"scenario":"Scenario 15",
+	"visual":"registraion success 15",
+	"funcional area":"tasks",
+	"test status":"pass",
+	"auomated" :"yes"
+},{
+	"id":16,
+	"scenario":"Scenario 16",
+	"visual":"registraion success 16",
+	"funcional area":"tasks",
+	"test status":"pass",
+	"auomated" :"yes"
+},{
+	"id":17,
+	"scenario":"Scenario 17",
+	"visual":"registraion success 17",
+	"funcional area":"tasks",
+	"test status":"pass",
+	"auomated" :"yes"
+},{
+	"id":18,
+	"scenario":"Scenario 18",
+	"visual":"registraion success 18",
+	"funcional area":"tasks",
+	"test status":"pass",
+	"auomated" :"yes"
+},{
+	"id":19,
+	"scenario":"Scenario 19",
+	"visual":"registraion success 19",
+	"funcional area":"tasks",
+	"test status":"pass",
+	"auomated" :"yes"
+},{
+	"id":20,
+	"scenario":"Scenario 20",
+	"visual":"registraion success 20",
+	"funcional area":"tasks",
+	"test status":"pass",
+	"auomated" :"yes"
+},{
+	"id":21,
+	"scenario":"Scenario 21",
+	"visual":"registraion success 21",
+	"funcional area":"tasks",
+	"test status":"pass",
+	"auomated" :"yes"
+},{
+	"id":22,
+	"scenario":"Scenario 22",
+	"visual":"registraion success 22",
+	"funcional area":"tasks",
+	"test status":"pass",
+	"auomated" :"yes"
+},{
+	"id":23,
+	"scenario":"Scenario 23",
+	"visual":"registraion success 23",
+	"funcional area":"tasks",
+	"test status":"pass",
+	"auomated" :"yes"
+},{
+	"id":24,
+	"scenario":"Scenario 24",
+	"visual":"registraion success 24",
+	"funcional area":"tasks",
+	"test status":"pass",
+	"auomated" :"yes"
+},{
+	"id":25,
+	"scenario":"Scenario 25",
+	"visual":"registraion success 25",
+	"funcional area":"tasks",
+	"test status":"fail",
+	"auomated" :"yes"
+},{
+	"id":26,
+	"scenario":"Scenario 26",
+	"visual":"registraion success 26",
+	"funcional area":"tasks",
+	"test status":"pass",
+	"auomated" :"yes"
+},{
+	"id":27,
+	"scenario":"Scenario 27",
+	"visual":"registraion success 27",
+	"funcional area":"tasks",
+	"test status":"pass",
+	"auomated" :"no"
+},{
+	"id":28,
+	"scenario":"Scenario 28",
+	"visual":"registraion success 28",
+	"funcional area":"tasks",
+	"test status":"fail",
+	"auomated" :"no"
+},{
+	"id":29,
+	"scenario":"Scenario 29",
+	"visual":"registraion success 29",
+	"funcional area":"navigation",
+	"test status":"pass",
+	"auomated" :"yes"
+},{
+	"id":30,
+	"scenario":"Scenario 30",
+	"visual":"registraion success 30",
+	"funcional area":"energy form",
+	"test status":"pass",
+	"auomated" :"yes"
+},{
+	"id":31,
+	"scenario":"Scenario 31",
+	"visual":"registraion success 31",
+	"funcional area":"energy form",
+	"test status":"pass",
+	"auomated" :"yes"
+},{
+	"id":32,
+	"scenario":"Scenario 32",
+	"visual":"registraion success 32",
+	"funcional area":"energy form",
+	"test status":"pass",
+	"auomated" :"yes"
+},{
+	"id":33,
+	"scenario":"Scenario 33",
+	"visual":"registraion success 33",
+	"funcional area":"energy form",
+	"test status":"pass",
+	"auomated" :"yes"
+},{
+	"id":34,
+	"scenario":"Scenario 34",
+	"visual":"registraion success 34",
+	"funcional area":"energy form",
+	"test status":"pass",
+	"auomated" :"no"
+},{
+	"id":35,
+	"scenario":"Scenario 35",
+	"visual":"registraion success 35",
+	"funcional area":"energy results",
+	"test status":"fail",
+	"auomated" :"yes"
+},{
+	"id":36,
+	"scenario":"Scenario 36",
+	"visual":"registraion success 36",
+	"funcional area":"energy results",
+	"test status":"pass",
+	"auomated" :"yes"
+},{
+	"id":37,
+	"scenario":"Scenario 37",
+	"visual":"registraion success 37",
+	"funcional area":"energy results",
+	"test status":"pass",
+	"auomated" :"no"
+},{
+	"id":38,
+	"scenario":"Scenario 38",
+	"visual":"registraion success 38",
+	"funcional area":"energy results",
+	"test status":"pass",
+	"auomated" :"yes"
+},{
+	"id":39,
+	"scenario":"Scenario 39",
+	"visual":"registraion success 39",
+	"funcional area":"energy results",
+	"test status":"fail",
+	"auomated" :"yes"
+},{
+	"id":40,
+	"scenario":"Scenario 40",
+	"visual":"registraion success 40",
+	"funcional area":"energy results",
+	"test status":"fail",
+	"auomated" :"yes"
+},{
+	"id":41,
+	"scenario":"Scenario 41",
+	"visual":"registraion success 41",
+	"funcional area":"energy results",
+	"test status":"pass",
+	"auomated" :"yes"
+},{
+	"id":42,
+	"scenario":"Scenario 42",
+	"visual":"registraion success 42",
+	"funcional area":"my docs",
+	"test status":"no run",
+	"auomated" :"no"
+},{
+	"id":43,
+	"scenario":"Scenario 43",
+	"visual":"registraion success 43",
+	"funcional area":"my docs",
+	"test status":"no run",
+	"auomated" :"no"
+},{
+	"id":44,
+	"scenario":"Scenario 44",
+	"visual":"registraion success 44",
+	"funcional area":"my docs",
+	"test status":"no run",
+	"auomated" :"no"
+}]

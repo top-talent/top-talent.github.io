@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+
+path {
+  fill: #ccc;
+  stroke: #fff;
+  stroke-width: .5px;
+}
+
+path:hover {
+  fill: red;
+}
+
+</style>
+<body>
+<script src="https://d3js.org/d3.v3.min.js"></script>
+<script src="https://d3js.org/topojson.v1.min.js"></script>
+<script>
+
+var width = 960,
+    height = 500;
+
+var path = d3.geo.path();
+
+var svg = d3.select("body").append("svg")
+    .attr("width", width)
+    .attr("height", height);
+
+// var url = "us_20m.json";
+// var url = "us_5m.json";
+var url = "alabama.json";
+var url1 = "al-counties-beaufied.json";
+// var url = "us.json";
+var url3 = "111thAlabama.json";
+var url2 = "us_5m.json";
+d3.json(url, function(error, topology) {
+  if (error) throw error;
+  
+  console.log("topojson", topology)
+  var geojson = topojson.feature(topology, topology.objects.state);
+  console.log("geojson", geojson)
+
+  svg.selectAll("path")
+      .data(geojson.features)
+    .enter().append("path")
+      .attr("d", path);
+});
+
+var svg1 = d3.select("body").append("svg")
+    .attr("width", width)
+    .attr("height", height);
+
+d3.json(url1, function(error, topology) {
+  if (error) throw error;
+  
+  console.log("topojson", topology)
+  var geojson = topojson.feature(topology, topology.objects.state);
+  console.log("geojson", geojson)
+
+  svg1.selectAll("path")
+      .data(geojson.features)
+    .enter().append("path")
+      .attr("d", path);
+});
+
+
+var svg2 = d3.select("body").append("svg")
+    .attr("width", width)
+    .attr("height", height);
+
+d3.json(url2, function(error, topology) {
+  if (error) throw error;
+  
+  console.log("topojson", topology)
+  var geojson = topojson.feature(topology, topology.objects.cb_2016_us_cd115_5m);
+  console.log("geojson", geojson)
+
+  svg2.selectAll("path")
+      .data(geojson.features)
+    .enter().append("path")
+      .attr("d", path);
+});
+
+var svg3 = d3.select("body").append("svg")
+    .attr("width", width)
+    .attr("height", height);
+
+d3.json(url3, function(error, topology) {
+  if (error) throw error;
+  
+  console.log("topojson", topology)
+  var geojson = topojson.feature(topology, topology.objects.gz_2010_01_500_11_500k);
+  console.log("geojson", geojson)
+
+  svg3.selectAll("path")
+      .data(geojson.features)
+    .enter().append("path")
+      .attr("d", path);
+});
+</script>

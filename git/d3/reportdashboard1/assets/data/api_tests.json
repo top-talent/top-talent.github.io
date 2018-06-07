@@ -1,0 +1,139 @@
+[{
+	"Id":1,
+	"HTTP Method":"GET",
+	"URI":"/Users",
+	"Description":"Find all instances of the model matched by filter from the data source",
+	"Status":"Pass"
+},{
+	"Id":2,
+	"HTTP Method":"PUT",
+	"URI":"/Users",
+	"Description":"Update existing model instance",
+	"Status":"Pass"
+},{
+	"Id":3,
+	"HTTP Method":"POST",
+	"URI":"/Users",
+	"Description":"Create new model instance and persist",
+	"Status":"Fail"
+},{
+	"Id":4,
+	"HTTP Method":"GET",
+	"URI":"/Users/{id}",
+	"Description":"Get id",
+	"Status":"Pass"
+},{
+	"Id":5,
+	"HTTP Method":"HEAD",
+	"URI":"/Users/{id}",
+	"Description":"Check if model instance exists",
+	"Status":"Pass"
+},{
+	"Id":6,
+	"HTTP Method":"PUT",
+	"URI":"/Users/{id}",
+	"Description":"Update attributes for model instance and persist",
+	"Status":"Pass"
+},{
+	"Id":7,
+	"HTTP Method":"DELETE",
+	"URI":"/Users/{id}",
+	"Description":"Deletes a model instance by id",
+	"Status":"Pass"
+},{
+	"Id":8,
+	"HTTP Method":"GET",
+	"URI":"/Users/{id}/accessTokens",
+	"Description":"Queries accessTokens of user",
+	"Status":"Pass"
+},{
+	"Id":9,
+	"HTTP Method":"POST",
+	"URI":"/Users/{id}/accessTokens",
+	"Description":"Creates new instance in accessTokens of user",
+	"Status":"Fail"
+},{
+	"Id":10,
+	"HTTP Method":"GET",
+	"URI":"/Users/{id}/accessTokens/{fk}",
+	"Description":"Find related item by id for accessTokens",
+	"Status":"Pass"
+},{
+	"Id":11,
+	"HTTP Method":"PUT",
+	"URI":"/Users/{id}/accessTokens/{fk}",
+	"Description":"Update a related item by id for accessTokens",
+	"Status":"Pass"
+},{
+	"Id":12,
+	"HTTP Method":"DELETE",
+	"URI":"/Users/{id}/accessTokens/{fk}",
+	"Description":"Delete a related item by id for accessTokens",
+	"Status":"Pass"
+},{
+	"Id":13,
+	"HTTP Method":"GET",
+	"URI":"/Users/{id}/accessTokens/count",
+	"Description":"Counts accessTokens for a user",
+	"Status":"Pass"
+},{
+	"Id":14,
+	"HTTP Method":"GET",
+	"URI":"/Users/{id}/exists",
+	"Description":"Checks whether a model instance exists in data source",
+	"Status":"Pass"
+},{
+	"Id":15,
+	"HTTP Method":"GET",
+	"URI":"/Users/change-stream",
+	"Description":"Create change stream",
+	"Status":"Pass"
+},{
+	"Id":16,
+	"HTTP Method":"POST",
+	"URI":"/Users/change-stream",
+	"Description":"Create change stream",
+	"Status":"Fail"
+},{
+	"Id":17,
+	"HTTP Method":"GET",
+	"URI":"/Users/confirm",
+	"Description":"Confirm user registration with email verification token",
+	"Status":"Pass"
+},{
+	"Id":18,
+	"HTTP Method":"GET",
+	"URI":"/Users/count",
+	"Description":"Count instances of model",
+	"Status":"Pass"
+},{
+	"Id":19,
+	"HTTP Method":"GET",
+	"URI":"/Users/findOne",
+	"Description":"Find first instance of model",
+	"Status":"Pass"
+},{
+	"Id":20,
+	"HTTP Method":"POST",
+	"URI":"/Users/login",
+	"Description":"Login a user",
+	"Status":"Pass"
+},{
+	"Id":21,
+	"HTTP Method":"POST",
+	"URI":"/Users/logout",
+	"Description":"Log user out",
+	"Status":"Pass"
+},{
+	"Id":22,
+	"HTTP Method":"POST",
+	"URI":"/Users/reset",
+	"Description":"Reset user password",
+	"Status":"Fail"
+},{
+	"Id":23,
+	"HTTP Method":"POST",
+	"URI":"/Users/update",
+	"Description":"Update instances of model",
+	"Status":"Pass"
+}]

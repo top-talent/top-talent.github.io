@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ads statistics</title>
+</head>
+<body>
+
+<style>
+    body {
+        font-family: "Lucida Console";
+        background-color: #397286;
+        position: relative;
+        width: 100%;
+        padding: 0;
+        text-align: center;
+    }
+    #pie-container {
+        display: inline-block;
+        width: 40%;
+    }
+    #histogram {
+        display: inline-block;
+        width: 55%;
+    }
+
+    @media (max-width: 640px) {
+        #pie-container,
+        #histogram {
+            width: 100%;
+        }
+    }
+
+</style>
+
+<div id="pie-container"></div>
+<div id="histogram"></div>
+
+<script src="d3.v4.js"></script>
+<script src="pie-chart.js"></script>
+<script src="histogram.js"></script>
+<script src="main.js"></script>
+</body>
+</html>

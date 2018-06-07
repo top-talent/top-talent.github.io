@@ -1,0 +1,73 @@
+th{
+	background: #eee;
+}
+
+th:nth-child(3){
+	width: 200px;
+}
+
+td:nth-child(3){
+	max-width: 200px;
+}
+
+th,td{
+	border: 1px solid black;
+}
+
+#tbl_section table{
+	width:100%;
+}
+#tbl_section{
+	width: 35%;
+	float: left;
+	overflow-x: scroll;
+	max-height: 800px;
+	overflow-y: scroll;
+	margin-right: 30px;
+}
+
+#right_section{
+	width: 60%;
+	float: left;
+	position: fixed;
+	right: 0;
+
+}
+
+#chart_section{
+	min-height: 500px;
+}
+
+#dropdown_section{
+	width: 100%;
+}
+
+.link {
+  stroke: #ccc;
+}
+
+.node text {
+  pointer-events: none;
+  font: 10px sans-serif;
+}
+
+#properties_section{
+	min-height: 300px;
+	border:1px solid #eee;
+	border-radius: 3px;
+	margin-right: 50px;
+	padding-left: 30px;
+}
+path.link {
+  fill: none;
+  stroke: #666;
+  stroke-width: 1.5px;
+}
+
+.selected text{
+	font-weight: 800;
+	font-size: 13px;
+}
+tr.active td{
+	background: #eee;
+}

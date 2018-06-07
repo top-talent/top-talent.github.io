@@ -1,0 +1,185 @@
+[{
+	"Id":1,
+	"Title":"Get Model",
+	"HTTP Method":"GET",
+	"URI":"/Users",
+	"Description":"Find all instances of the model matched by filter from the data source",
+	"HTTP Status code":200,
+	"Status":"Pass"
+},{
+	"Id":2,
+	"Title":"Update Model",
+	"HTTP Method":"PUT",
+	"URI":"/Users",
+	"Description":"Update existing model instance",
+	"HTTP Status code":200,
+	"Status":"Pass"
+},{
+	"Id":3,
+	"Title":"Create Model",
+	"HTTP Method":"POST",
+	"URI":"/Users",
+	"Description":"Create new model instance and persist",
+	"HTTP Status code":201,
+	"Status":"Fail"
+},{
+	"Id":4,
+	"Title":"Get Id",
+	"HTTP Method":"GET",
+	"URI":"/Users/{id}",
+	"Description":"Get id",
+	"HTTP Status code":200,
+	"Status":"Pass"
+},{
+	"Id":5,
+	"Title":"Check Model",
+	"HTTP Method":"HEAD",
+	"URI":"/Users/{id}",
+	"Description":"Check if model instance exists",
+	"HTTP Status code":204,
+	"Status":"Pass"
+},{
+	"Id":6,
+	"Title":"Update Model",
+	"HTTP Method":"PUT",
+	"URI":"/Users/{id}",
+	"Description":"Update attributes for model instance and persist",
+	"HTTP Status code":202,
+	"Status":"Pass"
+},{
+	"Id":7,
+	"Title":"Delete Model",
+	"HTTP Method":"DELETE",
+	"URI":"/Users/{id}",
+	"Description":"Deletes a model instance by id",
+	"HTTP Status code":200,
+	"Status":"Pass"
+},{
+	"Id":8,
+	"Title":"Query token",
+	"HTTP Method":"GET",
+	"URI":"/Users/{id}/accessTokens",
+	"Description":"Queries accessTokens of user",
+	"HTTP Status code":200,
+	"Status":"Pass"
+},{
+	"Id":9,
+	"Title":"Create Item",
+	"HTTP Method":"POST",
+	"URI":"/Users/{id}/accessTokens",
+	"Description":"Creates new instance in accessTokens of user",
+	"HTTP Status code":200,
+	"Status":"Fail"
+},{
+	"Id":10,
+	"Title":"Get Item",
+	"HTTP Method":"GET",
+	"URI":"/Users/{id}/accessTokens/{fk}",
+	"Description":"Find related item by id for accessTokens",
+	"HTTP Status code":200,
+	"Status":"Pass"
+},{
+	"Id":11,
+	"Title":"Update Item",
+	"HTTP Method":"PUT",
+	"URI":"/Users/{id}/accessTokens/{fk}",
+	"Description":"Update a related item by id for accessTokens",
+	"HTTP Status code":200,
+	"Status":"Pass"
+},{
+	"Id":12,
+	"Title":"Delete item",
+	"HTTP Method":"DELETE",
+	"URI":"/Users/{id}/accessTokens/{fk}",
+	"Description":"Delete a related item by id for accessTokens",
+	"HTTP Status code":200,
+	"Status":"Pass"
+},{
+	"Id":13,
+	"Title":"Count tokens",
+	"HTTP Method":"GET",
+	"URI":"/Users/{id}/accessTokens/count",
+	"Description":"Counts accessTokens for a user",
+	"HTTP Status code":200,
+	"Status":"Pass"
+},{
+	"Id":14,
+	"Title":"Model exists",	
+	"HTTP Method":"GET",
+	"URI":"/Users/{id}/exists",
+	"Description":"Checks whether a model instance exists in data source",
+	"HTTP Status code":200,
+	"Status":"Pass"
+},{
+	"Id":15,
+	"Title":"Change1",	
+	"HTTP Method":"GET",
+	"URI":"/Users/change-stream",
+	"Description":"Create change stream",
+	"HTTP Status code":200,
+	"Status":"Pass"
+},{
+	"Id":16,
+	"Title":"Change2",	
+	"HTTP Method":"POST",
+	"URI":"/Users/change-stream",
+	"Description":"Create change stream",
+	"HTTP Status code":400,
+	"Status":"Fail"
+},{
+	"Id":17,
+	"Title":"Registration",	
+	"HTTP Method":"GET",
+	"URI":"/Users/confirm",
+	"Description":"Confirm user registration with email verification token",
+	"HTTP Status code":200,
+	"Status":"Pass"
+},{
+	"Id":18,
+	"Title":"Count Model",	
+	"HTTP Method":"GET",
+	"URI":"/Users/count",
+	"Description":"Count instances of model",
+	"HTTP Status code":200,
+	"Status":"Pass"
+},{
+	"Id":19,
+	"Title":"Find Model",	
+	"HTTP Method":"GET",
+	"URI":"/Users/findOne",
+	"Description":"Find first instance of model",
+	"HTTP Status code":200,
+	"Status":"Pass"
+},{
+	"Id":20,
+	"Title":"Login",	
+	"HTTP Method":"POST",
+	"URI":"/Users/login",
+	"Description":"Login a user",
+	"HTTP Status code":200,
+	"Status":"Pass"
+},{
+	"Id":21,
+	"Title":"Logout",	
+	"HTTP Method":"POST",
+	"URI":"/Users/logout",
+	"Description":"Log user out",
+	"HTTP Status code":200,
+	"Status":"Pass"
+},{
+	"Id":22,
+	"Title":"Reset password",	
+	"HTTP Method":"POST",
+	"URI":"/Users/reset",
+	"Description":"Reset user password",
+	"HTTP Status code":200,
+	"Status":"Fail"
+},{
+	"Id":23,
+	"Title":"Update Model",	
+	"HTTP Method":"POST",
+	"URI":"/Users/update",
+	"Description":"Update instances of model",
+	"HTTP Status code":202,
+	"Status":"Pass"
+}]

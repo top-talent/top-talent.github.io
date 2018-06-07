@@ -1,0 +1,21 @@
+svg {
+	border:1px solid;
+}
+
+g rect {
+	fill:#ccc;
+}
+
+.linechart1 .axis path,
+.linechart1 .axis line {
+    fill: none;
+    stroke: grey;
+    stroke-width: 1;
+    shape-rendering: crispEdges;
+}
+
+path.line {
+	fill:none;
+	stroke: #29ddf4;
+	stroke-width:2;
+}

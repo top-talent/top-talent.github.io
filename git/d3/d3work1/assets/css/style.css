@@ -1,0 +1,37 @@
+body {
+  margin: auto;
+  max-width: 1600px;
+}
+
+path {  
+  stroke: #000;
+  stroke-width: 1.5px;
+}
+
+rect {
+	fill:white;
+	stroke-width: 3px;	
+}
+
+.end_item{
+	fill:#dbdbdb;
+	stroke: #44d13c;
+}
+
+svg{
+	width: 100%;
+	height: auto;
+}
+
+text{
+	font-size: 10px;
+	text-anchor: middle;
+}
+
+circle{
+	fill: none;
+}
+
+rect.rohumbus{
+	transform: rotate(45deg);
+}

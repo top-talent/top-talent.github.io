@@ -1,0 +1,6 @@
+language: node_js
+node_js:
+  - "node"
+script: node_modules/karma/bin/karma start build/karma.conf.js --single-run
+before script:
+  - npm install

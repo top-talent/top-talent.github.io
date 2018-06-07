@@ -1,0 +1,72 @@
+{
+  "responses": [
+    {
+      "bg_class": "bg-success",
+      "text": "It is certain."
+    },
+    {
+      "bg_class": "bg-success",
+      "text": "It is decidedly so."
+    },
+    {
+      "bg_class": "bg-success",
+      "text": "Without a doubt."
+    },
+    {
+      "bg_class": "bg-success",
+      "text": "Yes, definitely."
+    },
+    {
+      "bg_class": "bg-success",
+      "text": "As I see it, yes."
+    },
+    {
+      "bg_class": "bg-success",
+      "text": "Most likely."
+    },
+    {
+      "bg_class": "bg-success",
+      "text": "Yes."
+    },
+    {
+      "bg_class": "bg-success",
+      "text": "Signs point to yes."
+    },
+    {
+      "bg_class": "bg-warning",
+      "text": "Reply hazy try again."
+    },
+    {
+      "bg_class": "bg-warning",
+      "text": "Ask again later."
+    },
+    {
+      "bg_class": "bg-warning",
+      "text": "Cannot predict now."
+    },
+    {
+      "bg_class": "bg-warning",
+      "text": "Concentrate and ask again."
+    },
+    {
+      "bg_class": "bg-danger",
+      "text": "Don't count on it."
+    },
+    {
+      "bg_class": "bg-danger",
+      "text": "My reply is no."
+    },
+    {
+      "bg_class": "bg-danger",
+      "text": "My sources say no."
+    },
+    {
+      "bg_class": "bg-danger",
+      "text": "Outlook not so good."
+    },
+    {
+      "bg_class": "bg-danger",
+      "text": "Very doubtful."
+    }
+  ]
+}

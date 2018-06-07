@@ -1,0 +1,38 @@
+body {
+  margin: auto;
+  width: 1600px;
+}
+
+path {
+  fill: white;
+  stroke: #000;
+  stroke-width: 1.5px;
+}
+
+rect {
+	fill:white;
+	stroke-width: 4px;	
+}
+
+.end_item{
+	fill:#dbdbdb;
+	stroke: #44d13c;
+}
+
+svg{
+	width: 100%;
+	height: auto;
+}
+
+text{
+	font-size: 10px;
+	text-anchor: middle;
+}
+
+text.text-start{
+	text-anchor: start;
+}
+
+text.small_text{
+	font-size: 8px;
+}

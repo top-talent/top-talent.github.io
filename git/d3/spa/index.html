@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Single Page Application</title>
+<link type="text/css" href="assets/css/style.css" rel="stylesheet" />
+</head>
+<body>
+    <script type="text/javascript" src="assets/js/d3.v3.min.js"></script>
+
+    <div id="dropdown_section">
+    	<span>Select json file:</span>
+		<select id="json_sources" name="json_sources">
+		    <option value ="assets/tweets.json" selected="">Tweets</option>
+		    <option value ="assets/IMDB.json">IMDB</option>
+		</select>​
+	</div>
+	<div id="tbl_section"></div>
+	<div id="right_section">
+		<div id="chart_section"></div>
+		<div id="properties_section">
+			<p>Properties:</p>
+		</div>
+	</div>
+	
+	<script type="text/javascript" src="assets/js/force_graph.js"></script>
+	<script type="text/javascript" src="assets/js/tabulate.js"></script>
+</body>
+</html>

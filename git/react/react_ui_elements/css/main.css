@@ -1,0 +1,17 @@
+/* header */
+header {
+  margin-bottom: 15px;
+}
+
+/* footer */
+footer {
+  margin-top: 40px;
+  margin-bottom: 30px;
+}
+
+/* mobile input styling */
+@media (max-width: 768px) {
+  .form-control {
+    font-size: 16px;
+  }
+}

@@ -1,0 +1,40 @@
+html,body,#wrapper {
+	width: 100%;
+	height: 100%;
+	margin: 0px;
+}
+ 
+.chart {
+	font-family: Arial, sans-serif;
+	font-size: 12px;
+}
+ 
+.axis path,.axis line {
+	fill: none;
+	stroke: #000;
+	shape-rendering: crispEdges;
+}
+ 
+.bar {
+	fill: #e1fb82;
+}
+ 
+.bar-failed {
+	fill: #d5fdc0;
+}
+ 
+.bar-running {
+	fill: #faf6ef;
+}
+ 
+.bar-succeeded {
+	fill: #cccccc;
+}
+ 
+.bar-killed {
+	fill: #9fe6f1;
+}
+
+.axis line{
+	opacity: 0.3;
+}

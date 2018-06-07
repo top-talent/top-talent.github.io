@@ -1,0 +1,101 @@
+[{
+  "items": {
+    "1": {
+      "title": "Buyer receives payment notification",
+      "id": 1,
+      "description": "",
+      "type": "start",
+      "stream": 1,
+      "attachment": "http://upload1.location",
+      "connectors": {
+        "1": {
+          "title": "",
+          "type": "simple",
+          "linkTo": 2
+        }
+      }
+    },
+    "2": {
+      "title": "",
+      "id": 2,
+      "description": "",
+      "type": "junction",
+      "stream": 1,
+      "attachment": "http://upload1.location",
+      "connectors": {
+        "1": {
+          "title": "",
+          "type": "simple",
+          "linkTo": 3
+        }
+      }
+    },
+    "3": {
+      "title": "Fully Paid?",
+      "id": 3,
+      "description": "",
+      "type": "decision",
+      "stream": 1,
+      "attachment": "http://upload1.location",
+      "connectors": {
+        "1": {
+          "title": "Connector 5 Name",
+          "type": "simple",
+          "linkTo": 4
+        },
+        "2": {
+          "title": "Connector 4 Name",
+          "type": "simple",
+          "linkTo": 5
+        }
+      }
+    },
+    "4": {
+      "title": "Email buyer ask for full payment",
+      "id": 4,
+      "description": "",
+      "type": "process-simple",
+      "stream": 1,
+      "attachment": "http://upload1.location",
+      "connectors": {
+        "1": {
+          "title": "Test",
+          "type": "simple",
+          "linkTo": 2
+        }
+      }
+    },
+    "5": {
+      "title": "Send Invoice to Buyer",
+      "id": 5,
+      "description": "",
+      "type": "process-simple",
+      "stream": 1,
+      "attachment": "http://upload1.location",
+      "connectors": {
+        "1": {
+          "title": "",
+          "type": "simple",
+          "linkTo": 6
+        }
+      }
+    },
+
+    "6": {
+      "title": "Send Shipment notice to Buyer",
+      "id": 6,
+      "description": "",
+      "type": "finish",
+      "stream": 1,
+      "attachment": "http://upload1.location",
+      "connectors": {}
+    }
+  },
+  "streams": {
+    "1": {
+      "id": 1,
+      "title": "HR Staff",
+      "order": "1"
+    }
+  }
+}]

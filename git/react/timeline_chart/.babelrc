@@ -1,0 +1,19 @@
+{
+  "plugins": [
+    "transform-class-properties",
+    [
+      "transform-async-to-module-method",
+      {
+        "module": "bluebird",
+        "method": "coroutine"
+      }
+    ],
+    "transform-runtime",
+    "babel-plugin-lodash"
+  ],
+  "presets": [
+    "latest",
+    "react",
+    "stage-0"
+  ]
+}

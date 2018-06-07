@@ -1,0 +1,102 @@
+/* globals */
+body {
+  color: white;
+}
+@media only screen and (max-width: 1200px)  {
+  body#background {
+    background: url('../img/003_landing_page/4-min.jpg') no-repeat 50% 50% fixed;
+    background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -webkit-background-size: cover;
+    background-color: rgba(0, 81, 126, 0.8);
+  }
+}
+/* splash text */
+#splash-text-container {
+  display: none;
+}
+.splash-content h1 {
+  font-family: 'Lato', sans-serif;
+  font-size: 80px;
+  font-weight: bold;
+  margin-bottom: 0px;
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+.splash-content h2 {
+  font-family: 'Lato', sans-serif;
+  font-size: 40px;
+  font-weight: bold;
+  margin-top: 0px;
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+@media only screen and (min-width: 1200px)  {
+  .splash-content h1,
+  .splash-content h2 {
+    text-shadow: rgb(0, 0, 0) 1px 1px 1px;
+  }
+}
+
+/* splash email */
+#splash-email-container {
+  display: none;
+}
+#splash-email {
+  margin-top: 60px;
+}
+#splash-email input {
+  background-color: rgba(255, 255, 255, 0.9);
+  height: 40px;
+  font-size: 16px;
+  color: #333;
+}
+#splash-email span {
+  background-color: rgba(255, 255, 255, 0.9);
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+}
+#splash-email span:hover {
+  background-color: rgba(255, 255, 255, 1);
+}
+::-webkit-input-placeholder {
+  padding-left: 42px;
+}
+:-moz-placeholder {
+  padding-left: 42px;
+}
+::-moz-placeholder {
+  padding-left: 42px;
+}
+:-ms-input-placeholder {
+  padding-left: 42px;
+}
+#splash-email-success {
+  display: none;
+  margin-top: 48px;
+  margin-bottom: 0px;
+  padding: 15px;
+  font-weight: bold;
+  color: #468847;
+  background-color: #dff0d8;
+  border: 1px solid #d6e9c6;
+  border-radius: 10px;
+}
+
+/* contact-icons */
+#contact-container {
+  display: none;
+  margin-top: 25px;
+  margin-bottom: 10px;
+}
+.contact-icon {
+  color: rgba(255, 255, 255, 0.9);
+  margin-right: 2px;
+  margin-left: 2px;
+  font-size: 33px;
+  cursor: pointer;
+}
+.contact-icon:hover,
+.contact-icon:focus {
+  color: rgba(255, 255, 255, 1);
+}

@@ -1,0 +1,94 @@
+[{
+    "name": "flare",
+    "children": [{
+        "name": "analytics",
+        "children": [{
+            "name": "cluster"
+          },
+          {
+            "name": "graph"
+          }
+        ]
+      },
+      {
+        "name": "animate",
+        "children": [
+          { "name": "Easing", "size": 17010 },
+          { "name": "FunctionSequence", "size": 5842 }
+        ]
+      },
+      {
+        "name": "animate-1",
+        "children": [
+          { "name": "Easing", "size": 17010 },
+          { "name": "FunctionSequence", "size": 5842 }
+        ]
+      },
+      {
+        "name": "animate-2",
+        "children": [
+          { "name": "Easing", "size": 17010 },
+          { "name": "FunctionSequence", "size": 5842 }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "flare-2",
+    "children": [{
+        "name": "analytics",
+        "children": [{
+            "name": "cluster"
+          },
+          {
+            "name": "graph"
+          }
+        ]
+      },
+      {
+        "name": "animate",
+        "children": [
+          { "name": "Easing", "size": 17010 },
+          { "name": "FunctionSequence", "size": 5842 }
+        ]
+      },
+      {
+        "name": "animfdhgf",
+        "children": [
+          { "name": "Easing", "size": 17010 },
+          { "name": "FunctionSequence", "size": 5842 },
+          { "name": "FunctionSequencei", "size": 8842 }
+        ]
+      }
+    ]
+  },
+    {
+    "name": "flare-2",
+    "children": [{
+        "name": "analytics",
+        "children": [{
+            "name": "cluster"
+          },
+          {
+            "name": "graph"
+          }
+        ]
+      },
+      {
+        "name": "animate",
+        "children": [
+          { "name": "Easing", "size": 17010 },
+          { "name": "FunctionSequence", "size": 5842 }
+        ]
+      },
+      {
+        "name": "animfdhgf",
+        "children": [
+          { "name": "Easing", "size": 17010 },
+          { "name": "FunctionSequence", "size": 5842 },
+          { "name": "FunctionSequencei", "size": 8842 }
+        ]
+      }
+    ]
+  }
+]

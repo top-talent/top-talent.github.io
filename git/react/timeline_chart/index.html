@@ -1,0 +1,124 @@
+<html class='light'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='icon' href='data:;base64,iVBORw0KGgo='>
+    <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/fetch/2.0.1/fetch.min.js'></script>
+    <script type='text/javascript' src='dist/SimpleFlameChart.js'></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+        * {
+            font-family: 'Helvetica', 'Helvetica Neue', 'Open Sans', sans-serif;
+            font-size: 11px;
+            vertical-align: top;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #F5F5F5;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            height: 100%;
+            width: 100%;
+        }
+    </style>
+
+    <title>React.js - Timeline chart</title>
+</head>
+<body>
+<div id='flamechart' style='height:100%; width: 100%; user-select:none;'></div>
+<button onclick='render()' style='position: fixed; bottom: 5px; right: 5px;'> Switch Theme</button>
+</body>
+<script>
+  var { Vibrant, Warm, Cool, Green } = window.HSLColorGenerator;
+
+  var timings = [];
+  var themeCounter = 0;
+  var flameChart = null;
+
+  window.injectSimpleFlameChartStyles();
+
+  function onTimingClick(timing) {
+    if (flameChart.isTimingSelected(timing)) {
+      flameChart.setTimingSelected(timing, false);
+
+      return;
+    }
+
+    flameChart.setTimingSelected(null);
+    flameChart.setTimingSelected(timing, true);
+
+    setTimeout(function () {
+      alert(JSON.stringify(timing, null, 2));
+    }, 0);
+  }
+
+  function render() {
+    flameChart = window.renderSimpleFlameChart({
+      timings: timings,
+      theme: themeCounter++ % 2 ? 'light' : 'dark',
+      stacks: [
+        {
+          name: 'Network',
+          types: ['request'],
+          defaultHeight: 0.2,
+          onTimingClick: onTimingClick,
+          getTimingColor(timing) {
+            return Green.colorForID(timing.name)
+          }
+        },
+        {
+          name: 'Transaction',
+          types: ['transaction'],
+          overviewType: 'spread',
+          overviewHeight: 50,
+          defaultCollapsed: true,
+          defaultHeight: 0.3,
+          onTimingClick: onTimingClick,
+          getTimingColor(timing) {
+            return Cool.colorForID(timing.name)
+          }
+        },
+        {
+          name: 'Main',
+          types: ['main'],
+          overviewHeight: 50,
+          defaultHeight: 0.5,
+          onTimingClick: onTimingClick,
+          getTimingColor(timing, mode) {
+            if (mode === 'overview') {
+              return 'orange';
+            } else {
+              return Warm.colorForID(timing.name);
+            }
+          }
+        },
+        {
+          name: 'GPU',
+          types: ['gpu'],
+          overviewHeight: 50,
+          defaultHeight: 0.5,
+          onTimingClick: onTimingClick,
+          getTimingColor(timing) {
+            return Cool.colorForID(timing.name)
+          }
+        }
+      ]
+    }, document.getElementById('flamechart'));
+  }
+
+  window.onload = function () {
+    fetch('fixtures/timings.json', { mode: 'no-cors' })
+      .then(function (res) {
+        return res.json();
+      })
+      .then(function (timings) {
+        window.timings = timings;
+
+        render();
+      });
+  }
+</script>
+</html>

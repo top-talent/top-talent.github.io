@@ -1,0 +1,115 @@
+body {
+    font-size: 100%;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+#flow_execution_chart,#behavioural_test_coverage{
+	width: 30%;
+	float: left;
+}
+
+#scenarios_by_funcion_chart{
+	width: 40%;
+	float: left;
+}
+
+.d3-tip {
+  line-height: 1;
+  font-weight: bold;
+  padding: 12px;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  border-radius: 2px;
+}
+
+/* Creates a small triangle extender for the tooltip */
+.d3-tip:after {
+  box-sizing: border-box;
+  display: inline;
+  font-size: 10px;
+  width: 100%;
+  line-height: 1;
+  color: rgba(0, 0, 0, 0.8);
+  content: "\25BC";
+  position: absolute;
+  text-align: center;
+}
+
+/* Style northward tooltips differently */
+.d3-tip.n:after {
+  margin: -1px 0 0 0;
+  top: 100%;
+  left: 0;
+}
+
+text{
+	text-transform: capitalize;
+}
+
+h3{
+  text-align: center;
+}
+
+#table_data tr{
+  padding: 15px;
+  
+}
+
+#table_data th, td{
+  border: 1px solid black;
+  font-size: 20px;
+  padding:10px;
+}
+#table_data{
+  width: 100%;
+  clear: both;
+}
+
+#horizontal_bar_chart{
+  width: 50%;
+  min-height: 300px;
+  display: inline;
+  float: left;
+}
+
+#horizontal_bar_chart .axisHorizontal path{
+        fill: none;
+}
+
+#horizontal_bar_chart .axisHorizontal .tick line {
+        stroke-width: 1;
+        stroke: rgba(0, 0, 0, 0.2);
+}
+
+#horizontal_bar_chart .bar {
+        fill: steelblue;
+        fill-opacity: .9;
+}
+
+#heatmap_functional_area{
+  clear: both;
+  width: 50%;
+  float:left;
+}
+
+#horizontal_bar_chart text.label{
+  text-anchor: start;
+  font-size: 14px;
+}
+
+.hour.bordered.clicked ,.clicked{
+  stroke: lightgrey;
+  stroke-width: 10px;
+}
+
+.hour.bordered{
+  stroke:lightblue;
+  stroke-width: 2px;
+}
+
+#table_data table{
+  margin: 0 auto;
+}
+

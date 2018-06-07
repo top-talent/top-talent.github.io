@@ -1,0 +1,264 @@
+[  
+   {  
+      "id":"lss",
+      "label":"LSS",
+      "dashboard":785,
+      "instanceidlist":"2051881",
+      "description":"The Lilly Safety System (LSS) is a web-based application composed of several modules for the purpose of processing adverse event information regarding pharmaceutical products and medical devices. These modules allow for the entry and acceptance of adverse event information into a safety database, querying the database, generation of a number of different types of reports from the database, and safety surveillance and analysis of the adverse event information within the database. LSS is used globally to facilitate compliance-based activities for required drug and device reporting to the appropriate regulatory authorities.",
+      "connects":[  
+         {  
+            "to":"Medical SAD",
+            "type":"Clinical Lab",
+            "returnpath":"false",
+            "filter":"InstanceName = 'BP-LSS_ESI'",
+            "label":"",
+            "width":0,
+            "height":0,
+            "points":[  
+               {  
+                  "x":77,
+                  "y":137
+               },
+               {  
+                  "x":77,
+                  "y":182
+               }
+            ]
+         }
+      ],
+      "nodetype":"Disclose",
+      "width":44,
+      "height":35,
+      "x":28,
+      "y":133,
+      "activeeventseverity":0
+   },
+   {  
+      "id":"RAPT",
+      "label":"RAPT",
+      "dashboard":769,
+      "instanceidlist":"2097612,2088529,2088527",
+      "description":"Regulatory Planning and Tracking is an intranet-based relational database designed for the collection and tracking of regulatory activity and product registration status information for all countries in which Lilly has a marketing presence. Release 4.6",
+      "connects":[  
+         {  
+            "to":"lss",
+            "title":"RAPT-LSS",
+            "description":"RAPT transfers information such as approval dates and registration class for drugs by country into LSS for use during adverse event processing and reporting.",
+            "type":"Regulatory",
+            "label":"",
+            "width":0,
+            "height":0,
+            "points":[  
+
+            ]
+         },
+         {  
+            "to":"Medical SAD",
+            "type":"Regulatory",
+            "returnpath":"true",
+            "label":"",
+            "width":0,
+            "height":0,
+            "points":[  
+               {  
+                  "x":77,
+                  "y":237
+               },
+               {  
+                  "x":77,
+                  "y":197
+               }
+            ]
+         }
+      ],
+      "nodetype":"Disclose",
+      "width":52,
+      "height":35,
+      "x":28,
+      "y":241,
+      "activeeventseverity":4
+   },
+   {  
+      "id":"Medical SAD",
+      "label":"Medical SAD",
+      "dashboard":792,
+      "instanceidlist":"",
+      "description":"Medical Staging Area Database",
+      "connects":[  
+         {  
+            "to":"Integration",
+            "type":"Clinical Trial",
+            "label":"",
+            "width":0,
+            "height":0,
+            "points":[  
+               {  
+                  "x":143,
+                  "y":30
+               }
+            ]
+         },
+         {  
+            "to":"Impact",
+            "type":"Clinical Trial",
+            "returnpath":"true",
+            "label":"",
+            "width":0,
+            "height":0,
+            "points":[  
+               {  
+                  "x":170,
+                  "y":137
+               }
+            ]
+         },
+         {  
+            "to":"CT-WIN",
+            "type":"Clinical Trial",
+            "label":"",
+            "width":0,
+            "height":0,
+            "points":[  
+               {  
+                  "x":306,
+                  "y":199
+               },
+               {  
+                  "x":306,
+                  "y":267
+               }
+            ]
+         },
+         {  
+            "to":"eCTS",
+            "type":"Clinical Trial",
+            "returnpath":"true",
+            "label":"",
+            "filter":"InstanceName = 'LRLITINFPRD.AM.LILLY.COM' AND EventText LIKE'.%wf_sub_mdf_ECTS.%'",
+            "width":0,
+            "height":0,
+            "points":[  
+
+            ]
+         },
+         {  
+            "to":"INFUSE",
+            "type":"Medical Sad",
+            "label":"",
+            "width":0,
+            "height":0,
+            "points":[  
+               {  
+                  "x":142,
+                  "y":453
+               },
+               {  
+                  "x":541,
+                  "y":452
+               }
+            ]
+         },
+         {  
+            "to":"CTR",
+            "type":"Medical Sad",
+            "label":"",
+            "width":0,
+            "height":0,
+            "points":[  
+               {  
+                  "x":156,
+                  "y":433
+               }
+            ]
+         },
+         {  
+            "to":"LEO",
+            "type":"Medical Sad",
+            "label":"",
+            "width":0,
+            "height":0,
+            "points":[  
+               {  
+                  "x":127,
+                  "y":469
+               }
+            ]
+         },
+         {  
+            "to":"CDR",
+            "type":"Medical Sad",
+            "label":"",
+            "width":0,
+            "height":0,
+            "points":[  
+               {  
+                  "x":155,
+                  "y":96
+               }
+            ]
+         },
+         {  
+            "to":"Clintrial 4-6",
+            "type":"Clinical Trial",
+            "label":"",
+            "width":0,
+            "height":0,
+            "points":[  
+               {  
+                  "x":131,
+                  "y":-10
+               },
+               {  
+                  "x":541,
+                  "y":-10
+               }
+            ]
+         }
+      ],
+      "nodetype":"Plan/Design/Execute",
+      "width":90,
+      "height":35,
+      "x":142,
+      "y":190
+   },
+   {  
+      "id":"Integration",
+      "label":"Integration",
+      "dashboard":"Integration",
+      "instanceidlist":"",
+      "connects":[  
+         {  
+            "to":"Clintrial 4-6",
+            "type":"Clinical Trial",
+            "returnpath":"true",
+            "label":"",
+            "width":0,
+            "height":0,
+            "points":[  
+
+            ]
+         }
+      ],
+      "nodetype":"External",
+      "width":79,
+      "height":35,
+      "x":298,
+      "y":30
+   },
+   {  
+      "id":"Impact",
+      "label":"Impact",
+      "dashboard":762,
+      "instanceidlist":"1963999",
+      "description":"IMPACT is a COTS system. International Management Package for the Administration of Clinical Trials.  IMPACT is a database application that tracks key elements of the Clinical Trial process (both planning and actual figures).  It facilitates:  Centralized collection and reporting of clinical trial issues, Investigator addresses for safety mailings and study drug shipments, Investigator site selection.",
+      "connects":[  
+
+      ],
+      "nodetype":"Plan/Design/Execute",
+      "width":58,
+      "height":35,
+      "x":291,
+      "y":137,
+      "activeeventseverity":0
+   }
+]

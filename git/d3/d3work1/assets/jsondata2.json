@@ -1,0 +1,130 @@
+[{
+  "items": {
+    "1": {
+      "title": "Node 1 Title",
+      "id": 1,
+      "description": "",
+      "type": "start",
+      "stream": 1,
+      "attachment": "http://upload1.location",
+      "connectors": {
+        "1": {
+          "id": 0,
+          "title": "",
+          "type": "simple",
+          "linkTo": 2
+        }
+      }
+    },
+    "2": {
+      "title": "Node 2 Title",
+      "id": 2,
+      "description": "",
+      "type": "process-simple",
+      "stream": 1,
+      "attachment": "http://upload1.location",
+      "connectors": {
+        "1": {
+          "id": 0,
+          "title": "",
+          "type": "simple",
+          "linkTo": 3
+        }
+      }
+    },
+    "3": {
+      "title": "Decision Title",
+      "id": 3,
+      "description": "",
+      "type": "decision",
+      "stream": 2,
+      "attachment": "http://upload1.location",
+      "connectors": {
+        "1": {
+          "id": 0,
+          "title": "Connector 5 Name",
+          "type": "simple",
+          "linkTo": 4
+        },
+        "2": {
+          "id": 1,
+          "title": "Connector 4 Name",
+          "type": "simple",
+          "linkTo": 5
+        }
+      }
+    },
+    "4": {
+      "title": "Node 4 Title",
+      "id": 4,
+      "description": "",
+      "type": "finish",
+      "stream": 2,
+      "attachment": "http://upload1.location",
+      "connectors": {}
+    },
+    "5": {
+      "title": "Node 3 Title",
+      "id": 5,
+      "description": "",
+      "type": "process-simple",
+      "stream": 3,
+      "attachment": "http://upload1.location",
+      "connectors": {
+        "1": {
+          "id": 0,
+          "title": "Connector Name 6",
+          "type": "simple",
+          "linkTo": 6
+        }
+      }
+    },
+    "6": {
+      "title": "Node 5 Title",
+      "id": 6,
+      "description": "",
+      "type": "process-simple",
+      "stream": 3,
+      "attachment": "http://upload1.location",
+      "connectors": {
+        "1": {
+          "id": 0,
+          "title": "",
+          "type": "simple",
+          "linkTo": 7
+        }
+      }
+    },
+    "7": {
+      "title": "Connector End Title",
+      "id": 7,
+      "description": "",
+      "type": "connector-end",
+      "stream": 4,
+      "attachment": "http://upload1.location",
+      "connectors": {}
+    }
+  },
+  "streams": {
+    "1": {
+      "id": 1,
+      "title": "Stream One",
+      "order": "1"
+    },
+    "2": {
+      "id": 2,
+      "title": "Stream Two",
+      "order": "2"
+    },
+    "3": {
+      "id": 3,
+      "title": "Stream Three",
+      "order": "3"
+    },
+    "4": {
+      "id": 4,
+      "title": "Stream Four",
+      "order": "4"
+    }
+  }
+}]

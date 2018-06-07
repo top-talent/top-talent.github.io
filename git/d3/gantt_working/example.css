@@ -1,0 +1,67 @@
+html,body,#wrapper {
+	width: 100%;
+	height: 100%;
+	margin: 0px;
+}
+ 
+.chart {
+	font-family: Arial, sans-serif;
+	font-size: 12px;
+}
+ 
+.axis path,.axis line {
+	fill: none;
+	stroke: #000;
+	shape-rendering: crispEdges;
+}
+
+.context .active rect[class^=task_style]{
+	opacity: 1;
+}
+.context [class^=task_style]{
+	opacity: 0.3;
+}
+.task_style_1 {
+	fill: #e1fb82;
+}
+ 
+.task_style_2 {
+	fill: #d5fdc0;
+}
+ 
+.task_style_3 {
+	fill: #faf6ef;
+}
+ 
+.task_style_4 {
+	fill: #cccccc;
+}
+ 
+.task_style_5 {
+	fill: #9fe6f1;
+}
+
+.axis line{
+	opacity: 0.3;
+}
+
+.box_container{
+	clip-path: url(#clip);
+}
+
+.brush .extent {
+  	fill:	white;
+  	fill-opacity: .35;
+  	clip-path: url(#clip);
+}
+
+rect.background{
+	opacity: 0.2;
+	fill: gray;
+	visibility: inherit !important;
+}
+rect.pane {
+	cursor: move;
+	fill: none;
+	pointer-events: all;
+}

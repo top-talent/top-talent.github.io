@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+
+* {
+ font-family: sans-serif, serif;
+}
+
+circle,
+path {
+  cursor: pointer;
+}
+
+circle {
+  fill: none;
+  pointer-events: all;
+}
+
+#tooltip { background-color: white;
+        padding: 3px 5px;
+        border: 1px solid black;
+        text-align: center;}
+
+html {
+  font-family: sans-serif, serif;
+  
+}
+</style>
+<body>
+<script src="https://d3js.org/d3.v3.min.js"></script>
+<script>
+
+
+var padding = {top: 50, right: 0, bottom: 0, left: 0};
+
+
+var hue = d3.scale.category20c();
+
+var luminance = d3.scale.sqrt()
+    .domain([0, 1e6])
+    .clamp(true)
+    .range([90, 20]);
+
+var svg = d3.select("body").append("svg");
+
+var chart_title = "The sunburst chart title";
+function resize(){
+
+  var width = (window.innerWidth);
+  var height = (window.innerHeight);
+  var radius = Math.min(width/2.5, height/2.5) - 10;
+
+  function filter_min_arc_size_text(d, i) {return (d.dx*d.depth*radius/3)>14}; 
+
+  d3.select(".redraw").remove();
+  var redraw = svg.attr("width", width)
+    .attr("height", height)
+    .append("g")
+    .attr("class", "redraw")
+    .attr("transform", "translate(" + width/2 + "," + height/2 + ")");
+
+  redraw.append("text")
+    .attr("x", 0)             
+    .attr("y", - height/2 + padding.top/2)
+    .attr("text-anchor", "middle")  
+    .style("font-size", "16px") 
+    //.style("text-decoration", "underline")  
+    .text(chart_title);  
+
+
+  var partition = d3.layout.partition()
+      .sort(function(a, b) { return d3.ascending(a.name, b.name); })
+      .size([2 * Math.PI, radius]);
+
+  var arc = d3.svg.arc()
+      .startAngle(function(d) { return d.x; })
+      .endAngle(function(d) { return d.x + d.dx - .01 / (d.depth + .5); })
+      .innerRadius(function(d) { return radius / 3 * d.depth; })
+      .outerRadius(function(d) { return radius / 3 * (d.depth + 1) - 1; });
+
+  //Tooltip description
+  var tooltip = d3.select("body")
+      .append("div")
+      .attr("id", "tooltip")
+      .style("position", "absolute")
+      .style("z-index", "10")
+      .style("opacity", 0);
+
+  function format_number(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  }
+
+
+  function format_description(d) {
+    var description = d.description;
+        return  '<b>' + d.name + '</b></br>'+ d.description + '<br> (' + format_number(d.value) + ')';
+  }
+
+  function computeTextRotation(d) {
+    var angle=(d.x +d.dx/2)*180/Math.PI - 90  
+    
+    return angle;
+  }
+
+  function mouseOverArc(d) {
+         d3.select(this).attr("stroke","black")
+         
+            tooltip.html(format_description(d));
+            return tooltip.transition()
+              .duration(50)
+              .style("opacity", 0.9);
+          }
+
+  function mouseOutArc(){
+    d3.select(this).attr("stroke","")
+    return tooltip.style("opacity", 0);
+  }
+
+  function mouseMoveArc (d) {
+            return tooltip
+              .style("top", (d3.event.pageY-10)+"px")
+              .style("left", (d3.event.pageX+10)+"px");
+  }
+
+  var root_ = null;
+
+  // d3.json("flare-labeled.json", function(error, root) {
+  //  if (error) return console.warn(error);
+    // Compute the initial layout on the entire tree to sum sizes.
+    // Also compute the full name and fill color for each node,
+    // and stash the children so they can be restored as we descend.
+
+     root = {"name":"flare","description":"flare","children":[{"name":"analytic","description":"analytics","children":[{"name":"cluster","description":"cluster","children":[{"name":"Agglomer","description":"AgglomerativeCluster","size":3938},{"name":"Communit","description":"CommunityStructure","size":3812},{"name":"Hierarch","description":"HierarchicalCluster","size":6714},{"name":"MergeEdg","description":"MergeEdge","size":743}]},{"name":"graph","description":"graph","children":[{"name":"Betweenn","description":"BetweennessCentrality","size":3534},{"name":"LinkDist","description":"LinkDistance","size":5731},{"name":"MaxFlowM","description":"MaxFlowMinCut","size":7840},{"name":"Shortest","description":"ShortestPaths","size":5914},{"name":"Spanning","description":"SpanningTree","size":3416}]},{"name":"optimiza","description":"optimization","children":[{"name":"AspectRa","description":"AspectRatioBanker","size":7074}]}]},{"name":"animate","description":"animate","children":[{"name":"Easing","description":"Easing","size":17010},{"name":"Function","description":"FunctionSequence","size":5842},{"name":"interpol","description":"interpolate","children":[{"name":"ArrayInt","description":"ArrayInterpolator","size":1983},{"name":"ColorInt","description":"ColorInterpolator","size":2047},{"name":"DateInte","description":"DateInterpolator","size":1375},{"name":"Interpol","description":"Interpolator","size":8746},{"name":"MatrixIn","description":"MatrixInterpolator","size":2202},{"name":"NumberIn","description":"NumberInterpolator","size":1382},{"name":"ObjectIn","description":"ObjectInterpolator","size":1629},{"name":"PointInt","description":"PointInterpolator","size":1675},{"name":"Rectangl","description":"RectangleInterpolator","size":2042}]},{"name":"ISchedul","description":"ISchedulable","size":1041},{"name":"Parallel","description":"Parallel","size":5176},{"name":"Pause","description":"Pause","size":449},{"name":"Schedule","description":"Scheduler","size":5593},{"name":"Sequence","description":"Sequence","size":5534},{"name":"Transiti","description":"Transition","size":9201},{"name":"Transer","description":"Transitioner","size":19975},{"name":"TransEve","description":"TransitionEvent","size":1116},{"name":"Tween","description":"Tween","size":6006}]},{"name":"data","description":"data","children":[{"name":"converte","description":"converters","children":[{"name":"Converte","description":"Converters","size":721},{"name":"Delimite","description":"DelimitedTextConverter","size":4294},{"name":"GraphMLC","description":"GraphMLConverter","size":9800},{"name":"IDataCon","description":"IDataConverter","size":1314},{"name":"JSONConv","description":"JSONConverter","size":2220}]},{"name":"DataFiel","description":"DataField","size":1759},{"name":"DataSche","description":"DataSchema","size":2165},{"name":"DataSet","description":"DataSet","size":586},{"name":"DataSour","description":"DataSource","size":3331},{"name":"DataTabl","description":"DataTable","size":772},{"name":"DataUtil","description":"DataUtil","size":3322}]},{"name":"display","description":"display","children":[{"name":"DirtySpr","description":"DirtySprite","size":8833},{"name":"LineSpri","description":"LineSprite","size":1732},{"name":"RectSpri","description":"RectSprite","size":3623},{"name":"TextSpri","description":"TextSprite","size":10066}]},{"name":"flex","description":"flex","children":[{"name":"FlareVis","description":"FlareVis","size":4116}]},{"name":"physics","description":"physics","children":[{"name":"DragForc","description":"DragForce","size":1082},{"name":"GravityF","description":"GravityForce","size":1336},{"name":"IForce","description":"IForce","size":319},{"name":"NBodyFor","description":"NBodyForce","size":10498},{"name":"Particle","description":"Particle","size":2822},{"name":"Simulati","description":"Simulation","size":9983},{"name":"Spring","description":"Spring","size":2213},{"name":"SpringFo","description":"SpringForce","size":1681}]},{"name":"query","description":"query","children":[{"name":"Aggregat","description":"AggregateExpression","size":1616},{"name":"And","description":"And","size":1027},{"name":"Arithmet","description":"Arithmetic","size":3891},{"name":"Average","description":"Average","size":891},{"name":"BinaryEx","description":"BinaryExpression","size":2893},{"name":"Comparis","description":"Comparison","size":5103},{"name":"Composit","description":"CompositeExpression","size":3677},{"name":"Count","description":"Count","size":781},{"name":"DateUtil","description":"DateUtil","size":4141},{"name":"Distinct","description":"Distinct","size":933},{"name":"Expressi","description":"Expression","size":5130},{"name":"ExpressiI","description":"ExpressionIterator","size":3617},{"name":"Fn","description":"Fn","size":3240},{"name":"If","description":"If","size":2732},{"name":"IsA","description":"IsA","size":2039},{"name":"Literal","description":"Literal","size":1214},{"name":"Match","description":"Match","size":3748},{"name":"Maximum","description":"Maximum","size":843},{"name":"methods","description":"methods","children":[{"name":"add","description":"add","size":593},{"name":"and","description":"and","size":330},{"name":"average","description":"average","size":287},{"name":"count","description":"count","size":277},{"name":"distinct","description":"distinct","size":292},{"name":"div","description":"div","size":595},{"name":"eq","description":"eq","size":594},{"name":"fn","description":"fn","size":460},{"name":"gt","description":"gt","size":603},{"name":"gte","description":"gte","size":625},{"name":"iff","description":"iff","size":748},{"name":"isa","description":"isa","size":461},{"name":"lt","description":"lt","size":597},{"name":"lte","description":"lte","size":619},{"name":"max","description":"max","size":283},{"name":"min","description":"min","size":283},{"name":"mod","description":"mod","size":591},{"name":"mul","description":"mul","size":603},{"name":"neq","description":"neq","size":599},{"name":"not","description":"not","size":386},{"name":"or","description":"or","size":323},{"name":"orderby","description":"orderby","size":307},{"name":"range","description":"range","size":772},{"name":"select","description":"select","size":296},{"name":"stddev","description":"stddev","size":363},{"name":"sub","description":"sub","size":600},{"name":"sum","description":"sum","size":280},{"name":"update","description":"update","size":307},{"name":"variance","description":"variance","size":335},{"name":"where","description":"where","size":299},{"name":"xor","description":"xor","size":354},{"name":"_","description":"_","size":264}]},{"name":"Minimum","description":"Minimum","size":843},{"name":"Not","description":"Not","size":1554},{"name":"Or","description":"Or","size":970},{"name":"Query","description":"Query","size":13896},{"name":"Range","description":"Range","size":1594},{"name":"StringUt","description":"StringUtil","size":4130},{"name":"Sum","description":"Sum","size":791},{"name":"Variable","description":"Variable","size":1124},{"name":"Variance","description":"Variance","size":1876},{"name":"Xor","description":"Xor","size":1101}]},{"name":"scale","description":"scale","children":[{"name":"IScaleMa","description":"IScaleMap","size":2105},{"name":"LinearSc","description":"LinearScale","size":1316},{"name":"LogScale","description":"LogScale","size":3151},{"name":"OrdinalS","description":"OrdinalScale","size":3770},{"name":"Quantile","description":"QuantileScale","size":2435},{"name":"Quantita","description":"QuantitativeScale","size":4839},{"name":"RootScal","description":"RootScale","size":1756},{"name":"Scale","description":"Scale","size":4268},{"name":"ScaleTyp","description":"ScaleType","size":1821},{"name":"TimeScal","description":"TimeScale","size":5833}]},{"name":"util","description":"util","children":[{"name":"Arrays","description":"Arrays","size":8258},{"name":"Colors","description":"Colors","size":10001},{"name":"Dates","description":"Dates","size":8217},{"name":"Displays","description":"Displays","size":12555},{"name":"Filter","description":"Filter","size":2324},{"name":"Geometry","description":"Geometry","size":10993},{"name":"heap","description":"heap","children":[{"name":"Fibonacc","description":"FibonacciHeap","size":9354},{"name":"HeapNode","description":"HeapNode","size":1233}]},{"name":"IEvaluab","description":"IEvaluable","size":335},{"name":"IPredica","description":"IPredicate","size":383},{"name":"IValuePr","description":"IValueProxy","size":874},{"name":"math","description":"math","children":[{"name":"DenseMat","description":"DenseMatrix","size":3165},{"name":"IMatrix","description":"IMatrix","size":2815},{"name":"SparseMa","description":"SparseMatrix","size":3366}]},{"name":"Maths","description":"Maths","size":17705},{"name":"Orientat","description":"Orientation","size":1486},{"name":"palette","description":"palette","children":[{"name":"ColorPal","description":"ColorPalette","size":6367},{"name":"Palette","description":"Palette","size":1229},{"name":"ShapePal","description":"ShapePalette","size":2059},{"name":"SizePale","description":"SizePalette","size":2291}]},{"name":"Property","description":"Property","size":5559},{"name":"Shapes","description":"Shapes","size":19118},{"name":"Sort","description":"Sort","size":6887},{"name":"Stats","description":"Stats","size":6557},{"name":"Strings","description":"Strings","size":22026}]},{"name":"vis","description":"vis","children":[{"name":"axis","description":"axis","children":[{"name":"Axes","description":"Axes","size":1302},{"name":"Axis","description":"Axis","size":24593},{"name":"AxisGrid","description":"AxisGridLine","size":652},{"name":"AxisLabe","description":"AxisLabel","size":636},{"name":"Cartesia","description":"CartesianAxes","size":6703}]},{"name":"controls","description":"controls","children":[{"name":"AnchorCo","description":"AnchorControl","size":2138},{"name":"ClickCon","description":"ClickControl","size":3824},{"name":"Control","description":"Control","size":1353},{"name":"ControlL","description":"ControlList","size":4665},{"name":"DragCont","description":"DragControl","size":2649},{"name":"ExpandCo","description":"ExpandControl","size":2832},{"name":"HoverCon","description":"HoverControl","size":4896},{"name":"IControl","description":"IControl","size":763},{"name":"PanZoomC","description":"PanZoomControl","size":5222},{"name":"Selectio","description":"SelectionControl","size":7862},{"name":"TooltipC","description":"TooltipControl","size":8435}]},{"name":"data","description":"data","children":[{"name":"Data","description":"Data","size":20544},{"name":"DataList","description":"DataList","size":19788},{"name":"DataSpri","description":"DataSprite","size":10349},{"name":"EdgeSpri","description":"EdgeSprite","size":3301},{"name":"NodeSpri","description":"NodeSprite","size":19382},{"name":"render","description":"render","children":[{"name":"ArrowTyp","description":"ArrowType","size":698},{"name":"EdgeRend","description":"EdgeRenderer","size":5569},{"name":"IRendere","description":"IRenderer","size":353},{"name":"ShapeRen","description":"ShapeRenderer","size":2247}]},{"name":"ScaleBin","description":"ScaleBinding","size":11275},{"name":"Tree","description":"Tree","size":7147},{"name":"TreeBuil","description":"TreeBuilder","size":9930}]},{"name":"events","description":"events","children":[{"name":"DataEven","description":"DataEvent","size":2313},{"name":"Selectio","description":"SelectionEvent","size":1880},{"name":"TooltipE","description":"TooltipEvent","size":1701},{"name":"Visualiz","description":"VisualizationEvent","size":1117}]},{"name":"legend","description":"legend","children":[{"name":"Legend","description":"Legend","size":20859},{"name":"LegendIt","description":"LegendItem","size":4614},{"name":"LegendRa","description":"LegendRange","size":10530}]},{"name":"operator","description":"operator","children":[{"name":"distorti","description":"distortion","children":[{"name":"BifocalD","description":"BifocalDistortion","size":4461},{"name":"Distorti","description":"Distortion","size":6314},{"name":"FisheyeD","description":"FisheyeDistortion","size":3444}]},{"name":"encoder","description":"encoder","children":[{"name":"ColorEnc","description":"ColorEncoder","size":3179},{"name":"Encoder","description":"Encoder","size":4060},{"name":"Property","description":"PropertyEncoder","size":4138},{"name":"ShapeEnc","description":"ShapeEncoder","size":1690},{"name":"SizeEnco","description":"SizeEncoder","size":1830}]},{"name":"filter","description":"filter","children":[{"name":"FisheyeT","description":"FisheyeTreeFilter","size":5219},{"name":"GraphDis","description":"GraphDistanceFilter","size":3165},{"name":"Visibili","description":"VisibilityFilter","size":3509}]},{"name":"IOperato","description":"IOperator","size":1286},{"name":"label","description":"label","children":[{"name":"Labeler","description":"Labeler","size":9956},{"name":"RadialLa","description":"RadialLabeler","size":3899},{"name":"StackedA","description":"StackedAreaLabeler","size":3202}]},{"name":"layout","description":"layout","children":[{"name":"AxisLayo","description":"AxisLayout","size":6725},{"name":"BundledE","description":"BundledEdgeRouter","size":3727},{"name":"CircleLa","description":"CircleLayout","size":9317},{"name":"CirclePa","description":"CirclePackingLayout","size":12003},{"name":"Dendrogr","description":"DendrogramLayout","size":4853},{"name":"ForceDir","description":"ForceDirectedLayout","size":8411},{"name":"IcicleTr","description":"IcicleTreeLayout","size":4864},{"name":"Indented","description":"IndentedTreeLayout","size":3174},{"name":"Layout","description":"Layout","size":7881},{"name":"NodeLink","description":"NodeLinkTreeLayout","size":12870},{"name":"PieLayou","description":"PieLayout","size":2728},{"name":"RadialTr","description":"RadialTreeLayout","size":12348},{"name":"RandomLa","description":"RandomLayout","size":870},{"name":"StackedA","description":"StackedAreaLayout","size":9121},{"name":"TreeMapL","description":"TreeMapLayout","size":9191}]},{"name":"Operator","description":"Operator","size":2490},{"name":"OperatorL","description":"OperatorList","size":5248},{"name":"OperatorS","description":"OperatorSequence","size":4190},{"name":"OperatorSW","description":"OperatorSwitch","size":2581},{"name":"SortOper","description":"SortOperator","size":2023}]},{"name":"Visualiz","description":"Visualization","size":16540}]}]};
+    
+    partition
+        .value(function(d) { return d.size; })
+        .nodes(root)
+        .forEach(function(d) {
+          d._children = d.children;
+          d.sum = d.value;
+          d.key = key(d);
+          d.fill = fill(d);
+        });
+
+    // Now redefine the value function to use the previously-computed sum.
+    partition
+        .children(function(d, depth) { return depth < 2 ? d._children : null; })
+        .value(function(d) { return d.sum; });
+
+    var center = redraw.append("circle")
+        .attr("r", radius / 3)
+        .on("click", zoomOut);
+
+    center.append("title")
+        .text("zoom out");
+        
+    var partitioned_data=partition.nodes(root).slice(1)
+
+    var path = redraw.selectAll("path")
+        .data(partitioned_data)
+      .enter().append("path")
+        .attr("d", arc)
+        .style("fill", function(d) { return d.fill; })
+        .each(function(d) { this._current = updateArc(d); })
+        .on("click", zoomIn)
+      .on("mouseover", mouseOverArc)
+        .on("mousemove", mouseMoveArc)
+        .on("mouseout", mouseOutArc);
+    
+        
+    var texts = redraw.selectAll("text")
+        .data(partitioned_data)
+      .enter().append("text")
+      .filter(filter_min_arc_size_text)      
+        .attr("transform", function(d) { return "rotate(" + computeTextRotation(d) + ")"; })
+      .attr("x", function(d) { return radius / 3 * d.depth; })  
+      .attr("dx", "6") // margin
+        .attr("dy", ".35em") // vertical-align  
+      .text(function(d,i) {return d.name})
+
+    function zoomIn(p) {
+      if (p.depth > 1) p = p.parent;
+      if (!p.children) return;
+      zoom(p, p);
+    }
+
+    function zoomOut(p) {
+      if (!p.parent) return;
+      zoom(p.parent, p);
+    }
+
+    // Zoom to the specified new root.
+    function zoom(root, p) {
+      if (document.documentElement.__transition__) return;
+
+      // Rescale outside angles to match the new layout.
+      var enterArc,
+          exitArc,
+          outsideAngle = d3.scale.linear().domain([0, 2 * Math.PI]);
+
+      function insideArc(d) {
+        return p.key > d.key
+            ? {depth: d.depth - 1, x: 0, dx: 0} : p.key < d.key
+            ? {depth: d.depth - 1, x: 2 * Math.PI, dx: 0}
+            : {depth: 0, x: 0, dx: 2 * Math.PI};
+      }
+
+      function outsideArc(d) {
+        return {depth: d.depth + 1, x: outsideAngle(d.x), dx: outsideAngle(d.x + d.dx) - outsideAngle(d.x)};
+      }
+
+      center.datum(root);
+
+      // When zooming in, arcs enter from the outside and exit to the inside.
+      // Entering outside arcs start from the old layout.
+      if (root === p) enterArc = outsideArc, exitArc = insideArc, outsideAngle.range([p.x, p.x + p.dx]);
+    
+     var new_data=partition.nodes(root).slice(1)
+
+      path = path.data(new_data, function(d) { return d.key; });
+        
+     // When zooming out, arcs enter from the inside and exit to the outside.
+      // Exiting outside arcs transition to the new layout.
+      if (root !== p) enterArc = insideArc, exitArc = outsideArc, outsideAngle.range([p.x, p.x + p.dx]);
+
+      d3.transition().duration(d3.event.altKey ? 7500 : 750).each(function() {
+        path.exit().transition()
+            .style("fill-opacity", function(d) { return d.depth === 1 + (root === p) ? 1 : 0; })
+            .attrTween("d", function(d) { return arcTween.call(this, exitArc(d)); })
+            .remove();
+            
+        path.enter().append("path")
+            .style("fill-opacity", function(d) { return d.depth === 2 - (root === p) ? 1 : 0; })
+            .style("fill", function(d) { return d.fill; })
+            .on("click", zoomIn)
+         .on("mouseover", mouseOverArc)
+           .on("mousemove", mouseMoveArc)
+           .on("mouseout", mouseOutArc)
+            .each(function(d) { this._current = enterArc(d); });
+
+      
+        path.transition()
+            .style("fill-opacity", 1)
+            .attrTween("d", function(d) { return arcTween.call(this, updateArc(d)); });
+            
+        
+           
+      });
+      
+      
+     texts = texts.data(new_data, function(d) { return d.key; })
+     
+     texts.exit()
+             .remove()    
+      texts.enter()
+              .append("text")
+          
+      texts.style("opacity", 0)
+        .attr("transform", function(d) { return "rotate(" + computeTextRotation(d) + ")"; })
+      .attr("x", function(d) { return radius / 3 * d.depth; })  
+      .attr("dx", "6") // margin
+        .attr("dy", ".35em") // vertical-align
+        .filter(filter_min_arc_size_text)      
+        .text(function(d,i) {return d.name})
+      .transition().delay(750).style("opacity", 1)
+          
+       
+    }
+  //});
+
+  function key(d) {
+    var k = [], p = d;
+    while (p.depth) k.push(p.name), p = p.parent;
+    return k.reverse().join(".");
+  }
+
+  function fill(d) {
+    var p = d;
+    while (p.depth > 1) p = p.parent;
+    var c = d3.lab(hue(p.name));
+    c.l = luminance(d.sum);
+    return c;
+  }
+
+  function arcTween(b) {
+    var i = d3.interpolate(this._current, b);
+    this._current = i(0);
+    return function(t) {
+      return arc(i(t));
+    };
+  }
+
+  function updateArc(d) {
+    return {depth: d.depth, x: d.x, dx: d.dx};
+}
+
+d3.select(self.frameElement).style("height", height + padding.top + "px");
+}
+resize();
+d3.select(window).on("resize", resize);
+
+</script> 

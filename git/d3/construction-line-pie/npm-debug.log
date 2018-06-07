@@ -1,0 +1,893 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install',
+1 verbose cli   'http-server',
+1 verbose cli   '-g' ]
+2 info using npm@3.10.10
+3 info using node@v6.9.4
+4 silly loadCurrentTree Starting
+5 silly install loadCurrentTree
+6 silly install readGlobalPackageData
+7 silly fetchPackageMetaData http-server
+8 silly fetchNamedPackageData http-server
+9 silly mapToRegistry name http-server
+10 silly mapToRegistry using default registry
+11 silly mapToRegistry registry http://registry.npmjs.org/
+12 silly mapToRegistry data Result {
+12 silly mapToRegistry   raw: 'http-server',
+12 silly mapToRegistry   scope: null,
+12 silly mapToRegistry   escapedName: 'http-server',
+12 silly mapToRegistry   name: 'http-server',
+12 silly mapToRegistry   rawSpec: '',
+12 silly mapToRegistry   spec: 'latest',
+12 silly mapToRegistry   type: 'tag' }
+13 silly mapToRegistry uri http://registry.npmjs.org/http-server
+14 verbose request uri http://registry.npmjs.org/http-server
+15 verbose request no auth needed
+16 info attempt registry request try #1 at 4:04:17 PM
+17 verbose request id de61f9e903318d77
+18 verbose etag "CETY004MYJRA5KQQIY3RX7MN7"
+19 http request GET http://registry.npmjs.org/http-server
+20 info retry will retry, error on last attempt: Error: connect ECONNREFUSED 127.0.0.1:3128
+21 info attempt registry request try #2 at 4:04:28 PM
+22 verbose etag "CETY004MYJRA5KQQIY3RX7MN7"
+23 http request GET http://registry.npmjs.org/http-server
+24 info retry will retry, error on last attempt: Error: connect ECONNREFUSED 127.0.0.1:3128
+25 info attempt registry request try #3 at 4:05:29 PM
+26 verbose etag "CETY004MYJRA5KQQIY3RX7MN7"
+27 http request GET http://registry.npmjs.org/http-server
+28 silly get cb [ 304, undefined ]
+29 verbose etag http://registry.npmjs.org/http-server from cache
+30 verbose get saving http-server to C:\Users\ttkhlashidze\AppData\Roaming\npm-cache\registry.npmjs.org\http-server\.cache.json
+31 verbose correctMkdir C:\Users\ttkhlashidze\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+32 silly install normalizeTree
+33 silly loadCurrentTree Finishing
+34 silly loadIdealTree Starting
+35 silly install loadIdealTree
+36 silly cloneCurrentTree Starting
+37 silly install cloneCurrentTreeToIdealTree
+38 silly cloneCurrentTree Finishing
+39 silly loadShrinkwrap Starting
+40 silly install loadShrinkwrap
+41 silly loadShrinkwrap Finishing
+42 silly loadAllDepsIntoIdealTree Starting
+43 silly install loadAllDepsIntoIdealTree
+44 silly resolveWithNewModule http-server@0.9.0 checking installable status
+45 silly cache add args [ 'http-server', null ]
+46 verbose cache add spec http-server
+47 silly cache add parsed spec Result {
+47 silly cache add   raw: 'http-server',
+47 silly cache add   scope: null,
+47 silly cache add   escapedName: 'http-server',
+47 silly cache add   name: 'http-server',
+47 silly cache add   rawSpec: '',
+47 silly cache add   spec: 'latest',
+47 silly cache add   type: 'tag' }
+48 silly addNamed http-server@latest
+49 verbose addNamed "latest" is being treated as a dist-tag for http-server
+50 info addNameTag [ 'http-server', 'latest' ]
+51 silly mapToRegistry name http-server
+52 silly mapToRegistry using default registry
+53 silly mapToRegistry registry http://registry.npmjs.org/
+54 silly mapToRegistry data Result {
+54 silly mapToRegistry   raw: 'http-server',
+54 silly mapToRegistry   scope: null,
+54 silly mapToRegistry   escapedName: 'http-server',
+54 silly mapToRegistry   name: 'http-server',
+54 silly mapToRegistry   rawSpec: '',
+54 silly mapToRegistry   spec: 'latest',
+54 silly mapToRegistry   type: 'tag' }
+55 silly mapToRegistry uri http://registry.npmjs.org/http-server
+56 verbose addNameTag registry:http://registry.npmjs.org/http-server not in flight; fetching
+57 verbose get http://registry.npmjs.org/http-server not expired, no request
+58 silly addNameTag next cb for http-server with tag latest
+59 silly addNamed http-server@0.9.0
+60 verbose addNamed "0.9.0" is a plain semver version for http-server
+61 silly cache afterAdd http-server@0.9.0
+62 verbose afterAdd C:\Users\ttkhlashidze\AppData\Roaming\npm-cache\http-server\0.9.0\package\package.json not in flight; writing
+63 verbose correctMkdir C:\Users\ttkhlashidze\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+64 verbose afterAdd C:\Users\ttkhlashidze\AppData\Roaming\npm-cache\http-server\0.9.0\package\package.json written
+65 silly fetchNamedPackageData colors
+66 silly mapToRegistry name colors
+67 silly mapToRegistry using default registry
+68 silly mapToRegistry registry http://registry.npmjs.org/
+69 silly mapToRegistry data Result {
+69 silly mapToRegistry   raw: 'colors',
+69 silly mapToRegistry   scope: null,
+69 silly mapToRegistry   escapedName: 'colors',
+69 silly mapToRegistry   name: 'colors',
+69 silly mapToRegistry   rawSpec: '',
+69 silly mapToRegistry   spec: 'latest',
+69 silly mapToRegistry   type: 'tag' }
+70 silly mapToRegistry uri http://registry.npmjs.org/colors
+71 silly fetchNamedPackageData corser
+72 silly mapToRegistry name corser
+73 silly mapToRegistry using default registry
+74 silly mapToRegistry registry http://registry.npmjs.org/
+75 silly mapToRegistry data Result {
+75 silly mapToRegistry   raw: 'corser',
+75 silly mapToRegistry   scope: null,
+75 silly mapToRegistry   escapedName: 'corser',
+75 silly mapToRegistry   name: 'corser',
+75 silly mapToRegistry   rawSpec: '',
+75 silly mapToRegistry   spec: 'latest',
+75 silly mapToRegistry   type: 'tag' }
+76 silly mapToRegistry uri http://registry.npmjs.org/corser
+77 silly fetchNamedPackageData ecstatic
+78 silly mapToRegistry name ecstatic
+79 silly mapToRegistry using default registry
+80 silly mapToRegistry registry http://registry.npmjs.org/
+81 silly mapToRegistry data Result {
+81 silly mapToRegistry   raw: 'ecstatic',
+81 silly mapToRegistry   scope: null,
+81 silly mapToRegistry   escapedName: 'ecstatic',
+81 silly mapToRegistry   name: 'ecstatic',
+81 silly mapToRegistry   rawSpec: '',
+81 silly mapToRegistry   spec: 'latest',
+81 silly mapToRegistry   type: 'tag' }
+82 silly mapToRegistry uri http://registry.npmjs.org/ecstatic
+83 silly fetchNamedPackageData http-proxy
+84 silly mapToRegistry name http-proxy
+85 silly mapToRegistry using default registry
+86 silly mapToRegistry registry http://registry.npmjs.org/
+87 silly mapToRegistry data Result {
+87 silly mapToRegistry   raw: 'http-proxy',
+87 silly mapToRegistry   scope: null,
+87 silly mapToRegistry   escapedName: 'http-proxy',
+87 silly mapToRegistry   name: 'http-proxy',
+87 silly mapToRegistry   rawSpec: '',
+87 silly mapToRegistry   spec: 'latest',
+87 silly mapToRegistry   type: 'tag' }
+88 silly mapToRegistry uri http://registry.npmjs.org/http-proxy
+89 silly fetchNamedPackageData opener
+90 silly mapToRegistry name opener
+91 silly mapToRegistry using default registry
+92 silly mapToRegistry registry http://registry.npmjs.org/
+93 silly mapToRegistry data Result {
+93 silly mapToRegistry   raw: 'opener',
+93 silly mapToRegistry   scope: null,
+93 silly mapToRegistry   escapedName: 'opener',
+93 silly mapToRegistry   name: 'opener',
+93 silly mapToRegistry   rawSpec: '',
+93 silly mapToRegistry   spec: 'latest',
+93 silly mapToRegistry   type: 'tag' }
+94 silly mapToRegistry uri http://registry.npmjs.org/opener
+95 silly fetchNamedPackageData optimist
+96 silly mapToRegistry name optimist
+97 silly mapToRegistry using default registry
+98 silly mapToRegistry registry http://registry.npmjs.org/
+99 silly mapToRegistry data Result {
+99 silly mapToRegistry   raw: 'optimist',
+99 silly mapToRegistry   scope: null,
+99 silly mapToRegistry   escapedName: 'optimist',
+99 silly mapToRegistry   name: 'optimist',
+99 silly mapToRegistry   rawSpec: '',
+99 silly mapToRegistry   spec: 'latest',
+99 silly mapToRegistry   type: 'tag' }
+100 silly mapToRegistry uri http://registry.npmjs.org/optimist
+101 silly fetchNamedPackageData portfinder
+102 silly mapToRegistry name portfinder
+103 silly mapToRegistry using default registry
+104 silly mapToRegistry registry http://registry.npmjs.org/
+105 silly mapToRegistry data Result {
+105 silly mapToRegistry   raw: 'portfinder',
+105 silly mapToRegistry   scope: null,
+105 silly mapToRegistry   escapedName: 'portfinder',
+105 silly mapToRegistry   name: 'portfinder',
+105 silly mapToRegistry   rawSpec: '',
+105 silly mapToRegistry   spec: 'latest',
+105 silly mapToRegistry   type: 'tag' }
+106 silly mapToRegistry uri http://registry.npmjs.org/portfinder
+107 silly fetchNamedPackageData union
+108 silly mapToRegistry name union
+109 silly mapToRegistry using default registry
+110 silly mapToRegistry registry http://registry.npmjs.org/
+111 silly mapToRegistry data Result {
+111 silly mapToRegistry   raw: 'union',
+111 silly mapToRegistry   scope: null,
+111 silly mapToRegistry   escapedName: 'union',
+111 silly mapToRegistry   name: 'union',
+111 silly mapToRegistry   rawSpec: '',
+111 silly mapToRegistry   spec: 'latest',
+111 silly mapToRegistry   type: 'tag' }
+112 silly mapToRegistry uri http://registry.npmjs.org/union
+113 verbose request uri http://registry.npmjs.org/colors
+114 verbose request no auth needed
+115 info attempt registry request try #1 at 4:05:31 PM
+116 verbose etag "E12JSKA8O2PD55SLTOY7MC4Y6"
+117 http request GET http://registry.npmjs.org/colors
+118 verbose request uri http://registry.npmjs.org/ecstatic
+119 verbose request no auth needed
+120 info attempt registry request try #1 at 4:05:31 PM
+121 verbose etag "AEXH8EXEH1T03QQ36SSBVX5HK"
+122 http request GET http://registry.npmjs.org/ecstatic
+123 verbose request uri http://registry.npmjs.org/corser
+124 verbose request no auth needed
+125 info attempt registry request try #1 at 4:05:31 PM
+126 verbose etag "BQ9027Q706XQS21MJ192S2E6R"
+127 http request GET http://registry.npmjs.org/corser
+128 verbose request uri http://registry.npmjs.org/portfinder
+129 verbose request no auth needed
+130 info attempt registry request try #1 at 4:05:31 PM
+131 verbose etag "1NI06QCVBE9DQKC2P9161UK50"
+132 http request GET http://registry.npmjs.org/portfinder
+133 verbose request uri http://registry.npmjs.org/http-proxy
+134 verbose request no auth needed
+135 info attempt registry request try #1 at 4:05:31 PM
+136 verbose etag "5846ddf6-23cbb"
+137 verbose lastModified Tue, 06 Dec 2016 15:49:10 GMT
+138 http request GET http://registry.npmjs.org/http-proxy
+139 verbose request uri http://registry.npmjs.org/union
+140 verbose request no auth needed
+141 info attempt registry request try #1 at 4:05:31 PM
+142 verbose etag "CVJ4YJREGBVZEPY9WXDMRP5PL"
+143 http request GET http://registry.npmjs.org/union
+144 verbose request uri http://registry.npmjs.org/optimist
+145 verbose request no auth needed
+146 info attempt registry request try #1 at 4:05:31 PM
+147 verbose etag "DA1T18LK575L48O59Y9FAWJIL"
+148 http request GET http://registry.npmjs.org/optimist
+149 verbose request uri http://registry.npmjs.org/opener
+150 verbose request no auth needed
+151 info attempt registry request try #1 at 4:05:31 PM
+152 verbose etag "6FW6BM4TQZNQLN1G5X33BHYZG"
+153 http request GET http://registry.npmjs.org/opener
+154 info retry will retry, error on last attempt: Error: connect ECONNREFUSED 127.0.0.1:3128
+155 info retry will retry, error on last attempt: Error: connect ECONNREFUSED 127.0.0.1:3128
+156 info retry will retry, error on last attempt: Error: connect ECONNREFUSED 127.0.0.1:3128
+157 info retry will retry, error on last attempt: Error: connect ECONNREFUSED 127.0.0.1:3128
+158 info retry will retry, error on last attempt: Error: connect ECONNREFUSED 127.0.0.1:3128
+159 info retry will retry, error on last attempt: Error: connect ECONNREFUSED 127.0.0.1:3128
+160 info retry will retry, error on last attempt: Error: connect ECONNREFUSED 127.0.0.1:3128
+161 info retry will retry, error on last attempt: Error: connect ECONNREFUSED 127.0.0.1:3128
+162 info attempt registry request try #2 at 4:05:42 PM
+163 verbose etag "E12JSKA8O2PD55SLTOY7MC4Y6"
+164 http request GET http://registry.npmjs.org/colors
+165 info attempt registry request try #2 at 4:05:42 PM
+166 verbose etag "BQ9027Q706XQS21MJ192S2E6R"
+167 http request GET http://registry.npmjs.org/corser
+168 info attempt registry request try #2 at 4:05:42 PM
+169 verbose etag "6FW6BM4TQZNQLN1G5X33BHYZG"
+170 http request GET http://registry.npmjs.org/opener
+171 info attempt registry request try #2 at 4:05:42 PM
+172 verbose etag "AEXH8EXEH1T03QQ36SSBVX5HK"
+173 http request GET http://registry.npmjs.org/ecstatic
+174 info attempt registry request try #2 at 4:05:42 PM
+175 verbose etag "1NI06QCVBE9DQKC2P9161UK50"
+176 http request GET http://registry.npmjs.org/portfinder
+177 info attempt registry request try #2 at 4:05:42 PM
+178 verbose etag "5846ddf6-23cbb"
+179 verbose lastModified Tue, 06 Dec 2016 15:49:10 GMT
+180 http request GET http://registry.npmjs.org/http-proxy
+181 info attempt registry request try #2 at 4:05:42 PM
+182 verbose etag "CVJ4YJREGBVZEPY9WXDMRP5PL"
+183 http request GET http://registry.npmjs.org/union
+184 info attempt registry request try #2 at 4:05:42 PM
+185 verbose etag "DA1T18LK575L48O59Y9FAWJIL"
+186 http request GET http://registry.npmjs.org/optimist
+187 info retry will retry, error on last attempt: Error: connect ECONNREFUSED 127.0.0.1:3128
+188 info retry will retry, error on last attempt: Error: connect ECONNREFUSED 127.0.0.1:3128
+189 info retry will retry, error on last attempt: Error: connect ECONNREFUSED 127.0.0.1:3128
+190 info retry will retry, error on last attempt: Error: connect ECONNREFUSED 127.0.0.1:3128
+191 info retry will retry, error on last attempt: Error: connect ECONNREFUSED 127.0.0.1:3128
+192 info retry will retry, error on last attempt: Error: connect ECONNREFUSED 127.0.0.1:3128
+193 info retry will retry, error on last attempt: Error: connect ECONNREFUSED 127.0.0.1:3128
+194 info retry will retry, error on last attempt: Error: connect ECONNREFUSED 127.0.0.1:3128
+195 info attempt registry request try #3 at 4:06:43 PM
+196 verbose etag "6FW6BM4TQZNQLN1G5X33BHYZG"
+197 http request GET http://registry.npmjs.org/opener
+198 info attempt registry request try #3 at 4:06:43 PM
+199 verbose etag "AEXH8EXEH1T03QQ36SSBVX5HK"
+200 http request GET http://registry.npmjs.org/ecstatic
+201 info attempt registry request try #3 at 4:06:43 PM
+202 verbose etag "DA1T18LK575L48O59Y9FAWJIL"
+203 http request GET http://registry.npmjs.org/optimist
+204 info attempt registry request try #3 at 4:06:43 PM
+205 verbose etag "E12JSKA8O2PD55SLTOY7MC4Y6"
+206 http request GET http://registry.npmjs.org/colors
+207 info attempt registry request try #3 at 4:06:43 PM
+208 verbose etag "CVJ4YJREGBVZEPY9WXDMRP5PL"
+209 http request GET http://registry.npmjs.org/union
+210 info attempt registry request try #3 at 4:06:43 PM
+211 verbose etag "BQ9027Q706XQS21MJ192S2E6R"
+212 http request GET http://registry.npmjs.org/corser
+213 info attempt registry request try #3 at 4:06:43 PM
+214 verbose etag "5846ddf6-23cbb"
+215 verbose lastModified Tue, 06 Dec 2016 15:49:10 GMT
+216 http request GET http://registry.npmjs.org/http-proxy
+217 info attempt registry request try #3 at 4:06:43 PM
+218 verbose etag "1NI06QCVBE9DQKC2P9161UK50"
+219 http request GET http://registry.npmjs.org/portfinder
+220 silly get cb [ 304, undefined ]
+221 verbose etag http://registry.npmjs.org/colors from cache
+222 verbose get saving colors to C:\Users\ttkhlashidze\AppData\Roaming\npm-cache\registry.npmjs.org\colors\.cache.json
+223 verbose correctMkdir C:\Users\ttkhlashidze\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+224 silly get cb [ 304, undefined ]
+225 verbose etag http://registry.npmjs.org/optimist from cache
+226 verbose get saving optimist to C:\Users\ttkhlashidze\AppData\Roaming\npm-cache\registry.npmjs.org\optimist\.cache.json
+227 verbose correctMkdir C:\Users\ttkhlashidze\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+228 silly get cb [ 304, undefined ]
+229 verbose etag http://registry.npmjs.org/ecstatic from cache
+230 verbose get saving ecstatic to C:\Users\ttkhlashidze\AppData\Roaming\npm-cache\registry.npmjs.org\ecstatic\.cache.json
+231 verbose correctMkdir C:\Users\ttkhlashidze\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+232 silly get cb [ 304, undefined ]
+233 verbose etag http://registry.npmjs.org/opener from cache
+234 verbose get saving opener to C:\Users\ttkhlashidze\AppData\Roaming\npm-cache\registry.npmjs.org\opener\.cache.json
+235 verbose correctMkdir C:\Users\ttkhlashidze\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+236 silly get cb [ 304, undefined ]
+237 verbose etag http://registry.npmjs.org/portfinder from cache
+238 verbose get saving portfinder to C:\Users\ttkhlashidze\AppData\Roaming\npm-cache\registry.npmjs.org\portfinder\.cache.json
+239 verbose correctMkdir C:\Users\ttkhlashidze\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+240 silly get cb [ 304, undefined ]
+241 verbose etag http://registry.npmjs.org/union from cache
+242 verbose get saving union to C:\Users\ttkhlashidze\AppData\Roaming\npm-cache\registry.npmjs.org\union\.cache.json
+243 verbose correctMkdir C:\Users\ttkhlashidze\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+244 silly get cb [ 304, undefined ]
+245 verbose etag http://registry.npmjs.org/http-proxy from cache
+246 verbose get saving http-proxy to C:\Users\ttkhlashidze\AppData\Roaming\npm-cache\registry.npmjs.org\http-proxy\.cache.json
+247 verbose correctMkdir C:\Users\ttkhlashidze\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+248 silly get cb [ 304, undefined ]
+249 verbose etag http://registry.npmjs.org/corser from cache
+250 verbose get saving corser to C:\Users\ttkhlashidze\AppData\Roaming\npm-cache\registry.npmjs.org\corser\.cache.json
+251 verbose correctMkdir C:\Users\ttkhlashidze\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+252 silly resolveWithNewModule optimist@0.6.1 checking installable status
+253 silly cache add args [ 'optimist@0.6.x', null ]
+254 verbose cache add spec optimist@0.6.x
+255 silly cache add parsed spec Result {
+255 silly cache add   raw: 'optimist@0.6.x',
+255 silly cache add   scope: null,
+255 silly cache add   escapedName: 'optimist',
+255 silly cache add   name: 'optimist',
+255 silly cache add   rawSpec: '0.6.x',
+255 silly cache add   spec: '>=0.6.0 <0.7.0',
+255 silly cache add   type: 'range' }
+256 silly addNamed optimist@>=0.6.0 <0.7.0
+257 verbose addNamed ">=0.6.0 <0.7.0" is a valid semver range for optimist
+258 silly addNameRange { name: 'optimist', range: '>=0.6.0 <0.7.0', hasData: false }
+259 silly mapToRegistry name optimist
+260 silly mapToRegistry using default registry
+261 silly mapToRegistry registry http://registry.npmjs.org/
+262 silly mapToRegistry data Result {
+262 silly mapToRegistry   raw: 'optimist',
+262 silly mapToRegistry   scope: null,
+262 silly mapToRegistry   escapedName: 'optimist',
+262 silly mapToRegistry   name: 'optimist',
+262 silly mapToRegistry   rawSpec: '',
+262 silly mapToRegistry   spec: 'latest',
+262 silly mapToRegistry   type: 'tag' }
+263 silly mapToRegistry uri http://registry.npmjs.org/optimist
+264 verbose addNameRange registry:http://registry.npmjs.org/optimist not in flight; fetching
+265 silly resolveWithNewModule ecstatic@1.4.1 checking installable status
+266 silly cache add args [ 'ecstatic@^1.4.0', null ]
+267 verbose cache add spec ecstatic@^1.4.0
+268 silly cache add parsed spec Result {
+268 silly cache add   raw: 'ecstatic@^1.4.0',
+268 silly cache add   scope: null,
+268 silly cache add   escapedName: 'ecstatic',
+268 silly cache add   name: 'ecstatic',
+268 silly cache add   rawSpec: '^1.4.0',
+268 silly cache add   spec: '>=1.4.0 <2.0.0',
+268 silly cache add   type: 'range' }
+269 silly addNamed ecstatic@>=1.4.0 <2.0.0
+270 verbose addNamed ">=1.4.0 <2.0.0" is a valid semver range for ecstatic
+271 silly addNameRange { name: 'ecstatic', range: '>=1.4.0 <2.0.0', hasData: false }
+272 silly mapToRegistry name ecstatic
+273 silly mapToRegistry using default registry
+274 silly mapToRegistry registry http://registry.npmjs.org/
+275 silly mapToRegistry data Result {
+275 silly mapToRegistry   raw: 'ecstatic',
+275 silly mapToRegistry   scope: null,
+275 silly mapToRegistry   escapedName: 'ecstatic',
+275 silly mapToRegistry   name: 'ecstatic',
+275 silly mapToRegistry   rawSpec: '',
+275 silly mapToRegistry   spec: 'latest',
+275 silly mapToRegistry   type: 'tag' }
+276 silly mapToRegistry uri http://registry.npmjs.org/ecstatic
+277 verbose addNameRange registry:http://registry.npmjs.org/ecstatic not in flight; fetching
+278 silly resolveWithNewModule union@0.4.4 checking installable status
+279 silly cache add args [ 'union@~0.4.3', null ]
+280 verbose cache add spec union@~0.4.3
+281 silly cache add parsed spec Result {
+281 silly cache add   raw: 'union@~0.4.3',
+281 silly cache add   scope: null,
+281 silly cache add   escapedName: 'union',
+281 silly cache add   name: 'union',
+281 silly cache add   rawSpec: '~0.4.3',
+281 silly cache add   spec: '>=0.4.3 <0.5.0',
+281 silly cache add   type: 'range' }
+282 silly addNamed union@>=0.4.3 <0.5.0
+283 verbose addNamed ">=0.4.3 <0.5.0" is a valid semver range for union
+284 silly addNameRange { name: 'union', range: '>=0.4.3 <0.5.0', hasData: false }
+285 silly mapToRegistry name union
+286 silly mapToRegistry using default registry
+287 silly mapToRegistry registry http://registry.npmjs.org/
+288 silly mapToRegistry data Result {
+288 silly mapToRegistry   raw: 'union',
+288 silly mapToRegistry   scope: null,
+288 silly mapToRegistry   escapedName: 'union',
+288 silly mapToRegistry   name: 'union',
+288 silly mapToRegistry   rawSpec: '',
+288 silly mapToRegistry   spec: 'latest',
+288 silly mapToRegistry   type: 'tag' }
+289 silly mapToRegistry uri http://registry.npmjs.org/union
+290 verbose addNameRange registry:http://registry.npmjs.org/union not in flight; fetching
+291 silly resolveWithNewModule colors@1.0.3 checking installable status
+292 silly cache add args [ 'colors@1.0.3', null ]
+293 verbose cache add spec colors@1.0.3
+294 silly cache add parsed spec Result {
+294 silly cache add   raw: 'colors@1.0.3',
+294 silly cache add   scope: null,
+294 silly cache add   escapedName: 'colors',
+294 silly cache add   name: 'colors',
+294 silly cache add   rawSpec: '1.0.3',
+294 silly cache add   spec: '1.0.3',
+294 silly cache add   type: 'version' }
+295 silly addNamed colors@1.0.3
+296 verbose addNamed "1.0.3" is a plain semver version for colors
+297 silly mapToRegistry name colors
+298 silly mapToRegistry using default registry
+299 silly mapToRegistry registry http://registry.npmjs.org/
+300 silly mapToRegistry data Result {
+300 silly mapToRegistry   raw: 'colors',
+300 silly mapToRegistry   scope: null,
+300 silly mapToRegistry   escapedName: 'colors',
+300 silly mapToRegistry   name: 'colors',
+300 silly mapToRegistry   rawSpec: '',
+300 silly mapToRegistry   spec: 'latest',
+300 silly mapToRegistry   type: 'tag' }
+301 silly mapToRegistry uri http://registry.npmjs.org/colors
+302 verbose addNameVersion registry:http://registry.npmjs.org/colors not in flight; fetching
+303 silly resolveWithNewModule opener@1.4.1 checking installable status
+304 silly cache add args [ 'opener@~1.4.0', null ]
+305 verbose cache add spec opener@~1.4.0
+306 silly cache add parsed spec Result {
+306 silly cache add   raw: 'opener@~1.4.0',
+306 silly cache add   scope: null,
+306 silly cache add   escapedName: 'opener',
+306 silly cache add   name: 'opener',
+306 silly cache add   rawSpec: '~1.4.0',
+306 silly cache add   spec: '>=1.4.0 <1.5.0',
+306 silly cache add   type: 'range' }
+307 silly addNamed opener@>=1.4.0 <1.5.0
+308 verbose addNamed ">=1.4.0 <1.5.0" is a valid semver range for opener
+309 silly addNameRange { name: 'opener', range: '>=1.4.0 <1.5.0', hasData: false }
+310 silly mapToRegistry name opener
+311 silly mapToRegistry using default registry
+312 silly mapToRegistry registry http://registry.npmjs.org/
+313 silly mapToRegistry data Result {
+313 silly mapToRegistry   raw: 'opener',
+313 silly mapToRegistry   scope: null,
+313 silly mapToRegistry   escapedName: 'opener',
+313 silly mapToRegistry   name: 'opener',
+313 silly mapToRegistry   rawSpec: '',
+313 silly mapToRegistry   spec: 'latest',
+313 silly mapToRegistry   type: 'tag' }
+314 silly mapToRegistry uri http://registry.npmjs.org/opener
+315 verbose addNameRange registry:http://registry.npmjs.org/opener not in flight; fetching
+316 silly resolveWithNewModule portfinder@0.4.0 checking installable status
+317 silly cache add args [ 'portfinder@0.4.x', null ]
+318 verbose cache add spec portfinder@0.4.x
+319 silly cache add parsed spec Result {
+319 silly cache add   raw: 'portfinder@0.4.x',
+319 silly cache add   scope: null,
+319 silly cache add   escapedName: 'portfinder',
+319 silly cache add   name: 'portfinder',
+319 silly cache add   rawSpec: '0.4.x',
+319 silly cache add   spec: '>=0.4.0 <0.5.0',
+319 silly cache add   type: 'range' }
+320 silly addNamed portfinder@>=0.4.0 <0.5.0
+321 verbose addNamed ">=0.4.0 <0.5.0" is a valid semver range for portfinder
+322 silly addNameRange { name: 'portfinder', range: '>=0.4.0 <0.5.0', hasData: false }
+323 silly mapToRegistry name portfinder
+324 silly mapToRegistry using default registry
+325 silly mapToRegistry registry http://registry.npmjs.org/
+326 silly mapToRegistry data Result {
+326 silly mapToRegistry   raw: 'portfinder',
+326 silly mapToRegistry   scope: null,
+326 silly mapToRegistry   escapedName: 'portfinder',
+326 silly mapToRegistry   name: 'portfinder',
+326 silly mapToRegistry   rawSpec: '',
+326 silly mapToRegistry   spec: 'latest',
+326 silly mapToRegistry   type: 'tag' }
+327 silly mapToRegistry uri http://registry.npmjs.org/portfinder
+328 verbose addNameRange registry:http://registry.npmjs.org/portfinder not in flight; fetching
+329 silly resolveWithNewModule corser@2.0.1 checking installable status
+330 silly cache add args [ 'corser@~2.0.0', null ]
+331 verbose cache add spec corser@~2.0.0
+332 silly cache add parsed spec Result {
+332 silly cache add   raw: 'corser@~2.0.0',
+332 silly cache add   scope: null,
+332 silly cache add   escapedName: 'corser',
+332 silly cache add   name: 'corser',
+332 silly cache add   rawSpec: '~2.0.0',
+332 silly cache add   spec: '>=2.0.0 <2.1.0',
+332 silly cache add   type: 'range' }
+333 silly addNamed corser@>=2.0.0 <2.1.0
+334 verbose addNamed ">=2.0.0 <2.1.0" is a valid semver range for corser
+335 silly addNameRange { name: 'corser', range: '>=2.0.0 <2.1.0', hasData: false }
+336 silly mapToRegistry name corser
+337 silly mapToRegistry using default registry
+338 silly mapToRegistry registry http://registry.npmjs.org/
+339 silly mapToRegistry data Result {
+339 silly mapToRegistry   raw: 'corser',
+339 silly mapToRegistry   scope: null,
+339 silly mapToRegistry   escapedName: 'corser',
+339 silly mapToRegistry   name: 'corser',
+339 silly mapToRegistry   rawSpec: '',
+339 silly mapToRegistry   spec: 'latest',
+339 silly mapToRegistry   type: 'tag' }
+340 silly mapToRegistry uri http://registry.npmjs.org/corser
+341 verbose addNameRange registry:http://registry.npmjs.org/corser not in flight; fetching
+342 verbose get http://registry.npmjs.org/optimist not expired, no request
+343 silly addNameRange number 2 { name: 'optimist', range: '>=0.6.0 <0.7.0', hasData: true }
+344 silly addNameRange versions [ 'optimist',
+344 silly addNameRange   [ '0.0.1',
+344 silly addNameRange     '0.0.2',
+344 silly addNameRange     '0.0.4',
+344 silly addNameRange     '0.0.5',
+344 silly addNameRange     '0.0.6',
+344 silly addNameRange     '0.0.7',
+344 silly addNameRange     '0.1.0',
+344 silly addNameRange     '0.1.1',
+344 silly addNameRange     '0.1.2',
+344 silly addNameRange     '0.1.3',
+344 silly addNameRange     '0.1.4',
+344 silly addNameRange     '0.1.5',
+344 silly addNameRange     '0.1.6',
+344 silly addNameRange     '0.1.7',
+344 silly addNameRange     '0.1.8',
+344 silly addNameRange     '0.1.9',
+344 silly addNameRange     '0.0.3',
+344 silly addNameRange     '0.2.0',
+344 silly addNameRange     '0.2.1',
+344 silly addNameRange     '0.2.2',
+344 silly addNameRange     '0.2.3',
+344 silly addNameRange     '0.2.4',
+344 silly addNameRange     '0.2.5',
+344 silly addNameRange     '0.2.6',
+344 silly addNameRange     '0.2.7',
+344 silly addNameRange     '0.2.8',
+344 silly addNameRange     '0.3.0',
+344 silly addNameRange     '0.3.1',
+344 silly addNameRange     '0.3.3',
+344 silly addNameRange     '0.3.4',
+344 silly addNameRange     '0.3.5',
+344 silly addNameRange     '0.3.6',
+344 silly addNameRange     '0.3.7',
+344 silly addNameRange     '0.4.0',
+344 silly addNameRange     '0.5.0',
+344 silly addNameRange     '0.5.1',
+344 silly addNameRange     '0.5.2',
+344 silly addNameRange     '0.6.0',
+344 silly addNameRange     '0.6.1' ] ]
+345 silly addNamed optimist@0.6.1
+346 verbose addNamed "0.6.1" is a plain semver version for optimist
+347 silly resolveWithNewModule http-proxy@1.16.2 checking installable status
+348 silly cache add args [ 'http-proxy@^1.8.1', null ]
+349 verbose cache add spec http-proxy@^1.8.1
+350 silly cache add parsed spec Result {
+350 silly cache add   raw: 'http-proxy@^1.8.1',
+350 silly cache add   scope: null,
+350 silly cache add   escapedName: 'http-proxy',
+350 silly cache add   name: 'http-proxy',
+350 silly cache add   rawSpec: '^1.8.1',
+350 silly cache add   spec: '>=1.8.1 <2.0.0',
+350 silly cache add   type: 'range' }
+351 silly addNamed http-proxy@>=1.8.1 <2.0.0
+352 verbose addNamed ">=1.8.1 <2.0.0" is a valid semver range for http-proxy
+353 silly addNameRange { name: 'http-proxy', range: '>=1.8.1 <2.0.0', hasData: false }
+354 silly mapToRegistry name http-proxy
+355 silly mapToRegistry using default registry
+356 silly mapToRegistry registry http://registry.npmjs.org/
+357 silly mapToRegistry data Result {
+357 silly mapToRegistry   raw: 'http-proxy',
+357 silly mapToRegistry   scope: null,
+357 silly mapToRegistry   escapedName: 'http-proxy',
+357 silly mapToRegistry   name: 'http-proxy',
+357 silly mapToRegistry   rawSpec: '',
+357 silly mapToRegistry   spec: 'latest',
+357 silly mapToRegistry   type: 'tag' }
+358 silly mapToRegistry uri http://registry.npmjs.org/http-proxy
+359 verbose addNameRange registry:http://registry.npmjs.org/http-proxy not in flight; fetching
+360 verbose get http://registry.npmjs.org/ecstatic not expired, no request
+361 silly addNameRange number 2 { name: 'ecstatic', range: '>=1.4.0 <2.0.0', hasData: true }
+362 silly addNameRange versions [ 'ecstatic',
+362 silly addNameRange   [ '0.0.0',
+362 silly addNameRange     '0.0.1',
+362 silly addNameRange     '0.1.0',
+362 silly addNameRange     '0.1.1',
+362 silly addNameRange     '0.1.1-1',
+362 silly addNameRange     '0.1.2',
+362 silly addNameRange     '0.1.2-1',
+362 silly addNameRange     '0.1.4',
+362 silly addNameRange     '0.1.5',
+362 silly addNameRange     '0.1.6',
+362 silly addNameRange     '0.1.7',
+362 silly addNameRange     '0.3.0',
+362 silly addNameRange     '0.3.1',
+362 silly addNameRange     '0.3.2',
+362 silly addNameRange     '0.4.0',
+362 silly addNameRange     '0.4.1',
+362 silly addNameRange     '0.4.2',
+362 silly addNameRange     '0.4.3',
+362 silly addNameRange     '0.4.4',
+362 silly addNameRange     '0.4.5',
+362 silly addNameRange     '0.4.6',
+362 silly addNameRange     '0.4.7',
+362 silly addNameRange     '0.4.8',
+362 silly addNameRange     '0.4.9',
+362 silly addNameRange     '0.4.10',
+362 silly addNameRange     '0.4.11',
+362 silly addNameRange     '0.4.12',
+362 silly addNameRange     '0.4.13',
+362 silly addNameRange     '0.5.0',
+362 silly addNameRange     '0.5.1',
+362 silly addNameRange     '0.5.2',
+362 silly addNameRange     '0.5.3',
+362 silly addNameRange     '0.5.4',
+362 silly addNameRange     '0.5.5',
+362 silly addNameRange     '0.5.6',
+362 silly addNameRange     '0.5.7',
+362 silly addNameRange     '0.5.8',
+362 silly addNameRange     '0.6.0',
+362 silly addNameRange     '0.6.1',
+362 silly addNameRange     '0.7.0',
+362 silly addNameRange     '0.7.1',
+362 silly addNameRange     '0.7.2',
+362 silly addNameRange     '0.7.3',
+362 silly addNameRange     '0.7.4',
+362 silly addNameRange     '0.7.5',
+362 silly addNameRange     '0.7.6',
+362 silly addNameRange     '0.8.0',
+362 silly addNameRange     '1.0.0',
+362 silly addNameRange     '1.0.1',
+362 silly addNameRange     '1.1.0',
+362 silly addNameRange     '1.1.1',
+362 silly addNameRange     '1.1.2',
+362 silly addNameRange     '1.1.3',
+362 silly addNameRange     '1.2.0',
+362 silly addNameRange     '1.3.0',
+362 silly addNameRange     '1.3.1',
+362 silly addNameRange     '1.4.0',
+362 silly addNameRange     '1.4.1',
+362 silly addNameRange     '2.0.0',
+362 silly addNameRange     '2.1.0' ] ]
+363 silly addNamed ecstatic@1.4.1
+364 verbose addNamed "1.4.1" is a plain semver version for ecstatic
+365 verbose get http://registry.npmjs.org/union not expired, no request
+366 silly addNameRange number 2 { name: 'union', range: '>=0.4.3 <0.5.0', hasData: true }
+367 silly addNameRange versions [ 'union',
+367 silly addNameRange   [ '0.1.0',
+367 silly addNameRange     '0.1.2',
+367 silly addNameRange     '0.1.3',
+367 silly addNameRange     '0.1.4',
+367 silly addNameRange     '0.1.5',
+367 silly addNameRange     '0.1.6',
+367 silly addNameRange     '0.1.7',
+367 silly addNameRange     '0.1.8',
+367 silly addNameRange     '0.2.0',
+367 silly addNameRange     '0.2.1',
+367 silly addNameRange     '0.3.0',
+367 silly addNameRange     '0.3.2',
+367 silly addNameRange     '0.3.3',
+367 silly addNameRange     '0.3.4',
+367 silly addNameRange     '0.3.5',
+367 silly addNameRange     '0.3.6',
+367 silly addNameRange     '0.3.7',
+367 silly addNameRange     '0.3.8',
+367 silly addNameRange     '0.4.0',
+367 silly addNameRange     '0.4.1',
+367 silly addNameRange     '0.4.2',
+367 silly addNameRange     '0.4.3',
+367 silly addNameRange     '0.4.4' ] ]
+368 silly addNamed union@0.4.4
+369 verbose addNamed "0.4.4" is a plain semver version for union
+370 verbose get http://registry.npmjs.org/opener not expired, no request
+371 silly addNameRange number 2 { name: 'opener', range: '>=1.4.0 <1.5.0', hasData: true }
+372 silly addNameRange versions [ 'opener',
+372 silly addNameRange   [ '1.0.0', '1.0.1', '1.1.0', '1.2.0', '1.3.0', '1.4.0', '1.4.1' ] ]
+373 silly addNamed opener@1.4.1
+374 verbose addNamed "1.4.1" is a plain semver version for opener
+375 verbose get http://registry.npmjs.org/colors not expired, no request
+376 verbose get http://registry.npmjs.org/portfinder not expired, no request
+377 silly addNameRange number 2 { name: 'portfinder', range: '>=0.4.0 <0.5.0', hasData: true }
+378 silly addNameRange versions [ 'portfinder',
+378 silly addNameRange   [ '0.1.0',
+378 silly addNameRange     '0.2.0',
+378 silly addNameRange     '0.2.1',
+378 silly addNameRange     '0.3.0',
+378 silly addNameRange     '0.4.0',
+378 silly addNameRange     '1.0.0',
+378 silly addNameRange     '1.0.1',
+378 silly addNameRange     '1.0.2',
+378 silly addNameRange     '1.0.3',
+378 silly addNameRange     '1.0.4',
+378 silly addNameRange     '1.0.5',
+378 silly addNameRange     '1.0.6',
+378 silly addNameRange     '1.0.7-beta.0',
+378 silly addNameRange     '1.0.7' ] ]
+379 silly addNamed portfinder@0.4.0
+380 verbose addNamed "0.4.0" is a plain semver version for portfinder
+381 verbose get http://registry.npmjs.org/corser not expired, no request
+382 silly addNameRange number 2 { name: 'corser', range: '>=2.0.0 <2.1.0', hasData: true }
+383 silly addNameRange versions [ 'corser',
+383 silly addNameRange   [ '0.1.0',
+383 silly addNameRange     '0.2.0',
+383 silly addNameRange     '1.0.0',
+383 silly addNameRange     '1.0.1',
+383 silly addNameRange     '1.0.2',
+383 silly addNameRange     '1.1.0',
+383 silly addNameRange     '1.1.1',
+383 silly addNameRange     '1.1.2',
+383 silly addNameRange     '1.2.0',
+383 silly addNameRange     '2.0.0',
+383 silly addNameRange     '2.0.1' ] ]
+384 silly addNamed corser@2.0.1
+385 verbose addNamed "2.0.1" is a plain semver version for corser
+386 silly cache afterAdd optimist@0.6.1
+387 verbose afterAdd C:\Users\ttkhlashidze\AppData\Roaming\npm-cache\optimist\0.6.1\package\package.json not in flight; writing
+388 verbose correctMkdir C:\Users\ttkhlashidze\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+389 verbose get http://registry.npmjs.org/http-proxy not expired, no request
+390 silly addNameRange number 2 { name: 'http-proxy', range: '>=1.8.1 <2.0.0', hasData: true }
+391 silly addNameRange versions [ 'http-proxy',
+391 silly addNameRange   [ '0.5.9',
+391 silly addNameRange     '0.5.10',
+391 silly addNameRange     '0.5.11',
+391 silly addNameRange     '0.6.0',
+391 silly addNameRange     '0.6.1',
+391 silly addNameRange     '0.6.2',
+391 silly addNameRange     '0.6.4',
+391 silly addNameRange     '0.6.5',
+391 silly addNameRange     '0.6.6',
+391 silly addNameRange     '0.7.0',
+391 silly addNameRange     '0.7.2',
+391 silly addNameRange     '0.7.3',
+391 silly addNameRange     '0.7.4',
+391 silly addNameRange     '0.7.5',
+391 silly addNameRange     '0.7.6',
+391 silly addNameRange     '0.8.0',
+391 silly addNameRange     '0.8.1',
+391 silly addNameRange     '0.8.2',
+391 silly addNameRange     '0.8.3',
+391 silly addNameRange     '0.8.4',
+391 silly addNameRange     '0.8.5',
+391 silly addNameRange     '0.8.6',
+391 silly addNameRange     '0.8.7',
+391 silly addNameRange     '0.9.0',
+391 silly addNameRange     '0.9.1',
+391 silly addNameRange     '0.10.0',
+391 silly addNameRange     '0.10.1',
+391 silly addNameRange     '0.10.2',
+391 silly addNameRange     '0.10.3',
+391 silly addNameRange     '0.10.4',
+391 silly addNameRange     '1.0.0',
+391 silly addNameRange     '1.0.1',
+391 silly addNameRange     '1.0.2',
+391 silly addNameRange     '1.0.3',
+391 silly addNameRange     '1.1.0',
+391 silly addNameRange     '1.1.1',
+391 silly addNameRange     '1.1.2',
+391 silly addNameRange     '1.1.3',
+391 silly addNameRange     '1.1.4',
+391 silly addNameRange     '1.1.5',
+391 silly addNameRange     '1.1.6',
+391 silly addNameRange     '1.2.0',
+391 silly addNameRange     '1.2.1',
+391 silly addNameRange     '1.3.0',
+391 silly addNameRange     '1.4.0',
+391 silly addNameRange     '1.4.1',
+391 silly addNameRange     '1.4.2',
+391 silly addNameRange     '1.4.3',
+391 silly addNameRange     '1.5.0',
+391 silly addNameRange     '1.5.1',
+391 silly addNameRange     '1.5.2',
+391 silly addNameRange     '1.5.3',
+391 silly addNameRange     '1.6.0',
+391 silly addNameRange     '1.6.1',
+391 silly addNameRange     '1.6.2',
+391 silly addNameRange     '1.7.0',
+391 silly addNameRange     '1.7.1',
+391 silly addNameRange     '1.7.2',
+391 silly addNameRange     '1.7.3',
+391 silly addNameRange     '1.8.0',
+391 silly addNameRange     '1.8.1',
+391 silly addNameRange     '1.9.0',
+391 silly addNameRange     '1.9.1',
+391 silly addNameRange     '1.10.0',
+391 silly addNameRange     '1.10.1',
+391 silly addNameRange     '1.11.0',
+391 silly addNameRange     '1.11.1',
+391 silly addNameRange     '1.11.2',
+391 silly addNameRange     '1.11.3',
+391 silly addNameRange     '1.12.0',
+391 silly addNameRange     '1.12.1',
+391 silly addNameRange     '1.13.0',
+391 silly addNameRange     '1.13.1',
+391 silly addNameRange     '1.13.2',
+391 silly addNameRange     '1.13.3',
+391 silly addNameRange     '1.14.0',
+391 silly addNameRange     '1.15.0',
+391 silly addNameRange     '1.15.1',
+391 silly addNameRange     '1.15.2',
+391 silly addNameRange     '1.16.0',
+391 silly addNameRange     '1.16.1',
+391 silly addNameRange     '1.16.2' ] ]
+392 silly addNamed http-proxy@1.16.2
+393 verbose addNamed "1.16.2" is a plain semver version for http-proxy
+394 silly mapToRegistry name http-proxy
+395 silly mapToRegistry using default registry
+396 silly mapToRegistry registry http://registry.npmjs.org/
+397 silly mapToRegistry data Result {
+397 silly mapToRegistry   raw: 'http-proxy',
+397 silly mapToRegistry   scope: null,
+397 silly mapToRegistry   escapedName: 'http-proxy',
+397 silly mapToRegistry   name: 'http-proxy',
+397 silly mapToRegistry   rawSpec: '',
+397 silly mapToRegistry   spec: 'latest',
+397 silly mapToRegistry   type: 'tag' }
+398 silly mapToRegistry uri http://registry.npmjs.org/http-proxy
+399 verbose addRemoteTarball http://registry.npmjs.org/http-proxy/-/http-proxy-1.16.2.tgz not in flight; adding
+400 verbose addRemoteTarball [ 'http://registry.npmjs.org/http-proxy/-/http-proxy-1.16.2.tgz',
+400 verbose addRemoteTarball   '06dff292952bf64dbe8471fa9df73066d4f37742' ]
+401 silly cache afterAdd union@0.4.4
+402 verbose afterAdd C:\Users\ttkhlashidze\AppData\Roaming\npm-cache\union\0.4.4\package\package.json not in flight; writing
+403 verbose correctMkdir C:\Users\ttkhlashidze\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+404 silly cache afterAdd colors@1.0.3
+405 verbose afterAdd C:\Users\ttkhlashidze\AppData\Roaming\npm-cache\colors\1.0.3\package\package.json not in flight; writing
+406 verbose correctMkdir C:\Users\ttkhlashidze\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+407 silly cache afterAdd ecstatic@1.4.1
+408 verbose afterAdd C:\Users\ttkhlashidze\AppData\Roaming\npm-cache\ecstatic\1.4.1\package\package.json not in flight; writing
+409 verbose correctMkdir C:\Users\ttkhlashidze\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+410 silly cache afterAdd opener@1.4.1
+411 verbose afterAdd C:\Users\ttkhlashidze\AppData\Roaming\npm-cache\opener\1.4.1\package\package.json not in flight; writing
+412 verbose correctMkdir C:\Users\ttkhlashidze\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+413 silly cache afterAdd portfinder@0.4.0
+414 verbose afterAdd C:\Users\ttkhlashidze\AppData\Roaming\npm-cache\portfinder\0.4.0\package\package.json not in flight; writing
+415 verbose correctMkdir C:\Users\ttkhlashidze\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+416 silly cache afterAdd corser@2.0.1
+417 verbose afterAdd C:\Users\ttkhlashidze\AppData\Roaming\npm-cache\corser\2.0.1\package\package.json not in flight; writing
+418 verbose correctMkdir C:\Users\ttkhlashidze\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+419 verbose afterAdd C:\Users\ttkhlashidze\AppData\Roaming\npm-cache\optimist\0.6.1\package\package.json written
+420 info retry fetch attempt 1 at 4:06:44 PM
+421 info attempt registry request try #1 at 4:06:44 PM
+422 http fetch GET http://registry.npmjs.org/http-proxy/-/http-proxy-1.16.2.tgz
+423 verbose afterAdd C:\Users\ttkhlashidze\AppData\Roaming\npm-cache\union\0.4.4\package\package.json written
+424 verbose afterAdd C:\Users\ttkhlashidze\AppData\Roaming\npm-cache\colors\1.0.3\package\package.json written
+425 verbose afterAdd C:\Users\ttkhlashidze\AppData\Roaming\npm-cache\opener\1.4.1\package\package.json written
+426 verbose afterAdd C:\Users\ttkhlashidze\AppData\Roaming\npm-cache\ecstatic\1.4.1\package\package.json written
+427 verbose afterAdd C:\Users\ttkhlashidze\AppData\Roaming\npm-cache\portfinder\0.4.0\package\package.json written
+428 verbose afterAdd C:\Users\ttkhlashidze\AppData\Roaming\npm-cache\corser\2.0.1\package\package.json written
+429 info retry will retry, error on last attempt: Error: connect ECONNREFUSED 127.0.0.1:3128
+430 info attempt registry request try #2 at 4:06:55 PM
+431 http fetch GET http://registry.npmjs.org/http-proxy/-/http-proxy-1.16.2.tgz
+432 info retry will retry, error on last attempt: Error: connect ECONNREFUSED 127.0.0.1:3128
+433 info attempt registry request try #3 at 4:07:56 PM
+434 http fetch GET http://registry.npmjs.org/http-proxy/-/http-proxy-1.16.2.tgz
+435 error fetch failed http://registry.npmjs.org/http-proxy/-/http-proxy-1.16.2.tgz
+436 warn retry will retry, error on last attempt: Error: connect ECONNREFUSED 127.0.0.1:3128
+437 info retry fetch attempt 2 at 4:08:07 PM
+438 info attempt registry request try #1 at 4:08:07 PM
+439 http fetch GET http://registry.npmjs.org/http-proxy/-/http-proxy-1.16.2.tgz
+440 info retry will retry, error on last attempt: Error: connect ECONNREFUSED 127.0.0.1:3128
+441 verbose stack Error: kill ENOSYS
+441 verbose stack     at exports._errnoException (util.js:1022:11)
+441 verbose stack     at process.kill (internal/process.js:172:13)
+441 verbose stack     at process.listener (C:\Program Files\nodejs\node_modules\npm\node_modules\npmlog\node_modules\gauge\node_modules\signal-exit\index.js:86:15)
+441 verbose stack     at emitNone (events.js:91:20)
+441 verbose stack     at process.emit (events.js:185:7)
+441 verbose stack     at processEmit (C:\Program Files\nodejs\node_modules\npm\node_modules\npmlog\node_modules\gauge\node_modules\signal-exit\index.js:146:32)
+441 verbose stack     at processEmit (C:\Program Files\nodejs\node_modules\npm\node_modules\npm-registry-client\node_modules\npmlog\node_modules\gauge\node_modules\signal-exit\index.js:146:32)
+441 verbose stack     at Signal.wrap.onsignal (internal/process.js:199:44)
+442 verbose cwd C:\Users\ttkhlashidze\Desktop\ConstructionDashboard\Construction-Dashoard-with-d3.js
+443 error Windows_NT 6.1.7601
+444 error argv "C:\\Program Files\\nodejs\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install" "http-server" "-g"
+445 error node v6.9.4
+446 error npm  v3.10.10
+447 error code ENOSYS
+448 error errno ENOSYS
+449 error syscall kill
+450 error kill ENOSYS
+451 error If you need help, you may report this error at:
+451 error     <https://github.com/npm/npm/issues>
+452 verbose exit [ 1, true ]

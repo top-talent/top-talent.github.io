@@ -1,0 +1,214 @@
+{
+  "challenges": [
+    {
+      "key": 1,
+      "name": "001: Sign Up",
+      "date": "October 13, 2015",
+      "link": "/daily_ui/001_sign_up",
+      "image": "001_sign_up.jpg",
+      "description": "A sign up modal with form validation and animated feedback."
+    },
+    {
+      "key": 2,
+      "name": "002: Credit Card Checkout",
+      "date": "October 14, 2015",
+      "link": "/daily_ui/002_credit_card_checkout",
+      "image": "002_credit_card_checkout.jpg",
+      "description": "A credit card checkout screen with form validation, credit card type detection (examples provided) and animated feedback."
+    },
+    {
+      "key": 3,
+      "name": "003: Landing Page",
+      "date": "October 15, 2015",
+      "link": "/daily_ui/003_landing_page",
+      "image": "003_landing_page.jpg",
+      "description": "A landing page with rotating background images and a sign up input with email validation and animated feedback."
+    },
+    {
+      "key": 4,
+      "name": "004: Calculator",
+      "date": "October 16, 2015",
+      "link": "/daily_ui/004_calculator",
+      "image": "004_calculator.jpg",
+      "description": "A simple, functional calculator using JavaScript's eval() function with basic error handling and equation logging that accepts both button and keyboard inputs."
+    },
+    {
+      "key": 5,
+      "name": "005: App Icon",
+      "date": "October 19, 2015",
+      "link": "/daily_ui/005_app_icon",
+      "image": "005_app_icon.jpg",
+      "description": "A mobile app icon mockup for PeakBucket, a real life project."
+    },
+    {
+      "key": 6,
+      "name": "006: User Profile",
+      "date": "October 20, 2015",
+      "link": "/daily_ui/006_user_profile",
+      "image": "006_user_profile.jpg",
+      "description": "What I think my dog's user profile would look like if dogs used social media. Responsive layout. Used Underscore.js and d3.js to generate random post content."
+    },
+    {
+      "key": 7,
+      "name": "007: Settings",
+      "date": "October 21, 2015",
+      "link": "/daily_ui/007_settings",
+      "image": "007_settings.jpg",
+      "description": "Controls to style user supplied text using React.js and jQuery UI Slider."
+    },
+    {
+      "key": 8,
+      "name": "008: 404 Page",
+      "date": "October 22, 2015",
+      "link": "/daily_ui/008_404_page",
+      "image": "008_404_page.jpg",
+      "description": "A launch-themed 404 page with typed animation."
+    },
+    {
+      "key": 9,
+      "name": "009: Music Player",
+      "date": "October 23, 2015",
+      "link": "/daily_ui/009_music_player",
+      "image": "009_music_player.jpg",
+      "description": "A functional, responsive piano built with d3.js."
+    },
+    {
+      "key": 10,
+      "name": "010: Social Share",
+      "date": "October 26, 2015",
+      "link": "/daily_ui/010_social_share",
+      "image": "010_social_share.jpg",
+      "description": "A set of functional, responsive social share buttons that resize to fit three screen sizes and share the current page."
+    },
+    {
+      "key": 11,
+      "name": "011: Flash Message",
+      "date": "October 27, 2015",
+      "link": "/daily_ui/011_flash_message",
+      "image": "011_flash_message.jpg",
+      "description": "Success/Error message received after guessing a random number between 1 and 10."
+    },
+    {
+      "key": 12,
+      "name": "012: eCommerce Shop",
+      "date": "October 28, 2015",
+      "link": "/daily_ui/012_ecommerce_shop",
+      "image": "012_ecommerce_shop.jpg",
+      "description": "A responsive eCommerce shop for spinning widgets, including color selection, description and reviews."
+    },
+    {
+      "key": 13,
+      "name": "013: Direct Messaging",
+      "date": "October 29, 2015",
+      "link": "/daily_ui/013_direct_messaging",
+      "image": "013_direct_messaging.jpg",
+      "description": "Direct message with a magic 8 ball. Built with React.js; responses driven by Underscore.js."
+    },
+    {
+      "key": 14,
+      "name": "014: Countdown Timer",
+      "date": "October 30, 2015",
+      "link": "/daily_ui/014_countdown_timer",
+      "image": "014_countdown_timer.jpg",
+      "description": "A functional minutes and seconds countdown timer."
+    },
+    {
+      "key": 15,
+      "name": "015: On/Off Switch",
+      "date": "November 2, 2015",
+      "link": "/daily_ui/015_on_off_switch",
+      "image": "015_on_off_switch.jpg",
+      "description": "A light switch with transitions driven by d3.js."
+    },
+    {
+      "key": 16,
+      "name": "016: Overlay",
+      "date": "November 3, 2015",
+      "link": "/daily_ui/016_overlay",
+      "image": "016_overlay.jpg",
+      "description": "Mouse-tracking tooltips for a couple of SVG elements created with d3.js."
+    },
+    {
+      "key": 17,
+      "name": "017: Email Receipt",
+      "date": "November 4, 2015",
+      "link": "http://spinning-widget-store.herokuapp.com/",
+      "image": "017_email_receipt.jpg",
+      "description": "A simple Rails app that sends eReceipts for spinning widgets via SendGrid."
+    },
+    {
+      "key": 18,
+      "name": "018: Analytics Chart",
+      "date": "November 5, 2015",
+      "link": "/daily_ui/018_analytics_chart",
+      "image": "018_analytics_chart.jpg",
+      "description": "An interactive chart displaying weather trends in Yosemite National Park between 2011 and 2015; created with React.js and d3.js."
+    },
+    {
+      "key": 19,
+      "name": "019: Leaderboard",
+      "date": "November 5, 2015",
+      "link": "/daily_ui/019_leaderboard",
+      "image": "019_leaderboard.jpg",
+      "description": "Play heads or tails against a computer; built with React.js and Underscore.js."
+    },
+    {
+      "key": 20,
+      "name": "020: Location Tracker",
+      "date": "November 9, 2015",
+      "link": "/daily_ui/020_location_tracker",
+      "image": "020_location_tracker.jpg",
+      "description": "A mapping of the 2016 presidential candidate locations on Monday, November 9, 2015 made with d3.js."
+    },
+    {
+      "key": 21,
+      "name": "021: Home Monitor",
+      "date": "November 10, 2015",
+      "link": "/daily_ui/021_home_monitor",
+      "image": "021_home_monitor.jpg",
+      "description": "A mockup of a home monitor for the Trump mansion in Greenwich, CT."
+    },
+    {
+      "key": 22,
+      "name": "022: Search",
+      "date": "November 11, 2015",
+      "link": "/daily_ui/022_search",
+      "image": "022_search.jpg",
+      "description": "Search the Seven Dwarfs; built with Typeahead.js and React.js."
+    },
+    {
+      "key": 23,
+      "name": "023: Onboarding",
+      "date": "November 21, 2015",
+      "link": "/daily_ui/023_onboarding",
+      "image": "023_onboarding.jpg",
+      "description": "An interactive profile tour built with the Bootstrap Tour library and React.js."
+    },
+    {
+      "key": 24,
+      "name": "024: Boarding Pass",
+      "date": "November 23, 2015",
+      "link": "/daily_ui/024_boarding_pass",
+      "image": "024_boarding_pass.jpg",
+      "description": "A boarding pass generator, including a code 128 barcode, built with React.js."
+    },
+    {
+      "key": 25,
+      "name": "025: TV App",
+      "date": "November 24, 2015",
+      "link": "/daily_ui/025_tv_app",
+      "image": "025_tv_app.jpg",
+      "description": "A video player of the top 10 TED talks built with Flickity, React.js and the YouTube iframe API."
+    },
+    {
+      "key": 26,
+      "name": "026: Subscribe",
+      "date": "December 16, 2015",
+      "link": "/daily_ui/026_subscribe",
+      "image": "026_subscribe.jpg",
+      "description": "Added an air mail envelope-inspired border and zoom animation to make an otherwise standard Bootstrap modal more exciting."
+    }
+
+
+  ]
+}

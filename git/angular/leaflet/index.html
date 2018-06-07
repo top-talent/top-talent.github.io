@@ -1,0 +1,23 @@
+<html ng-app="APP">
+  <head>
+  	<title>Angular Leaflet directive example</title>
+	<script src="https://cdn.leafletjs.com/leaflet-0.5/leaflet.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.3/angular.min.js"></script>
+	<script src="leaflet.js"></script>
+    <link rel="stylesheet" href="leaflet.css" />
+    <script>
+        var APP = angular.module("APP", ["leaflet-directive"]).
+        controller("ctrl", [ "$scope", function($scope) {
+        }]);
+    </script>
+    <style>
+        .angular-leaflet-map {
+            width: 400px;
+            height: 300px;
+        }
+    </style>
+  </head>
+  <body ng-controller="ctrl">
+    <leaflet></leaflet>
+  </body>
+</html>
