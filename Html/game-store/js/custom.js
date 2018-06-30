@@ -1,0 +1,11 @@
+$(document).ready(function(){
+    $("#answer1").click(function(){
+        $("#comment1").slideToggle("slow");
+    });
+    $("#answer2").click(function(){
+        $("#comment2").slideToggle("slow");
+    });
+    $("#answer3").click(function(){
+        $("#comment3").slideToggle("slow");
+    });
+});
