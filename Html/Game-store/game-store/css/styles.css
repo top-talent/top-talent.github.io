@@ -4310,7 +4310,7 @@ select {
     margin-right: 0
 }
 
-.row .row {
+/*.row .row {
     width: auto;
     margin-left: -0.9375rem;
     margin-right: -0.9375rem;
@@ -4318,7 +4318,7 @@ select {
     margin-bottom: 0;
     max-width: none;
     *zoom: 1
-}
+}*/
 
 .row .row:before,
 .row .row:after {
