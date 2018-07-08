@@ -198,17 +198,20 @@ a.profile-link {
 }
 
 .search-grid {
-    background: 0
+    background: 0;
+    margin: 0 !important;
 }
 
 .newsletter .title-5 {
-    text-align: left
+    text-align: left;
+  
 }
 
 .title-5 {
     text-align: center;
     margin: 5px 0;
-    color: #fb8d2b
+    color: #fb8d2b;
+    font-size: 16px;
 }
 
 body.border .search-grid {
@@ -323,15 +326,15 @@ h1 span {
 
 .topbar-logo {
     line-height: .4rem;
-    font-size: .79rem;
     letter-spacing: 1px;
     margin: 14px 0 0 0
 }
 
 .top-bar-section ul li>a {
-    font-size: .8rem !important;
+    font-size: 1.1rem !important;
     font-weight: bold !important;
-    line-height: 85px !important
+    line-height: 85px !important;
+    text-decoration: none;
 }
 
 .topbar-logo img {
@@ -397,21 +400,13 @@ h1 span {
         border: none !important;
         border-radius: 3px !important;
         margin: .8rem 0 !important;
-
-        /*
-        -webkit-box-shadow: 2px 2px 6px 0 rgba(0,0,0,0.2) !important;
-        box-shadow: 2px 2px 6px 0 rgba(0,0,0,0.2) !important;
-        */
-
         -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
         -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
         box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
-
-
         background: #fff url(../images/search-icon.png) 99% 50% no-repeat;
         background-size: 17px;
-        height: 2.5rem !important;
-        font-size: 1rem !important
+        height: 4.5rem !important;
+        font-size: 1.5rem !important
 }
 
 .search:focus {
@@ -594,12 +589,13 @@ ul.langue-dropdown {
     width: 100%;
     color: #fb8d2b;
     font-weight: bold;
+    text-decoration: none;
 }
 
 .dlc-top-list span {
   font-weight: normal;
   color: #333;
-  font-size: 1rem;
+  font-size: 1.5rem;
   /*text-align: right;
   display: table-cell;*/
 }
@@ -679,7 +675,8 @@ ul.langue-dropdown {
 }
 
 .news-block {
-    padding: .9375rem 0
+    padding: .9375rem 0;
+    margin: 0 !important
 }
 
 .news-block h1, .giveaway h2 {
@@ -759,12 +756,13 @@ ul.langue-dropdown {
 }
 
 .pool a:hover {
-    color: #fb8d2b
+    color: #fb8d2b;
+    text-decoration: none;
 }
 
 .pool a span.price {
     font-weight: 700;
-    font-size: 1rem;
+    font-size: 1.5rem;
     text-shadow: 0 1px 2px rgba(0,0,0,0.6);
     text-shadow: 0 1px 2px rgba(0, 0, 0, .6)
 }
@@ -795,7 +793,7 @@ ul.langue-dropdown {
     width: 100%;
     line-height: 30px;
     padding: 0 0 10px 0;
-    font-size: 1rem
+    font-size: 1.5rem
 }
 
 .steps {
@@ -861,8 +859,7 @@ ul.langue-dropdown {
 .newsletter p {
     color: #fff;
     font-weight: 400;
-    font-size: .85rem;
-    margin: 0;
+    font-size: 1.5rem;
     padding: 0
 }
 
@@ -891,7 +888,8 @@ ul.langue-dropdown {
 }
 
 .footer p a {
-    text-decoration: underline
+    text-decoration: underline;
+    color: #fb8d2b;
 }
 
 .services {
@@ -926,7 +924,7 @@ ul.langue-dropdown {
 }
 
 .services p {
-    font-size: .8rem;
+    font-size: 1.2rem;
     text-align: center;
     padding: 0 2rem
 }
@@ -963,7 +961,7 @@ ul.footer-bottom-links {
     margin-left: 6px;
     text-transform: uppercase;
     font-weight: 400;
-    font-size: .77778rem
+    font-size: 1.2rem
 }
 
 .footer-bottom-links li:first-child {
@@ -982,7 +980,7 @@ ul.footer-bottom-links {
 .footer-bottom p.copyright {
     color: #999;
     opacity: .8;
-    font-size: .667rem;
+    font-size: .9rem;
     margin: 6px 0 0 0
 }
 
@@ -1334,7 +1332,7 @@ ul.platforms li img {
 .pricelist .tabs dd>a,
 .shop-details .tabs dd>a,
 .home .tabs dd>a {
-    font-size: .85rem;
+    font-size: 1.2rem;
     padding: 1rem 1.5rem 1em 3em;
     line-height: 1rem
 }
@@ -3583,7 +3581,8 @@ ul.catalog-freetoplay li {
         background: #eee
     }
     .home .tabs dd>a:hover {
-        background: #ddd
+        background: #ddd;
+        text-decoration: none;
     }
     .account-content dl.tabs {
         margin: 0;
@@ -7748,13 +7747,19 @@ a.th {
 }
 
 .tabs dd>a:hover {
-    background: #e9e9e9
+    background: #e9e9e9;
+    text-decoration: none;
 }
 
 .tabs dd.active a {
     background: #fff
 }
-
+.btn-price {
+    padding: 5px 10px !important;
+    font-size: 12px !important;
+    line-height: 1.5 !important;
+    border-radius: 3px 0px 0px 3px !important;
+}
 .tabs.radius dd:first-child a {
     -moz-border-radius-bottomleft: 3px;
     -moz-border-radius-topleft: 3px;
@@ -13086,6 +13091,7 @@ a.promotion {
 
 .gametitle {
   margin-top: 5px;
+  font-size: 13px;
 }
 
 span.stores {
@@ -13094,11 +13100,6 @@ span.stores {
 
 
 .labelgreen {
-
-  /*
-  text-shadow: 0 1px 2px rgba(0,0,0,0.6);
-  text-shadow: 0 1px 2px rgba(0, 0, 0, .6);
-  */
 
     display: inline-block;
     margin-left: -1px;
@@ -13116,19 +13117,15 @@ span.stores {
     user-select: none;
     background-image: none;
     border: 1px solid transparent;
-
-
-    padding: 5px 10px;
+    padding: 6px 10px;
     font-size: 12px;
     line-height: 1.5;
     border-radius: 0px 3px 3px 0px;
-
     font-weight: normal;
     text-decoration: none;
-
     background-color: #5CB85C;
-    font-size: 1rem;
-    color: white
+    font-size: 1.4rem;
+    color: white;
 
 }
 
@@ -13185,4 +13182,7 @@ i {
       float: right;
       padding-right: 25px;
   }
+}
+.newsletter-text {
+    margin: 0 !important;
 }

@@ -532,3 +532,12 @@ header.single em {
 .stores-limit-height {
     height: 365px;
 }
+ul.pagination li {
+    display: inline-table !important;
+    float: none !important;
+}
+.pagination .active span {
+    padding:2px 12px !important;
+    background-color: #5f5f5f !important;
+    border-color: #5f5f5f !important;
+}
