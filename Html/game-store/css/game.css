@@ -761,3 +761,83 @@
     width: 100%;
     height: 100%;
 }
+
+
+
+/* responsive */
+@media (max-width: 991px) {
+    .table-list, .table-list-2 {
+        height: 100px;
+    }
+    .right-heading {
+        margin-top: -3px;
+        padding: 12px 0;
+    }
+    .table-list-img {
+        float: left;
+    }
+    .table-list-price span {
+        display: none;
+    }
+    .global-payment {
+        margin-top: 6px;
+    }
+    .table-list .payment-button, .table-list-2 .payment-button {
+        margin-top: 6px;
+    }
+    .table-rating {
+        margin-top: 8px;
+    }
+    .p-comment-author {
+        padding: 40px 0!important;
+    }
+    .p-comment-author-name input {
+        margin: 0 !important;
+    }
+    input.field-position {
+        margin-top: -35px !important;
+    }
+
+}
+@media (max-width: 900px) {
+    .product-contents {
+        display: block;
+    }
+    .product-tickets, .pro-banner, .tab-content, .pro-tickets {
+        display: none;
+    }
+    .product-menu {
+        margin-bottom: 0;
+    }
+    .right-heading {
+        margin: 0;
+        padding: 12px 0;
+    }
+    .product-price {
+        float: right;
+    }
+    .table-list .payment-button, .table-list-2 .payment-button {
+        margin: 0;
+    }
+    .global-payment {
+        margin-top: 27px;
+    }
+   
+    
+}
+@media (max-width: 517px) {
+    .table-list-button {
+        display: none;
+    }
+}
+@media (max-width: 414px) {
+    .load a {
+        min-width: inherit;
+    }
+    .p-comment-author-name input {
+        margin: 0 !important;
+    }
+    input.field-position {
+        margin-top: -35px !important;
+    }
+}

@@ -3951,13 +3951,8 @@ ul.catalog-freetoplay li {
         font-weight: 400 !important;
         line-height: 70px !important
     }
-    .top-bar-section {
-        clear: both
-    }
     .top-bar .title-area {
-        width: 100%;
         height: 82px;
-        text-align: center
     }
     .top-bar-section .has-dropdown>a:after {
         margin-top: 3.5px !important
@@ -5998,7 +5993,7 @@ meta.foundation-mq-topbar {
         -webkit-transition: none 0 0;
         -moz-transition: none 0 0;
         transition: none 0 0;
-        left: 0 !important
+        float: right;
     }
     .top-bar-section ul {
         width: auto;
@@ -7675,6 +7670,12 @@ a.th {
     }
     .touch .orbit-bullets {
         display: block
+    }
+}
+
+@media only screen and (max-width:760px) {
+    .hide-for-small-only{
+        display: none !important;
     }
 }
 
@@ -10673,9 +10674,14 @@ th.hide-for-xxlarge-up {
     display: table-cell !important
 }
 
+@media only screen and (min-width:760px){
+    .hide-for-small-only{
+        display: inherit !important;
+    }
+}
+
 @media only screen and (min-width:40.063em) {
     .hide-for-small,
-    .hide-for-small-only,
     .show-for-medium,
     .show-for-medium-down,
     .show-for-medium-up,
