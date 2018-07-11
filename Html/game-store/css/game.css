@@ -803,9 +803,7 @@
     .product-contents {
         display: block;
     }
-    .product-tickets, .pro-banner, .tab-content, .pro-tickets {
-        display: none;
-    }
+    
     .product-menu {
         margin-bottom: 0;
     }
