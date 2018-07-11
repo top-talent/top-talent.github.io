@@ -595,9 +595,7 @@ ul.langue-dropdown {
 .dlc-top-list span {
   font-weight: normal;
   color: #333;
-  font-size: 1.5rem;
-  /*text-align: right;
-  display: table-cell;*/
+  padding-right: 7px;
 }
 
 .dlc-top-list li img {
@@ -762,7 +760,7 @@ ul.langue-dropdown {
 
 .pool a span.price {
     font-weight: 700;
-    font-size: 1.5rem;
+    font-size: 1rem;
     text-shadow: 0 1px 2px rgba(0,0,0,0.6);
     text-shadow: 0 1px 2px rgba(0, 0, 0, .6)
 }
@@ -793,7 +791,7 @@ ul.langue-dropdown {
     width: 100%;
     line-height: 30px;
     padding: 0 0 10px 0;
-    font-size: 1.5rem
+    /* font-size: 1.5rem */
 }
 
 .steps {
@@ -1332,9 +1330,9 @@ ul.platforms li img {
 .pricelist .tabs dd>a,
 .shop-details .tabs dd>a,
 .home .tabs dd>a {
-    font-size: 1.2rem;
+    font-size: 0.8rem;
     padding: 1rem 1.5rem 1em 3em;
-    line-height: 1rem
+    line-height: 1rem;
 }
 
 .pricelist.search-results .tabs {
@@ -1346,7 +1344,7 @@ ul.platforms li img {
 }
 
 .home .tabs dd>a {
-    padding: 1rem 2.5rem
+    padding: 0.7rem 1.5rem;
 }
 
 .shop-content .tabs dd>a {
@@ -13105,35 +13103,7 @@ span.stores {
 }
 
 
-.labelgreen {
-
-    display: inline-block;
-    margin-left: -1px;
-    margin-bottom: 0;
-    font-weight: 400;
-    text-align: center;
-    white-space: nowrap;
-    vertical-align: middle;
-    -ms-touch-action: manipulation;
-    touch-action: manipulation;
-    cursor: pointer;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    background-image: none;
-    border: 1px solid transparent;
-    padding: 6px 10px;
-    font-size: 12px;
-    line-height: 1.5;
-    border-radius: 0px 3px 3px 0px;
-    font-weight: normal;
-    text-decoration: none;
-    background-color: #5CB85C;
-    font-size: 1.4rem;
-    color: white;
-
-}
+.labelgreen {display: inline-block;margin-left: -1px;margin-bottom: 0;font-weight: 400;text-align: center;white-space: nowrap;vertical-align: middle;-ms-touch-action: manipulation;touch-action: manipulation;cursor: pointer;-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;background-image: none;border: 1px solid transparent;padding: 5px 10px;font-size: 12px;line-height: 1.5;border-radius: 0px 3px 3px 0px;font-weight: normal;text-decoration: none;background-color: #5CB85C;/* font-size: 1.4rem; */color: white;}
 
 .glyphicon-big {
     color: #fff;
