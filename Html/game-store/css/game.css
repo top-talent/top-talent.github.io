@@ -762,7 +762,11 @@
     height: 100%;
 }
 
-
+@media (min-width: 901px) {
+    .related-game-mobile {
+        display: none;
+    }
+}
 
 /* responsive */
 @media (max-width: 991px) {
@@ -800,16 +804,16 @@
 
 }
 @media (max-width: 900px) {
+    .related-game-mobile {
+        display: block;
+    }
+    .related-game-desktop {
+        display: none;
+    }
     .product-contents {
         display: block;
     }
-<<<<<<< HEAD
     
-=======
-/*     .product-tickets, .pro-banner, .tab-content, .pro-tickets {
-        display: none;
-    } */
->>>>>>> 3005b2a6d78fb516e003e45204b956c6e5be6a9c
     .product-menu {
         margin-bottom: 0;
     }
