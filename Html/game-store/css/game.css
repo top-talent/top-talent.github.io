@@ -315,6 +315,39 @@
     margin-right: 10px;
     float: left;
 }
+.social-button {
+    margin-bottom: 7px;
+}
+.twitter button {
+    padding: 1px 5px;
+    font-size: 12px;
+    line-height: 1.5;
+    border-radius: 3px;
+}
+.google {
+    text-align: center;
+}
+.google button {
+    padding: 1px 10px;
+    font-size: 12px;
+    line-height: 1.5;
+    border-radius: 3px;
+    border: 1px solid #e7e7e7;
+    background: #fff;
+    color: red
+}
+.facebook button {
+    padding: 1px 5px;
+    font-size: 12px;
+    line-height: 1.5;
+    border-radius: 3px;
+    background: #4267b2;
+    border: 1px solid #4267b2;
+    color: #fff;
+}
+.twitter button i, .facebook button i {
+    margin-right: 4px;
+}
 /* banner section */
 .pro-banner {
     width: 300px;
@@ -829,6 +862,9 @@
     }
     .global-payment {
         margin-top: 27px;
+    }
+    .social-button {
+        display: block;
     }
    
     
