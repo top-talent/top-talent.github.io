@@ -834,6 +834,13 @@
     input.field-position {
         margin-top: -35px !important;
     }
+    .twitter, .google {
+        float: left;
+        text-align: center;
+    }
+    .facebook {
+        text-align: center;
+    }
 
 }
 @media (max-width: 900px) {
