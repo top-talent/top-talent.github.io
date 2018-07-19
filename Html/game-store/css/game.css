@@ -795,6 +795,8 @@
     height: 100%;
 }
 
+
+
 @media (min-width: 901px) {
     .related-game-mobile {
         display: none;

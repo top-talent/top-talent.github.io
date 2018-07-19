@@ -13167,3 +13167,49 @@ i {
 .newsletter-text {
     margin: 0 !important;
 }
+
+/* menu- section */
+.navbar {
+    margin-bottom: 0 !important;
+}
+.menu-section .navbar-brand{ 
+    background: url(https://res.cloudinary.com/candidbusiness/image/upload/v1455406304/dispute-bills-chicago.png) center / contain no-repeat;
+    width: 200px;
+  }
+.navbar-alignit .navbar-header {
+        -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    height: 50px;
+  }
+  .navbar-alignit .navbar-brand {
+      top: 50%;
+      display: block;
+      position: relative;
+      height: auto;
+      transform: translate(0,-50%);
+      margin-right: 15px;
+     margin-left: 15px;
+  }
+  .menu-item>li {
+    border-left: 1px solid #424242;
+  }
+  .menu-item>li>a {
+    color: #9d9d9d;
+    text-transform: uppercase;
+    font-size: 0.8rem !important;
+    font-weight: bold !important;
+  }
+  .menu-item>li>a:hover {
+      background-color: #fb8d2b !important;
+  }
+  .navbar-right {
+      margin-right: 0 !important;
+  }
+  @media (min-width: 768px) {
+  .navbar-nav>li>a {
+      padding-top: 27px !important;
+      padding-bottom: 27px !important;
+  }
+  
+}

@@ -1,4 +1,8 @@
 $(function () {
+    $('#mobile-menu').click(function () {
+        console.log("test");
+        // $(".mobile-right").slideToggle("slow");
+    });
     // products tab
     $(".products-tab > div:gt(0)").hide();
     $(".products-tab ul a:first").addClass('selected');
@@ -15,7 +19,7 @@ $(function () {
         $(this).addClass('selected');
     return false;
     });
-
+    
     // button popover
     $('.global-button').popover({ 
         html: true,
