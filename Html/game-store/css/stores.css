@@ -541,3 +541,72 @@ ul.pagination li {
     background-color: #5f5f5f !important;
     border-color: #5f5f5f !important;
 }
+@media (max-width: 1199px) {
+    .product-result .stars>a {
+        float: left;
+        margin-left: 0;
+        margin-top: 11px;
+    }
+}
+@media (max-width: 991px) {
+    .product-left {
+        margin-bottom: -27px;
+    }
+    .stars {
+        float: right;
+        position: relative;
+        top: 33px;
+        right: 40px;
+    }
+    .stars>strong {
+        float: left;
+    }
+    .product-result .stars>a {
+        float: left;
+        clear: both;
+    }
+    .critic-result {
+        padding-left: 44px;
+    }
+    .racing {
+        padding-left: 44px;
+    }
+    .critics {
+        margin-left: 14px;
+    }
+    
+}
+@media (max-width: 660px) {
+    .stars {
+        right: 30%;
+    }
+    .critic-result {
+        margin-top: 67px;
+    }
+}
+@media (max-width: 414px) {
+    .product-left {
+        margin-bottom: -27px;
+    }
+    .stars {
+        width: 47%;
+        float: right;
+        position: relative;
+        top: 41px;
+        right: 40px;
+    }
+    .product-result .stars>a {
+        margin-left: 0;
+        float: left;
+        margin-top: 10px;
+    }
+    .critic-result {
+        padding-left: 9px;
+    }
+    .racing {
+        padding-left: 9px;
+    }
+    .critics {
+        margin-left: 14px;
+    }
+}
