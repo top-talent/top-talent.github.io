@@ -1,5 +1,15 @@
+@font-face {
+font-family: Brandon Grotesque;
+src: url('fonts/brandon-grotesque-medium-587bd623e472a.otf'); 
+}
+@font-face {
+font-family: Brandon Grotesque;
+src: url('fonts/brandon-grotesque-medium.otf'); 
+}
+
 body {
     color: #fff;
+    font-family: Brandon Grotesque;
 }
 
 .wrapper {
