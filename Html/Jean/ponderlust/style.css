@@ -1,0 +1,61 @@
+body {
+    color: #fff;
+    font-family: "mrs-eaves-roman-petite-caps",sans-serif ;
+}
+@import url("https://p.typekit.net/p.css?s=1&k=xja4xlw&ht=tk&f=28480.28482&a=7048324&app=typekit&e=css");
+
+@font-face {
+font-family:"mrs-eaves-roman-lining";
+src:url("https://use.typekit.net/af/f04c9e/00000000000000003b9adc09/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff2"),url("https://use.typekit.net/af/f04c9e/00000000000000003b9adc09/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff"),url("https://use.typekit.net/af/f04c9e/00000000000000003b9adc09/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("opentype");
+font-style:normal;font-weight:400;
+}
+
+@font-face {
+font-family:"mrs-eaves-roman-petite-caps";
+src:url("https://use.typekit.net/af/2b5691/00000000000000003b9adc0b/27/l?subset_id=1&fvd=n4&v=3") format("woff2"),url("https://use.typekit.net/af/2b5691/00000000000000003b9adc0b/27/d?subset_id=1&fvd=n4&v=3") format("woff"),url("https://use.typekit.net/af/2b5691/00000000000000003b9adc0b/27/a?subset_id=1&fvd=n4&v=3") format("opentype");
+font-style:normal;font-weight:400;
+}
+
+.wrapper {
+    background: #000;
+    width: 300px;
+    
+}
+.wrapper-width {
+    margin-left: 30px;
+    margin-right: 30px;
+    padding-top: 1px;
+}
+ul {
+    list-style-type: none;
+    margin-left: -9px;
+    padding: 0;
+    overflow: hidden;
+}
+
+li {
+    float: left;
+    font-size: 21px;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
+}
+h3 {
+    margin-top: -21px;
+    margin-left: 3px;
+}
+h1 {
+    margin-bottom: 2px;
+}
+img {
+    width: 17px;
+}
