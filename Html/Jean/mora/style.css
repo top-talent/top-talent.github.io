@@ -15,7 +15,7 @@ body {
 .wrapper {
     background: #f0940a;
     width: 300px;
-    padding: 20px;
+    padding: 20px 1px 1px 28px;
     
 }
 .wrapper-width {
