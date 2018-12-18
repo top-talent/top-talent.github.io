@@ -1,0 +1,343 @@
+/* portfolio-masonry  */
+.tt-portfolio-masonry{
+    .grid:after{
+      content: '';
+      display: block;
+      clear: both;
+    }
+    .element-item{
+      position: relative;
+      float: left;
+    }
+    .tt-portfolio-content{
+    	@include opacity(0);
+    	@include animation-value(opacity $value_speed);
+    }
+    .tt-portfolio-content.tt-show{
+    	@include opacity(1);
+    }
+	.tt-grid-col-4{
+		.element-item{
+            width: 25%;
+            padding: 10px;
+            @media (max-width:1024px){
+                width: 33.333%;
+            }
+            @media (max-width:789px){
+                width: 50%;
+            }
+            @media (max-width: 575px){
+            	padding: 5px;
+            	width: 100%;
+            }
+        }
+	}
+	.tt-grid-col-3{
+		.element-item{
+            width: 33.333%;
+            padding: 10px;
+            @media (max-width:789px){
+                width: 50%;
+            }
+            @media (max-width: 575px){
+            	padding: 5px;
+            	width: 100%;
+            }
+        }
+	}
+	.tt-grid-col-2{
+		.element-item{
+            width: 50%;
+            padding: 10px;
+            @media (max-width: 575px){
+            	padding: 5px;
+            	width: 100%;
+            }
+        }
+	}
+	.tt-filter-nav{
+		display: -ms-flexbox;
+		display: -webkit-flex;
+	    display: flex;
+	    -webkit-flex-direction: row;
+	    -ms-flex-direction: row;
+	    flex-direction: row;
+	    -webkit-flex-wrap: wrap;
+	    -ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
+	    -webkit-justify-content: center;
+	    -ms-flex-pack: center;
+	    justify-content: center;
+	    -webkit-align-content: stretch;
+	    -ms-flex-line-pack: stretch;
+	    align-content: stretch;
+	    -webkit-align-items: center;
+	    -ms-flex-align: center;
+	    align-items: center;
+		position: relative;
+		z-index: 2;
+		margin-top: -31px;
+		padding-bottom: 69px;
+		.button{
+			color: $portfolio_nav_btn_text;
+			font-family: $default_font2;
+			font-weight: 500;
+			padding: 5px;
+			letter-spacing: 0.03em;
+			margin: 0 9px;
+			cursor: pointer;
+			@include animation();
+		}
+		.button.active{
+			color: $portfolio_nav_btn_text_active;
+			cursor: default;
+		}
+		.button:hover{
+			color: $portfolio_nav_btn_text_hover;
+		}
+		@media (max-width: 1024px){
+			margin-top: -11px;
+			padding-bottom: 29px;
+			.button{
+				margin: 0 7px;
+			}
+		}
+		@media (max-width: 575px){
+			margin-top: -4px;
+			padding-bottom: 22px;
+			.button{
+				margin: 0 4px;
+			}
+		}
+	}
+}
+.tt-portfolio-masonry .element-item{
+	float: inherit !important;
+}
+.tt-portfolio-content{
+	margin-top: -30px;
+	@media (max-width: 1024px){
+		margin-top: -10px;
+	}
+	@media (min-width: 576px){
+		margin-left: -10px;
+		margin-right: -10px;
+	}
+	@media (max-width: 575px){
+		margin-left: -5px;
+		margin-right: -5px;
+		margin-top: -5px;
+	}
+	figure{
+		position: relative;
+        display: block;
+        width: 100%;
+        overflow: hidden;
+        margin: 0;
+        img{
+	          width: 100%;
+	          height: auto;
+	    }
+        figcaption{
+            position: absolute;
+            background: $portfolio_item_bg;
+            width: 100%;
+            height: 100%;
+            top: 0%;
+            left: 0%;
+            padding: 13px 19px;
+            z-index: 0;
+            color: $portfolio_item_text;
+            visibility: hidden;
+            @include opacity(0);
+            @include animation();
+            .tt-btn-zomm{
+            	font-family: $default_font_icon;
+            	color: $portfolio_item_icon;
+            	font-size: 20px;
+            	line-height: 1;
+            	padding:3px;
+            	@include animation();
+            }
+            .tt-btn-zomm:before{
+            	content: '\e9b5';
+            	display: inline-block;
+            }
+            .tt-btn-zomm:hover{
+            	color: $portfolio_item_icon_hover;
+            }
+            .tt-title{
+            	font-size: 16px;
+            	line-height: 1.3;
+            	letter-spacing: 0.03em;
+            	font-weight: 500;
+            	margin: 0;
+            	padding: 0;
+            	color: $portfolio_item_title;
+            	font-family: $default_font2;
+            	a{
+            		color: $portfolio_item_title;
+            	}
+            	a:hover{
+            		color: $portfolio_item_title_hover;
+            	}
+            }
+            p{
+            	margin-top: 4px;
+            	letter-spacing: 0.005em;
+            }
+            > *:nth-child(1){
+				margin-top: 0;
+			}
+        }
+	}
+}
+
+.tt-portfolio-content.layout-default{
+	figure{
+		figcaption{
+			 display: -ms-flexbox;
+		    display: -webkit-flex;
+		    display: flex;
+		    -webkit-flex-direction: column;
+		    -ms-flex-direction: column;
+		    flex-direction: column;
+		    -webkit-flex-wrap: wrap;
+		    -ms-flex-wrap: wrap;
+		    flex-wrap: wrap;
+		    -webkit-justify-content: flex-end;
+		    -ms-flex-pack: end;
+		    justify-content: flex-end;
+		    -webkit-align-content: flex-start;
+		    -ms-flex-line-pack: start;
+		    align-content: flex-start;
+		    -webkit-align-items: flex-start;
+		    -ms-flex-align: start;
+		    align-items: flex-start;
+
+		    text-align: left;
+			.tt-btn-zomm{
+				top: 0px;
+				left: 0px;
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				z-index: 1;
+			}
+			.tt-btn-zomm:before{
+				top: 15px;
+				right: 15px;
+				position: absolute;
+			}
+			.tt-title,
+			p{
+				position: relative;
+				z-index: 2;
+			}
+		}
+	}
+}
+
+.tt-portfolio-content.layout-swap-vertical{
+	figure{
+		figcaption{
+			display: -ms-flexbox;
+		    display: -webkit-flex;
+		    display: flex;
+		    -webkit-flex-direction: column;
+		    -ms-flex-direction: column;
+		    flex-direction: column;
+		    -webkit-flex-wrap: wrap;
+		    -ms-flex-wrap: wrap;
+		    flex-wrap: wrap;
+		    -webkit-justify-content: flex-start;
+		    -ms-flex-pack: start;
+		    justify-content: flex-start;
+		    -webkit-align-content: flex-end;
+		    -ms-flex-line-pack: end;
+		    align-content: flex-end;
+		    -webkit-align-items: flex-start;
+		    -ms-flex-align: start;
+		    align-items: flex-start;
+			.tt-btn-zomm{
+				bottom: 15px;
+				right: 15px;
+				position: absolute;
+			}
+		}
+	}
+}
+.tt-portfolio-content.layout-center{
+	figure{
+		figcaption{
+			display: -ms-flexbox;
+		    display: -webkit-flex;
+		    display: flex;
+		    -webkit-flex-direction: column;
+		    -ms-flex-direction: column;
+		    flex-direction: column;
+		    -webkit-flex-wrap: wrap;
+		    -ms-flex-wrap: wrap;
+		    flex-wrap: wrap;
+		    -webkit-justify-content: center;
+		    -ms-flex-pack: center;
+		    justify-content: center;
+		    -webkit-align-content: flex-end;
+		    -ms-flex-line-pack: end;
+		    align-content: flex-end;
+		    -webkit-align-items: center;
+		    -ms-flex-align: center;
+		    align-items: center;
+		    .tt-btn-zomm:not(:first-child){
+		    	margin-top: 2px;
+		    }
+		}
+	}
+}
+body:not(.touch-device) .tt-portfolio-content,
+.ie .tt-portfolio-content{
+	figure:hover{
+        figcaption{
+            z-index: 7;
+            left: 0;
+            top: 0;
+            @include opacity(1);
+            visibility: visible;
+        }
+    }
+}
+.touch-device{
+	.tt-portfolio-content{
+		figure.gallery-click{
+			 figcaption{
+	            z-index: 7;
+	            left: 0;
+	            top: 0;
+	            @include opacity(1);
+	            pointer-events: auto;
+	            visibility: visible;
+	        }
+		}
+		figure.gallery-click.finish-animation{
+			figcaption{
+				pointer-events: auto;
+			}
+
+		}
+	}
+}
+
+html.edge{
+	.tt-portfolio-content{
+		figure:hover{
+	        figcaption{
+	            z-index: 7;
+	            left: 0;
+	            top: 0;
+	            @include opacity(1);
+	            visibility: visible;
+	        }
+	    }
+	}
+}
+

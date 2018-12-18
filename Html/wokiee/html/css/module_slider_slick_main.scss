@@ -1,0 +1,251 @@
+/*
+    tt-slick-main-item
+*/
+.tt-slick-main{
+    z-index: 1;
+     .slick-dots{
+        position: absolute;
+        bottom: 9%;
+    }
+}
+.tt-slick-main-item{
+    display: block;
+    position: relative;
+    overflow: hidden;
+    margin-top: 20px;
+    z-index: 1;
+    @include user-select();
+    > img{
+        width: 100%;
+        height: auto;
+    }
+    .tt-description{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        padding:40px 95px;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -webkit-flex-wrap: nowrap;
+        -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-align-content: center;
+        -ms-flex-line-pack: center;
+        align-content: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+        color: red;
+        .tt-description-wrapper{
+            max-width: 618px;
+            text-align: center;
+        }
+        @include animation-value(color $value_speed);
+        .tt-title-small{
+            font-family: $default_font2;
+            color: $slick_main_title_small;
+            font-size: 50px;
+            line-height: 56px;
+            font-weight: 400;
+            letter-spacing: 0.03em;
+            @include animation-value(color $value_speed);
+        }
+        .tt-title-large{
+            font-family: $default_font2;
+            color: $slick_main_title_large;
+            font-size: 90px;
+            line-height: 90px;
+            font-weight: 500;
+            letter-spacing: 0.03em;
+            @include animation-value(color $value_speed);
+        }
+        p{
+            font-size: 14px;
+            line-height: 22px;
+            margin-top: 19px;
+            color:$slick_main_text;
+            @include animation-value(color $value_speed);
+        }
+        [class^="btn"]{
+            margin-top: 33px;
+        }
+        img{
+            max-width: 100%;
+            height: auto;
+        }
+        @media (max-width: 1229px){
+            .tt-title-small{
+                font-size: 40px;
+                line-height: 46px;
+            }
+            .tt-title-large{
+                font-size: 70px;
+                line-height: 75px;
+            }
+            p{
+                margin-top: 15px;
+            }
+            [class^="btn"]{
+                margin-top: 23px;
+            }
+        }
+        @media (max-width: 1024px){
+            .tt-title-small{
+                font-size: 30px;
+                line-height: 36px;
+            }
+            .tt-title-large{
+                font-size: 50px;
+                line-height: 55px;
+            }
+            p{
+                margin-top: 10px;
+            }
+            [class^="btn"]{
+                margin-top: 18px;
+            }
+        }
+        @media (max-width: 789px){
+            padding: 10px 60px;
+            .tt-description-wrapper{
+                max-width: 240px;
+            }
+            .tt-title-small{
+                font-size: 20px;
+                line-height: 26px;
+            }
+            .tt-title-large{
+                font-size: 30px;
+                line-height: 35px;
+            }
+            p{
+                margin-top: 8px;
+                font-size: 12px;
+                line-height: 18px;
+            }
+            [class^="btn"]{
+                margin-top: 13px;
+            }
+        }
+        @media (max-width: 575px){
+            padding: 10px 40px;
+            .tt-description-wrapper{
+                max-width: 200px;
+            }
+            .tt-title-small{
+                font-size: 15px;
+                line-height: 20px;
+            }
+            .tt-title-large{
+                font-size: 23px;
+                line-height: 28px;
+            }
+            p{
+                margin-top: 4px;
+                font-size: 12px;
+                line-height: 18px;
+            }
+            [class^="btn"]{
+                margin-top: 7px;
+            }
+        }
+        @media (max-width: 400px){
+            padding: 10px 40px;
+            .tt-description-wrapper{
+                max-width: 200px;
+            }
+            .tt-title-small{
+                font-size: 13px;
+                line-height: 15px;
+            }
+            .tt-title-large{
+                font-size: 20px;
+                line-height: 23px;
+            }
+            p{
+                margin-top: 2px;
+                line-height: 15px;
+            }
+            [class^="btn"]{
+                margin-top: 6px;
+            }
+        }
+        *:nth-child(1){
+            margin-top: 0;
+        }
+    }
+    @extend ._tt-point;
+}
+/* arrow-slick-main */
+.arrow-slick-main.slick-slider{
+    .slick-arrow,
+    .slick-arrow:active{
+        position: absolute;
+        top: 50%;
+        margin-top: -19px;
+        z-index: 7;
+        cursor: pointer;
+        font-size: 0;
+        line-height: 0;
+        background: none;
+        border: none;
+        width: 38px;
+        height: 38px;
+        color: $slick_main_arrow;
+        font-weight: 500;
+        @include border-radius(50%);
+        @include animation();
+    }
+    .slick-arrow:hover{
+        color: $slick_main_arrow_hover;
+    }
+    .slick-arrow:before{
+         font-family: $default_font_icon;
+         font-size: 30px;
+         line-height: 1;
+    }
+    .slick-prev{
+        left:8px;
+        @media (max-width: 575px){
+            left: 0;
+        }
+    }
+    .slick-prev:before{
+        content: "\e90d";
+    }
+    .slick-next{
+        right:8px;
+        @media (max-width: 575px){
+            right: 0;
+        }
+    }
+    .slick-next:before{
+        content: "\e90e";
+    }
+    .slick-dots{
+        li{
+            button{
+                background: $slick_main_bullet_bg;
+                &:hover{
+                    background:$slick_main_bullet_bg_hover;
+                }
+            }
+            &.slick-active{
+                button{
+                    background: $slick_main_bullet_bg_active;
+                }
+            }
+        }
+    }
+}

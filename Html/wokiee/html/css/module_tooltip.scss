@@ -1,0 +1,122 @@
+#tt-tooltip-popup{
+	@media (min-width: 1025px){
+		display: none;
+	}
+	@media (min-width: 1025px) {
+		color: $tooltip_text;
+		font-size: 14px;
+		line-height: 21px;
+		padding: 1px 8px 0;
+		position: absolute;
+		z-index: 8;
+		white-space:nowrap;
+		display: inline-block;
+		-moz-opacity: 0;
+		-khtml-opacity: 0;
+		-webkit-opacity: 0;
+		opacity: 0;
+		span{
+			position: relative;
+			z-index: 7;
+		}
+		&:before{
+			content:'';
+			display: block;
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			background: $tooltip_bg;
+			box-shadow:0 0px 4px $tooltip_shadow;
+			z-index: 2;
+			border-radius: 4px;
+		}
+		&:after{
+			content:'';
+			display: block;
+		    position:absolute;
+		    z-index: 1;
+		    width:6px;
+		    height:6px;
+		    background-color:$tooltip_bg;
+		    box-shadow:0 0px 4px $tooltip_shadow;
+		    top:50%;
+		    transform:translate(-50%,-50%) rotate(-45deg);
+		}
+		i{
+			display: block;
+			position: absolute;
+			top: 50%;
+			height: 100%;
+			z-index: 3;
+			margin-top: -3px;
+		}
+		i:after{
+			content:'';
+			display: block;
+			z-index: 3;
+		   	border: 3px solid transparent;
+		}
+
+		/*left*/
+		&.tooltip-left:after{
+ 			right:-6px;
+		}
+		&.tooltip-left i{
+			right: -6px;
+		}
+		&.tooltip-left i:after{
+			border-left: 3px solid $tooltip_bg;
+		}
+		/*right*/
+		&.tooltip-right:after{
+ 			left:-0px;
+		}
+		&.tooltip-right i{
+			left: -6px;
+		}
+		&.tooltip-right i:after{
+			border-right: 3px solid $tooltip_bg;
+		}
+		/*top*/
+		&.tooltip-top:after{
+ 			top:100%;
+ 			left: 50%;
+		}
+		&.tooltip-top i{
+			left: -6px;
+		}
+		&.tooltip-top i{
+			bottom:-3px;
+ 			left: 50%;
+ 			margin-top: 0;
+		}
+		&.tooltip-top i:after{
+			border-top: 3px solid $tooltip_bg;
+			top: inherit;
+			bottom: 0%;
+ 			left: 50%;
+ 			margin-left: -3px;
+ 			position: absolute;
+		}
+		/*bottom*/
+		&.tooltip-bottom:after{
+ 			top:0px;
+ 			left: 50%;
+		}
+		&.tooltip-bottom i{
+			left: -6px;
+		}
+		&.tooltip-bottom i{
+			top:-3px;
+ 			left: 50%;
+		}
+		&.tooltip-bottom i:after{
+			border-bottom: 3px solid $tooltip_bg;
+			top:0px;
+ 			left: 50%;
+ 			margin-left: -3px;
+		}
+	}
+}

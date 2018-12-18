@@ -1,0 +1,937 @@
+.tt-layout-promo-box:not(.nomargin){
+	@media (min-width: 576px){
+		margin-top: -20px;
+	}
+	@media (max-width: 575px){
+		margin-top: -10px;
+	}
+}
+@media (max-width: 790px){
+	.tt-list-sm-shift{
+		[class^="col-xs"]{
+			 -webkit-order: 2;
+		    -ms-flex-order: 2;
+		    order: 2;
+		}
+	}
+}
+.tt-promo-box{
+    display: block;
+    position: relative;
+    overflow: hidden;
+    margin-top: 20px;
+    @include user-select();
+    > img{
+        width: 100%;
+        height: auto;
+    }
+    .tt-description{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        padding:20px;
+        display: -ms-flexbox;
+	    display: -webkit-flex;
+	    display: flex;
+	 	-webkit-flex-direction: row;
+	    -ms-flex-direction: row;
+	    flex-direction: row;
+	    -webkit-flex-wrap: nowrap;
+	    -ms-flex-wrap: nowrap;
+	    flex-wrap: nowrap;
+	    -webkit-justify-content: center;
+	    -ms-flex-pack: center;
+	    justify-content: center;
+	    -webkit-align-content: center;
+	    -ms-flex-line-pack: center;
+	    align-content: center;
+	    -webkit-align-items: center;
+	    -ms-flex-align: center;
+	    align-items: center;
+	    color: $promo_text;
+	    @include animation-value(color $value_speed);
+	    .tt-title-small{
+			font-family: $default_font2;
+			color: $promo_title_small_text;
+			font-size: 16px;
+			line-height: 26px;
+			font-weight: 500;
+			letter-spacing: 0.03em;
+			@include animation-value(color $value_speed);
+			span{
+				@include animation-value(color $value_speed);
+			}
+	    }
+	    .tt-title-large{
+	    	font-family: $default_font2;
+	    	color: $promo_title_large_text;
+	    	font-size: 26px;
+			line-height: 34px;
+			font-weight: 500;
+			letter-spacing: 0.03em;
+			@include animation-value(color $value_speed);
+			span{
+				@include animation-value(color $value_speed);
+			}
+	    }
+	    p{
+	    	font-size: 14px;
+	    	line-height: 22px;
+	    	margin-top: 4px;
+	    	@include animation-value(color $value_speed);
+	    }
+	    [class^="btn"]{
+	    	margin-top: 20px;
+	    }
+	    img{
+	    	max-width: 100%;
+	    	height: auto;
+	    }
+	    @media (max-width: 1024px){
+			.tt-title-small{
+				font-size: 15px;
+				line-height: 22px;
+			}
+			.tt-title-large{
+				font-size: 23px;
+				line-height: 30px;
+			}
+	    }
+		@media (max-width: 575px){
+			.tt-title-small{
+				font-size: 15px;
+				line-height: 22px;
+			}
+			.tt-title-large{
+				font-size: 20px;
+				line-height: 29px;
+			}
+			p{
+				margin-top: 0;
+				line-height: 20px;
+			}
+			[class^="btn"]{
+		    	margin-top: 10px;
+		    }
+		}
+	    *:nth-child(1){
+			margin-top: 0;
+		}
+    }
+ 	@extend ._tt-point;
+ 	@media (max-width: 575px){
+ 		margin-top: 10px;
+ 	}
+}
+html:not(.ie){
+	.tt-promo-box{
+		.tt-description{
+			.tt-description-wrapper{
+				.tt-background{
+					@include animation();
+				}
+			}
+		}
+	}
+}
+.tt-promo-box:not(.tt-one-child){
+	.tt-description{
+		.tt-description-wrapper{
+	    	padding:27px;
+	    	text-align: center;
+	    	max-width: 409px;
+	    	min-width: 47%;
+	    	position: relative;
+	    	.tt-background{
+	    		content: '';
+	    		position: absolute;
+	    		z-index: 0;
+	    		top: 0;
+	    		left: 0;
+	    		width: 100%;
+	    		height: 100%;
+	    		display: block;
+	    		background:$promo_bg_content;
+	    		@include border-radius(5px);
+	    	}
+	    	>*:not(.tt-background){
+	    		position: relative;
+	    	}
+	    	@media (max-width: 1024px){
+	    		padding:19px;
+	    	}
+	    }
+	    @media (max-width: 575px){
+			.tt-description-wrapper{
+				padding: 15px;
+			}
+		}
+		img:first-child + *{
+	    	@media (min-width: 576px){
+	    		margin-top:24px;
+	    	}
+	    	@media (max-width: 575px){
+	    		margin-top:12px;
+	    	}
+	    }
+	    [class^="tt-title"] + img,
+	    p + img{
+	    	@media (min-width: 576px){
+	    		margin-top:11px;
+	    		margin-bottom: 11px;
+	    	}
+	    	@media (max-width: 575px){
+	    		margin-top:5px;
+	    		margin-bottom: 5px;
+	    	}
+	    }
+	}
+}
+.tt-promo-box.tt-one-child{
+	.tt-description{
+		.tt-description-wrapper{
+	    	padding: 13px 39px 11px;
+	    	text-align: center;
+	    	max-width: 409px;
+	    	position: relative;
+	    	.tt-background{
+	    		content: '';
+	    		position: absolute;
+	    		z-index: 0;
+	    		top: 0;
+	    		left: 0;
+	    		width: 100%;
+	    		height: 100%;
+	    		display: block;
+	    		background:$promo_bg_content;
+	    		@include border-radius(5px);
+	    	}
+	    	>*:not(.tt-background){
+	    		position: relative;
+	    	}
+	    }
+	    @media (max-width: 1024px){
+	    	.tt-description-wrapper{
+    			padding: 13px 18px 11px;
+    		}
+    	}
+	    @media (max-width: 575px){
+			.tt-description-wrapper{
+				padding: 13px 15px 11px;
+			}
+		}
+		img{
+			max-width: inherit;
+			width: 100%;
+			@media (max-width: 575px){
+				max-width: 147px;
+			}
+		}
+		img:first-child:not(:last-child){
+			@media (min-width: 576px){
+	    		margin-top: 6px;
+	    	}
+	    	@media (max-width: 575px){
+	    		margin-top: 2px;
+	    	}
+		}
+		img:first-child:not(:last-child) + *{
+	    	@media (min-width: 576px){
+	    		margin-top:12px;
+	    	}
+	    	@media (max-width: 575px){
+	    		margin-top:9px;
+	    	}
+	    }
+	    img:not(:first-child):not(:last-child){
+	    	@media (min-width: 576px){
+	    		margin-top:11px;
+	    		margin-bottom: 8px;
+	    	}
+	    	@media (max-width: 575px){
+	    		margin-top:11px;
+	    	}
+	    }
+	}
+}
+// hover-type-1
+.tt-promo-box:not(.hover-type-2):hover{
+	text-decoration: none;
+	.tt-description-wrapper{
+		.tt-background{
+    		top: -10px;
+    		left: -10px;
+    		width: calc(100% + 20px);
+    		height: calc(100% + 20px);
+    	}
+	}
+	.tt-title-large{
+		color: $promo_title_large_text_hover;
+	}
+	.tt-title-small{
+		color: $promo_title_small_text_hover;
+	}
+	.btn-underline{
+		border-color: $promo_hover_bt_underline_border;
+		color: $promo_hover_bt_underline_text;
+	}
+}
+// hover-type-2
+.tt-promo-box.hover-type-2:hover{
+	.tt-description-wrapper{
+		.tt-background{
+			background: $promo_hover02_bg_content_hover;
+		}
+		*:not(.tt-base-color){
+			color: $promo_hover02_text_content_hover;
+		}
+		.btn-underline{
+			border-color:$promo_hover02_hover_bt_underline_border;
+		}
+	}
+}
+// hover-type-3
+.tt-promo-box.hover-type-3:hover{
+	.tt-description-wrapper{
+		.tt-title-large:not(.tt-base-color){
+			color: $default_color;
+			span{
+				color: $default_color;
+			}
+		}
+	}
+}
+// hover-type-4
+.tt-promo-box.hover-type-4{
+	img{
+		 @include scale(1);
+		 @include animation(0.5s);
+	}
+	&:hover img{
+		 @include scale(1.1);
+	}
+}
+
+/*
+	tt-promo-fullwidth
+*/
+.tt-promo-fullwidth{
+    display: block;
+    position: relative;
+    overflow: hidden;
+    > img{
+        width: 100%;
+        height: auto;
+    }
+    .tt-description{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        display: -ms-flexbox;
+	    display: -webkit-flex;
+	    display: flex;
+	 	-webkit-flex-direction: row;
+	    -ms-flex-direction: row;
+	    flex-direction: row;
+	    -webkit-flex-wrap: nowrap;
+	    -ms-flex-wrap: nowrap;
+	    flex-wrap: nowrap;
+	    -webkit-justify-content: center;
+	    -ms-flex-pack: center;
+	    justify-content: center;
+	    -webkit-align-content: center;
+	    -ms-flex-line-pack: center;
+	    align-content: center;
+	    -webkit-align-items: center;
+	    -ms-flex-align: center;
+	    align-items: center;
+	    color: $promo_fullwidth_text;
+	    @include animation-value(color $value_speed);
+	    .tt-description-wrapper{
+	    	max-width: 700px;
+	    	text-align: center;
+	    }
+	    .tt-title-small{
+			font-family: $default_font2;
+			color: $promo_fullwidth_title_small;
+			font-size: 50px;
+			line-height: 60px;
+			font-weight: 500;
+			@include animation-value(color $value_speed);
+	    }
+	    .tt-title-large{
+	    	font-family: $default_font2;
+	    	color: $promo_fullwidth_title_large;
+	    	font-size: 90px;
+			line-height: 90px;
+			font-weight: 500;
+			@include animation-value(color $value_speed);
+	    }
+	    p{
+	    	font-family: $default_font2;
+	    	font-size: 16px;
+	    	line-height: 22px;
+	    	margin-top: 20px;
+	    	font-weight: 300;
+	    	@include animation-value(color $value_speed);
+	    }
+	    [class^="btn"]{
+	    	margin-top: 34px;
+	    }
+	    img{
+	    	max-width: 100%;
+	    	height: auto;
+	    }
+	    @media (min-width: 1701px){
+	    	padding:10% 17.6%;
+	    }
+	    @media (min-width: 1401px) and (max-width: 1700px){
+	    	padding:10% 8%;
+	    }
+	    @media (max-width: 1400px){
+	    	padding:10% 5%;
+	    	.tt-title-small{
+				font-size: 40px;
+				line-height: 50px;
+			}
+			.tt-title-large{
+				font-size: 65px;
+				line-height: 75px;
+			}
+			p{
+				margin-top: 15px;
+			}
+			 [class^="btn"]{
+		    	margin-top: 27px;
+		    }
+	    }
+	    @media (max-width: 1100px){
+	    	padding:10% 5%;
+	    	.tt-title-small{
+				font-size: 35px;
+				line-height: 45px;
+			}
+			.tt-title-large{
+				font-size: 50px;
+				line-height: 60px;
+			}
+			p{
+				margin-top: 10px;
+			}
+			 [class^="btn"]{
+		    	margin-top: 20px;
+		    }
+	    }
+	    @media (max-width: 900px){
+	   		.tt-title-small{
+				font-size: 20px;
+				line-height: 30px;
+			}
+			.tt-title-large{
+				font-size: 37px;
+				line-height: 44px;
+			}
+			p{
+				margin-top: 5px;
+			}
+			 [class^="btn"]{
+		    	margin-top: 15px;
+		    }
+		    .tt-description-wrapper{
+		    	max-width: 332px;
+		    }
+	    }
+	    @media (max-width: 789px){
+	   		padding:5% 3%;
+	   		.tt-title-small{
+				font-size: 17px;
+				line-height: 25px;
+			}
+			.tt-title-large{
+				font-size: 30px;
+				line-height: 35px;
+			}
+			p{
+				line-height: 20px;
+			}
+			[class^="btn"]{
+		    	margin-top: 15px;
+		    }
+		    .tt-description-wrapper{
+		    	max-width: 283px;
+		    }
+	    }
+	     @media (max-width: 657px){
+	   		padding:5% 10px;
+	   		.tt-title-small{
+				font-size: 15px;
+				line-height: 20px;
+			}
+			.tt-title-large{
+				font-size: 25px;
+				line-height: 30px;
+			}
+			p{
+				font-size: 14px;
+				line-height: 18px;
+			}
+			[class^="btn"]{
+		    	margin-top: 10px;
+		    }
+		    .tt-description-wrapper{
+		    	max-width: 251px;
+		    }
+	    }
+	    @media (max-width: 575px){
+	    	.tt-description-wrapper{
+		    	padding-left: 15px;
+		    	padding-right: 15px;
+		    	max-width: 200px;
+		    }
+	   		.tt-title-small{
+				font-size: 14px;
+				line-height: 16px;
+			}
+			.tt-title-large{
+				font-size: 21px;
+				line-height: 24px;
+				br{
+					display: none;
+				}
+			}
+			p{
+				font-size: 13px;
+				line-height: 16px;
+				margin-top: 0;
+			}
+			[class^="btn"]{
+		    	margin-top: 5px;
+		    }
+	    }
+	     @media (max-width: 450px){
+	     	.tt-description-wrapper{
+		    	padding-left: 5px;
+		    	padding-right: 0px;
+		    	max-width: 160px;
+		    }
+		    .tt-title-large{
+				font-size: 17px;
+				line-height: 20px;
+			}
+			.tt-title-small{
+				font-size: 12px;
+				line-height: 12px;
+			}
+			p{
+				font-size: 12px;
+				line-height: 14px;
+			}
+	     }
+	    *:nth-child(1){
+			margin-top: 0;
+		}
+    }
+    @media (max-width: 450px){
+	    .tt-description:not(.tt-point-h-r):not(.tt-point-h-l){
+	    	.tt-description-wrapper{
+	    		max-width: 270px;
+	    	}
+	    }
+    }
+ 	@extend ._tt-point;
+}
+
+.tt-promo-fullwidth.tt-promo-parallax{
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	height: 650px;
+	@media (max-width: 1199px){
+		height: 550px;
+	}
+	@media (max-width: 789px){
+		height: 350px;
+	}
+	@media (max-width: 451px){
+		height: 250px;
+	}
+	&.bg-position-bottom{
+		background-position: center bottom;
+	}
+}
+body:not(.touch-device) .tt-promo-fullwidth.tt-promo-parallax{
+	@media (min-width: 1025px){
+		background-attachment: fixed;
+	}
+}
+
+.container{
+	.tt-promo-fullwidth{
+		.tt-description{
+			@media (min-width: 1701px){
+		    	padding:10% 10%;
+		    }
+		    @media (min-width: 1401px) and (max-width: 1700px){
+		    	padding:10% 10%;
+		    }
+		    @media (max-width: 1400px){
+		    	padding:10% 12%;
+		    }
+		    @media (max-width: 790px){
+		   		padding:5% 5%;
+		    }
+		}
+	}
+}
+/*
+	tt-promo-fullwidth-02
+*/
+.tt-promo-fullwidth-02{
+    display: block;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    @include user-select();
+    > img{
+        width: 100%;
+        height: auto;
+    }
+    .tt-description{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        display: -ms-flexbox;
+	    display: -webkit-flex;
+	    display: flex;
+	 	-webkit-flex-direction: row;
+	    -ms-flex-direction: row;
+	    flex-direction: row;
+	    -webkit-flex-wrap: nowrap;
+	    -ms-flex-wrap: nowrap;
+	    flex-wrap: nowrap;
+	    -webkit-justify-content: center;
+	    -ms-flex-pack: center;
+	    justify-content: center;
+	    -webkit-align-content: center;
+	    -ms-flex-line-pack: center;
+	    align-content: center;
+	    -webkit-align-items: center;
+	    -ms-flex-align: center;
+	    align-items: center;
+	    color: $promo_fullwidth02_text;
+	    @include animation-value(color $value_speed);
+	    .tt-description-wrapper{
+	    	text-align: center;
+	    }
+	    .tt-title-large{
+	    	font-family: $default_font2;
+	    	color: $promo_fullwidth02_title_large;
+	    	font-size: 34px;
+			line-height: 44px;
+			font-weight: 500;
+			letter-spacing: 0.03em;
+			@include animation-value(color $value_speed);
+	    }
+	    p{
+	    	font-size: 14px;
+	    	line-height: 22px;
+	    	margin-top: 23px;
+	    	@include animation-value(color $value_speed);
+	    }
+	    img{
+	    	max-width: 100%;
+	    	height: auto;
+	    }
+	    @media (max-width: 1024px){
+			.tt-title-large{
+				font-size: 24px;
+				line-height: 30px;
+			}
+			p{
+				line-height: 19px;
+				margin-top: 15px;
+			}
+	    }
+	    @media (max-width: 789px){
+			.tt-title-large{
+				font-size: 18px;
+				line-height: 22px;
+			}
+			p{
+				margin-top: 8px;
+			}
+	    }
+	    @media (max-width: 575px){
+			.tt-title-large{
+				font-size: 16px;
+				line-height: 19px;
+				br{
+					display: none;
+				}
+			}
+			p{
+				margin-top: 5px;
+			}
+	    }
+	    *:nth-child(1){
+			margin-top: 0;
+		}
+    }
+ 	@extend ._tt-point;
+}
+/* tt-promo-03 (listing banner aside) */
+.tt-promo-03{
+    display: block;
+    position: relative;
+    overflow: hidden;
+    @include user-select();
+    > img{
+        width: 100%;
+        height: auto;
+    }
+}
+.tt-content-aside:not(:last-child) {
+    margin-bottom: 33px;
+}
+.tt-btn-col-close + .tt-content-aside{
+	margin-top: 32px;
+}
+/* tt-promo-collection */
+.tt-collection-listing{
+	@media (min-width: 1025px){
+		margin-top: -38px;
+		.tt-collection-item{
+			margin-top: 38px;
+		}
+	}
+	@media (max-width: 1024px) and (min-width: 576px){
+		margin-top: -40px;
+		.tt-collection-item{
+			margin-top: 40px;
+		}
+	}
+	@media (max-width: 575px){
+		margin-top: -30px;
+		.tt-collection-item{
+			margin-top: 30px;
+		}
+	}
+}
+.tt-collection-item{
+	display: block;
+	img{
+		max-width: 100%;
+		height: auto;
+	}
+	.tt-description{
+		padding-top: 14px;
+		position: relative;
+		text-align: center;
+		.tt-title{
+			font-family:$default_font;
+			font-size: 14px;
+			font-weight: 400;
+			color: $collection_item_title;
+			@include animation-value(color $value_speed);
+			a{
+				color: $collection_item_title;
+			}
+		}
+		.tt-add-info{
+			list-style: none;
+			margin: 2px 0 0 0;
+			padding: 0;
+			display: -ms-flexbox;
+		    display: -webkit-flex;
+		    display: flex;
+		    -webkit-flex-direction: column;
+		    -ms-flex-direction: column;
+		    flex-direction: column;
+			li{
+				font-size: 12px;
+				line-height: 19px;
+				color: $collection_item_info_text;
+			}
+		}
+	}
+	&:hover{
+		.tt-description{
+			.tt-title{
+				color: $collection_item_title_hover;
+			}
+		}
+	}
+}
+
+
+.tt-layout-promo02{
+	@media (min-width: 576px){
+		margin-top: -20px;
+	}
+	@media (max-width: 575px){
+		margin-top: -10px;
+	}
+}
+.tt-promo02{
+    display: block;
+    position: relative;
+    overflow: hidden;
+    margin-top: 20px;
+    @include user-select();
+    img{
+        width: 100%;
+        height: auto;
+    }
+    .tt-description{
+        &:not(:empty){
+        	padding-top:14px;
+        }
+	    color: $promo_text;
+	    .tt-title-small{
+			font-family: $default_font2;
+			color: $promo_title_small_text;
+			font-size: 16px;
+			line-height: 26px;
+			font-weight: 500;
+			letter-spacing: 0.03em;
+			@include animation-value(color $value_speed);
+	    }
+	    .tt-title-large{
+	    	font-family: $default_font2;
+	    	color: $promo_title_large_text;
+	    	font-size: 26px;
+			line-height: 34px;
+			font-weight: 500;
+			letter-spacing: 0.03em;
+			@include animation-value(color $value_speed);
+	    }
+	    a.tt-title{
+	    	display: inline-block;
+	    	&:hover{
+	    		> *{
+		    		color: $default_color;
+		    	}
+	    	}
+	    }
+	    p{
+	    	font-size: 14px;
+	    	line-height: 22px;
+	    	margin-top: 4px;
+	    	@include animation-value(color $value_speed);
+	    	a{
+	    		color: $default_color;
+	    		text-decoration: underline;
+	    		&:hover{
+	    			text-decoration:none;
+	    		}
+	    	}
+	    }
+	    p:first-child{
+	    	margin-top: 1px;
+	    }
+	    [class^="btn"]{
+	    	margin-top: 20px;
+	    }
+	    p + [class^="btn"]{
+	    	margin-top: 12px;
+	    }
+	    img{
+	    	max-width: 100%;
+	    	height: auto;
+	    }
+	    @media (max-width: 1024px){
+			.tt-title-small{
+				font-size: 15px;
+				line-height: 22px;
+			}
+			.tt-title-large{
+				font-size: 23px;
+				line-height: 30px;
+			}
+	    }
+		@media (max-width: 575px){
+			.tt-title-small{
+				font-size: 15px;
+				line-height: 22px;
+			}
+			.tt-title-large{
+				font-size: 20px;
+				line-height: 29px;
+			}
+			p{
+				margin-top: 0;
+				line-height: 20px;
+			}
+			[class^="btn"]{
+		    	margin-top: 10px;
+		    }
+		}
+	    *:nth-child(1){
+			margin-top: 0;
+		}
+		[class^="btn"]:nth-child(1){
+			margin-top: 6px !important;
+		}
+    }
+    &.tt-no-btn:hover{
+    	.tt-description{
+			.tt-title{
+	    		> *{
+		    		color: $default_color;
+		    	}
+			}
+		}
+    }
+    .tt-description:first-child{
+    	padding-top: 0;
+    }
+ 	@media (max-width: 575px){
+ 		margin-top: 10px;
+ 	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

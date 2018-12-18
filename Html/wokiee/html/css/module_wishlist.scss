@@ -1,0 +1,216 @@
+/* modal-wishlist */
+.tt-wishlist-box{
+    .tt-wishlist-list{
+        .tt-item{
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-flex-direction: row;
+            -ms-flex-direction: row;
+            flex-direction: row;
+            -webkit-flex-wrap: nowrap;
+            -ms-flex-wrap: nowrap;
+            flex-wrap: nowrap;
+            -webkit-justify-content: space-between;
+            -ms-flex-pack: justify;
+            justify-content: space-between;
+            -webkit-align-content: stretch;
+            -ms-flex-line-pack: stretch;
+            align-content: stretch;
+            -webkit-align-items: center;
+            -ms-flex-align: center;
+            align-items: center;
+            .tt-col-description{
+                display: -ms-flexbox;
+                display: -webkit-flex;
+                display: flex;
+                -webkit-flex-direction: row;
+                -ms-flex-direction: row;
+                flex-direction: row;
+                -webkit-flex-wrap: nowrap;
+                -ms-flex-wrap: nowrap;
+                flex-wrap: nowrap;
+                -webkit-justify-content: flex-start;
+                -ms-flex-pack: start;
+                justify-content: flex-start;
+                -webkit-align-content: stretch;
+                -ms-flex-line-pack: stretch;
+                align-content: stretch;
+                -webkit-align-items: center;
+                -ms-flex-align: center;
+                align-items: center;
+                min-width: 405px;
+                .tt-img{
+                    img{
+                        width: 100%;
+                        height: auto;
+                        max-width: 180px;
+                    }
+                }
+                .tt-img + .tt-description{
+                    margin-left: 19px;
+                }
+                .tt-description{
+                    .tt-title{
+                        font-family:$default_font2;
+                        font-size: 14px;
+                        font-weight: 500;
+                        color: $product_title_text;
+                        a{
+                            color: $product_title_text;
+                            &:hover{
+                                color: $product_title_text_hover;
+                            }
+                        }
+                    }
+                    .tt-price{
+                        display: -ms-flexbox;
+                        display: -webkit-flex;
+                        display: flex;
+                        -webkit-flex-direction: row;
+                        -ms-flex-direction: row;
+                        flex-direction: row;
+                        -webkit-flex-wrap: wrap;
+                        -ms-flex-wrap: wrap;
+                        flex-wrap: wrap;
+                        font-size: 16px;
+                        line-height: 20px;
+                        font-weight: 500;
+                        font-family:$default_font2;
+                        color: $product_price_text;
+                        .new-price{
+                            color: $product_new_price_text;
+                            margin-right:7px;
+                        }
+                        .old-price{
+                            color: $product_old_price_text;
+                            text-decoration: line-through;
+                            .money{
+                                text-decoration: line-through;
+                            }
+                        }
+                        span{
+                            display: inline-block;
+                        }
+                    }
+                }
+            }
+            .tt-col-btn{
+                .tt-btn-addtocart{
+                    background: $btn_colorbg;
+                    font-family: $default_font2;
+                    border: none;
+                    color: $btn_colortext;
+                    font-size: 14px;
+                    line-height: 1;
+                    font-weight: 400;
+                    letter-spacing:0.03em;
+                    position: relative;
+                    outline: none;
+                    padding: 6px 31px 4px;
+                    display: inline-flex;
+                    justify-content: center;
+                    align-items: center;
+                    text-align: center;
+                    height: 40px;
+                    cursor: pointer;
+                    @include border-radius($border_radius);
+                    @include animation();
+
+                    @media (max-width: 575px){
+                        font-size: 12px;
+                        padding-left: 25px;
+                        padding-right: 25px;
+                        height: 39px;
+                    }
+                    i{
+                        color: $product_btn02_addtocart_icon;
+                        font-size: 20px;
+                        margin-right: 6px;
+                        position: relative;
+                        top:-2px;
+                    }
+                    &:hover{
+                        background-color: $product_btn02_addtocart_bg_hover;
+                        color: $product_btn02_addtocart_text_hover;
+                        i{
+                            color: $product_btn02_addtocart_icon_hover;
+                        }
+                    }
+                    @include animation-value(color $value_speed);
+                }
+                > *{
+                    margin-left: 12px;
+                }
+                .btn-link{
+                    top:-4px;
+                    position: relative;
+                    .icon-f-73{
+                        top:4px;
+                    }
+                }
+                @media (max-width: 1024px){
+                    display: -ms-flexbox;
+                    display: -webkit-flex;
+                    display: flex;
+                    -webkit-flex-direction: column;
+                    -ms-flex-direction: column;
+                    flex-direction: column;
+                      -webkit-align-items: flex-end;
+                    -ms-flex-align: end;
+                    align-items: flex-end;
+                    > *:not(:first-child){
+                        margin-top: 5px;
+                    }
+                    .tt-btn-addtocart + *{
+                        margin-top: 14px;
+                    }
+                }
+            }
+            &:not(:last-child){
+                padding-bottom:20px;
+                margin-bottom: 20px;
+            }
+            &:not(:last-child){
+                border-bottom: 1px solid $border;
+            }
+            @media (max-width: 790px){
+                -webkit-flex-direction: column;
+                -ms-flex-direction: column;
+                flex-direction: column;
+                &:not(:last-child){
+                    padding-bottom: 10px;
+                }
+                .tt-col-description{
+                     -webkit-flex-direction: column;
+                    -ms-flex-direction: column;
+                    flex-direction: column;
+                    min-width: inherit;
+                    .tt-img + .tt-description{
+                        margin-left: 0;
+                        margin-right: 0;
+                    }
+                    .tt-description{
+                        width: 100%;
+                        text-align: center;
+                        margin-top: 15px;
+                        .tt-price{
+                            text-align: center;
+                            display: block;
+                        }
+                    }
+                }
+                .tt-col-btn{
+                     -webkit-align-items: center;
+                    -ms-flex-align: center;
+                    align-items: center;
+                    margin-top: 14px;
+                }
+                .tt-col-btn > *{
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+}
+

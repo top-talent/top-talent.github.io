@@ -1,0 +1,248 @@
+/*
+	Font
+*/
+@import url('https://fonts.googleapis.com/css?family=Hind:300,400,500,600');
+$default_font:										'Hind', sans-serif;
+$default_font_icon:									'wokiee';
+/*
+	Colors
+*/
+$default_bg_color:                					#ffffff;
+$default_text_color:              					#777777;
+$link_color_base:                   				$default_text_color;
+$simple_links_hover_speed: 							0.2s;
+
+
+$default_color:                  					#2879fe;
+/*
+Mixin
+*/
+$value_speed: 							0.2s;
+@mixin animation($speed:0.2s){
+    transition:all $speed linear;
+    -ms-transition:all $speed linear;
+    -webkit-transition:all $speed linear;
+    -o-transition: all $speed linear;
+}
+@mixin animation-value($transition) {
+    -moz-transition:    $transition linear;
+    -o-transition:      $transition linear;
+    -webkit-transition: $transition linear;
+    transition:         $transition linear;
+}
+@mixin opacity ($opacity){
+    -moz-opacity: $opacity;
+    -khtml-opacity: $opacity;
+    -webkit-opacity: $opacity;
+    opacity: $opacity;
+}
+@mixin radius($radius:50%){
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+    border-radius: $radius;
+}
+strong{
+	font-weight: 600;
+	color: #191919;
+}
+
+/*
+	imports
+*/
+@import "../external/bootstrap/scss/bootstrap.scss";
+@import "../font/style.scss";
+@import "module_header.scss";
+@import "module_menu.scss";
+@import "module_typography.scss";
+
+/*
+Global
+*/
+html.touch-device{
+	overflow-x: hidden;
+}
+body{
+	font-family:$default_font;
+	font-size: 14px;
+    line-height: 22px;
+    font-weight: 300;
+    color: $default_text_color;
+    background: $default_bg_color;
+    margin: 0;
+    overflow-x: hidden;
+}
+a{
+    text-decoration: none;
+    outline:none;
+    color: $default_color;
+}
+a:hover{
+    outline: none;
+    text-decoration: none;
+    outline:none;
+}
+a:active,
+a:visited,
+a:focus{
+    text-decoration: none;
+    outline: none;
+}
+
+
+/* content */
+#pageContent{
+	position: relative;
+	z-index: 1;
+	margin-top: 39px;
+	.content-holder{
+		display: -ms-flexbox;
+	    display: -webkit-flex;
+	    display: flex;
+	    -webkit-flex-direction: row;
+	    -ms-flex-direction: row;
+	    flex-direction: row;
+	    -webkit-flex-wrap: nowrap;
+	    -ms-flex-wrap: nowrap;
+	    flex-wrap: nowrap;
+	    -webkit-justify-content: flex-start;
+	    -ms-flex-pack: start;
+	    justify-content: flex-start;
+	    -webkit-align-content: stretch;
+	    -ms-flex-line-pack: stretch;
+	    align-content: stretch;
+	    min-height: calc(100vh - 100px);
+	    margin-left: -10px;
+	    margin-right: -10px;
+	}
+	.col-menu{
+		@media (min-width: 1025px){
+			min-width: 269px;
+			width: 269px;
+		}
+		@media (max-width: 1024px){
+			min-width: 239px;
+			width: 239px;
+		}
+		@media (min-width: 791px){
+			position: relative;
+			padding-right: 30px;
+		}
+		@media (max-width: 790px){
+			box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.08);
+			background:#ffffff;
+			position: fixed;
+			z-index: 2;
+			top: 60px;
+			height: 100%;
+			left: -300px;
+			overflow: hidden;
+		    -moz-transition: left 0.3s linear;
+		    -o-transition: left 0.3s linear;
+		    -webkit-transition: left 0.3s linear;
+		    transition: left 0.3s linear;
+		    &.is-open{
+		    	left: 0;
+		    }
+		    #navmenu{
+		    	padding-top: 16px;
+		    	padding-left: 20px;
+		    	padding-right: 20px;
+		    	nav{
+		    		width: 100%;
+		    	}
+		    }
+		}
+	}
+	.col-content{
+		-webkit-flex: 2 2 auto;
+	    -ms-flex: 2 2 auto;
+	    flex: 2 2 auto;
+	    position: relative;
+	    padding-bottom: 30px;
+	    &:before{
+			content: '';
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 1px;
+			height: 100%;
+			background:#eceaea;
+			z-index: 1;
+		}
+	    @media (min-width: 791px){
+	    	padding-left: 31px;
+	    }
+	    @media (max-width: 790px){
+	    	&:before{
+	    	 	@include opacity(0);
+	    	 }
+	    }
+	    @media (max-width: 575px){
+	    	padding-left: 20px;
+	    	padding-right: 20px;
+	    }
+	}
+}
+
+#tt-back-to-top{
+	display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-content: center;
+    -ms-flex-line-pack: center;
+    align-content: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+    -ms-transition: 0.4s;
+    transition: 0.4s;
+
+    width: 62px;
+    height: 62px;
+    background-color:rgba(40, 121, 254, 0.75);
+    color: #ffffff;
+    font-size: 0;
+    line-height: 0;
+    position: fixed;
+    bottom: -64px;
+    right: 5px;
+    z-index: 20;
+    border-radius:6px;
+}
+#tt-back-to-top:before{
+	font-family: $default_font_icon;
+	content: "\e903";
+	display: block;
+	font-size: 20px;
+	line-height: 1;
+	position: relative;
+	top: 0;
+	@include animation-value(top 0.2s);
+}
+#tt-back-to-top:hover{
+	background-color:rgba(34, 103, 216, 0.75);
+	color: #ffffff;
+}
+#tt-back-to-top:hover:before{
+	top: -4px;
+}
+#tt-back-to-top.tt-show{
+	    bottom: 50px;
+}
+
+
+

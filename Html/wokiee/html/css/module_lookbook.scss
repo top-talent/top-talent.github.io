@@ -1,0 +1,357 @@
+.tt-lookbook{
+    text-align: center;
+    position: relative;
+    img{
+        width: 100%;
+        height: auto;
+    }
+    .tt-hotspot{
+        position: absolute;
+        color: $lookbook_hotspot_icon;
+        font-size: 14px;
+        line-height: 1;
+        cursor: pointer;
+        width: 38px;
+        height: 38px;
+        .tt-btn{
+            width: 38px;
+            height: 38px;
+            padding: 4px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 2;
+            background:$lookbook_hotspot_border;
+            @include border-radius(50%);
+            @include animation-value(padding $value_speed);
+        }
+        .tt-btn:after{
+            content: '';
+            display: block;
+            width: 100%;
+            height: 100%;
+            top:attr(data-style-top);
+            background-color: $lookbook_hotspot_bg;
+            @include border-radius(50%);
+            @include animation-value(background-color $value_speed);
+        }
+        .tt-btn:before{
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-flex-direction: row;
+            -ms-flex-direction: row;
+            flex-direction: row;
+            -webkit-flex-wrap: nowrap;
+            -ms-flex-wrap: nowrap;
+            flex-wrap: nowrap;
+            -webkit-justify-content: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            -webkit-align-content: stretch;
+            -ms-flex-line-pack: stretch;
+            align-content: stretch;
+            -webkit-align-items: center;
+            -ms-flex-align: center;
+            align-items: center;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 3;
+            font-family: $default_font_icon;
+            font-size: 14px;
+            content: "\e9a0";
+            line-height: 1;
+            font-weight: normal;
+            width: 38px;
+            height: 38px;
+            @include scale(1);
+            @include animation();
+        }
+        .tt-img{
+             a{
+                display: block;
+             }
+        }
+        .tt-content-parent{
+            display: none;
+        }
+        .tt-description{
+            .new-price {
+                margin-right: 7px;
+            }
+            .old-price {
+                text-decoration: line-through;
+            }
+        }
+        @media (max-width: 789px){
+            .tt-hotspot-content{
+                position: relative;
+                .tt-description{
+                    .tt-title{
+                        padding-right: 16px;
+                    }
+                }
+            }
+        }
+        @media (max-width: 575px){
+            .tt-hotspot-content .tt-description{
+                .tt-title{
+                    margin-top: -3px;
+                    line-height: 17px;
+                }
+                .tt-price{
+                    margin-top: 4px;
+                }
+                [class^="btn"]{
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+    .tt-hotspot.active{
+        .tt-btn{
+            padding: 9px;
+        }
+        .tt-btn:after{
+            background-color: $lookbook_hotspot_bg_active;
+        }
+        .tt-btn:before{
+            @include scale(0);
+        }
+        @media (max-width: 789px){
+            width: 100%;
+            height: 100%;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-flex-direction: row;
+            -ms-flex-direction: row;
+            flex-direction: row;
+            -webkit-flex-wrap: nowrap;
+            -ms-flex-wrap: nowrap;
+            flex-wrap: nowrap;
+            -webkit-justify-content: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            -webkit-align-content: center;
+            -ms-flex-line-pack: center;
+            align-content: center;
+            -webkit-align-items: center;
+            -ms-flex-align: center;
+            align-items: center;
+            z-index: 7;
+            .tt-btn{
+                z-index: 0;
+            }
+            &:after{
+                content:'';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                display: block;
+                background:$lookbook_mobile_bg_item;
+            }
+            .tt-hotspot-content{
+                position: relative;
+                z-index: 8;
+                left: 0;
+                .tt-img{
+                    width: 28%;
+                    min-width: 28%;
+                }
+            }
+        }
+    }
+}
+body:not(.touch-device){
+    .tt-hotspot{
+        .tt-btn:hover:after{
+            background-color:$lookbook_hotspot_bg_hover;
+        }
+    }
+}
+.tt-hotspot-content{
+    background-color:$lookbook_description_bg;
+    z-index: -1;
+    padding: 20px;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-align-content: stretch;
+    -ms-flex-line-pack: stretch;
+    align-content: stretch;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    box-shadow: 0 0 10px $lookbook_description_shadow;
+    @include border-radius($border_radius);
+    img{
+        max-width: 100%;
+        height: auto;
+    }
+    .tt-btn-close{
+        position: absolute;
+        display: block;
+        right: 14px;
+        top: 8px;
+        font-family: $default_font_icon;
+        font-size: 14px;
+        color: $lookbook_hotspot_btn_close_text;
+        z-index: 1;
+        padding:5px;
+        @include animation-value(color $value_speed);
+    }
+    .tt-btn-close:before{
+        content: "\e9b3";
+    }
+    .tt-btn-close:hover{
+        color: $lookbook_hotspot_btn_close_text_hover;
+    }
+    .tt-img{
+        width: 99px;
+        min-width: 99px;
+    }
+    .tt-img + .tt-description{
+        margin-left: 19px;
+    }
+    .tt-description{
+        text-align: left;
+        .tt-title{
+            font-size: 14px;
+            line-height: 22px;
+            font-family:$default_font;
+            font-weight: 400;
+            color: $lookbook_description_title_text;
+            margin-top: -5px;
+            padding-right: 12px;
+            a{
+                color: $lookbook_description_title_text;
+                &:hover{
+                    color: $lookbook_description_title_text_hover;
+                }
+            }
+        }
+        .tt-price{
+            color: $lookbook_description_price;
+            font-weight: 500;
+            font-size: 16px;
+            padding-right: 12px;
+            .new-price {
+                color: $lookbook_description_price_new;
+                margin-right: 7px;
+            }
+            .old-price {
+                color: $lookbook_description_price_old;
+                text-decoration: line-through;
+            }
+        }
+        [class^="btn"]{
+            padding-left: 15px;
+            padding-right: 15px;
+            margin-top: 22px;
+            width:100%;
+        }
+        > *:nth-child(1):not(.tt-title){
+            margin-top: 0;
+        }
+    }
+
+    @media (min-width: 790px){
+        width: 300px;
+    }
+    @media (max-width: 798px){
+        max-width: 300px;
+    }
+}
+.tt-lookbook-popup{
+    position: absolute;
+    z-index: 21;
+    display: none;
+    @include opacity(0);
+}
+
+/* blog-masonry  */
+.tt-lookbook-masonry{
+    margin-top: -20px;
+    overflow: hidden;
+    margin-left: -10px;
+    margin-right: -10px;
+    .grid:after{
+      content: '';
+      display: block;
+      clear: both;
+    }
+    .element-item{
+      position: relative;
+      float: left;
+    }
+    .tt-lookbook-init {
+        @include opacity(0);
+        @include animation-value(opacity $value_speed);
+    }
+    .tt-lookbook-init.tt-show {
+          @include opacity(1);
+    }
+    .tt-grid-col-2{
+		.element-item{
+            width: 50%;
+            margin-top: 20px;
+            padding: 0 8px;
+            @media (max-width:789px){
+                width: 100%;
+            }
+            @media (max-width: 575px){
+                margin-top: 10px;
+            	padding: 0;
+            }
+        }
+	}
+	.tt-grid-col-3{
+		.element-item{
+            width: 33.33%;
+            margin-top: 20px;
+            padding: 0 10px;
+            @media (max-width:1024px){
+                width: 50%;
+            }
+            @media (max-width:789px){
+                width: 100%;
+            }
+            @media (max-width: 575px){
+                margin-top: 10px;
+            	padding: 0;
+            }
+        }
+	}
+}
+.tt-lookbook-masonry:after{
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* tt-carousel-lookbook */
+.tt-carousel-lookbook.arrow-location-center{
+    .slick-slide{
+        padding:0 10px;
+    }
+    .slick-prev{
+        left: 15px;
+    }
+    .slick-next{
+        right: 15px;
+    }
+}
+

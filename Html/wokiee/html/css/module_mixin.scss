@@ -1,0 +1,59 @@
+$value_speed:                           $simple_links_hover_speed;
+
+@mixin animation($speed:0.2s){
+    transition:all $speed linear;
+    -ms-transition:all $speed linear;
+    -webkit-transition:all $speed linear;
+    -o-transition: all $speed linear;
+}
+@mixin animation-value($transition) {
+    -moz-transition:    $transition linear;
+    -o-transition:      $transition linear;
+    -webkit-transition: $transition linear;
+    transition:         $transition linear;
+}
+@mixin border-radius($radius:50%){
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+    border-radius: $radius;
+}
+@mixin background-size($value:cover){
+    -webkit-background-size: $value;
+    -moz-background-size: $value;
+    -o-background-size: $value;
+    background-size: $value;
+}
+@mixin opacity ($opacity){
+    -moz-opacity: $opacity;
+    -khtml-opacity: $opacity;
+    -webkit-opacity: $opacity;
+    opacity: $opacity;
+}
+@mixin scale($value:1){
+    -webkit-transform: scale($value);
+    -moz-transform: scale($value);
+    -ms-transform: scale($value);
+    -o-transform: scale($value);
+    transform: scale($value);
+}
+@mixin rotate($value:90){
+    -webkit-transform: rotate($value);
+    -moz-transform: rotate($value);
+    -ms-transform: rotate($value);
+    -o-transform: rotate($value);
+    transform: rotate($value);
+}
+@mixin user-select($none:none){
+    -webkit-touch-callout: $none;
+    -webkit-user-select: $none;
+    -khtml-user-select: $none;
+    -moz-user-select: $none;
+    -ms-user-select: $none;
+    user-select: $none;
+}
+@mixin box-shadow($value) {
+    -webkit-box-shadow: $value;
+    -moz-box-shadow: $value;
+    box-shadow: $value;
+}

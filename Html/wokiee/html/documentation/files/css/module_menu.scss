@@ -1,0 +1,92 @@
+#navmenu{
+	margin-top: 0;
+	@media (min-width: 791px){
+		position: fixed;
+	}
+	&.stuck-height{
+		overflow-x: auto;
+		width: 256px;
+		height: calc(100vh - 40px);
+	}
+	&.stuckScroll{
+		margin-top: -79px;
+	}
+	nav {
+		//level 0
+		@media (min-width: 1025px){
+			width: 229px;
+		}
+		@media (max-width: 1024px){
+			width: 219px;
+		}
+		> ul{
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			> li{
+				> a{
+					color: #191919;
+					font-weight: 500;
+					font-size: 14px;
+					line-height: 1.1;
+					display: block;
+					position: relative;
+					padding: 8px 11px 6px 11px;
+					text-transform: capitalize;
+					@include border-radius(6px);
+					@include animation($value_speed);
+					&:hover{
+						color: #ffffff;
+						background:$default_color;
+					}
+				}
+				&.active{
+					> a{
+						background:$default_color;
+						color: #ffffff;
+					}
+				}
+				&:not(:first-child){
+					margin-top: 1px;
+				}
+			}
+			//level 1
+			ul{
+				display: none;
+			}
+		}
+		// level 2
+		.submenu{
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			li{
+				a{
+					display:block;
+					padding:7px 5px 8px 32px;
+					color: #777777;
+					font-size: 14px;
+					line-height: 1.1;
+					position: relative;
+					text-transform: capitalize;
+					@include animation($value_speed);
+					&.redcolor{
+						color: #f8353e;
+					}
+					&.active,
+					&:hover{
+						color: #2bbca9;
+					}
+				}
+			}
+		}
+		.icon-marker{
+			position: absolute;
+		    left: 12px;
+		    top: 5px;
+		    font-size: 18px;
+		    line-height: 1.1;
+		    display: inline-block;
+		}
+	}
+}

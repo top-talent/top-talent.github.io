@@ -1,0 +1,273 @@
+@media (min-width: 576px){
+    html.tt-boxed{
+        background:$boxed_bg_color;
+        body{
+            background:$default_bg_color;
+            margin:0 auto;
+            @media (min-width: 576px) {
+                max-width: 546px;
+            }
+            @media (min-width: 791px) {
+                max-width: 770px;
+            }
+            @media (min-width: 1025px) {
+                max-width: 990px;
+            }
+            @media (min-width: 1230px) {
+                max-width: 1200px;
+            }
+        }
+        header{
+            [class^="tt-color-scheme"]{
+                 .container,
+                 .container-fluid{
+                    @media (min-width: 1025px) {
+                        padding-left: 40px;
+                        padding-right: 40px;
+                    }
+                    @media (max-width: 1024px) {
+                        padding-left: 20px;
+                        padding-right: 20px;
+                    }
+                }
+            }
+            .tt-desktop-header{
+                > div:not([class^="tt-color-scheme"]){
+                    @media (min-width: 1025px) {
+                        padding-left: 40px;
+                        padding-right: 40px;
+                    }
+                    @media (max-width: 1024px) {
+                        padding-left: 20px;
+                        padding-right: 20px;
+                    }
+                }
+                .tt-desctop-menu{
+                    nav > ul{
+                        > li.dropdown > a{
+                            @media (max-width: 1229px){
+                                padding-left: 8px;
+                                padding-right: 8px;
+                            }
+                        }
+                    }
+                }
+            }
+            .tt-mobile-header{
+                > .container-fluid{
+                    @media (min-width: 1025px) {
+                        padding-left: 40px;
+                        padding-right: 40px;
+                    }
+                    @media (max-width: 1024px) {
+                        padding-left: 20px;
+                        padding-right: 20px;
+                    }
+                }
+            }
+            .tt-stuck-nav{
+                margin-right: auto;
+                margin-left: auto;
+                width: 100%;
+                -webkit-box-shadow: 0px 5px 5px -4px $boxed_stuck_nav_shadow;
+                -moz-box-shadow: 0px 5px 5px -4px $boxed_stuck_nav_shadow;
+                box-shadow: 0px 5px 5px -4px $boxed_stuck_nav_shadow;
+
+                @media (min-width: 576px) {
+                    max-width: 546px;
+                }
+                @media (min-width: 791px) {
+                    max-width: 770px;
+                }
+                @media (min-width: 1025px) {
+                    max-width: 990px;
+                }
+                @media (min-width: 1230px) {
+                    max-width: 1200px;
+                }
+                > .container{
+                    @media (min-width: 1025px) {
+                        padding-left: 40px;
+                        padding-right: 40px;
+                    }
+                    @media (max-width: 1024px) {
+                        padding-left: 20px;
+                        padding-right: 20px;
+                    }
+                }
+            }
+        }
+        header,
+        .tt-header-static,
+        footer{
+            margin-right: auto;
+            margin-left: auto;
+            width: 100%;
+
+            @media (min-width: 576px) {
+                max-width: 546px;
+            }
+            @media (min-width: 791px) {
+                max-width: 770px;
+            }
+            @media (min-width: 1025px) {
+                max-width: 990px;
+            }
+            @media (min-width: 1230px) {
+                max-width: 1200px;
+            }
+        }
+         @media (max-width: 790px) {
+            .tt-back-to-top{
+                margin-right: auto;
+                margin-left: auto;
+                padding-right: 10px;
+                padding-left: 10px;
+                width: 100%;
+                @media (min-width: 576px) {
+                    max-width: 546px;
+                }
+                @media (min-width: 791px) {
+                    max-width: 770px;
+                }
+                @media (min-width: 1025px) {
+                    max-width: 990px;
+                }
+                @media (min-width: 1230px) {
+                    max-width: 1200px;
+                }
+            }
+        }
+        .tt-breadcrumb{
+            margin-right: auto;
+            margin-left: auto;
+            overflow: hidden;
+           > .container{
+                 @media (min-width: 576px) {
+                    max-width: 546px;
+                }
+                @media (min-width: 791px) {
+                    max-width: 770px;
+                }
+                @media (min-width: 1025px) {
+                    max-width: 990px;
+                }
+                @media (min-width: 1230px) {
+                    max-width: 1200px;
+                }
+
+                @media (min-width: 1025px) {
+                    padding-left: 40px;
+                    padding-right: 40px;
+                }
+                @media (max-width: 1024px) {
+                    padding-left: 20px;
+                    padding-right: 20px;
+                }
+           }
+        }
+        #tt-pageContent{
+            margin-right: auto;
+            margin-left: auto;
+            overflow: hidden;
+            @media (min-width: 576px) {
+                max-width: 546px;
+            }
+            @media (min-width: 791px) {
+                max-width: 770px;
+            }
+            @media (min-width: 1025px) {
+                max-width: 990px;
+            }
+            @media (min-width: 1230px) {
+                max-width: 1200px;
+            }
+
+            > div{
+                > .container{
+                    @media (min-width: 1025px) {
+                        padding-left: 40px;
+                        padding-right: 40px;
+                    }
+                    @media (max-width: 1024px) {
+                        padding-left: 20px;
+                        padding-right: 20px;
+                    }
+                }
+                > .container-fluid{
+                    @media (min-width: 1025px) {
+                        padding-left: 0px;
+                        padding-right: 0px;
+                    }
+                    @media (max-width: 1024px) {
+                        padding-left: 0px;
+                        padding-right: 0px;
+                    }
+                }
+            }
+            .tt_product_showmore{
+                padding-bottom: 2px;
+            }
+
+            .container-fluid,
+            .container-fluid-custom{
+                margin-right: auto;
+                margin-left: auto;
+                width: 100%;
+                @media (min-width: 576px) {
+                    padding-right: 20px;
+                    padding-left: 20px;
+                }
+                @media (max-width: 576px) {
+                    padding-right: 10px;
+                    padding-left: 10px;
+                }
+            }
+
+            @media (min-width: 576px) {
+                .container-fluid,
+                .container-fluid-custom {
+                    max-width: 546px;
+                }
+            }
+
+            @media (min-width: 791px) {
+                .container-fluid,
+                .container-fluid-custom {
+                    max-width: 770px;
+                }
+            }
+
+            @media (min-width: 1025px) {
+                .container-fluid,
+                .container-fluid-custom {
+                    max-width: 990px;
+                }
+            }
+
+            @media (min-width: 1230px) {
+                .container-fluid,
+                .container-fluid-custom {
+                    max-width: 1200px;
+                }
+            }
+        }
+        footer{
+           margin-right: auto;
+           margin-left: auto;
+           overflow: hidden;
+           > div{
+                > .container{
+                    @media (min-width: 1025px) {
+                        padding-left: 40px;
+                        padding-right: 40px;
+                    }
+                    @media (max-width: 1024px) {
+                        padding-left: 20px;
+                        padding-right: 20px;
+                    }
+                }
+           }
+        }
+    }
+}
