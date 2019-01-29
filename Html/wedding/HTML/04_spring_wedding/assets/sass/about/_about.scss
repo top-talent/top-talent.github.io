@@ -1,0 +1,100 @@
+.persons-area{
+	display: block;
+	position: relative;
+	background: url(images/about/bg-1.jpg);
+	@include res(m768){padding: 60px 0;}
+	&:after{
+		background:rgba(0, 0, 0, 0.85);
+	}
+	.container{
+		position: relative;
+		z-index: 999;
+	}
+	.persons{
+		display: block;
+		position: relative;
+		padding: 0 70px;
+		text-align: center;
+		@include res(m992){padding: 0 20px;}
+		@include res(m768){margin: 0 0 40px;}
+		figure{
+			display: block;
+			position: relative;
+			overflow: hidden;
+			vertical-align: middle;
+			margin: -227px 0 40px;
+			padding: 10px 10px 0;
+			@include res(m768){margin: 0 0 30px;}
+			img{
+				width: 100%;
+				border:15px solid #fff;
+				@include border-radius(100%);
+				@include transition($transition);
+			}
+			h2{
+				position: absolute;
+				height: 60px;
+				line-height: 60px;
+				background: $primary-color;
+				color: #fff;
+				font-family: $title-font;
+				font-weight: 400;
+				font-size: 40px;
+				padding: 0 100px;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				display: inline-block;
+				margin: 0;
+				-webkit-clip-path: polygon(100% 0, 90% 50%, 100% 100%, 0 100%, 10% 50%, 0 0);
+				clip-path: polygon(100% 0, 90% 50%, 100% 100%, 0 100%, 10% 50%, 0 0);
+				@include res(m992){padding: 0 20px;}
+				@include res(m480){font-size: 36px;}
+			}	
+		}
+		&:hover{
+			figure{
+				img{
+					box-shadow: 0 -3px 15px rgba(0, 0, 0, 0.3);
+				}
+				
+			}
+		}
+		.content{
+			display: block;
+			position: relative;
+			h3{
+				font-family: $title-font;
+				font-weight: 400;
+				color: #fff;
+				font-size: 50px;
+				margin: 0 0 5px;
+				@include res(m480){font-size: 40px;}
+			}
+			p{	
+				color: #fff;
+				font-style: italic;
+				opacity: 0.5;
+			}
+			ul{
+				li{
+					display: inline-block;
+					padding: 0 2px;
+					a{
+						display: block;
+						width: 46px;
+						height: 46px;
+						line-height: 46px;
+						background: rgba(255, 255, 255, 0.2);
+						color:  rgba(255, 255, 255, 0.5);
+						@include border-radius(100%);
+						&:hover{
+							background:$primary-color;
+							color: #fff;
+						}
+					}
+				}
+			}
+		}
+	}
+}

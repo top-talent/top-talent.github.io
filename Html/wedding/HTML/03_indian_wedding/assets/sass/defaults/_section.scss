@@ -1,0 +1,55 @@
+/*** Section ***/
+.section{
+	padding: $section 0;
+	@include res(m992) { padding:$section+(-25) 0 ;}
+	@include res(m768) { padding:$section+(-25-15) 0;}
+}
+.section2{
+	padding: $section 0 $section+(-30);
+	@include res(m992) { padding:$section+(-25) 0 $section+(-30-25);}
+	@include res(m768) { padding:$section+(-25-15) 0 $section+(-30-25-15);}
+}
+.section3{
+	padding: $section+(-30) 0 $section;
+	@include res(m992) { padding: $section+(-30-25) 0 $section+(-25);}
+	@include res(m768) { padding: $section+(-30-25-15) 0 $section+(-25-15);}
+}
+.section4{
+	padding-bottom:  $section;
+	@include res(m992) { padding-bottom: $section+(-25);}
+	@include res(m768) { padding-bottom: $section+(-25-15);}
+}
+.section5{
+	padding-top: $section;
+	@include res(m992) { padding-top:$section+(-25);}
+	@include res(m768) { padding-top:$section+(-25-15);}
+}
+.section-heading{
+	display: block;
+	text-align: center;
+	margin: 0 0 60px;
+	@include res(m480){margin: 0 0 40px;}
+	h2{
+		margin: 0;
+		font-weight: 700;
+		text-transform: uppercase;
+		color: #111111;
+		padding: 0 0 53px;
+		position: relative;
+		@include res(m420){font-size: 26px;padding: 0 0 43px;}
+		&:after{
+			content:'';
+			position: absolute;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			height: 35px;
+			width: 176px;
+			margin: 0 auto;
+			background: url(images/icons/sec.png) no-repeat center;
+		}
+	}
+}
+.section-bg{
+	background: url(images/icons/dot.png) center;
+}

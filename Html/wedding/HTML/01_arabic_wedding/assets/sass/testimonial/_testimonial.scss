@@ -1,0 +1,36 @@
+.testimonial-srea{
+	display: block;
+	position: relative;
+	background: $primary-color;
+	.testimonial-list{
+		display: block;
+		position: relative;
+		text-align: center;
+		padding-top: 89px;
+		&:after{
+			content:'';
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: 0;
+			width: 65px;
+			height: 49px;
+			background: url(images/icons/7.png) no-repeat center;
+			background-size: cover;
+			margin: 0 auto;
+		}
+		h2{
+			font-family: $title-font;
+			font-weight: 400;
+			color: #fff;
+			font-size: 46px;
+			margin: 0 0 20px;
+			@include res(m320){font-size: 36px;}
+		}
+		p{
+			margin: 0;
+			font-size: 16px;
+			color: #fff;
+		}
+	}
+}

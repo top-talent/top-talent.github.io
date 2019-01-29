@@ -1,0 +1,15 @@
+.home_2{
+	display: block;
+	position: relative;
+	line-height: 100px;
+	height: 100px;
+	background: #101010;
+	@include res(m480){height: auto;line-height: 26px;padding: 50px 0;}
+	.copyright{
+		display:block;
+		@include res(m768){text-align: center}
+		p{
+			margin: 0;
+		}
+	}
+}

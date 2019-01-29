@@ -1,0 +1,38 @@
+footer{
+	display: block;
+	position: relative;
+	background: #111111;
+	text-align: center;
+	padding-top: 15px;
+	.copyright{
+		height: 120px;
+		line-height: 120px;
+		display: block;
+		@include res(m480){height: auto;line-height: 26px;padding: 40px 0 25px;}
+		p{
+			margin: 0;
+			color: #fff;
+			font-family: $title-font;
+		}
+	}
+	.arroe-button{
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: -40px;
+		z-index: 999;
+		border:6px solid #111;
+		background: #fff;
+		color: $primary-color;
+		height: 80px;
+		line-height: 72px;
+		width: 80px;
+		margin: 0 auto;
+		@include border-radius(100%);
+		a{
+			display: block;
+			font-size: 22px;
+			color: $primary-color;
+		}
+	}
+}

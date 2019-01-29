@@ -1,0 +1,28 @@
+/***All plugins Reset***/
+
+/*owl Navigations*/
+
+
+/*owl Paginations*/
+.owl-controls{
+	margin: 0;
+	.owl-pagination{
+		margin-top: 40px;
+		.owl-page{
+			padding: 0 2px;
+			span{
+				width: 12px;
+				height: 12px;
+				background: #594d52;
+				opacity: 1;
+				position: relative;
+				margin: 0 3px;
+			}
+			&.active{
+				span{
+					background: $primary-color;
+				}
+			}
+		}
+	}
+}

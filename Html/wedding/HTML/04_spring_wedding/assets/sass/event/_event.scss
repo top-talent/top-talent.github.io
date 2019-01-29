@@ -1,0 +1,78 @@
+.event-area{
+	position: relative;
+	padding-bottom: 125px;
+	@include res(m992){padding-bottom: 100px;}
+	@include res(m768){padding-bottom: 85px;}
+
+	.event-list{
+		display: block;
+		position: relative;
+		text-align: center;
+		margin: 0 0 30px;
+		.time{
+			display: inline-block;
+			background: $primary-color;
+			color: #fff;
+			line-height: 64px;
+			height: 64px;
+			padding: 0 30px;
+			text-transform: uppercase;
+			font-family: $title-font;
+			font-size: 30px;
+			box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+			z-index: 999;
+			position: relative;
+			@include transition($transition);
+		}
+		.content{
+			display: block;
+			position: relative;
+			background: $primary-color;
+			margin: -32px 0 0;
+			padding: 72px 40px;
+			h2{
+				font-family: $title-font;
+				font-weight: 400;
+				color: #fff;
+				font-size: 40px;
+				padding: 0 0 15px;
+				margin: 0 0 15px;
+				position: relative;
+				&:after{
+					content:'';
+					position: absolute;
+					bottom: 0;
+					left: 0;
+					right: 0;
+					height: 1px;
+					background: #fff;
+					width: 80px;
+					margin: 0 auto;
+				}
+			}
+			h3{
+				font-family: $title-font;
+				font-weight: 400;
+				color: #fff;
+				font-size: 30px;
+			}
+			span{
+				color: #fff;
+				font-size: 18px;
+				display: block;
+				margin: 0 0 20px;
+			}
+			p{
+				margin: 0;
+				color: #fff;
+				opacity: 0.5;
+			}
+		}
+		&:hover{
+			.time{
+				box-shadow: none;
+				background: $hover-color;
+			}
+		}
+	}
+}

@@ -1,0 +1,135 @@
+.about-area{
+	.about-list{
+		.imgs{
+			display: block;
+			position: relative;
+			figure{
+				display: block;
+				position: relative;
+				border-radius: 30px;
+				box-shadow: 5px 6px 0px $primary-color;
+				overflow: hidden;
+				vertical-align: middle;
+				img{
+					display: block;
+					width: 100%;
+					border-radius: 30px;
+					transition: $transition;
+				}
+			}
+		}
+		.content{
+			text-align: center;
+			display: block;
+			margin-top: 30px;
+			h2{
+				font-weight: 400;
+				color: $primary-color;
+				margin: 0 0 15px;
+				font-size: 30px;
+				font-family: $title-font;
+			}
+			p{
+				font-size: 16px;
+				color: #797979;
+				margin: 0 0 15px;
+			}	
+			ul{
+				li{
+					display: inline-block;
+					padding: 0 4px;
+					@include res(m992){padding: 0;}
+					@include res(m768){padding: 0 4px;}
+					a{
+						display: block;
+						width: 46px;
+						height: 46px;
+						border-radius: 100%;
+						border:1px solid #e4e4e4;
+						line-height: 44px;
+						text-align: center;
+						color: #111111;
+						background: #fff;
+						&:hover{
+							color:$primary-color;
+						}
+					}
+				}
+			}
+		}
+		&:hover{
+			.imgs{
+				figure{
+					img{
+						filter: blur(10px);
+					}
+				}
+			}
+		}
+	}
+	.about-invitation{
+		text-align: center;
+		display: block;
+		position: relative;
+		width: 395px;
+		height: 395px;
+		box-shadow: 0 0px 20px rgba(0, 0, 0, 0.1);
+		border-radius: 100%;
+		margin: 0 auto;
+		@include res(m992){width: 100%;height: 100%;}
+		@include res(m768){margin: 30px auto;width: 395px;height:100%;}
+		@include res(m320){width: 100%;}
+		&:after{
+			content:'';
+			position: absolute;
+			left: -100px;
+			top: 0;
+			bottom: 0;
+			right: 0;
+			width: 495px;
+			height: 495px;
+			background: url(images/icons/3.png) no-repeat left bottom;
+			background-size: cover;
+			@include res(m992){display: none;}
+		}
+		.content{
+			position: relative;
+			z-index: 999;
+			background: #fff;
+			display: block;
+			width: 395px;
+			height: 395px;
+			border-radius: 100%;
+			display: table-cell;
+			vertical-align: middle;
+			h2{
+				font-size: 48px;
+				font-weight: 400;
+				color: $primary-color;
+				font-family: $title-font;
+				display: block;
+			}
+			p{
+				margin: 0 0 15px;
+				color: #797979;
+				font-size: 16px;
+				display: block;
+			}
+			strong{
+				font-weight: 400;
+				color: #222222;
+				font-size: 30px;
+				display: block;
+				margin: 0 0 15px;
+				text-transform: uppercase;
+				line-height: 30px;
+			}
+			span{
+				font-size: 18px;
+				color: #797979;
+				display: block;
+				position: relative;
+			}
+		}
+	}
+}

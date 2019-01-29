@@ -1,0 +1,263 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css?family=Bilbo+Swash+Caps|Raleway:300,400,500,600,700|Lora:400,400i,700,700i');
+
+/*-------------------------------------
+   Project:	Wedding
+	Version:	1.0.0
+	Author: 
+	Website: 
+	Purchase:
+---------------------------------------
+    
+    CSS INDEX
+    ===================
+	
+    1. Theme Default CSS (body, link color, section etc)
+    2. Header area start here
+    3. Slider area start here
+    4. About area start here
+    5. Breadcumb area start here
+    6. Banner area start here
+    7. Services area start here
+    8. Team area start here
+    9. Price list area start here
+    10. Pagination area start here
+    11. Sidebar area start here
+    12. Products area start here
+    13. Testimonial area start here
+    14. Client area start here
+    15. Form area start here
+    16. Social link area start here
+    17. Blog area start here
+    18. Faq area start here
+    19. Contact area start here
+	  20. Gallery area start here
+    21. Event area start here
+    22. Footer area start here
+
+
+
+---------------------------------------*/
+
+/*....................................
+1.Theme default CSS
+....................................*/
+
+/*-------- Global Variables Start here --------*/
+
+$body-font: 'Raleway', sans-serif;
+$title-font: 'Lora', serif;
+$second-font: 'Bilbo Swash Caps', cursive;
+$primary-color: #f33c3c;
+$hover-color: #ccc;
+$transition :0.5s;
+$section:100px;
+
+/*-------- Global Variables End here --------*/
+
+/*-------- Responsive Mixins Start here --------*/
+
+@mixin clearfix() {
+  clear: both;
+  &::after {
+    display: block;
+    content: "";
+    clear: both;
+  }
+}
+
+@mixin transition($trans) {
+  -webkit-transition: all $trans ease;
+    -moz-transition: all $trans ease;
+     -ms-transition: all $trans ease;
+      -o-transition: all $trans ease;
+        transition: all $trans ease;
+}
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+        border-radius: $radius;
+}
+
+@mixin box-shadow($shadow) {
+  -webkit-transition:$shadow;
+    -moz-transition:$shadow;
+        box-shadow:$shadow;
+}
+
+/* 
+  Responsive Call = @include res(media){@contents;}
+  media = m1920, m1600, m1200, m992, m768, m480, m320
+*/
+
+@mixin res($media) {
+  @if $media == m1920 {
+    @media only screen and (max-width: 1920px) { @content; }
+  }
+  @if $media == m1600 {
+    @media only screen and (max-width: 1600px) { @content; }
+  }
+  @else if $media == m1200 {
+    @media only screen and (max-width: 1200px) { @content; }
+  }
+  @else if $media == m992 {
+    @media only screen and (max-width: 992px) { @content; }
+  }
+  @else if $media == m768 {
+    @media only screen and (max-width: 768px) { @content; }
+  }
+  @else if $media == m480 {
+    @media only screen and (max-width: 480px) { @content; }
+  }
+  @else if $media == m320 {
+    @media only screen and (max-width: 320px) { @content; }
+  }
+}
+
+/*-------- Responsive Mixins End here --------*/
+
+html,
+body {
+  font-size: 16px;
+  color: #797979;
+  font-family: $body-font;
+  vertical-align: baseline;
+  line-height: 26px;
+  font-weight: 400;
+}
+
+
+/* ....................................
+1.1 Reset CSS 
+.......................................*/
+@import 'sass/defaults/_defaults.scss';
+
+
+/*....................................
+2. Header area start here
+....................................*/
+@import 'sass/header/_con.scss';
+
+
+/*....................................
+3. Slider area start here
+....................................*/
+@import 'sass/slider/_slider.scss';
+
+
+/*....................................
+4. About area start here
+....................................*/
+@import 'sass/about/_about.scss';
+
+
+/*....................................
+5. Breadcumb area start here
+....................................*/
+@import 'sass/breadcumb/_breadcumb.scss';
+
+
+/*....................................
+6. Banner area start here
+....................................*/
+@import 'sass/banner/_banner.scss';
+
+
+/*....................................
+7. Services area start here
+....................................*/
+@import 'sass/services/_services.scss';
+
+
+/*....................................
+8. Team area start here
+....................................*/
+@import 'sass/team/_team.scss';
+
+
+/*....................................
+9. Price list area start here
+....................................*/
+@import 'sass/price-list/_pricelist.scss';
+
+
+/*....................................
+10. Pagination area start here
+....................................*/
+@import 'sass/pagination/_pagination.scss';
+
+
+/*....................................
+11. Sidebar area start here
+....................................*/
+@import 'sass/sidebar/_sidebar.scss';
+
+
+/*....................................
+12. Products area start here
+....................................*/
+@import 'sass/products/_products.scss';
+
+
+/*....................................
+13. Testimonial area start here
+....................................*/
+@import 'sass/testimonial/_testimonial.scss';
+
+
+/*....................................
+14. Client area start here
+....................................*/
+@import 'sass/client/_client.scss';
+
+
+/*....................................
+15. Form area start here
+....................................*/
+@import 'sass/form/_form.scss';
+
+
+/*....................................
+16. Social link area start here
+....................................*/
+@import 'sass/social_link/_social.scss';
+
+
+/*....................................
+17. Blog area start here
+....................................*/
+@import 'sass/blog/_con.scss';
+
+
+/*....................................
+18. Faq area start here
+....................................*/
+@import 'sass/faq/_faq.scss';
+
+
+/*....................................
+19. Contact area start here
+....................................*/
+@import 'sass/contact/_con.scss';
+
+
+/*....................................
+20. Gallery area start here
+....................................*/
+@import 'sass/gallery/_gallery.scss';
+
+
+/*....................................
+21. Event area start here
+....................................*/
+@import 'sass/event/_event.scss';
+
+
+/*....................................
+22. Footer area start here
+....................................*/
+@import 'sass/footer/_con.scss';
+

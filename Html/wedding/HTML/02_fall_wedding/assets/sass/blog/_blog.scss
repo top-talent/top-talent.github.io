@@ -1,0 +1,107 @@
+.blog_area_2{
+    position: relative;
+    display: block;
+    background: url(images/blog/bg-1.jpg);
+    &::after{
+        background: rgba(0, 0, 0, 0.85);
+    }
+    .container{
+        position: relative;
+        z-index: 999;
+    }
+    .section-heading{
+        h2{
+            color: #fff;
+        }
+    }
+    .blogs{
+        display: block;
+        position: relative;
+        background: #fff;
+        margin-top: 60px;
+        figure{
+            display:block;
+            position: relative;
+            z-index: 999;
+            img{
+                width: 200px;
+                height: 200px;
+                display: inline-block;
+                border: 6px solid #f7f7f7;
+                position: absolute;
+                top:-60px;
+                left: 40px;
+                @include border-radius(100%);
+                @include res(m320){display: none;}
+            }
+            h2{
+                font-family: $title-font;
+                font-weight: 400;
+                color: #222;
+                margin: 0;
+                position: absolute;
+                top: 80px;
+                left: 260px;
+                z-index: 999;
+                @include res(m320){left: 30px;}
+            }
+        }
+        .date{
+            display: inline-block;
+            background: $primary-color;
+            text-align: center;
+            padding: 18px 40px;
+            z-index: 999;
+            position: absolute;
+            top: -42px;
+            right: 40px;
+            @include border-radius(45px);
+            strong{
+                color: #fff;
+                font-size: 30px;
+                font-weight: 400;
+                display: block;
+            }
+            span{
+                color: #fff;
+                text-transform: uppercase;
+                display: block;
+            }
+        }
+        .content{
+            position: relative;
+            display: block;
+            padding: 170px 40px 40px;
+            @include res(m320){padding: 130px 30px 40px;}
+            ul{
+                display: block;
+                margin: 0 0 20px;
+                li{
+                    display: inline-block;
+                    color: $primary-color;
+                    padding-right: 25px;
+                    i{
+                        font-size: 15px;
+                        padding-right: 5px;
+                    }
+                    span{
+                        
+                    }
+                    &:last-child{
+                        padding-right: 0;
+                    }
+                }
+            }
+            p{
+                margin: 0 0 20px;
+            }
+            a{
+                color: $primary-color;
+                line-height: 26px;
+                i{
+                    padding-left: 8px;
+                }
+            }
+        }
+    }
+}

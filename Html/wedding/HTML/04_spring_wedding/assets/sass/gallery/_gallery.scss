@@ -1,0 +1,64 @@
+.gallery-area{
+	position: relative;
+	padding-top: 325px;
+	@include res(m992){padding-top: 300px;}
+	@include res(m768){padding-top: 285px;}
+	.gallerys{
+		display: block;
+		position: relative;
+		margin: 0 0 30px;
+		figure{
+			display: block;
+			position: relative;
+			overflow: hidden;
+			vertical-align: middle;
+			&:after{
+				content:'';
+				position: absolute;
+				left: 10%;
+				right: 10%;
+				top: 10%;
+				bottom: 10%;
+				opacity: 0;
+				background: rgba(0, 0, 0, 0.7);
+				@include transition($transition);
+			}
+			a{
+				display: block;
+				img{
+					width: 100%;
+				}
+				span{
+					position: absolute;
+					left: 0;
+					right: 0;
+					top: 50%;
+					z-index: 999;
+					background: $primary-color;
+					color: #fff;
+					height: 60px;
+					width: 60px;
+					line-height: 60px;
+					text-align: center;
+					margin: -30px auto 0;
+					transform: scale(0);
+					@include transition($transition);
+				}
+			}
+			&:hover{
+				&:after{
+					left: 0;
+					right: 0;
+					top: 0;
+					bottom: 0;
+					opacity: 1;
+				}
+				a{
+					span{
+						transform: scale(1);
+					}
+				}
+			}
+		}
+	}
+}

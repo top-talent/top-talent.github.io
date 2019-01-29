@@ -1,0 +1,85 @@
+.event_area_2{
+    position: relative;
+    background: url(images/event/bg-1.jpg);
+    &::after{
+        background: rgba(0, 0, 0, 0.85)
+    }
+    .container{
+        position: relative;
+        z-index: 999;
+    }
+    .section-heading{
+        h2{
+            color: #fff;
+        }
+    }
+    .event-list{
+        position: relative;
+        display: block;
+        padding-top: 50px;
+        figure{
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            line-height: 100px;
+            overflow: hidden;
+            vertical-align: middle;
+            position: absolute;
+            top: 0;
+            left: 20px;
+            z-index: 999;
+            @include border-radius(100%);
+            img{
+                display: block;
+                width: 100%;
+                border: 6px solid #f7f7f7;
+                @include border-radius(100%);
+            }
+        }
+        .date{
+            display: inline-block;
+            background: $primary-color;
+            text-align: center;
+            padding: 18px 40px;
+            z-index: 999;
+            position: absolute;
+            top: 0;
+            right: 20px;
+            @include border-radius(45px);
+            strong{
+                color: #fff;
+                font-size: 30px;
+                font-weight: 400;
+                display: block;
+            }
+            span{
+                color: #fff;
+                text-transform: uppercase;
+                display: block;
+            }
+        }
+        .content{
+            display: block;
+            background: #fff;
+            position: relative;
+            padding: 80px 40px 40px;
+            h2{
+                margin: 10px;
+                font-family: $title-font;
+                font-weight: 400;
+                color: $primary-color;
+                display: block;
+            }
+            h4{
+                margin: 10px;
+                font-size: 24px;
+                font-weight: 400;
+                color: #797979;
+            }
+            p{
+                padding: 0 0 0 8px;
+                margin: 0;
+            }
+        }
+    }
+}

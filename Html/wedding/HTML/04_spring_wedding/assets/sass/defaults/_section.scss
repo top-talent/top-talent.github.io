@@ -1,0 +1,99 @@
+/*** Section ***/
+.section{
+	padding: $section 0;
+	@include res(m992) { padding:$section+(-25) 0 ;}
+	@include res(m768) { padding:$section+(-25-15) 0;}
+}
+.section2{
+	padding: $section 0 $section+(-30);
+	@include res(m992) { padding:$section+(-25) 0 $section+(-30-25);}
+	@include res(m768) { padding:$section+(-25-15) 0 $section+(-30-25-15);}
+}
+.section3{
+	padding: $section+(-30) 0 $section;
+	@include res(m992) { padding: $section+(-30-25) 0 $section+(-25);}
+	@include res(m768) { padding: $section+(-30-25-15) 0 $section+(-25-15);}
+}
+.section4{
+	padding-bottom:  $section;
+	@include res(m992) { padding-bottom: $section+(-25);}
+	@include res(m768) { padding-bottom: $section+(-25-15);}
+}
+.section5{
+	padding-top: $section;
+	@include res(m992) { padding-top:$section+(-25);}
+	@include res(m768) { padding-top:$section+(-25-15);}
+}
+.section-heading{
+	text-align: center;
+	display: block;
+	position: relative;
+	margin: 0 0 40px;
+	h2{
+		font-family: $title-font;
+		font-weight: 400;
+		font-size: 50px;
+		margin: 0 0 15px;
+		color: #222222;
+		@include res(m992){font-size: 46px;}
+		@include res(m480){font-size: 36px;}
+
+	}
+	p{
+		color: #797979;
+		margin: 0 auto;
+		display: block;
+		width: 60%;
+		@include res(m992){width: 85%;}
+		@include res(m768){width: 95%;}
+
+	}
+}
+.bgimgst{
+	display: block;
+	@include res(m480){display: none;}
+	&:after{
+		content:'';
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: -26px;
+		bottom: 0;
+		z-index: -1;
+		background: url(images/icons/8.png) no-repeat left top;
+	}
+	&:before{
+		content:'';
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: -26px;
+		bottom: 0;
+		z-index: -1;
+		background: url(images/icons/9.png) no-repeat right top;
+	}
+}
+.bgimgsb{
+	display: block;
+	@include res(m480){display: none;}
+	&:after{
+		content:'';
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: -26px;
+		z-index: -1;
+		background: url(images/icons/7.png) no-repeat left bottom;
+	}
+	&:before{
+		content:'';
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: -26px;
+		z-index: -1;
+		background: url(images/icons/7.png) no-repeat right bottom;
+	}
+}

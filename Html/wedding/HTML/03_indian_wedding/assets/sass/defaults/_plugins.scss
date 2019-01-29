@@ -1,0 +1,135 @@
+/***All plugins Reset***/
+
+/*owl Navigations*/
+.owl-controls{
+	margin: 0;
+	.owl-buttons{
+		position: absolute;
+		left: 20px;
+		bottom: 20px;
+		div{
+			opacity: 1;
+			display: block;
+			border-radius: 0;
+			background: #333333;
+			color: #fff;
+			width: 42px;
+			height: 52px;
+			line-height: 52px;
+			text-align: center;
+			padding: 0;
+			margin: 0;
+			@include transition($transition);
+			&:hover{
+				background:$primary-color;
+			}
+			&.owl-prev{
+				border-bottom: 1px solid #434242;
+			}
+			&.owl-next{
+
+			}
+		}
+	}
+}
+.family-area{
+	.owl-controls{
+		margin: 0;
+		@include res(m320){display: none !important;}
+		.owl-buttons{
+		    text-align: right;
+		    -webkit-tap-highlight-color: transparent;
+		    display: block;
+		    position: absolute;
+		    top: 38px;
+		    right: 15px;
+		    bottom: 50%;
+			div{
+				position: relative;
+				z-index: 999;
+				&.owl-prev{
+					color: #222;
+				    font-size: 20px;
+				    margin: 0px;
+				    padding: 0px;
+				    opacity: 1;
+				    background: rgba(255, 255, 255, 1);
+				    display: inline-block;
+				    cursor: pointer;
+				    width: 50px;
+				    height: 50px;
+				    line-height: 50px;
+				    text-align: center;
+				    margin-right: 5px;
+				    @include transition($transition);
+				    @include border-radius(100%);
+				    &:hover{
+						background:$primary-color;
+						color: #fff;
+					}
+				}
+				&.owl-next{
+					color: #222;
+				    font-size: 20px;
+				    margin: 0px;
+				    margin-left: 5px;
+				    padding: 0px;
+				    opacity: 1;
+				    background: rgba(255, 255, 255, 1);
+				    display: inline-block;
+				    cursor: pointer;
+				    width: 50px;
+				    height: 50px;
+				    line-height: 50px;
+				    text-align: center;
+				    @include transition($transition);
+				    @include border-radius(100%);
+				    &:hover{
+						background:$primary-color;
+						color: #fff;
+					}
+				}
+			}
+		}
+	}
+}
+/*owl Paginations*/
+.owl-controls{
+	margin: 0;
+	.owl-pagination{
+		.owl-page{
+			padding: 0 2px;
+			span{
+				width: 17px;
+				height: 17px;
+				background: #f7f7f7;
+				opacity: 1;
+				position: relative;
+				margin: 0 3px;
+				&:after{
+					content:'';
+					position: absolute;
+					left: 0;
+					right: 0;
+					top: 0;
+					bottom: 0;
+					border:3px solid $primary-color;
+					border-radius: 100%;
+					opacity: 0;
+					@include transition($transition);
+				}
+			}
+			&.active{
+				span{
+					background: transparent;
+					&:after{
+						opacity:1;
+					}
+				}
+			}
+		}
+	}
+}
+.mfp-title{
+	display: none;
+}

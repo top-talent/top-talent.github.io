@@ -1,0 +1,89 @@
+header{
+	display: block;
+	position: relative;
+	background: $primary-color;
+	height: 140px;
+	line-height: 140px;
+	@include res(m992){height: 120px;line-height: 120px;}
+	.main-header{
+		.logo-img{
+			a{
+				img{
+					
+				}	
+			}
+		}
+	}
+	.mobilemenu{
+		.mean-container{
+			.mean-nav{
+				background:#1D1D22;
+				margin-top: 34px;
+				ul{
+					li{
+						a{
+							font-size: 13px;
+							padding: 0 5%;
+							line-height: 44px;
+							&.mean-expand{
+								padding: 0;
+								line-height: 44px;
+								height: 44px !important;
+								padding: 0 12px !important;
+								&:hover{
+									background: #1D1D22;
+								}
+								&.mean-expand{
+									&.mean-clicked{
+										background: #1D1D22;
+									}
+								}
+							}
+							&:hover{
+								color: $primary-color;
+								background: transparent;
+							}
+						}
+					}
+				}
+			}
+			.mean-bar{
+				background: inherit;
+				padding: 0;
+				min-height: 0;
+				position: absolute;
+				width: auto !important;
+				left: 15px;
+				right: 15px;
+				top: 50px;
+				z-index: 9999;
+			}
+			a{
+				&.meanmenu-reveal{
+					top: -2px;
+					right: 0 !important;
+					background: $primary-color;
+					height: 10px;
+					padding: 8px 11px 17px;
+				}
+			}
+		}
+	}
+	&.sticky{
+		position: fixed;
+		left: 0;
+		right: 0;
+		top: 0;
+		box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+		height: 100px;
+		line-height: 100px;
+		z-index: 9999999;
+		@include res(m320){height: 80px;line-height: 80px;}
+		.mobilemenu{
+			.mean-bar{
+				top: 26px;
+			}
+		}
+	}
+	
+}

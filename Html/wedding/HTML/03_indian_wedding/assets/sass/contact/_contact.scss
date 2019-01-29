@@ -1,0 +1,192 @@
+.rspv-area{
+	position: relative;
+	display: block;
+	background: url(images/banner/bg-3.jpg);
+	margin-top: 215px;
+	&:after{
+		background:rgba(0, 0, 0, 0.5);
+	}
+	.container{
+		position: relative;
+		z-index: 999;
+	}
+	.rspv-form{
+		display: block;
+		position: relative;
+		background: #fff;
+		border:6px solid #ebebeb;
+		text-align: center;
+		padding: 60px;
+		margin: -215px 0 70px;
+		@include res(m320){padding: 40px 0;}
+		.heading{
+			display: block;
+			position: relative;
+			margin: 0 0 60px;
+			@include res(m320){margin: 0 0 40px;}
+			p{
+				font-family: $title-font;
+				color: $primary-color;
+				font-size: 20px;
+				text-transform: uppercase;
+				margin: 0 0 5px;
+				font-weight: 400;
+			}
+			h2{
+				margin: 0;
+				color: #222;
+				font-weight: 700;
+				text-transform: capitalize;
+				@include res(m320){font-size: 24px;}
+				span{
+					font-weight: 300;
+				}
+			}
+		}
+		form{
+			display: block;
+			position: relative;
+			fieldset{
+				text-align: left;
+				display: block;
+				position: relative;
+				margin: 0 0 20px;
+				label{
+					font-family: $title-font;
+					font-weight: 400;
+					color: #111111;
+					font-size: 16px;
+					margin: 0 0 10px;
+					display: block;
+					font-style: italic;
+				}
+				input{
+					display: block;
+					width: 100%;
+					border:1px solid #e4e4e4;
+					line-height: 48px;
+					height: 50px;
+					background: #fff;
+					padding: 0 15px;
+					@include transition(transition);
+					&:focus{
+						border:1px solid $primary-color;
+					}
+				}
+				select{
+					display: block;
+					width: 100%;
+					border:1px solid #e4e4e4;
+					line-height: 48px;
+					height: 50px;
+					background: #fff;
+					padding: 0 15px;
+					cursor: pointer;
+					@include transition(transition);
+					&:focus{
+						outline:none;
+						border:1px solid $primary-color;
+					}
+				}
+				textarea{
+					display: block;
+					width: 100%;
+					border:1px solid #e4e4e4;
+					height: 100px;
+					background: #fff;
+					padding: 10px 15px;
+					@include transition(transition);
+					&:focus{
+						border:1px solid $primary-color;
+					}
+				}
+			}
+			button{
+				margin-top: 20px;
+			}
+		}
+	}
+	.testimonial-slider{
+		position: relative;
+		padding-top: 88px;
+		&:after{
+			content:'';
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: 0;
+			height: 60px;
+			background: url(images/icons/1.png) no-repeat center;
+		}
+		.content{
+			text-align: center;
+			display: block;
+			position: relative;
+			h2{
+				font-family: $second-font;
+				font-size: 58px;
+				color: #fff;
+				margin: 0;
+				font-weight: 400;
+				@include res(m480){font-size: 48px;}
+				@include res(m320){font-size: 36px;}
+			}
+			p{
+				margin: 0;
+				color: #fff;
+				opacity: 0.5;
+			}
+		}
+	}
+}
+.contact-area{
+	display: block;
+	position: relative;
+	.contact-info{
+		display: block;
+		position: relative;
+		@include res(m768){margin-top: 50px;}
+		.info-list{
+			display: block;
+			position: relative;
+			overflow: hidden;
+			vertical-align: middle;
+			margin: 0 0 30px;
+			@include clearfix();
+			&:last-child{
+				margin:0;
+			}
+			.info-ico{
+				display: block;
+				width: 120px;
+				height:120px;
+				line-height: 112px;
+				text-align: center;
+				border:6px solid #ebebeb;
+				float: left;
+				background: #fff;
+				@include border-radius(20px);
+				img{
+					display: inline-block;
+				}
+			}
+			.info-content{
+				display: block;
+				width: calc(100% - 120px);
+				float: right;
+				padding:10px 0 10px 30px;
+				h2{
+					font-weight: 400;
+					margin: 0 0 10px;
+					color: $primary-color;
+				}
+				p{
+					margin: 0;
+					display: block;
+					color: #797979;
+					font-family: $title-font;
+				}
+			}
+		}
+	}
+}

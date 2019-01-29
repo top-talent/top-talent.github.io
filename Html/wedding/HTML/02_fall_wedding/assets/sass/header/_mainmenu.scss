@@ -1,0 +1,43 @@
+header{
+	.menus{
+		text-align: right;
+		nav{
+			ul{
+				li{
+					display: inline-block;
+					a{
+						display: block;
+						color: #111111;
+						font-size: 18px;
+						font-style: italic;
+						text-transform: capitalize;
+						padding: 0 12px;
+						@include res(m992){padding: 0 8px;font-size: 15px;}
+						&:hover{
+							color:$primary-color;
+						}
+					}
+					&:first-child{
+
+					}
+					&:last-child{
+						@include res(m992){display: none;}
+						a{
+							display: block;
+							padding: 0 65px;
+							background: $primary-color;
+							color: #fff;
+							font-size: 18px;
+							text-transform: uppercase;
+							margin-left: 12px;
+							line-height: 80px;
+							height: 80px;
+							@include border-radius(38px);
+						}
+					}
+				}
+			}
+		}
+	}
+	
+}

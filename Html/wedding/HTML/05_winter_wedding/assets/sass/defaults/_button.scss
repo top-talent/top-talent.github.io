@@ -1,0 +1,30 @@
+/***Button***/
+.btn1{
+	display: inline-block;
+	position: relative;
+	padding: 0 35px !important;
+	line-height: 50px;
+	height: 50px;
+	background: $primary-color;
+	text-transform: uppercase;
+	font-weight: 500;
+	color: #fff;
+	cursor: pointer;
+	@include transition($transition);
+	@include border-radius(50px);
+	&:hover{
+		background:#000;
+		color: #fff;
+	}
+}
+.btn2{
+	display: inline-block;
+	position: relative;
+	color: $primary-color;
+	i{
+		padding-left: 8px;
+	}
+	&:hover{
+		color: #222;
+	}
+}

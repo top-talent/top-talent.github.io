@@ -1,0 +1,25 @@
+footer{
+	position: relative;
+	display: block;
+	background: $primary-color;
+	line-height: 120px;
+	height: 120px;
+	@include res(m768){height: auto;line-height: 26px;padding: 50px 0;text-align: center;}
+	.foo-logo{
+		a{
+			display: inline-block;
+			img{
+
+			}
+		}
+	}
+	.copyright{
+		display: block;
+		text-align: right;
+		@include res(m768){text-align: center;margin: 20px 0 0;}
+		p{
+			margin: 0;
+			color: #fff;
+		}
+	}
+}

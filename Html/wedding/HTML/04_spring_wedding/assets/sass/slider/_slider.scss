@@ -1,0 +1,151 @@
+.slider-area{
+	position: relative;
+	display: block;
+	background: url(images/sliders/bg.jpg);
+	padding: 60px 0;
+	&:after{
+		background:rgba(0, 0, 0, 0.85);
+	}
+	.container{
+		position: relative;
+		z-index: 999;
+	}
+	.bx-wrapper{
+		margin: 0;
+		padding: 0;
+		box-shadow: none;
+		border:none;
+		.bx-loading{
+			display: none !important;
+		}
+		.bx-pager{
+			display: none !important;
+		}
+		.bx-viewport{
+			overflow: visible !important;
+		    border: none;
+		    box-shadow: none;
+		    left: 0;
+		    background: transparent;
+		}
+		.bx-controls{
+			.bx-controls-direction{
+				a{
+					display: inline-block;
+					height: 96px;
+					width: 96px;
+					background: $primary-color;
+					border-radius: 100%;
+					line-height: 76px;
+					text-align: center;
+					margin-top: -48px;
+					border:10px solid #2f2f2f;
+					transition: $transition;
+					@include res(m480){width: 70px;height: 70px;line-height: 50px;margin-top: -35px;}
+					@include res(m320){display: none;}
+					&.bx-prev{
+						left: -48px;
+						@include res(m1200){left: 0;}
+						&:before{
+							content:"\f060";
+							position: absolute;
+							left: 0;
+							right: 0;
+							top: 0;
+							bottom: 0;
+							line-height: 76px;
+							height: 76px;
+							border-radius: 100%;
+							color: #fff;
+							font-size: 16px;
+							text-indent: 0px;
+							font-family: "FontAwesome";
+							transition: $transition;
+							@include res(m480){height: 50px;line-height: 50px;}
+						}
+					}
+					&.bx-next{
+						right: -48px;
+						@include res(m1200){right: 0;}
+						&:before{
+							content:"\f061";
+							position: absolute;
+							left: 0;
+							right: 0;
+							top: 0;
+							bottom: 0;
+							line-height: 76px;
+							height: 76px;
+							border-radius: 100%;
+							color: #fff;
+							font-size: 16px;
+							text-indent: 0px;
+							font-family: "FontAwesome";
+							transition: $transition;
+							@include res(m480){height: 50px;line-height: 50px;}
+						}
+					}
+					&:hover{
+						background: $primary-color;
+						&:before{
+							color:#fff;
+						}
+					}
+				}
+			}
+		}
+	}
+	.slider-list{
+		height: 600px;
+		width: 100%;
+		position: relative;
+		overflow: hidden;
+		display: block;
+		vertical-align: middle;
+		padding: 225px 0;
+		@include res(m480){height: 400px;padding: 120px 0;}
+		&:after{
+			background:rgba(0, 0, 0, 0.2);
+		}
+		.content{
+			text-align: center;
+			position: relative;
+			z-index: 999;
+			display: block;
+			h2{
+				font-family: $title-font;
+				font-weight: 400;
+				color: #111;
+				font-size: 60px;
+				margin: 0 0 20px;
+			}
+			h3{
+				font-family: $title-font;
+				font-weight: 400;
+				color: #fff;
+				font-size: 40px;
+				margin: 0;
+				background: $primary-color;
+				height: 60px;
+				line-height: 60px;
+				padding: 0 90px;
+				display: inline-block;
+				-webkit-clip-path: polygon(100% 0, 90% 50%, 100% 100%, 0 100%, 10% 50%, 0 0);
+				clip-path: polygon(100% 0, 90% 50%, 100% 100%, 0 100%, 10% 50%, 0 0);
+				@include res(m480){padding: 0 60px;}
+			}
+		}
+		&.one{
+			background: url(images/sliders/1.jpg) no-repeat center;
+			background-size: cover;
+		}
+		&.two{
+			background: url(images/sliders/2.jpg) no-repeat center;
+			background-size: cover;
+		}
+		&.three{
+			background: url(images/sliders/3.jpg) no-repeat center;
+			background-size: cover;
+		}
+	}
+}

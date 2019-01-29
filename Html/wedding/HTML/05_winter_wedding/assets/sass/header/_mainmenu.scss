@@ -1,0 +1,36 @@
+header{
+	.main-menu{
+		nav{
+			ul{
+				li{
+					display: inline-block;
+					a{
+						display: block;
+						color: #000;
+						padding: 0 15px;
+						text-transform: capitalize;
+						@include res(m992){padding: 0 5px;font-size: 14px;}
+						&:hover{
+							color:$primary-color;
+						}
+					}
+					&:first-child{
+						a{
+							padding-left: 0;
+						}
+					}
+					&:last-child{
+						float: right;
+						padding: 35px 0;
+						a{
+							color: #fff;
+							@include res(m992){padding: 0 25px !important;}
+						}
+					}
+					
+				}
+			}
+		}
+	}
+	
+}

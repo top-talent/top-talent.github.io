@@ -1,0 +1,33 @@
+header{
+	.main-menus{
+		text-align: right;
+		nav{
+			ul{
+				li{
+					display: inline-block;
+					&:first-child{
+
+					}
+					&:last-child{
+
+					}
+					a{
+						display: block;
+						font-family: $title-font;
+						color: #fff;
+						font-size: 18px;
+						font-style: italic;
+						text-transform: capitalize;
+						padding: 0 22px;
+						@include res(m992){padding: 0 10px;}
+						&:hover{
+							background: #de3232;
+							color: #fff;
+						}
+					}
+				}
+			}
+		}
+	}
+	
+}

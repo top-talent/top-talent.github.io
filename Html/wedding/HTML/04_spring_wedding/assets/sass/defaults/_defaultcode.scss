@@ -1,0 +1,112 @@
+a {
+	@include transition($transition);
+	text-decoration: none;
+	&:hover {
+		text-decoration: none;
+		color: #096b89;
+	}
+	&:active{
+		outline: 0 none;
+		text-decoration: none;
+	}
+	&:focus {
+		outline: 0px solid;
+		text-decoration: none;
+	}
+}
+p {
+  margin: 0 0 26px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0 0 26px;
+  font-weight: 600;
+}
+img{
+  max-width: 100%;
+  height: auto;
+}
+ul{
+  list-style: outside none none;
+  margin: 0;
+  padding: 0;
+}
+input{
+  box-shadow: none;
+  border-radius: 0;
+  outline: none;
+  &:focus{
+    outline:none;
+    box-shadow: none;
+  }
+  &:active{
+    outline: none;
+    box-shadow: none;
+  }
+}
+textarea{
+  outline: none;
+  box-shadow: none;
+  border-radius: 0;
+  &:focus{
+    outline:none;
+    box-shadow: none;
+  }
+  &:active{
+    outline: none;
+    box-shadow: none;
+  }
+}
+button{
+  outline: none;
+  box-shadow: none;
+  border: none;
+  cursor: pointer;
+  @include transition($transition);
+  &:focus{
+    outline:none;
+    box-shadow: none;
+    border: none;
+  }
+  &:active{
+    outline: none;
+    box-shadow: none;
+    border: none;
+  }
+}
+.fix{
+  overflow: hidden;
+}
+.clear{
+  clear: both;
+}
+.d-inline-block{
+  display: inline-block;
+}
+.d-block{
+  display: block;
+}
+.d-table{
+  display: table;
+}
+.w-50{
+  width: 50%;
+}
+::-moz-selection{
+  background: #00c3ff;
+  text-shadow: none;
+}
+::selection{
+  background: #00c3ff;
+  text-shadow: none;
+}
+.browserupgrade{
+  margin: 26px  0;
+  background: #00c3ff;
+  color: #333333;
+  padding: 26px 0;
+}
