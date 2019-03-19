@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- <link rel="stylesheet" type="text/css" href="email.css"> -->
+</head>
+<body>
+	<div class="email-template" style="font-family: Verdana,Arial,Helvetica,sans-serif;
+    width: 90%;
+    margin: 50px auto;">
+			<div class="e-content" >
+				<div class="e-admin-content" style="width: 100%;
+   float: left;">
+					<div class="e-admin" style="float: left;">
+					<h3>Hi Administrator,</h3>
+	        <h4>[st_email_booking_first_name] [st_email_booking_last_name] booked your&nbsp;system.</h4>
+	        <h4>Below are customer\'s&nbsp;booking details:</h4>
+	        <h3><strong>Booking Code: </strong>[st_email_booking_id]</h3>
+				</div>
+				<div class="e-admin-date" style="float: right;">
+					<h3><strong>Date: </strong>[st_email_booking_date]</h3>
+				</div>
+				</div>
+				<div class="e-infos" style="width: 100%;
+	float: left;
+	margin: 50px 0;">
+					<div class="e-custom-info" style="width: 48%;
+  float: left; border-right: 1px solid #eee">
+						<h3><strong>Customer Information</strong></h3>
+						<div  style=" 
+   margin: 50px 0;">
+							<p><strong>First name:</strong> [st_email_booking_first_name]</p>
+							<p><strong>Last name:</strong> [st_email_booking_last_name]</p>	
+							<p><strong>Email:</strong> [st_email_booking_email]</p>	
+							<p><strong>Phone:</strong> [st_email_booking_phone]</p>	
+							<p><strong>City:</strong> [st_email_booking_city]</p>	
+							<p><strong>Address line :</strong> [st_email_booking_address]</p>	
+							<p><strong>Country:</strong> [st_email_booking_country]</p>	
+							<p><strong>Comments & Questions:</strong></p>	
+							<p>[st_email_booking_note]</p>
+
+							<div class="e-yatch-info" style="float: left;
+    							margin: 20px 0;">
+						<h3><strong>Yatch Information</strong></h3>
+						<div class="e-details" style="width: 30%;
+							  float: left;
+							   margin: 20px 0;">
+							<p><strong>Title:</strong>
+								<br> <h3>[st_email_booking_item_link] </h3></p>	
+							<p><strong>Price:</strong> [st_email_booking_item_price]</p>	
+							<p><strong>Address:</strong> [st_email_booking_address]</p>	
+							<p><strong>Boat name:</strong> [st_custom_meta key="st_custom_boat_name"]</p>	
+							<!-- <p><strong>Construction year:</strong> [st_custom_meta key="st_custom_contruction_year"]</p>	
+							<p><strong>Number of cabins:</strong> [st_custom_meta key="st_custom_cabins"]</p>	
+							<p><strong>Number of cabins:</strong> [st_custom_meta key="st_custom_berths"]</p>	
+							<p><strong>Days maximum passangers:</strong>[st_custom_meta key="st_custom_days_maximum_passengers"]</p>	
+							<p><strong>Boat length:</strong> [st_custom_meta key="st_custom_boat_length_m"]<span>m</span></p>	
+							<p><strong>Boat beam:</strong> [st_custom_meta key="st_custom_beam_m"]<span>m</span></p>	
+							<p><strong>Boat draft:</strong> [st_custom_meta key="st_custom_draft_m"]<span>m</span></p>	
+							<p><strong>Yatch type:</strong> </p>	
+							<p><strong>Category: </strong> </p>	
+							<p><strong>Crew: </strong> </p>	 -->
+						</div>
+					</div>
+						</div>
+						
+					</div>
+					<div class="e-booking-info" style="width: 48%;
+  float: left; padding-left: 2%;">
+						<h3><strong>Booking Information</strong></h3>
+						<div class="e-details" style="float: left;
+   							margin: 20px 0;">
+							<p><strong>Check in:</strong> [st_email_booking_check_in]</p>
+							<p><strong>Check out:</strong> [st_email_booking_check_out]</p>	
+							<p><strong>Number of adults:</strong> [st_email_booking_adult_info]</p>	
+							<p><strong>Number of children:</strong> [st_email_booking_children_info]</p>
+							<p><strong>Comment & Questions:</strong></p>	
+							<p>[st_email_booking_note]</p>
+						</div>
+					</div>
+					
+				</div>
+				
+			</div>
+			
+		</div>
+		
+	
+</body>
+</html>
