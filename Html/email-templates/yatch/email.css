@@ -1,0 +1,93 @@
+body{
+	margin: 0;
+	padding:0;
+	font-family: Verdana,Arial,Helvetica,sans-serif;
+}
+.email-template {
+    width: 90%;
+    margin: 50px auto;
+}
+.e-logo {
+	float: left;
+}
+.e-yatch {
+	text-align: right;
+}
+.e-header-booking {
+	background: #0e117d;
+	padding: 20px 10px;
+}
+.e-header-booking h1 {
+	text-align: left; 
+	color: #fff;
+}
+.e-admin-content {
+	width: 100%;
+   float: left;
+}
+.e-admin {
+	float: left;
+}
+.e-admin-date {
+	float: right;
+}
+.e-infos {
+	width: 100%;
+	float: left;
+	margin: 50px 0;
+}
+.e-custom-info, .e-booking-info, .e-yatch-info {
+	width: 30%;
+  float: left;
+}
+.e-yatch-info {
+	border-left: 1px solid #eee;
+	padding-left: 2%;
+}
+.e-booking-info {
+	border-left: 1px solid #eee;
+	padding-left: 2%;
+}
+.e-details {
+	 float: left;
+   margin: 20px 0;
+}
+
+
+
+
+.e-footer {
+	text-align: center;
+  width: 100%;
+  float: left;
+  margin: 50px 0;
+}
+.e-social {
+	border-bottom: 1px solid #eee;
+  padding-bottom: 20px;
+}
+.e-footer-info {
+	padding-top: 20px;
+	text-align: center;
+}
+
+/*responsive*/
+@media only screen and (max-width: 768px) {
+	.e-custom-info, .e-booking-info, .e-yatch-info {
+		width: 100%;
+		border-bottom: 1px solid #eee;
+	}
+	.e-booking-info {
+		border-left: none;
+		padding: 0
+	}
+	.e-yatch-info {
+		border: none;	
+		padding: 0;
+	}
+}
+@media only screen and (max-width: 768px) {
+	.e-admin-date {
+		float: none;
+	}
+}
