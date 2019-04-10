@@ -1,0 +1,26 @@
+{
+  "name": "crunch",
+  "main": [
+    "styles/style.css",
+    "scripts/scripts.js"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery.easing": "^1.3.1",
+    "matchHeight": "matchheight#^0.7.0",
+    "jQuery.mmenu": "mmenu#^5.7.4",
+    "css-hamburgers": "^0.5.0",
+    "popper.js": "https://unpkg.com/popper.js",
+    "tooltip.js": "https://unpkg.com/tooltip.js",
+    "jquery-lazy": "^1.7.5",
+    "owl.carousel": "^2.2.1",
+    "fancybox": "^3.2.5",
+    "webfontloader": "https://github.com/typekit/webfontloader.git#^1.6.28"
+  }
+}

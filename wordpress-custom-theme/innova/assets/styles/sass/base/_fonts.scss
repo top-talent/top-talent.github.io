@@ -1,0 +1,17 @@
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~ Fonts ~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+	/* ~~~~~~~~~~ Open Sans ~~~~~~~~~~ */
+
+	@mixin primary-font($fontWeight) {
+	    @if $fontWeight == "regular" {
+	        font-weight: 400;
+	    } @elseif $fontWeight == "bold" {
+	        font-weight: 700;
+	    } @elseif $fontWeight == "extra-bold" {
+	        font-weight: 800;
+	    }
+	    font-family: 'Open Sans', sans-serif;
+	    font-style: normal;
+	}

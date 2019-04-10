@@ -1,0 +1,163 @@
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~ Footer ~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+	.main-footer {
+		&__first-stage {
+			background: #efefef;
+
+			&__logo {
+				width: 150px;
+				height: 38px;
+				display: block;
+				margin: 0 auto;
+
+				@include media-breakpoint-up(sm) {
+					width: 160px;
+					height: 41px;
+				}
+
+				@include media-breakpoint-up(md) {
+					width: 175px;
+					height: 45px;
+				}
+			}
+
+			&__address {
+				@include fluid-type(14px, 15px);
+				text-align: center;
+				color: #363636;
+
+				@include media-breakpoint-up(md) {
+					text-align: right;
+					margin-top: 0;
+				}
+			}
+
+			&__contact-details {
+				list-style: none;
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: center;
+
+				@include media-breakpoint-up(md) {
+					justify-content: flex-end;
+				}
+
+				&__single-contact {
+					display: block;
+					width: 100%;
+					text-align: center;
+					line-height: 1;
+					position: relative;
+
+					@include media-breakpoint-up(sm) {
+						width: auto;
+						margin-left: 10px;
+						margin-right: 10px;
+					}
+
+					@include media-breakpoint-up(md) {
+						margin-left: 15px;
+						margin-right: 15px;
+					}
+
+					@include media-breakpoint-up(lg) {
+						margin-left: 20px;
+						margin-right: 20px;
+					}
+
+					&:after {
+						@include media-breakpoint-up(sm) {
+							content: '';
+							display: block;
+							position: absolute;
+							right: -10px;
+							top: 0;
+							height: 100%;
+							width: 1px;
+							background: #a1a1a1;
+						}
+
+						@include media-breakpoint-up(md) {
+							right: -15px;
+						}
+
+						@include media-breakpoint-up(lg) {
+							right: -20px;
+						}
+					}
+
+					&:first-child {
+						margin-left: 0;
+					}
+
+					&:last-child {
+						margin-right: 0;
+
+						&:after {
+							@include media-breakpoint-up(sm) {
+								display: none;
+							}
+						}
+					}
+
+					&__link {
+						@include fluid-type(14px, 15px);
+						color: #a1a1a1;
+
+						&:hover,
+						&:focus {
+							color: $primary-color;
+						}
+					}
+				}
+			}
+		}
+
+		&__second-stage {
+			@include element-spacing(.5);
+			background: #444444;
+
+			ul {
+				display: flex;
+				flex-wrap: wrap;
+				list-style: none;
+
+				@include media-breakpoint-up(sm) {
+					justify-content: center;
+				}
+
+				li {
+					@include fluid-type(14px, 15px);
+					color: #a1a1a1;
+					width: 100%;
+					text-align: center;
+					margin-top: 5px;
+
+					@include media-breakpoint-up(sm) {
+						width: auto;
+						margin: 0 10px;
+					}
+
+					@include media-breakpoint-up(md) {
+						margin: 0 15px;
+					}
+
+					@include media-breakpoint-up(lg) {
+						margin: 0 20px;
+					}
+
+					a {
+						border-bottom: 1px solid #a1a1a1;
+
+						&:hover,
+						&:focus {
+							border-bottom-color: transparent;
+							color: #fff;
+						}
+					}
+				}
+			}
+		}
+	}

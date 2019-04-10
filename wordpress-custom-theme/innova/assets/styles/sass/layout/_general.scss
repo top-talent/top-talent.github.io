@@ -1,0 +1,457 @@
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~ General ~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+    /* ~~~~~~~~~~ Body ~~~~~~~~~~ */
+
+    body {
+        @include primary-font('regular');
+        @include fluid-type(15px, 16px, 1.75);
+        background: #fff;
+    }
+
+
+    /* ~~~~~~~~~~ Headlines ~~~~~~~~~~ */
+
+    h1,
+    h2,
+    h3 {
+        @include primary-font('bold');
+    }
+
+    h1 {
+        @include fluid-type(50px, 70px, .9);
+
+        sup {
+            @include fluid-type(25px, 35px, .9);
+            top: -35px;
+        }
+    }
+
+    h2 {
+        @include fluid-type(36px, 48px, 1);
+    }
+
+    h3 {
+        @include fluid-type(24px, 36px, 1);
+    }
+
+
+    /* ~~~~~~~~~~ Text elements ~~~~~~~~~~ */
+
+    b,
+    strong {
+        @include primary-font('bold');
+    }
+
+    em {
+        font-style: italic;
+    }
+
+    sup {
+        @include fluid-type(10px, 11px, 1.75);
+        position: relative;
+        top: -7.5px;
+    }
+
+
+    /* ~~~~~~~~~~ To top ~~~~~~~~~~ */
+
+    .return-to-top {
+        position: fixed;
+        bottom: 50px;
+        right: 50px;
+        background: #aaa;
+        width: 45px;
+        height: 45px;
+        text-decoration: none;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 5;
+        border-radius: 50%;
+        text-align: center;
+        color: #fff;
+
+        @include media-breakpoint-down(md) {
+            display: none !important;
+        }
+
+        &--visible {
+            @extend %single-transition;
+            opacity: 0.75;
+            visibility: visible;
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+
+        i {
+            @include fluid-type(15px, 16px);
+            position: relative;
+            top: -2px;
+        }
+    }
+
+
+    /* ~~~~~~~~~~ Social Icons ~~~~~~~~~~ */
+
+    .social-icons {
+        &__item {
+            margin: 0 2.5px;
+
+            @include media-breakpoint-up(sm) {
+                margin: 0 5px;
+            }
+
+            &:first-child {
+                margin-left: 0;
+            }
+
+            &:last-child {
+                margin-right: 0;
+            }
+
+            &__social-icon-link {
+                display: block;
+                width: 35px;
+                height: 35px;
+                border-radius: 50%;
+                background: $primary-color;
+                color: #fff;
+
+                @include media-breakpoint-up(sm) {
+                    width: 37.5px;
+                    height: 37.5px;
+                }
+
+                @include media-breakpoint-up(md) {
+                    width: 40px;
+                    height: 40px;
+                }
+
+                &:hover,
+                &:focus {
+                    background: darken($primary-color, 5%);
+                    color: #fff;
+                }
+            }
+        }
+    }
+
+
+    /* ~~~~~~~~~~ Main ~~~~~~~~~~ */
+
+    #main {
+        padding-top: 69px;
+
+        @include media-breakpoint-up(sm) {
+            padding-top: 81px;
+        }
+
+        @include media-breakpoint-up(md) {
+            padding-top: 92px;
+        }
+
+        @include media-breakpoint-up(lg) {
+            padding-top: 135px;
+        }
+
+        @include media-breakpoint-up(xl) {
+            padding-top: 145px;
+        }
+
+        .admin-bar & {
+            padding-top: 69px + $mobile-wp-admin-bar-height;
+
+            @include media-breakpoint-up(sm) {
+                padding-top: 81px + $mobile-wp-admin-bar-height;
+            }
+
+            @include media-breakpoint-up(md) {
+                padding-top: 92px + $mobile-wp-admin-bar-height;
+            }
+
+            @media screen and (min-width: 783px) {
+                padding-top: 82px + $desktop-wp-admin-bar-height;
+            }
+
+            @include media-breakpoint-up(lg) {
+                padding-top: 135px + $desktop-wp-admin-bar-height;
+            }
+
+            @include media-breakpoint-up(xl) {
+                padding-top: 145px + $desktop-wp-admin-bar-height;
+            }
+        }
+    }
+
+
+    /* ~~~~~~~~~~ Buttons ~~~~~~~~~~ */
+
+    .innova-button {
+        @extend .element-medium-margin-top;
+        display: inline-block;
+
+        &__full-background {
+            @include primary-font('bold');
+            @include fluid-type(13px, 14px);
+            @include letter-spacing(75);
+            padding: 10px 45px 10px 30px;
+            border: 1px solid transparent;
+            border-bottom-right-radius: 30px;
+            text-transform: uppercase;
+
+            &--white {
+                background: #fff;
+                color: $primary-color;
+
+                &:hover,
+                &:focus {
+                    background: transparent;
+                    color: #fff;
+                    border-color: #fff;
+                }
+            }
+        }
+
+        &__download {
+            border-bottom-right-radius: 30px;
+            border: none;
+            text-align: left;
+            padding: 10px 40px 10px 70px;
+
+            @include media-breakpoint-up(sm) {
+                padding-top: 12.5px;
+                padding-bottom: 12.5px;
+                padding-left: 72.5px;
+            }
+
+            @include media-breakpoint-up(md) {
+                padding-left: 75px;
+            }
+
+            &--primary-color {
+                background: $primary-color;
+                position: relative;
+
+                &:before {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    top: 50%;
+                    margin-top: -15px;
+                    left: 20px;
+                    width: 30px;
+                    height: 30px;
+                    background: url(../images/icon__download.svg) no-repeat;
+                    background-size: 30px 30px;
+
+                    @include media-breakpoint-up(sm) {
+                        margin-top: -16.25px;
+                        width: 32.5px;
+                        height: 32.5px;
+                        background-size: 32.5px 32.5px;
+                    }
+
+                    @include media-breakpoint-up(md) {
+                        margin-top: -17.5px;
+                        width: 35px;
+                        height: 35px;
+                        background-size: 35px 35px;
+                    }
+                }
+
+                &:hover,
+                &:focus {
+                    background: darken($primary-color, 10%);
+                }
+
+                .innova-button {
+                    &__download {
+                        &__value {
+                            color: #fff;
+                        }
+
+                        &__subtitle {
+                            color: rgba(#fff, .65);
+                        }
+                    }
+                }
+            }
+
+            &__value,
+            &__subtitle {
+                @include primary-font('bold');
+                text-transform: uppercase;
+                display: block;
+            }
+
+            &__value {
+                @include fluid-type(18px, 20px);
+                @include letter-spacing(75);
+            }
+
+            &__subtitle {
+                @include fluid-type(13px, 14px);
+                @include letter-spacing(40);
+            }
+        }
+    }
+
+
+    /* ~~~~~~~~~~ Hello Section ~~~~~~~~~~ */
+
+    .hello-section {
+        background: $primary-color;
+        color: #fff;
+    }
+
+
+    /* ~~~~~~~~~~ Gravity Form ~~~~~~~~~~ */
+
+    .gform_wrapper {
+        .validation_error {
+            border: none !important;
+            color: #fff !important;
+        }
+
+        .gform_body {
+            .gform_fields {
+                .gfield {
+                    @extend .element-small-margin-top;
+                    padding: 0;
+                    max-width: 100% !important;
+
+                    &.gfield_error:not(.gf_left_half):not(.gf_right_half) {
+                        margin: 0 !important;
+                        max-width: 100% !important;
+                        background: transparent !important;
+                        border: none !important;
+
+                        .ginput_container {
+                            input {
+                                border: none !important;
+                                border-bottom: 1px solid #fff !important;
+                            }
+                        }
+                    }
+
+                    .gfield_label {
+                        display: none;
+                    }
+
+                    .ginput_container {
+                        input,
+                        select {
+                           @include primary-font('regular');
+                           @include fluid-type(15px, 16px);
+                           color: #fff;
+                           background: transparent;
+                           border: none;
+                           border-bottom: 1px solid #fff;
+                           padding: 10px 0 !important;
+                           width: 100%;
+
+                            @include placeholder() {
+                                @include primary-font('regular');
+                                @include fluid-type(15px, 16px);
+                                color: #fff;
+                                opacity: 1;
+                                padding: 0;
+                                margin: 0;
+                           }
+                       }
+
+                        select {
+                            appearance: none;
+                            position: relative;
+                            background: transparent url('../images/icon__arrow--down--white.svg') right center no-repeat;
+                            background-size: 19px 11px;
+
+                            option {
+                                padding-left: 0;
+                                padding-right: 0;
+                            }
+                        }
+
+                        .gfield_checkbox {
+                            li {
+                                display: flex;
+                                align-items: flex-start;
+
+                                input {
+                                    margin-top: 5px;
+
+                                    &:checked {
+                                        & + label {
+                                            @include primary-font('regular');
+                                            @include fluid-type(14px, 15px);
+                                        }
+                                    }
+                                }
+
+                                label {
+                                    @include primary-font('regular');
+                                    @include fluid-type(14px, 15px);
+                                    color: #fff;
+                                    margin-left: 10px;
+                                }
+                            }
+
+                        }
+                    }
+
+                    .gfield_description {
+                        &.validation_message {
+                            margin-top: 5px;
+                            padding: 0;
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+        }
+
+        .gform_footer {
+            margin: 0;
+            padding: 0;
+
+            input[type='submit'] {
+                @extend .innova-button;
+                @extend .innova-button__full-background;
+                @extend .innova-button__full-background--white;
+                width: 100%;
+            }
+        }
+    }
+
+    .gform_confirmation_message {
+        color: #fff;
+    }
+
+
+    /* ~~~~~~~~~~ Form Modal ~~~~~~~~~~ */
+
+    .form-modal {
+        .modal-content {
+            background: $primary-color;
+            border-radius: 0;
+
+            .modal-header {
+                border-bottom: none;
+                padding-bottom: 0;
+
+                &__title {
+                    color: #fff;
+                }
+
+                .close {
+                    span {
+                        color: #fff;
+                        box-shadow: none;
+                    }
+                }
+            }
+        }
+    }

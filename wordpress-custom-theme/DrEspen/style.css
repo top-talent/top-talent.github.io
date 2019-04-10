@@ -1,0 +1,16 @@
+/*
+Theme Name:         Dr Espens Theme
+Theme URI:          https://emperor-creative.com/
+Description:        Website theme for Dr. Espen
+Version:            1.0
+Author:             David Peter Howard
+Author URI:         https://creativecreations.com.au/
+Text Domain:        emperor
+
+*/
+
+.phone-number-navigation a {
+    color: #c94429;
+    text-decoration: none;
+}p { font-size: 16px; }.products li h2{  min-height:78px;}.revolution-slider #banner-image{  margin-bottom:0;  width: 90%;}#categories_list{	margin-top:0 !important;}/* */.bundled_table_item_indent > .wc-autoship-upsell-container {  display: none;}.top_video_sec .video_image {  background-size: cover;  padding: 15vh 0;  text-align: center;  background-position: center;  background-repeat: no-repeat;  display: none;}.top_video_sec .video_image.active {  display: block;}.top_icon_sec ul {  margin: 0;  padding: 0;  list-style-type: none;  overflow: hidden;}.top_icon_sec li {  display: inline-block;  width: 12.5%;  float: left;  text-align: center;  opacity: .2;  padding: 15px 0;}.top_icon_sec li.active {  opacity: 1;}.survey-header_new {display: none;}.page-id-3836 .survey-header_new {display: block;}.infusion-field .irs-bar, .infusion-field .irs-bar-edge {  border-top: 1px solid #C94429;  border-bottom: 1px solid #C94429;  background: #C94429;  background: linear-gradient(to top, #C94429 0%, #9e240b 100%);}.infusion-field .irs-single {background: #C94429;}.infusion-field .irs-bar-edge {border: 1px solid #C94429;border-right: 0;}#nextBtn {  background-color: #c94429;  border-color: #c94429;  color: #fff;  border-radius: 0;}.thank-you {  text-align: center;  margin-bottom: 50px;}.thank-you #chartContainer {  margin-top: 20px;}.step.finish {  background-color: #c94429 !important;  opacity: 1;}.complimentary {  text-align: center;  padding-left: 45px;  width: 100%;}.complimentary .yes, .complimentary .no {  font-size: 24px;  background: #019201;  display: inline-block;  color: #fff;  width: 48%;  margin: 0 1% 0;  height: 60px;  vertical-align: middle;  line-height: 60px;  border-radius: 10px;  cursor: pointer;}.complimentary .no {background: #d4030c;}.infusion-field img {  display: block;  margin: 0 auto;}.infusion-field input, .infusion-field textarea {  width: calc(100% - 45px) !important;}.is_form_wrapper button{	font-family: 'Open Sans', sans-serif !important;}.outer_month {width: 33.33%;display: inline-block;vertical-align: top;padding: 0 15px;}/* Responsive CSS Starts Here */@media (max-width:1200px){  #woocommerce-store .product-start .products li{    width:100%;    margin:0 0 30px;    text-align:center;  }  .products li h2{    min-height:auto;  }}@media (max-width:767px) {  .complimentary .yes, .complimentary .no {    width: 100%;    margin: 0 0 10px;  }  .is_form_wrapper {    width: 100% !important;  }  .gai span.infusion-option, .gai2 span.infusion-option {    min-width: 230px !important;  }  .gai span.infusion-option label, .gai2 span.infusion-option label {    font-size: 16px !important;  }  .infusion-field label {    line-height: 28px !important;  }  .infusion-field label, .infusion-field input {    font-size: 18px !important;  }}
+

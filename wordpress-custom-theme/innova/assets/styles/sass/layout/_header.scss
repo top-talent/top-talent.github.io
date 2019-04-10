@@ -1,0 +1,131 @@
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~ Header ~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+	.main-header {
+		@include admin-sticky-fix();
+		position: fixed;
+		top: 0;
+		width: 100%;
+		z-index: 10;
+		background: #fff;
+		padding: 15px 0;
+		border-bottom: 1px solid #efefef;
+
+		@include media-breakpoint-up(sm) {
+			padding: 17.5px 0;
+		}
+
+		@include media-breakpoint-up(md) {
+			padding: 20px 0;
+		}
+
+		&--scrolled {
+			.navbar {
+				.navbar-brand {
+					&__logo {
+						&--desktop {
+							width: 150px !important;
+							height: 62px !important;
+						}
+					}
+				}
+			}
+		}
+
+		.navbar {
+			display: block;
+			padding: 0;
+
+			.navbar-brand {
+				display: block;
+				padding: 0;
+				margin: 0;
+
+				&__logo {
+					@extend %single-transition;
+					width: 150px;
+					height: 38px;
+					display: block;
+
+					@include media-breakpoint-up(sm) {
+						width: 175px;
+						height: 45px;
+					}
+
+					@include media-breakpoint-up(md) {
+						width: 200px;
+						height: 51px;
+					}
+
+					&--mobile {
+						@include media-breakpoint-up(lg) {
+							display: none;
+						}
+					}
+
+					&--desktop {
+						display: none;
+
+						@include media-breakpoint-up(lg) {
+							display: block;
+							width: 225px;
+							height: 94px;
+						}
+
+						@include media-breakpoint-up(xl) {
+							width: 250px;
+							height: 104px;
+						}
+					}
+				}
+			}
+
+			.navbar-nav {
+				flex-direction: inherit;
+				display: none;
+
+				@include media-breakpoint-up(lg) {
+					display: flex;
+				}
+
+				.nav-item {
+					.nav-link {
+						color: #6c6c6c;
+						margin: 0 12.5px;
+						padding: 0 0 2.5px;
+						border-bottom: 2px solid transparent;
+
+						&.active,
+						&:hover {
+							border-bottom-color: $primary-color;
+						}
+					}
+				}
+			}
+
+			.hamburger {
+			    display: block;
+			    transform: scale(0.7);
+			    padding: 0;
+			    width: 40px;
+			    height: 24px;
+
+			    @include media-breakpoint-up(lg) {
+			        display: none;
+			    }
+
+			    .hamburger-box {
+			        .hamburger-inner {
+			            &,
+			            &:after,
+			            &:before {
+			                background-color: #000;
+			                height: 3px;
+			                border-radius: 3px;
+			            }
+			        }
+			    }
+			}
+		}
+	}

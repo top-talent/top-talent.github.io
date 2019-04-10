@@ -1,0 +1,399 @@
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~ Content ~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+#tinymce{
+    height: auto;
+    padding: 20px !important;
+}
+
+#tinymce,
+.content {
+
+    /* ~~~~~~~~~~ First element fix ~~~~~~~~~~ */
+
+    .first-element-fix {
+        & + * {
+            margin-top: 0;
+        }
+    }
+
+
+    /* ~~~~~~~~~~ Headlines ~~~~~~~~~~ */
+
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        margin-top: 40px;
+    }
+
+
+    /* ~~~~~~~~~~ Text elements ~~~~~~~~~~ */
+
+    > p {
+        @extend .element-small-margin-top;
+    }
+
+    a:not([class*='-button']) {
+        color: $primary-color;
+        border-bottom: 1px solid transparent;
+
+        &:hover,
+        &:focus {
+            border-color: $primary-color;
+        }
+    }
+
+
+    /* ~~~~~~~~~~ ul, ol lists ~~~~~~~~~~ */
+
+    ul {
+        list-style-type: disc;
+    }
+
+    ol {
+        list-style-type: decimal;
+    }
+
+    ul,
+    ol {
+        list-style-position: outside;
+        margin: 25px 0 0 25px;
+
+        @include media-breakpoint-up(sm) {
+            margin-top: 30px;
+        }
+
+        @include media-breakpoint-up(md) {
+            margin-top: 30px;
+        }
+
+        ul,
+        ol {
+            list-style-position: outside;
+            margin: 0 0 15px 25px;
+
+            @include media-breakpoint-up(sm) {
+                margin-bottom: 20px;
+            }
+
+            @include media-breakpoint-up(md) {
+                margin-bottom: 25px;
+            }
+        }
+
+        ul {
+            list-style-type: circle;
+        }
+
+        ol {
+            list-style-type: lower-latin;
+        }
+
+        li {
+            margin-top: 10px;
+
+            &:first-child {
+                margin-top: 0;
+            }
+        }
+    }
+
+
+    /* ~~~~~~~~~~ Images ~~~~~~~~~~ */
+
+    img,
+    .wp-caption {
+        width: auto;
+        height: auto;
+        max-width: 100%;
+        margin-top: 40px;
+        margin-bottom: 40px;
+        display: block;
+
+        &.alignleft {
+            float: left;
+            width: auto;
+            max-width: 100%;
+            margin: 0 25px 15px 0;
+        }
+
+         &.alignright {
+            float: right;
+            width: auto;
+            max-width: 100%;
+            margin: 0 0 15px 25px;
+        }
+
+        &.aligncenter {
+            width: auto;
+            max-width: 100%;
+
+            @include media-breakpoint-up(sm) {
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+
+        .wp-caption-text {
+            @include fluid-type(13px, 14px);
+            margin-top: 10px;
+            text-align: center;
+            font-style: italic !important;
+        }
+    }
+
+    img {
+        display: block;
+    }
+
+    .wp-caption {
+        display: inline-block;
+        margin-bottom: 0;
+
+        img {
+            margin: 0;
+        }
+    }
+
+
+    /* ~~~~~~~~~~ iFrame ~~~~~~~~~~ */
+
+    iframe {
+        width: 100%;
+        height: 200px;
+        margin-top: 25px;
+
+        @include media-breakpoint-up(sm) {
+            height: 250px;
+        }
+
+        @include media-breakpoint-up(md) {
+            height: 308px;
+        }
+
+        @include media-breakpoint-up(lg) {
+            height: 390px;
+        }
+
+        @include media-breakpoint-up(xl) {
+            height: 410px;
+        }
+    }
+
+
+    /* ~~~~~~~~~~ Gallery ~~~~~~~~~~ */
+
+    .gallery {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 40px -5px 0 !important;
+
+        &.gallery-columns-2 {
+            .gallery-item {
+                width: calc(50% - 10px) !important;
+            }
+        }
+
+        &.gallery-columns-3 {
+            .gallery-item {
+               width: calc(33.33% - 10px) !important;
+
+            }
+        }
+
+        &.gallery-columns-4 {
+            .gallery-item {
+                width: calc(50% - 10px) !important;
+
+                @include media-breakpoint-up(sm) {
+                    width: calc(25% - 10px) !important;
+                }
+            }
+        }
+
+        &.gallery-columns-5 {
+            .gallery-item {
+                width: calc(33.33% - 10px) !important;
+
+                @include media-breakpoint-up(sm) {
+                    width: calc(20% - 10px) !important;
+                }
+            }
+        }
+
+        &.gallery-columns-6 {
+            .gallery-item {
+                width: calc(33.33% - 10px) !important;
+
+                @include media-breakpoint-up(sm) {
+                    width: calc(25% - 10px) !important;
+                }
+
+                @include media-breakpoint-up(md) {
+                    width: calc(16.66% - 10px) !important;
+                }
+            }
+        }
+
+        &.gallery-columns-7 {
+            .gallery-item {
+                width: calc(33.33% - 10px) !important;
+
+                @include media-breakpoint-up(sm) {
+                    width: calc(25% - 10px) !important;
+                }
+
+                @include media-breakpoint-up(md) {
+                    width: calc(14.28% - 10px) !important;
+                }
+            }
+        }
+
+        &.gallery-columns-8 {
+            .gallery-item {
+                width: calc(25% - 10px) !important;
+
+                @include media-breakpoint-up(md) {
+                    width: calc(12.5% - 10px) !important;
+                }
+            }
+        }
+
+        &.gallery-columns-9 {
+            .gallery-item {
+                width: calc(25% - 10px) !important;
+
+                @include media-breakpoint-up(md) {
+                    width: calc(11.1% - 10px) !important;
+                }
+            }
+        }
+
+        .gallery-item {
+            flex-shrink: 0;
+            margin: 0 5px;
+
+            .gallery-icon {
+                margin-left: auto;
+                margin-right: auto;
+                display: block;
+
+                a {
+                    img {
+                        border: none !important;
+                        margin: 0;
+                    }
+                }
+            }
+        }
+    }
+
+
+    /* ~~~~~~~~~~ Preformatted ~~~~~~~~~~ */
+
+    pre {
+        @include fluid-type(15px, 16px);
+        margin-top: 25px;
+        background: #3A3A3A;
+        border-radius: 3px;
+        padding: 25px;
+        color: #fff;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -pre-wrap;
+        white-space: -o-pre-wrap;
+        word-wrap: break-word;
+        display: block;
+    }
+
+
+    /* ~~~~~~~~~ Blockquote ~~~~~~~~~~ */
+
+    blockquote {
+        margin-top: 25px;
+        border-left: 2px solid $primary-color;
+        padding-left: 15px;
+
+        @include media-breakpoint-up(sm) {
+            border-left-width: 3px;
+            padding-left: 20px;
+        }
+
+        @include media-breakpoint-up(md) {
+            border-left-width: 4px;
+            padding-left: 25px;
+        }
+
+        @include media-breakpoint-up(lg) {
+            border-left-width: 5px;
+        }
+
+        cite {
+            // @include secondary-font('bold');
+        }
+    }
+
+
+    /* ~~~~~~~~~~ Table ~~~~~~~~~~ */
+
+    table {
+        border: 1px solid #E5E5E5;
+        margin-top: 40px;
+
+        tr {
+            border-bottom: 1px solid #E5E5E5;
+
+            &:last-child {
+                border: 0;
+            }
+        }
+
+        td,
+        th {
+            border-right: 1px solid #E5E5E5;
+            padding: 15px;
+
+            &:last-child {
+                border: 0;
+            }
+        }
+    }
+
+
+    /* ~~~~~~~~~~ Panel ~~~~~~~~~~ */
+
+    .panel {
+        @extend .element-small-margin-top;
+        padding: 15px;
+
+        &--outline {
+            border: 2px solid #d4d4d4;
+        }
+
+        &--full-background {
+            background: $primary-color;
+            color: #fff;
+
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6 {
+                color: #fff;
+            }
+        }
+
+        @include media-breakpoint-up(sm) {
+            padding: 20px;
+        }
+
+        @include media-breakpoint-up(md) {
+            padding: 25px;
+        }
+    }
+
+}

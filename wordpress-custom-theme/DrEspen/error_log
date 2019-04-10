@@ -1,0 +1,28 @@
+[10-Apr-2018 06:57:40 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_template_part() in /home/drespen/public_html/wp-content/themes/DrEspen/404.php:1
+Stack trace:
+#0 {main}
+  thrown in /home/drespen/public_html/wp-content/themes/DrEspen/404.php on line 1
+[10-Apr-2018 06:57:40 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_template_part() in /home/drespen/public_html/wp-content/themes/DrEspen/404.php:1
+Stack trace:
+#0 {main}
+  thrown in /home/drespen/public_html/wp-content/themes/DrEspen/404.php on line 1
+[07-May-2018 13:13:08 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_template_part() in /home/drespen/public_html/wp-content/themes/DrEspen/404.php:1
+Stack trace:
+#0 {main}
+  thrown in /home/drespen/public_html/wp-content/themes/DrEspen/404.php on line 1
+[11-Jan-2019 00:19:38 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_template_part() in /home/drespen/public_html/wp-content/themes/DrEspen/404.php:1
+Stack trace:
+#0 {main}
+  thrown in /home/drespen/public_html/wp-content/themes/DrEspen/404.php on line 1
+[11-Jan-2019 00:19:38 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_template_part() in /home/drespen/public_html/wp-content/themes/DrEspen/index.php:1
+Stack trace:
+#0 {main}
+  thrown in /home/drespen/public_html/wp-content/themes/DrEspen/index.php on line 1
+[11-Jan-2019 00:19:39 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_template_part() in /home/drespen/public_html/wp-content/themes/DrEspen/404.php:1
+Stack trace:
+#0 {main}
+  thrown in /home/drespen/public_html/wp-content/themes/DrEspen/404.php on line 1
+[11-Jan-2019 00:19:39 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_template_part() in /home/drespen/public_html/wp-content/themes/DrEspen/index.php:1
+Stack trace:
+#0 {main}
+  thrown in /home/drespen/public_html/wp-content/themes/DrEspen/index.php on line 1
